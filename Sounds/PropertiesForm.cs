@@ -24,6 +24,20 @@ namespace Sounds
             bitrateBox.Text = f.Properties.AudioBitrate.ToString();
             channelsBox.Text = f.Properties.AudioChannels.ToString();
             sampleRateBox.Text = f.Properties.AudioSampleRate.ToString();
+
+            titleBox.Text = f.Tag.Title;
+            albumBox.Text = f.Tag.Album;
+            trackBox.Text = f.Tag.TrackCount > 0 ?
+                string.Format("{0}/{1}", f.Tag.Track, f.Tag.TrackCount)
+                : f.Tag.Track.ToString();
+            discBox.Text = f.Tag.DiscCount > 0 ?
+                string.Format("{0}/{1}", f.Tag.Disc, f.Tag.DiscCount)
+                : f.Tag.Disc.ToString();
+        }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
