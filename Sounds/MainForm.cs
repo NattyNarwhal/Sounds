@@ -247,8 +247,16 @@ namespace Sounds
         private void trackBarSyncTimer_Tick(object sender, EventArgs e)
         {
             positionTrackBar.Value = Convert.ToInt32(mp.Position.TotalSeconds);
-            positionLabel.Text = string.Format("{0} / {1}",
-                mp.Position, mp.NaturalDuration.TimeSpan);
+            if (mp.NaturalDuration.HasTimeSpan)
+            {
+                positionLabel.Text = string.Format("{0} / {1}",
+                    mp.Position, mp.NaturalDuration.TimeSpan);
+            }
+            else
+            {
+                positionLabel.Text = string.Format("{0}",
+                    mp.Position);
+            }
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
