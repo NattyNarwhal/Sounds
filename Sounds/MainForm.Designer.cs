@@ -32,7 +32,6 @@
             this.addFilesDialog = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
             this.titleHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -53,16 +52,17 @@
             this.previousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.positionLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.removeSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.openPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openPlaylistDialog = new System.Windows.Forms.OpenFileDialog();
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.savePlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.savePlaylistAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.albumArtBox)).BeginInit();
@@ -78,6 +78,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.listToolStripMenuItem,
             this.playbackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -93,21 +94,10 @@
             this.savePlaylistToolStripMenuItem,
             this.savePlaylistAsToolStripMenuItem,
             this.toolStripSeparator1,
-            this.addFilesToolStripMenuItem,
-            this.removeSelectedToolStripMenuItem,
-            this.toolStripSeparator2,
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
-            // 
-            // addFilesToolStripMenuItem
-            // 
-            this.addFilesToolStripMenuItem.Name = "addFilesToolStripMenuItem";
-            this.addFilesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.addFilesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.addFilesToolStripMenuItem.Text = "Add &Files...";
-            this.addFilesToolStripMenuItem.Click += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
             // 
             // playbackToolStripMenuItem
             // 
@@ -270,14 +260,6 @@
             this.positionLabel.Name = "positionLabel";
             this.positionLabel.Size = new System.Drawing.Size(0, 17);
             // 
-            // removeSelectedToolStripMenuItem
-            // 
-            this.removeSelectedToolStripMenuItem.Name = "removeSelectedToolStripMenuItem";
-            this.removeSelectedToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.removeSelectedToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.removeSelectedToolStripMenuItem.Text = "&Remove Selected";
-            this.removeSelectedToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
-            // 
             // newPlaylistToolStripMenuItem
             // 
             this.newPlaylistToolStripMenuItem.Name = "newPlaylistToolStripMenuItem";
@@ -298,11 +280,6 @@
             this.openPlaylistToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.openPlaylistToolStripMenuItem.Text = "&Open Playlist...";
             this.openPlaylistToolStripMenuItem.Click += new System.EventHandler(this.openPlaylistToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(203, 6);
             // 
             // quitToolStripMenuItem
             // 
@@ -336,6 +313,31 @@
             this.savePlaylistAsToolStripMenuItem.Text = "Save Playlist &As...";
             this.savePlaylistAsToolStripMenuItem.Click += new System.EventHandler(this.savePlaylistAsToolStripMenuItem_Click);
             // 
+            // listToolStripMenuItem
+            // 
+            this.listToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addFilesToolStripMenuItem,
+            this.removeSelectedToolStripMenuItem});
+            this.listToolStripMenuItem.Name = "listToolStripMenuItem";
+            this.listToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.listToolStripMenuItem.Text = "&List";
+            // 
+            // addFilesToolStripMenuItem
+            // 
+            this.addFilesToolStripMenuItem.Name = "addFilesToolStripMenuItem";
+            this.addFilesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.addFilesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.addFilesToolStripMenuItem.Text = "Add &Files...";
+            this.addFilesToolStripMenuItem.Click += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
+            // 
+            // removeSelectedToolStripMenuItem
+            // 
+            this.removeSelectedToolStripMenuItem.Name = "removeSelectedToolStripMenuItem";
+            this.removeSelectedToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
+            this.removeSelectedToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.removeSelectedToolStripMenuItem.Text = "&Remove Selected";
+            this.removeSelectedToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,7 +369,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addFilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playbackToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader titleHeader;
         private System.Windows.Forms.Panel panel1;
@@ -387,16 +388,17 @@
         private System.Windows.Forms.ToolStripMenuItem previousToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel positionLabel;
-        private System.Windows.Forms.ToolStripMenuItem removeSelectedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newPlaylistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openPlaylistToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openPlaylistDialog;
         private System.Windows.Forms.SaveFileDialog savePlaylistDialog;
         private System.Windows.Forms.ToolStripMenuItem savePlaylistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem savePlaylistAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addFilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeSelectedToolStripMenuItem;
     }
 }
 
