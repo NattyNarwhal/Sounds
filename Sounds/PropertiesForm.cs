@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,11 +38,34 @@ namespace Sounds
             artistsBox.Items.AddRange(f.Tag.Performers);
             composersBox.Items.AddRange(f.Tag.Composers);
             genresBox.Items.AddRange(f.Tag.Genres);
+            
+            albumArtSelector.DisplayMember = "Type";
+            albumArtSelector.Items.AddRange(f.Tag.Pictures);
+            if (albumArtSelector.Items.Count > 0)
+                albumArtSelector.SelectedIndex = 0;
         }
 
         private void okButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void albumArtSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picture = (TagLib.IPicture)albumArtSelector.SelectedItem;
+
+            albumArtInfo.Text = string.Format("[{0}] {1}",
+                picture.MimeType, picture.Description);
+
+            var pictureStream = picture?.Data?.Data;
+            if (pictureStream != null)
+            {
+                using (var ms = new MemoryStream(pictureStream))
+                {
+                    var b = Image.FromStream(ms);
+                    albumArtBox.Image = b;
+                }
+            }
         }
     }
 }
