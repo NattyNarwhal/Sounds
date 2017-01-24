@@ -49,6 +49,12 @@
             this.titleBox = new System.Windows.Forms.TextBox();
             this.titleLabel = new System.Windows.Forms.Label();
             this.discBox = new System.Windows.Forms.TextBox();
+            this.discLabel = new System.Windows.Forms.Label();
+            this.artistsLabel = new System.Windows.Forms.Label();
+            this.artistsBox = new System.Windows.Forms.ListBox();
+            this.composersBox = new System.Windows.Forms.ListBox();
+            this.composersLabel = new System.Windows.Forms.Label();
+            this.genresBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.intrinisicsTab.SuspendLayout();
@@ -60,7 +66,7 @@
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.okButton.Location = new System.Drawing.Point(197, 226);
+            this.okButton.Location = new System.Drawing.Point(197, 324);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
             this.okButton.TabIndex = 0;
@@ -70,12 +76,15 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.intrinisicsTab);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(260, 208);
+            this.tabControl1.Size = new System.Drawing.Size(260, 306);
             this.tabControl1.TabIndex = 1;
             // 
             // intrinisicsTab
@@ -195,8 +204,14 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.discBox);
+            this.tabPage2.Controls.Add(this.genresBox);
             this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.composersBox);
+            this.tabPage2.Controls.Add(this.composersLabel);
+            this.tabPage2.Controls.Add(this.artistsBox);
+            this.tabPage2.Controls.Add(this.artistsLabel);
+            this.tabPage2.Controls.Add(this.discBox);
+            this.tabPage2.Controls.Add(this.discLabel);
             this.tabPage2.Controls.Add(this.trackBox);
             this.tabPage2.Controls.Add(this.trackLabel);
             this.tabPage2.Controls.Add(this.albumBox);
@@ -206,7 +221,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(252, 182);
+            this.tabPage2.Size = new System.Drawing.Size(252, 280);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Metadata";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -278,21 +293,72 @@
             this.discBox.Size = new System.Drawing.Size(166, 20);
             this.discBox.TabIndex = 13;
             // 
+            // discLabel
+            // 
+            this.discLabel.AutoSize = true;
+            this.discLabel.Location = new System.Drawing.Point(6, 87);
+            this.discLabel.Name = "discLabel";
+            this.discLabel.Size = new System.Drawing.Size(28, 13);
+            this.discLabel.TabIndex = 12;
+            this.discLabel.Text = "&Disc";
+            // 
+            // artistsLabel
+            // 
+            this.artistsLabel.AutoSize = true;
+            this.artistsLabel.Location = new System.Drawing.Point(6, 113);
+            this.artistsLabel.Name = "artistsLabel";
+            this.artistsLabel.Size = new System.Drawing.Size(35, 13);
+            this.artistsLabel.TabIndex = 14;
+            this.artistsLabel.Text = "A&rtists";
+            // 
+            // artistsBox
+            // 
+            this.artistsBox.FormattingEnabled = true;
+            this.artistsBox.Location = new System.Drawing.Point(80, 110);
+            this.artistsBox.Name = "artistsBox";
+            this.artistsBox.Size = new System.Drawing.Size(166, 43);
+            this.artistsBox.TabIndex = 15;
+            // 
+            // composersBox
+            // 
+            this.composersBox.FormattingEnabled = true;
+            this.composersBox.Location = new System.Drawing.Point(80, 159);
+            this.composersBox.Name = "composersBox";
+            this.composersBox.Size = new System.Drawing.Size(166, 43);
+            this.composersBox.TabIndex = 17;
+            // 
+            // composersLabel
+            // 
+            this.composersLabel.AutoSize = true;
+            this.composersLabel.Location = new System.Drawing.Point(6, 162);
+            this.composersLabel.Name = "composersLabel";
+            this.composersLabel.Size = new System.Drawing.Size(59, 13);
+            this.composersLabel.TabIndex = 16;
+            this.composersLabel.Text = "&Composers";
+            // 
+            // genresBox
+            // 
+            this.genresBox.FormattingEnabled = true;
+            this.genresBox.Location = new System.Drawing.Point(80, 208);
+            this.genresBox.Name = "genresBox";
+            this.genresBox.Size = new System.Drawing.Size(166, 43);
+            this.genresBox.TabIndex = 19;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 87);
+            this.label1.Location = new System.Drawing.Point(6, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "&Disc";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "&Genres";
             // 
             // PropertiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.okButton;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 359);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.okButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -328,12 +394,18 @@
         private System.Windows.Forms.TextBox sampleRateBox;
         private System.Windows.Forms.Label sampleRateLabel;
         private System.Windows.Forms.TextBox discBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label discLabel;
         private System.Windows.Forms.TextBox trackBox;
         private System.Windows.Forms.Label trackLabel;
         private System.Windows.Forms.TextBox albumBox;
         private System.Windows.Forms.Label albumLabel;
         private System.Windows.Forms.TextBox titleBox;
         private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.ListBox artistsBox;
+        private System.Windows.Forms.Label artistsLabel;
+        private System.Windows.Forms.ListBox genresBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox composersBox;
+        private System.Windows.Forms.Label composersLabel;
     }
 }

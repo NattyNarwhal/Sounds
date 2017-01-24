@@ -33,6 +33,10 @@ namespace Sounds
             discBox.Text = f.Tag.DiscCount > 0 ?
                 string.Format("{0}/{1}", f.Tag.Disc, f.Tag.DiscCount)
                 : f.Tag.Disc.ToString();
+
+            artistsBox.Items.AddRange(f.Tag.Performers);
+            composersBox.Items.AddRange(f.Tag.Composers);
+            genresBox.Items.AddRange(f.Tag.Genres);
         }
 
         private void okButton_Click(object sender, EventArgs e)
