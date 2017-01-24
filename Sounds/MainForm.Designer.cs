@@ -63,6 +63,8 @@
             this.listToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.albumArtBox)).BeginInit();
@@ -317,7 +319,9 @@
             // 
             this.listToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addFilesToolStripMenuItem,
-            this.removeSelectedToolStripMenuItem});
+            this.removeSelectedToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.propertiesToolStripMenuItem});
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
             this.listToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.listToolStripMenuItem.Text = "&List";
@@ -337,6 +341,18 @@
             this.removeSelectedToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.removeSelectedToolStripMenuItem.Text = "&Remove Selected";
             this.removeSelectedToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(185, 6);
+            // 
+            // propertiesToolStripMenuItem
+            // 
+            this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
+            this.propertiesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.propertiesToolStripMenuItem.Text = "&Properties...";
+            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -399,6 +415,8 @@
         private System.Windows.Forms.ToolStripMenuItem listToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addFilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeSelectedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItem;
     }
 }
 

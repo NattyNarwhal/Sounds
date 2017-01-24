@@ -295,5 +295,11 @@ namespace Sounds
         {
             SavePlaylist(true);
         }
+
+        private void propertiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+                new PropertiesForm((TagLib.File)listView1.SelectedItems[0].Tag).Show(this);
+        }
     }
 }
