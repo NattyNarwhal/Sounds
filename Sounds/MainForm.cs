@@ -20,6 +20,8 @@ namespace Sounds
         // not if the MediaPlayer is, but if we should at all
         bool playing = false;
 
+        bool repeat = false;
+
         string playlistFile = null;
 
         public MainForm()
@@ -28,6 +30,8 @@ namespace Sounds
             UpdateMenus();
             mp.MediaEnded += (o, e) =>
             {
+                // avoid race coondition
+                trackBarSyncTimer.Enabled = false;
                 if (playing)
                     Next();
             };
@@ -194,6 +198,18 @@ namespace Sounds
             {
                 PlayActive();
             }
+            else if (playing && repeat)
+            {
+                activeFile = (TagLib.File)listView1.Items.Cast<ListViewItem>().FirstOrDefault().Tag;
+                if (activeFile != null)
+                {
+                    PlayActive();
+                }
+                else
+                {
+                    Stop();
+                }
+            }
             else
             {
                 Stop();
@@ -255,7 +271,13 @@ namespace Sounds
 
         private void trackBarSyncTimer_Tick(object sender, EventArgs e)
         {
-            positionTrackBar.Value = Convert.ToInt32(mp.Position.TotalSeconds);
+            var value = Convert.ToInt32(mp.Position.TotalSeconds);
+            // only update the trackbar if value =< max, to avoid races
+            if (positionTrackBar.Maximum >= value)
+            {
+                positionTrackBar.Value = value;
+            }
+
             if (mp.NaturalDuration.HasTimeSpan)
             {
                 positionLabel.Text = string.Format("{0} / {1}",
@@ -348,6 +370,11 @@ namespace Sounds
                     AddFile(f);
                 }
             }
+        }
+
+        private void repeatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            repeat = repeatToolStripMenuItem.Checked;
         }
     }
 }

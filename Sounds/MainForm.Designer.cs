@@ -68,6 +68,8 @@
             this.trackNoHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.repeatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.albumArtBox)).BeginInit();
@@ -112,7 +114,9 @@
             this.stopToolStripMenuItem,
             this.toolStripMenuItem1,
             this.previousToolStripMenuItem,
-            this.nextToolStripMenuItem});
+            this.nextToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.repeatToolStripMenuItem});
             this.playbackToolStripMenuItem.Name = "playbackToolStripMenuItem";
             this.playbackToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.playbackToolStripMenuItem.Text = "&Playback";
@@ -377,6 +381,19 @@
             this.addDirectoryToolStripMenuItem.Text = "Add &Directory...";
             this.addDirectoryToolStripMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(170, 6);
+            // 
+            // repeatToolStripMenuItem
+            // 
+            this.repeatToolStripMenuItem.CheckOnClick = true;
+            this.repeatToolStripMenuItem.Name = "repeatToolStripMenuItem";
+            this.repeatToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.repeatToolStripMenuItem.Text = "&Repeat";
+            this.repeatToolStripMenuItem.Click += new System.EventHandler(this.repeatToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,6 +460,8 @@
         private System.Windows.Forms.ColumnHeader trackNoHeader;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.ToolStripMenuItem addDirectoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem repeatToolStripMenuItem;
     }
 }
 
