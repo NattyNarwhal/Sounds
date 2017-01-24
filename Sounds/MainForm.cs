@@ -49,19 +49,27 @@ namespace Sounds
         
         public void AddFile(string fileName)
         {
-            var f = TagLib.File.Create(fileName);
-            if (f.Properties.MediaTypes != TagLib.MediaTypes.Audio)
+            try
             {
-                // we don't want it
-                return;
+                var f = TagLib.File.Create(fileName);
+                if (f.Properties?.MediaTypes != TagLib.MediaTypes.Audio)
+                {
+                    // we don't want it
+                    return;
+                }
+                var lvi = new ListViewItem();
+                // fall back to filename
+                lvi.Text = f.Tag.Title ?? f.Name;
+                lvi.SubItems.Add(f.Tag.Track.ToString());
+                lvi.SubItems.Add(f.Tag.Album);
+                lvi.SubItems.Add(f.Tag.Performers.Count() > 0 ? f.Tag.Performers?[0] : string.Empty);
+                lvi.Tag = f;
+                listView1.Items.Add(lvi);
             }
-            var lvi = new ListViewItem();
-            lvi.Text = f.Tag.Title;
-            lvi.SubItems.Add(f.Tag.Track.ToString());
-            lvi.SubItems.Add(f.Tag.Album);
-            lvi.SubItems.Add(f.Tag.Performers?[0]);
-            lvi.Tag = f;
-            listView1.Items.Add(lvi);
+            catch (TagLib.UnsupportedFormatException)
+            {
+                // not needed
+            }
         }
 
         public void PlayAndSet()
@@ -329,6 +337,17 @@ namespace Sounds
         private void listView1_ItemActivate(object sender, EventArgs e)
         {
             PlayAndSet();
+        }
+
+        private void addDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog(this) == DialogResult.OK)
+            {
+                foreach (var f in Directory.EnumerateFiles(folderBrowserDialog1.SelectedPath))
+                {
+                    AddFile(f);
+                }
+            }
         }
     }
 }

@@ -66,6 +66,8 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trackNoHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.albumArtBox)).BeginInit();
@@ -323,6 +325,7 @@
             // 
             this.listToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addFilesToolStripMenuItem,
+            this.addDirectoryToolStripMenuItem,
             this.removeSelectedToolStripMenuItem,
             this.toolStripSeparator2,
             this.propertiesToolStripMenuItem});
@@ -361,6 +364,18 @@
             // trackNoHeader
             // 
             this.trackNoHeader.Text = "Track #";
+            // 
+            // folderBrowserDialog1
+            // 
+            this.folderBrowserDialog1.Description = "Pick a folder full of music to add.";
+            this.folderBrowserDialog1.ShowNewFolderButton = false;
+            // 
+            // addDirectoryToolStripMenuItem
+            // 
+            this.addDirectoryToolStripMenuItem.Name = "addDirectoryToolStripMenuItem";
+            this.addDirectoryToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.addDirectoryToolStripMenuItem.Text = "Add &Directory...";
+            this.addDirectoryToolStripMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -426,6 +441,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader trackNoHeader;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.ToolStripMenuItem addDirectoryToolStripMenuItem;
     }
 }
 
