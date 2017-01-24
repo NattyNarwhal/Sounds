@@ -25,6 +25,7 @@ namespace Sounds
         public MainForm()
         {
             InitializeComponent();
+            UpdateMenus();
             mp.MediaEnded += (o, e) =>
             {
                 if (playing)
@@ -98,6 +99,7 @@ namespace Sounds
             mp.Pause();
         }
 
+        // Metadata and such
         public void UpdateUI()
         {
             if (activeFile != null)
@@ -142,6 +144,14 @@ namespace Sounds
             {
                 lvi.Font = listView1.Font;
             }
+        }
+
+        public void UpdateMenus()
+        {
+            var selected = listView1.SelectedItems.Count > 0;
+            removeSelectedToolStripMenuItem.Enabled = selected;
+            propertiesToolStripMenuItem.Enabled = selected;
+            playToolStripMenuItem.Enabled = !playing && selected;
         }
 
         public void Stop()
@@ -300,6 +310,16 @@ namespace Sounds
         {
             if (listView1.SelectedItems.Count > 0)
                 new PropertiesForm((TagLib.File)listView1.SelectedItems[0].Tag).Show(this);
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateMenus();
+        }
+
+        private void listView1_ItemActivate(object sender, EventArgs e)
+        {
+            PlayAndSet();
         }
     }
 }
