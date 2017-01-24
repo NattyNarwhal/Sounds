@@ -70,6 +70,8 @@
             this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.repeatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shuffleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.albumArtBox)).BeginInit();
@@ -332,6 +334,8 @@
             this.addDirectoryToolStripMenuItem,
             this.removeSelectedToolStripMenuItem,
             this.toolStripSeparator2,
+            this.shuffleToolStripMenuItem,
+            this.toolStripSeparator3,
             this.propertiesToolStripMenuItem});
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
             this.listToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -393,6 +397,18 @@
             this.repeatToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.repeatToolStripMenuItem.Text = "&Repeat";
             this.repeatToolStripMenuItem.Click += new System.EventHandler(this.repeatToolStripMenuItem_Click);
+            // 
+            // shuffleToolStripMenuItem
+            // 
+            this.shuffleToolStripMenuItem.Name = "shuffleToolStripMenuItem";
+            this.shuffleToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.shuffleToolStripMenuItem.Text = "&Shuffle";
+            this.shuffleToolStripMenuItem.Click += new System.EventHandler(this.shuffleToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(185, 6);
             // 
             // MainForm
             // 
@@ -462,6 +478,8 @@
         private System.Windows.Forms.ToolStripMenuItem addDirectoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem repeatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shuffleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 

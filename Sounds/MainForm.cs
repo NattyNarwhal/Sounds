@@ -216,6 +216,18 @@ namespace Sounds
             }
         }
 
+        public void Shuffle()
+        {
+            var r = new Random();
+            for (int n = listView1.Items.Count - 1; n > 0; --n)
+            {
+                int k = r.Next(n + 1);
+                var temp = (ListViewItem)listView1.Items[n].Clone();
+                listView1.Items[n] = (ListViewItem)listView1.Items[k].Clone();
+                listView1.Items[k] = temp;
+            }
+        }
+
         public void NewPlaylist()
         {
             Stop();
@@ -375,6 +387,11 @@ namespace Sounds
         private void repeatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             repeat = repeatToolStripMenuItem.Checked;
+        }
+
+        private void shuffleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Shuffle();
         }
     }
 }
