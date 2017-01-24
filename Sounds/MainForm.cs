@@ -24,6 +24,25 @@ namespace Sounds
 
         string playlistFile = null;
 
+        bool Paused
+        {
+            get
+            {
+                // HACK HACK
+                try
+                {
+                    var mps = mp.GetType().GetFields(System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).Where(x => x.Name == "_mediaPlayerState").First().GetValue(mp);
+                    var paused = (bool)mps.GetType().GetFields(System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).Where(x => x.Name == "_paused").First().GetValue(mps);
+                    return paused;
+                }
+                catch (Exception)
+                {
+                    // god knows what could have gone wrong
+                    return false;
+                }
+            }
+        }
+
         public MainForm()
         {
             InitializeComponent();
