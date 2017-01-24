@@ -412,5 +412,40 @@ namespace Sounds
         {
             Shuffle();
         }
+
+        private void listView1_ItemDrag(object sender, ItemDragEventArgs e)
+        {
+            DoDragDrop(e.Item, DragDropEffects.Move);
+        }
+
+        private void listView1_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.AllowedEffect == DragDropEffects.Move)
+            {
+                e.Effect = DragDropEffects.Move;
+            }
+        }
+
+        private void listView1_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Effect == DragDropEffects.Move)
+            {
+                var cp = listView1.PointToClient(new Point(e.X, e.Y));
+                ListViewItem dragToItem = listView1.GetItemAt(cp.X, cp.Y);
+                if (!listView1.SelectedItems.Contains(dragToItem))
+                {
+                    var selectedItems = listView1.SelectedItems.Cast<ListViewItem>().ToList();
+
+                    var dropIndex = dragToItem?.Index ?? listView1.Items.Count;
+
+                    foreach (var i in selectedItems)
+                        listView1.Items.Insert(dropIndex++, (ListViewItem)i.Clone());
+
+                    foreach (var i in selectedItems)
+                        i.Remove();
+                }
+
+            }
+        }
     }
 }
