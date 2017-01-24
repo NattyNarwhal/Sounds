@@ -57,6 +57,7 @@ namespace Sounds
             }
             var lvi = new ListViewItem();
             lvi.Text = f.Tag.Title;
+            lvi.SubItems.Add(f.Tag.Track.ToString());
             lvi.SubItems.Add(f.Tag.Album);
             lvi.SubItems.Add(f.Tag.Performers?[0]);
             lvi.Tag = f;
