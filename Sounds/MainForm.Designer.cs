@@ -340,8 +340,8 @@
             // 
             this.skipAheadToolStripMenuItem.Name = "skipAheadToolStripMenuItem";
             this.skipAheadToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.Left)));
-            this.skipAheadToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            | System.Windows.Forms.Keys.Right)));
+            this.skipAheadToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.skipAheadToolStripMenuItem.Text = "S&kip Ahead";
             this.skipAheadToolStripMenuItem.Click += new System.EventHandler(this.skipAheadToolStripMenuItem_Click);
             // 
@@ -349,8 +349,8 @@
             // 
             this.rewindToolStripMenuItem.Name = "rewindToolStripMenuItem";
             this.rewindToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.Right)));
-            this.rewindToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            | System.Windows.Forms.Keys.Left)));
+            this.rewindToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.rewindToolStripMenuItem.Text = "Re&wind";
             this.rewindToolStripMenuItem.Click += new System.EventHandler(this.rewindToolStripMenuItem_Click);
             // 
