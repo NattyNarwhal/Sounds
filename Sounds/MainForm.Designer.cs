@@ -82,16 +82,32 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.positionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.errorMessageLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.volumeButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.openPlaylistDialog = new System.Windows.Forms.OpenFileDialog();
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.playToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.pauseToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.volumeButton = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.previousToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.nextToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.addSongToolStripButton = new System.Windows.Forms.ToolStripSplitButton();
+            this.addDirectoryToolStripButtonMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.playlistContextMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.positionTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.albumArtBox)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // addFilesDialog
@@ -100,6 +116,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.listToolStripMenuItem,
@@ -385,9 +402,9 @@
             this.artistHeader});
             this.listView1.ContextMenuStrip = this.playlistContextMenu;
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(0, 130);
+            this.listView1.Location = new System.Drawing.Point(0, 106);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(284, 109);
+            this.listView1.Size = new System.Drawing.Size(284, 84);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -428,20 +445,20 @@
             // 
             this.playContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Play;
             this.playContextToolStripMenuItem.Name = "playContextToolStripMenuItem";
-            this.playContextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.playContextToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.playContextToolStripMenuItem.Text = "&Play";
             this.playContextToolStripMenuItem.Click += new System.EventHandler(this.playContextToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(133, 6);
             // 
             // propertiesContextToolStripMenuItem
             // 
             this.propertiesContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Properties;
             this.propertiesContextToolStripMenuItem.Name = "propertiesContextToolStripMenuItem";
-            this.propertiesContextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.propertiesContextToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.propertiesContextToolStripMenuItem.Text = "P&roperties...";
             this.propertiesContextToolStripMenuItem.Click += new System.EventHandler(this.propertiesContextToolStripMenuItem_Click);
             // 
@@ -461,7 +478,7 @@
             this.panel1.Controls.Add(this.positionTrackBar);
             this.panel1.Controls.Add(this.albumArtBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 106);
             this.panel1.TabIndex = 2;
@@ -519,12 +536,12 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.positionLabel,
-            this.errorMessageLabel,
-            this.volumeButton});
+            this.errorMessageLabel});
             this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.statusStrip1.Location = new System.Drawing.Point(0, 239);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(284, 22);
             this.statusStrip1.TabIndex = 3;
@@ -539,15 +556,6 @@
             // 
             this.errorMessageLabel.Name = "errorMessageLabel";
             this.errorMessageLabel.Size = new System.Drawing.Size(0, 17);
-            // 
-            // volumeButton
-            // 
-            this.volumeButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.volumeButton.Image = global::Sounds.Properties.Resources.Volume;
-            this.volumeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.volumeButton.Name = "volumeButton";
-            this.volumeButton.Size = new System.Drawing.Size(76, 20);
-            this.volumeButton.Text = "Volume";
             // 
             // openPlaylistDialog
             // 
@@ -564,15 +572,136 @@
             this.folderBrowserDialog1.Description = "Pick a folder full of music to add.";
             this.folderBrowserDialog1.ShowNewFolderButton = false;
             // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.BottomToolStripPanel
+            // 
+            this.toolStripContainer1.BottomToolStripPanel.Controls.Add(this.statusStrip1);
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.AutoScroll = true;
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.listView1);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(284, 190);
+            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(284, 261);
+            this.toolStripContainer1.TabIndex = 4;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            // 
+            // toolStripContainer1.TopToolStripPanel
+            // 
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.playToolStripButton,
+            this.pauseToolStripButton,
+            this.toolStripSeparator6,
+            this.previousToolStripButton,
+            this.nextToolStripButton,
+            this.toolStripSeparator7,
+            this.volumeButton,
+            this.toolStripSeparator8,
+            this.addSongToolStripButton});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(281, 25);
+            this.toolStrip1.TabIndex = 1;
+            // 
+            // playToolStripButton
+            // 
+            this.playToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.playToolStripButton.Image = global::Sounds.Properties.Resources.Play;
+            this.playToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.playToolStripButton.Name = "playToolStripButton";
+            this.playToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.playToolStripButton.Text = "Play";
+            this.playToolStripButton.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
+            // 
+            // pauseToolStripButton
+            // 
+            this.pauseToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pauseToolStripButton.Image = global::Sounds.Properties.Resources.Pause;
+            this.pauseToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.pauseToolStripButton.Name = "pauseToolStripButton";
+            this.pauseToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.pauseToolStripButton.Text = "Pause";
+            this.pauseToolStripButton.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
+            // 
+            // volumeButton
+            // 
+            this.volumeButton.Image = global::Sounds.Properties.Resources.Volume;
+            this.volumeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.volumeButton.Name = "volumeButton";
+            this.volumeButton.Size = new System.Drawing.Size(58, 22);
+            this.volumeButton.Text = "50%";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // previousToolStripButton
+            // 
+            this.previousToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.previousToolStripButton.Image = global::Sounds.Properties.Resources.Previous;
+            this.previousToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.previousToolStripButton.Name = "previousToolStripButton";
+            this.previousToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.previousToolStripButton.Text = "Previous";
+            this.previousToolStripButton.Click += new System.EventHandler(this.previousToolStripMenuItem_Click);
+            // 
+            // nextToolStripButton
+            // 
+            this.nextToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.nextToolStripButton.Image = global::Sounds.Properties.Resources.Next;
+            this.nextToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.nextToolStripButton.Name = "nextToolStripButton";
+            this.nextToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.nextToolStripButton.Text = "Next";
+            this.nextToolStripButton.Click += new System.EventHandler(this.nextToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            // 
+            // addSongToolStripButton
+            // 
+            this.addSongToolStripButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addDirectoryToolStripButtonMenuItem});
+            this.addSongToolStripButton.Image = global::Sounds.Properties.Resources.AddSong;
+            this.addSongToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.addSongToolStripButton.Name = "addSongToolStripButton";
+            this.addSongToolStripButton.Size = new System.Drawing.Size(100, 20);
+            this.addSongToolStripButton.Text = "Add Song...";
+            this.addSongToolStripButton.ButtonClick += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
+            // 
+            // addDirectoryToolStripButtonMenuItem
+            // 
+            this.addDirectoryToolStripButtonMenuItem.Name = "addDirectoryToolStripButtonMenuItem";
+            this.addDirectoryToolStripButtonMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.addDirectoryToolStripButtonMenuItem.Text = "Add &Directory...";
+            this.addDirectoryToolStripButtonMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.toolStripContainer1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Sounds";
@@ -585,8 +714,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.albumArtBox)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.toolStripContainer1.BottomToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.BottomToolStripPanel.PerformLayout();
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -636,7 +773,6 @@
         private System.Windows.Forms.ToolStripMenuItem shuffleToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripStatusLabel errorMessageLabel;
-        private System.Windows.Forms.ToolStripDropDownButton volumeButton;
         private System.Windows.Forms.ToolStripMenuItem volumeUpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem volumeDownToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem muteToolStripMenuItem;
@@ -649,6 +785,18 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem propertiesContextToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeContextToolStripMenuItem;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton playToolStripButton;
+        private System.Windows.Forms.ToolStripButton pauseToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton previousToolStripButton;
+        private System.Windows.Forms.ToolStripButton nextToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripDropDownButton volumeButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripSplitButton addSongToolStripButton;
+        private System.Windows.Forms.ToolStripMenuItem addDirectoryToolStripButtonMenuItem;
     }
 }
 

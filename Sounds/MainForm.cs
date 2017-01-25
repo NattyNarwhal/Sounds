@@ -286,6 +286,13 @@ namespace Sounds
             rewindToolStripMenuItem.Enabled = playing;
             skipAheadToolStripMenuItem.Enabled = playing;
 
+            playToolStripButton.Enabled = canPlay;
+            playToolStripButton.Checked = playing && !Paused;
+            pauseToolStripButton.Enabled = canPause;
+            pauseToolStripButton.Checked = playing && Paused;
+            previousToolStripButton.Enabled = playing;
+            nextToolStripButton.Enabled = playing;
+
             volumeUpToolStripMenuItem.Enabled = Volume + 0.1 <= 1;
             volumeDownToolStripMenuItem.Enabled = Volume - 0.1 >= 0;
             muteToolStripMenuItem.Enabled = Volume > 0;
