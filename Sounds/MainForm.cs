@@ -60,6 +60,7 @@ namespace Sounds
                 simplePercent.NumberFormat.PercentDecimalDigits = 0;
                 simplePercent.NumberFormat.PercentPositivePattern = 1;
                 volumeButton.Text = string.Format(simplePercent, "{0:P}", mp.Volume);
+                volumeStatusButton.Text = string.Format(simplePercent, "{0:P}", mp.Volume);
                 UpdateMenus();
             }
         }
@@ -80,6 +81,7 @@ namespace Sounds
             dd.RenderMode = ToolStripRenderMode.System;
             dd.Items.Add(tb);
             volumeButton.DropDown = dd;
+            volumeStatusButton.DropDown = dd;
 
             // do initial init of menubar and such
             UpdateMenus();
@@ -636,7 +638,16 @@ namespace Sounds
 
         private void showToolbarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip1.Visible = showToolbarToolStripMenuItem.Checked;
+            var check = showToolbarToolStripMenuItem.Checked;
+            toolStrip1.Visible = check;
+
+            volumeStatusButton.Enabled = !check;
+            volumeStatusButton.Visible = !check;
+        }
+
+        private void showStatusbarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            statusStrip1.Visible = showStatusbarToolStripMenuItem.Checked;
         }
     }
 }

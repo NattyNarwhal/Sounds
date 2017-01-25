@@ -99,6 +99,8 @@
             this.addDirectoryToolStripButtonMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showToolbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.volumeStatusButton = new System.Windows.Forms.ToolStripDropDownButton();
+            this.showStatusbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.playlistContextMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -542,7 +544,8 @@
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.positionLabel,
-            this.errorMessageLabel});
+            this.errorMessageLabel,
+            this.volumeStatusButton});
             this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
@@ -703,7 +706,8 @@
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showToolbarToolStripMenuItem});
+            this.showToolbarToolStripMenuItem,
+            this.showStatusbarToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "&View";
@@ -717,6 +721,27 @@
             this.showToolbarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.showToolbarToolStripMenuItem.Text = "Show &Toolbar";
             this.showToolbarToolStripMenuItem.Click += new System.EventHandler(this.showToolbarToolStripMenuItem_Click);
+            // 
+            // volumeStatusButton
+            // 
+            this.volumeStatusButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.volumeStatusButton.Enabled = false;
+            this.volumeStatusButton.Image = global::Sounds.Properties.Resources.Volume;
+            this.volumeStatusButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.volumeStatusButton.Name = "volumeStatusButton";
+            this.volumeStatusButton.Size = new System.Drawing.Size(58, 20);
+            this.volumeStatusButton.Text = "50%";
+            this.volumeStatusButton.Visible = false;
+            // 
+            // showStatusbarToolStripMenuItem
+            // 
+            this.showStatusbarToolStripMenuItem.Checked = true;
+            this.showStatusbarToolStripMenuItem.CheckOnClick = true;
+            this.showStatusbarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.showStatusbarToolStripMenuItem.Name = "showStatusbarToolStripMenuItem";
+            this.showStatusbarToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.showStatusbarToolStripMenuItem.Text = "Show &Status Bar";
+            this.showStatusbarToolStripMenuItem.Click += new System.EventHandler(this.showStatusbarToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -821,6 +846,8 @@
         private System.Windows.Forms.ToolStripMenuItem addDirectoryToolStripButtonMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showToolbarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton volumeStatusButton;
+        private System.Windows.Forms.ToolStripMenuItem showStatusbarToolStripMenuItem;
     }
 }
 
