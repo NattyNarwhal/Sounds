@@ -57,9 +57,9 @@
             this.titleBox = new System.Windows.Forms.TextBox();
             this.titleLabel = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.albumArtSelector = new System.Windows.Forms.ComboBox();
-            this.albumArtBox = new System.Windows.Forms.PictureBox();
             this.albumArtInfo = new System.Windows.Forms.Label();
+            this.albumArtBox = new System.Windows.Forms.PictureBox();
+            this.albumArtSelector = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.intrinisicsTab.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -236,8 +236,10 @@
             // genresBox
             // 
             this.genresBox.FormattingEnabled = true;
+            this.genresBox.HorizontalScrollbar = true;
             this.genresBox.Location = new System.Drawing.Point(80, 208);
             this.genresBox.Name = "genresBox";
+            this.genresBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.genresBox.Size = new System.Drawing.Size(166, 43);
             this.genresBox.TabIndex = 19;
             // 
@@ -253,8 +255,10 @@
             // composersBox
             // 
             this.composersBox.FormattingEnabled = true;
+            this.composersBox.HorizontalScrollbar = true;
             this.composersBox.Location = new System.Drawing.Point(80, 159);
             this.composersBox.Name = "composersBox";
+            this.composersBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.composersBox.Size = new System.Drawing.Size(166, 43);
             this.composersBox.TabIndex = 17;
             // 
@@ -270,8 +274,10 @@
             // artistsBox
             // 
             this.artistsBox.FormattingEnabled = true;
+            this.artistsBox.HorizontalScrollbar = true;
             this.artistsBox.Location = new System.Drawing.Point(80, 110);
             this.artistsBox.Name = "artistsBox";
+            this.artistsBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.artistsBox.Size = new System.Drawing.Size(166, 43);
             this.artistsBox.TabIndex = 15;
             // 
@@ -373,16 +379,14 @@
             this.tabPage1.Text = "Pictures";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // albumArtSelector
+            // albumArtInfo
             // 
-            this.albumArtSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.albumArtSelector.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.albumArtSelector.FormattingEnabled = true;
-            this.albumArtSelector.Location = new System.Drawing.Point(6, 6);
-            this.albumArtSelector.Name = "albumArtSelector";
-            this.albumArtSelector.Size = new System.Drawing.Size(240, 21);
-            this.albumArtSelector.TabIndex = 0;
-            this.albumArtSelector.SelectedIndexChanged += new System.EventHandler(this.albumArtSelector_SelectedIndexChanged);
+            this.albumArtInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.albumArtInfo.Location = new System.Drawing.Point(6, 256);
+            this.albumArtInfo.Name = "albumArtInfo";
+            this.albumArtInfo.Size = new System.Drawing.Size(240, 21);
+            this.albumArtInfo.TabIndex = 2;
             // 
             // albumArtBox
             // 
@@ -396,14 +400,16 @@
             this.albumArtBox.TabIndex = 1;
             this.albumArtBox.TabStop = false;
             // 
-            // albumArtInfo
+            // albumArtSelector
             // 
-            this.albumArtInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.albumArtInfo.Location = new System.Drawing.Point(6, 256);
-            this.albumArtInfo.Name = "albumArtInfo";
-            this.albumArtInfo.Size = new System.Drawing.Size(240, 21);
-            this.albumArtInfo.TabIndex = 2;
+            this.albumArtSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.albumArtSelector.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.albumArtSelector.FormattingEnabled = true;
+            this.albumArtSelector.Location = new System.Drawing.Point(6, 6);
+            this.albumArtSelector.Name = "albumArtSelector";
+            this.albumArtSelector.Size = new System.Drawing.Size(240, 21);
+            this.albumArtSelector.TabIndex = 0;
+            this.albumArtSelector.SelectedIndexChanged += new System.EventHandler(this.albumArtSelector_SelectedIndexChanged);
             // 
             // PropertiesForm
             // 
