@@ -101,6 +101,7 @@
             this.showToolbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.volumeStatusButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.showStatusbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showInfoPaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.playlistContextMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -707,7 +708,8 @@
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showToolbarToolStripMenuItem,
-            this.showStatusbarToolStripMenuItem});
+            this.showStatusbarToolStripMenuItem,
+            this.showInfoPaneToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "&View";
@@ -742,6 +744,16 @@
             this.showStatusbarToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.showStatusbarToolStripMenuItem.Text = "Show &Status Bar";
             this.showStatusbarToolStripMenuItem.Click += new System.EventHandler(this.showStatusbarToolStripMenuItem_Click);
+            // 
+            // showInfoPaneToolStripMenuItem
+            // 
+            this.showInfoPaneToolStripMenuItem.Checked = true;
+            this.showInfoPaneToolStripMenuItem.CheckOnClick = true;
+            this.showInfoPaneToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.showInfoPaneToolStripMenuItem.Name = "showInfoPaneToolStripMenuItem";
+            this.showInfoPaneToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.showInfoPaneToolStripMenuItem.Text = "Show &Info Pane";
+            this.showInfoPaneToolStripMenuItem.Click += new System.EventHandler(this.showInfoPaneToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -848,6 +860,7 @@
         private System.Windows.Forms.ToolStripMenuItem showToolbarToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton volumeStatusButton;
         private System.Windows.Forms.ToolStripMenuItem showStatusbarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showInfoPaneToolStripMenuItem;
     }
 }
 

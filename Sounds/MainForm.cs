@@ -663,5 +663,10 @@ namespace Sounds
         {
             statusStrip1.Visible = showStatusbarToolStripMenuItem.Checked;
         }
+
+        private void showInfoPaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = showInfoPaneToolStripMenuItem.Checked;
+        }
     }
 }
