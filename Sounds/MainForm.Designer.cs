@@ -410,7 +410,7 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(0, 106);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(417, 267);
+            this.listView1.Size = new System.Drawing.Size(417, 243);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -445,15 +445,15 @@
             this.propertiesContextToolStripMenuItem,
             this.removeContextToolStripMenuItem});
             this.playlistContextMenu.Name = "playlistContextMenu";
-            this.playlistContextMenu.Size = new System.Drawing.Size(137, 76);
+            this.playlistContextMenu.Size = new System.Drawing.Size(153, 98);
             // 
             // playContextToolStripMenuItem
             // 
             this.playContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Play;
             this.playContextToolStripMenuItem.Name = "playContextToolStripMenuItem";
-            this.playContextToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.playContextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.playContextToolStripMenuItem.Text = "&Play";
-            this.playContextToolStripMenuItem.Click += new System.EventHandler(this.playContextToolStripMenuItem_Click);
+            this.playContextToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
@@ -464,17 +464,17 @@
             // 
             this.propertiesContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Properties;
             this.propertiesContextToolStripMenuItem.Name = "propertiesContextToolStripMenuItem";
-            this.propertiesContextToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.propertiesContextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.propertiesContextToolStripMenuItem.Text = "P&roperties...";
-            this.propertiesContextToolStripMenuItem.Click += new System.EventHandler(this.propertiesContextToolStripMenuItem_Click);
+            this.propertiesContextToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
             // removeContextToolStripMenuItem
             // 
             this.removeContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Delete;
             this.removeContextToolStripMenuItem.Name = "removeContextToolStripMenuItem";
-            this.removeContextToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.removeContextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.removeContextToolStripMenuItem.Text = "Remo&ve";
-            this.removeContextToolStripMenuItem.Click += new System.EventHandler(this.removeContextToolStripMenuItem_Click);
+            this.removeContextToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -535,6 +535,7 @@
             this.albumArtBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.albumArtBox.TabIndex = 0;
             this.albumArtBox.TabStop = false;
+            this.albumArtBox.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
             // trackBarSyncTimer
             // 
@@ -591,7 +592,7 @@
             this.toolStripContainer1.ContentPanel.AutoScroll = true;
             this.toolStripContainer1.ContentPanel.Controls.Add(this.listView1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(417, 373);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(417, 349);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -618,9 +619,9 @@
             this.volumeButton,
             this.toolStripSeparator8,
             this.addSongToolStripButton});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(3, 48);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(298, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(267, 25);
             this.toolStrip1.TabIndex = 1;
             // 
             // playToolStripButton

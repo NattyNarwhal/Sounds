@@ -635,21 +635,6 @@ namespace Sounds
             mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, 15));
         }
 
-        private void playContextToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PlayAndSet(true);
-        }
-
-        private void propertiesContextToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ShowPropertiesDialog();
-        }
-
-        private void removeContextToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DeleteSelected();
-        }
-
         private void showToolbarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var check = showToolbarToolStripMenuItem.Checked;
