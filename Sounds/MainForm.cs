@@ -627,12 +627,12 @@ namespace Sounds
 
         private void skipAheadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, 15));
+            mp.Position = mp.Position.Add(new TimeSpan(0, 0, 15));
         }
 
         private void rewindToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp.Position = mp.Position.Add(new TimeSpan(0, 0, 15));
+            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, 15));
         }
 
         private void playContextToolStripMenuItem_Click(object sender, EventArgs e)
