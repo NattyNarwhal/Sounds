@@ -152,6 +152,15 @@ namespace Sounds
             UpdateMenus();
         }
 
+        public void PlayPauseToggle()
+        {
+            if (!playing || Paused)
+                PlayAndSet(false);
+            else if (playing)
+                Pause();
+            UpdateMenus();
+        }
+
         // Metadata and such
         public void UpdateUI()
         {
