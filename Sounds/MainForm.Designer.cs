@@ -79,6 +79,8 @@
             this.openPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.savePlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skipAheadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rewindToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.positionTrackBar)).BeginInit();
@@ -199,6 +201,8 @@
             this.toolStripMenuItem1,
             this.previousToolStripMenuItem,
             this.nextToolStripMenuItem,
+            this.skipAheadToolStripMenuItem,
+            this.rewindToolStripMenuItem,
             this.toolStripMenuItem2,
             this.volumeUpToolStripMenuItem,
             this.volumeDownToolStripMenuItem,
@@ -213,6 +217,7 @@
             // 
             this.playToolStripMenuItem.Image = global::Sounds.Properties.Resources.Play;
             this.playToolStripMenuItem.Name = "playToolStripMenuItem";
+            this.playToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.playToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.playToolStripMenuItem.Text = "&Play";
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
@@ -229,6 +234,8 @@
             // 
             this.stopToolStripMenuItem.Image = global::Sounds.Properties.Resources.Stop;
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
+            this.stopToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Space)));
             this.stopToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.stopToolStripMenuItem.Text = "&Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
@@ -493,6 +500,24 @@
             this.addFilesToolStripMenuItem.Text = "Add &Files...";
             this.addFilesToolStripMenuItem.Click += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
             // 
+            // skipAheadToolStripMenuItem
+            // 
+            this.skipAheadToolStripMenuItem.Name = "skipAheadToolStripMenuItem";
+            this.skipAheadToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Left)));
+            this.skipAheadToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.skipAheadToolStripMenuItem.Text = "S&kip Ahead";
+            this.skipAheadToolStripMenuItem.Click += new System.EventHandler(this.skipAheadToolStripMenuItem_Click);
+            // 
+            // rewindToolStripMenuItem
+            // 
+            this.rewindToolStripMenuItem.Name = "rewindToolStripMenuItem";
+            this.rewindToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Right)));
+            this.rewindToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.rewindToolStripMenuItem.Text = "Re&wind";
+            this.rewindToolStripMenuItem.Click += new System.EventHandler(this.rewindToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -570,6 +595,8 @@
         private System.Windows.Forms.ToolStripMenuItem muteToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem togglePlaybackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skipAheadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rewindToolStripMenuItem;
     }
 }
 

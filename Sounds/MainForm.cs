@@ -259,9 +259,14 @@ namespace Sounds
 
             var canPlay = playing ? Paused : any;
             var canPause = playing ? !Paused : false;
+            const string toggleDesc = "Ctrl+Space";
 
             playToolStripMenuItem.Enabled = canPlay;
+            playToolStripMenuItem.ShortcutKeyDisplayString =
+                canPlay ? toggleDesc : string.Empty;
             pauseToolStripMenuItem.Enabled = canPause;
+            pauseToolStripMenuItem.ShortcutKeyDisplayString =
+                canPause ? toggleDesc : string.Empty;
             stopToolStripMenuItem.Enabled = playing;
             playToolStripMenuItem.Checked = playing && !Paused;
             pauseToolStripMenuItem.Checked = playing && Paused;
@@ -269,6 +274,8 @@ namespace Sounds
 
             previousToolStripMenuItem.Enabled = playing;
             nextToolStripMenuItem.Enabled = playing;
+            rewindToolStripMenuItem.Enabled = playing;
+            skipAheadToolStripMenuItem.Enabled = playing;
 
             volumeUpToolStripMenuItem.Enabled = Volume + 0.1 <= 1;
             volumeDownToolStripMenuItem.Enabled = Volume - 0.1 >= 0;
@@ -579,6 +586,16 @@ namespace Sounds
         private void togglePlaybackToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PlayPauseToggle();
+        }
+
+        private void skipAheadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, 15));
+        }
+
+        private void rewindToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            mp.Position = mp.Position.Add(new TimeSpan(0, 0, 15));
         }
     }
 }
