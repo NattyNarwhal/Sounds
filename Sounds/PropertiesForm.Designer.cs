@@ -42,6 +42,8 @@
             this.fileNameBox = new System.Windows.Forms.TextBox();
             this.fileNameLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.yearBox = new System.Windows.Forms.TextBox();
+            this.yearLabel = new System.Windows.Forms.Label();
             this.genresBox = new System.Windows.Forms.ListBox();
             this.genreLabel = new System.Windows.Forms.Label();
             this.composersBox = new System.Windows.Forms.ListBox();
@@ -58,10 +60,8 @@
             this.titleLabel = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.albumArtInfo = new System.Windows.Forms.Label();
-            this.albumArtBox = new System.Windows.Forms.PictureBox();
             this.albumArtSelector = new System.Windows.Forms.ComboBox();
-            this.yearBox = new System.Windows.Forms.TextBox();
-            this.yearLabel = new System.Windows.Forms.Label();
+            this.albumArtBox = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.intrinisicsTab.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -237,6 +237,25 @@
             this.tabPage2.Text = "Metadata";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // yearBox
+            // 
+            this.yearBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.yearBox.Location = new System.Drawing.Point(80, 257);
+            this.yearBox.Name = "yearBox";
+            this.yearBox.ReadOnly = true;
+            this.yearBox.Size = new System.Drawing.Size(166, 20);
+            this.yearBox.TabIndex = 21;
+            // 
+            // yearLabel
+            // 
+            this.yearLabel.AutoSize = true;
+            this.yearLabel.Location = new System.Drawing.Point(6, 260);
+            this.yearLabel.Name = "yearLabel";
+            this.yearLabel.Size = new System.Drawing.Size(29, 13);
+            this.yearLabel.TabIndex = 20;
+            this.yearLabel.Text = "&Year";
+            // 
             // genresBox
             // 
             this.genresBox.FormattingEnabled = true;
@@ -373,8 +392,8 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.albumArtInfo);
-            this.tabPage1.Controls.Add(this.albumArtBox);
             this.tabPage1.Controls.Add(this.albumArtSelector);
+            this.tabPage1.Controls.Add(this.albumArtBox);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -392,18 +411,6 @@
             this.albumArtInfo.Size = new System.Drawing.Size(240, 21);
             this.albumArtInfo.TabIndex = 2;
             // 
-            // albumArtBox
-            // 
-            this.albumArtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.albumArtBox.Location = new System.Drawing.Point(6, 33);
-            this.albumArtBox.Name = "albumArtBox";
-            this.albumArtBox.Size = new System.Drawing.Size(240, 220);
-            this.albumArtBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.albumArtBox.TabIndex = 1;
-            this.albumArtBox.TabStop = false;
-            // 
             // albumArtSelector
             // 
             this.albumArtSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -415,24 +422,17 @@
             this.albumArtSelector.TabIndex = 0;
             this.albumArtSelector.SelectedIndexChanged += new System.EventHandler(this.albumArtSelector_SelectedIndexChanged);
             // 
-            // yearBox
+            // albumArtBox
             // 
-            this.yearBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.albumArtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.yearBox.Location = new System.Drawing.Point(80, 257);
-            this.yearBox.Name = "yearBox";
-            this.yearBox.ReadOnly = true;
-            this.yearBox.Size = new System.Drawing.Size(166, 20);
-            this.yearBox.TabIndex = 21;
-            // 
-            // yearLabel
-            // 
-            this.yearLabel.AutoSize = true;
-            this.yearLabel.Location = new System.Drawing.Point(6, 260);
-            this.yearLabel.Name = "yearLabel";
-            this.yearLabel.Size = new System.Drawing.Size(29, 13);
-            this.yearLabel.TabIndex = 20;
-            this.yearLabel.Text = "&Year";
+            this.albumArtBox.Location = new System.Drawing.Point(6, 33);
+            this.albumArtBox.Name = "albumArtBox";
+            this.albumArtBox.Size = new System.Drawing.Size(240, 220);
+            this.albumArtBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.albumArtBox.TabIndex = 1;
+            this.albumArtBox.TabStop = false;
             // 
             // PropertiesForm
             // 
@@ -448,6 +448,7 @@
             this.Name = "PropertiesForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Properties";
             this.tabControl1.ResumeLayout(false);
             this.intrinisicsTab.ResumeLayout(false);

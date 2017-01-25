@@ -186,7 +186,7 @@
             this.propertiesToolStripMenuItem.Image = global::Sounds.Properties.Resources.Properties;
             this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             this.propertiesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.propertiesToolStripMenuItem.Text = "&Properties...";
+            this.propertiesToolStripMenuItem.Text = "Song &Properties...";
             this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
             // playbackToolStripMenuItem

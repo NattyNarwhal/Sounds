@@ -254,7 +254,7 @@ namespace Sounds
             var any = listView1.Items.Count > 0;
 
             removeSelectedToolStripMenuItem.Enabled = selected;
-            propertiesToolStripMenuItem.Enabled = playing || any;
+            propertiesToolStripMenuItem.Enabled = playing || selected;
             shuffleToolStripMenuItem.Enabled = any;
 
             var canPlay = playing ? Paused : any;
