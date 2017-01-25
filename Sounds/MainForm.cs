@@ -94,18 +94,21 @@ namespace Sounds
             {
                 // not needed
             }
+            finally
+            {
+                UpdateMenus();
+            }
         }
 
-        public void PlayAndSet()
+        public void PlayAndSet(bool playSelected)
         {
-            if (playing)
+            if (!playSelected && Paused)
             {
                 mp.Play();
+                UpdateMenus();
             }
             else
             {
-                playing = true;
-
                 if (listView1.SelectedItems.Count > 0)
                 {
                     activeFile = (TagLib.File)listView1.SelectedItems[0].Tag;
@@ -116,6 +119,8 @@ namespace Sounds
                 }
                 else return;
 
+                playing = true;
+
                 PlayActive();
             }
         }
@@ -125,11 +130,13 @@ namespace Sounds
             mp.Open(new Uri(activeFile.Name));
             mp.Play();
             UpdateUI();
+            UpdateMenus();
         }
 
         public void Pause()
         {
             mp.Pause();
+            UpdateMenus();
         }
 
         // Metadata and such
@@ -182,9 +189,17 @@ namespace Sounds
         public void UpdateMenus()
         {
             var selected = listView1.SelectedItems.Count > 0;
+            var any = listView1.Items.Count > 0;
+
             removeSelectedToolStripMenuItem.Enabled = selected;
             propertiesToolStripMenuItem.Enabled = selected;
-            playToolStripMenuItem.Enabled = !playing && selected;
+            shuffleToolStripMenuItem.Enabled = any;
+
+            playToolStripMenuItem.Enabled = playing ? Paused : any;
+            pauseToolStripMenuItem.Enabled = playing ? !Paused : false;
+            stopToolStripMenuItem.Enabled = playing;
+            previousToolStripMenuItem.Enabled = playing;
+            nextToolStripMenuItem.Enabled = playing;
         }
 
         public void Stop()
@@ -196,6 +211,7 @@ namespace Sounds
             activeFile = null;
 
             UpdateUI();
+            UpdateMenus();
         }
 
         public void Previous()
@@ -283,7 +299,7 @@ namespace Sounds
 
         private void playToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PlayAndSet();
+            PlayAndSet(false);
         }
 
         private void pauseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -390,7 +406,7 @@ namespace Sounds
 
         private void listView1_ItemActivate(object sender, EventArgs e)
         {
-            PlayAndSet();
+            PlayAndSet(true);
         }
 
         private void addDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
