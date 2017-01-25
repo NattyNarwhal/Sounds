@@ -235,6 +235,7 @@ namespace Sounds
                 artistLabel.Text = string.Empty;
 
                 positionLabel.Text = string.Empty;
+                positionTrackBar.Enabled = false;
 
                 albumArtBox.Image = null;
             }
