@@ -75,6 +75,10 @@
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.volumeButton = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.volumeUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.volumeDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.muteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.positionTrackBar)).BeginInit();
@@ -225,6 +229,10 @@
             this.previousToolStripMenuItem,
             this.nextToolStripMenuItem,
             this.toolStripMenuItem2,
+            this.volumeUpToolStripMenuItem,
+            this.volumeDownToolStripMenuItem,
+            this.muteToolStripMenuItem,
+            this.toolStripSeparator4,
             this.repeatToolStripMenuItem});
             this.playbackToolStripMenuItem.Name = "playbackToolStripMenuItem";
             this.playbackToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
@@ -240,8 +248,8 @@
             // pauseToolStripMenuItem
             // 
             this.pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
-            this.pauseToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.pauseToolStripMenuItem.Text = "Pa&use";
+            this.pauseToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.pauseToolStripMenuItem.Text = "P&ause";
             this.pauseToolStripMenuItem.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
             // 
             // stopToolStripMenuItem
@@ -434,6 +442,35 @@
             this.volumeButton.Size = new System.Drawing.Size(76, 20);
             this.volumeButton.Text = "Volume";
             // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(210, 6);
+            // 
+            // volumeUpToolStripMenuItem
+            // 
+            this.volumeUpToolStripMenuItem.Name = "volumeUpToolStripMenuItem";
+            this.volumeUpToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Up)));
+            this.volumeUpToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.volumeUpToolStripMenuItem.Text = "Volume &Up";
+            this.volumeUpToolStripMenuItem.Click += new System.EventHandler(this.volumeUpToolStripMenuItem_Click);
+            // 
+            // volumeDownToolStripMenuItem
+            // 
+            this.volumeDownToolStripMenuItem.Name = "volumeDownToolStripMenuItem";
+            this.volumeDownToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Down)));
+            this.volumeDownToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.volumeDownToolStripMenuItem.Text = "Volume &Down";
+            this.volumeDownToolStripMenuItem.Click += new System.EventHandler(this.volumeDownToolStripMenuItem_Click);
+            // 
+            // muteToolStripMenuItem
+            // 
+            this.muteToolStripMenuItem.Name = "muteToolStripMenuItem";
+            this.muteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
+            this.muteToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.muteToolStripMenuItem.Text = "&Mute";
+            this.muteToolStripMenuItem.Click += new System.EventHandler(this.muteToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,6 +543,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripStatusLabel errorMessageLabel;
         private System.Windows.Forms.ToolStripDropDownButton volumeButton;
+        private System.Windows.Forms.ToolStripMenuItem volumeUpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem volumeDownToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem muteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }
 

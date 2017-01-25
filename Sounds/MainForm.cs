@@ -46,6 +46,23 @@ namespace Sounds
             }
         }
 
+        double Volume
+        {
+            get
+            {
+                return mp.Volume;
+            }
+            set
+            {
+                mp.Volume = value;
+                tb.Value = Convert.ToInt32(mp.Volume * 100);
+                var simplePercent = new CultureInfo(CultureInfo.InvariantCulture.Name);
+                simplePercent.NumberFormat.PercentDecimalDigits = 0;
+                simplePercent.NumberFormat.PercentPositivePattern = 1;
+                volumeButton.Text = string.Format(simplePercent, "{0:P}", mp.Volume);
+            }
+        }
+
         public MainForm()
         {
             InitializeComponent();
@@ -55,7 +72,7 @@ namespace Sounds
             tb.TickFrequency = 10;
             tb.Scroll += (o, e) =>
             {
-                ChangeVolume(tb.Value / 100d);
+                Volume = tb.Value / 100d;
             };
             // a new dropdown w/ a system rendering looks more like a panel
             var dd = new ToolStripDropDown();
@@ -93,7 +110,7 @@ namespace Sounds
             };
 
             // mp's value is, but not the UI bits; do this to update them
-            ChangeVolume(0.50);
+            Volume = 0.50;
         }
         
         public void AddFile(string fileName)
@@ -131,16 +148,6 @@ namespace Sounds
             {
                 AddFile(f);
             }
-        }
-
-        public void ChangeVolume(double amount)
-        {
-            mp.Volume = amount;
-            tb.Value = Convert.ToInt32(amount * 100);
-            var simplePercent = new CultureInfo(CultureInfo.InvariantCulture.Name);
-            simplePercent.NumberFormat.PercentDecimalDigits = 0;
-            simplePercent.NumberFormat.PercentPositivePattern = 1;
-            volumeButton.Text = string.Format(simplePercent, "{0:P}", mp.Volume);
         }
 
         public void PlayAndSet(bool playSelected)
@@ -546,6 +553,21 @@ namespace Sounds
                 }
 
             }
+        }
+
+        private void volumeUpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Volume += 0.1;
+        }
+
+        private void volumeDownToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Volume -= 0.1;
+        }
+
+        private void muteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Volume = 0;
         }
     }
 }
