@@ -100,6 +100,14 @@ namespace Sounds
             }
         }
 
+        public void AddDirectory(string name)
+        {
+            foreach (var f in Directory.EnumerateFiles(name))
+            {
+                AddFile(f);
+            }
+        }
+
         public void PlayAndSet(bool playSelected)
         {
             if (!playSelected && Paused)
@@ -417,10 +425,7 @@ namespace Sounds
         {
             if (folderBrowserDialog1.ShowDialog(this) == DialogResult.OK)
             {
-                foreach (var f in Directory.EnumerateFiles(folderBrowserDialog1.SelectedPath))
-                {
-                    AddFile(f);
-                }
+                AddDirectory(folderBrowserDialog1.SelectedPath);
             }
         }
 
@@ -441,7 +446,11 @@ namespace Sounds
 
         private void listView1_DragEnter(object sender, DragEventArgs e)
         {
-            if (e.AllowedEffect == DragDropEffects.Move)
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+            else if (e.AllowedEffect == DragDropEffects.Move)
             {
                 e.Effect = DragDropEffects.Move;
             }
@@ -449,7 +458,25 @@ namespace Sounds
 
         private void listView1_DragDrop(object sender, DragEventArgs e)
         {
-            if (e.Effect == DragDropEffects.Move)
+            if (e.Effect == DragDropEffects.Copy)
+            {
+                if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                {
+                    var data = (string[])e.Data.GetData(DataFormats.FileDrop);
+                    foreach (var f in data)
+                    {
+                        if (Directory.Exists(f))
+                        {
+                            AddDirectory(f);
+                        }
+                        else if(File.Exists(f))
+                        {
+                            AddFile(f);
+                        }
+                    }
+                }
+            }
+            else if (e.Effect == DragDropEffects.Move)
             {
                 var cp = listView1.PointToClient(new Point(e.X, e.Y));
                 ListViewItem dragToItem = listView1.GetItemAt(cp.X, cp.Y);
