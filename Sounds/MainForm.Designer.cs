@@ -128,7 +128,7 @@
             this.playbackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(417, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -409,7 +409,7 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(0, 106);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(284, 84);
+            this.listView1.Size = new System.Drawing.Size(417, 267);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -485,7 +485,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 106);
+            this.panel1.Size = new System.Drawing.Size(417, 106);
             this.panel1.TabIndex = 2;
             // 
             // artistLabel
@@ -521,7 +521,7 @@
             this.positionTrackBar.LargeChange = 15;
             this.positionTrackBar.Location = new System.Drawing.Point(109, 58);
             this.positionTrackBar.Name = "positionTrackBar";
-            this.positionTrackBar.Size = new System.Drawing.Size(172, 45);
+            this.positionTrackBar.Size = new System.Drawing.Size(305, 45);
             this.positionTrackBar.TabIndex = 1;
             this.positionTrackBar.TickFrequency = 60;
             this.positionTrackBar.Scroll += new System.EventHandler(this.trackBar1_Scroll);
@@ -549,7 +549,7 @@
             this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(284, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(417, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -590,11 +590,11 @@
             this.toolStripContainer1.ContentPanel.AutoScroll = true;
             this.toolStripContainer1.ContentPanel.Controls.Add(this.listView1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(284, 190);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(417, 373);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(284, 261);
+            this.toolStripContainer1.Size = new System.Drawing.Size(417, 444);
             this.toolStripContainer1.TabIndex = 4;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -747,7 +747,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(417, 444);
             this.Controls.Add(this.toolStripContainer1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
