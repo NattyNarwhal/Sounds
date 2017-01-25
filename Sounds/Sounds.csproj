@@ -87,6 +87,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -101,6 +102,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Volume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Repeat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddSong.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
