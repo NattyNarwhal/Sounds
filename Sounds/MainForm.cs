@@ -574,5 +574,10 @@ namespace Sounds
         {
             Volume = 0;
         }
+
+        private void togglePlaybackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PlayPauseToggle();
+        }
     }
 }

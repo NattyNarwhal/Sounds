@@ -79,6 +79,7 @@
             this.volumeUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.volumeDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.muteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.togglePlaybackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.positionTrackBar)).BeginInit();
@@ -222,6 +223,7 @@
             // playbackToolStripMenuItem
             // 
             this.playbackToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.togglePlaybackToolStripMenuItem,
             this.playToolStripMenuItem,
             this.pauseToolStripMenuItem,
             this.stopToolStripMenuItem,
@@ -471,6 +473,15 @@
             this.muteToolStripMenuItem.Text = "&Mute";
             this.muteToolStripMenuItem.Click += new System.EventHandler(this.muteToolStripMenuItem_Click);
             // 
+            // togglePlaybackToolStripMenuItem
+            // 
+            this.togglePlaybackToolStripMenuItem.Name = "togglePlaybackToolStripMenuItem";
+            this.togglePlaybackToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Space)));
+            this.togglePlaybackToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.togglePlaybackToolStripMenuItem.Text = "&Toggle Playback";
+            this.togglePlaybackToolStripMenuItem.Visible = false;
+            this.togglePlaybackToolStripMenuItem.Click += new System.EventHandler(this.togglePlaybackToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,6 +558,7 @@
         private System.Windows.Forms.ToolStripMenuItem volumeDownToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem muteToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem togglePlaybackToolStripMenuItem;
     }
 }
 
