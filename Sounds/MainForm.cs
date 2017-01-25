@@ -55,6 +55,11 @@ namespace Sounds
                 if (playing)
                     Next();
             };
+            mp.MediaFailed += (o, e) =>
+            {
+                Stop();
+                errorMessageLabel.Text = e.ErrorException.Message;
+            };
             mp.MediaOpened += (o, e) =>
             {
                 if (mp.NaturalDuration.HasTimeSpan)
@@ -188,6 +193,7 @@ namespace Sounds
             }
 
             // we can run this regardless
+            errorMessageLabel.Text = string.Empty;
             foreach (var lvi in listView1.Items.Cast<ListViewItem>().Where(x => x.Tag != activeFile))
             {
                 lvi.Font = listView1.Font;
