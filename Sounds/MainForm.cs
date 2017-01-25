@@ -302,6 +302,20 @@ namespace Sounds
             playContextToolStripMenuItem.Enabled = selected;
             propertiesContextToolStripMenuItem.Enabled = selected;
             removeContextToolStripMenuItem.Enabled = selected;
+
+            // status bar image
+            if (!playing)
+            {
+                positionLabel.Image = Properties.Resources.Stop;
+            }
+            else if (playing && Paused)
+            {
+                positionLabel.Image = Properties.Resources.Pause;
+            }
+            else if (playing && !Paused)
+            {
+                positionLabel.Image = Properties.Resources.Play;
+            }
         }
 
         public void Stop()
