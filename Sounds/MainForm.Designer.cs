@@ -38,14 +38,16 @@
             this.savePlaylistAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showToolbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showStatusbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showInfoPaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.shuffleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.togglePlaybackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,8 +56,8 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.previousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.skipAheadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rewindToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skipAheadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.volumeUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.volumeDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,6 +84,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.positionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.errorMessageLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.volumeStatusButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.openPlaylistDialog = new System.Windows.Forms.OpenFileDialog();
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
@@ -89,19 +92,15 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.playToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.pauseToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.volumeButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.previousToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.nextToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.volumeButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.addSongToolStripButton = new System.Windows.Forms.ToolStripSplitButton();
-            this.addDirectoryToolStripButtonMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showToolbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.volumeStatusButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.showStatusbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showInfoPaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addFilesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.playlistContextMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -192,6 +191,48 @@
             this.quitToolStripMenuItem.Text = "&Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showToolbarToolStripMenuItem,
+            this.showStatusbarToolStripMenuItem,
+            this.showInfoPaneToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.propertiesToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "&View";
+            // 
+            // showToolbarToolStripMenuItem
+            // 
+            this.showToolbarToolStripMenuItem.Checked = true;
+            this.showToolbarToolStripMenuItem.CheckOnClick = true;
+            this.showToolbarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.showToolbarToolStripMenuItem.Name = "showToolbarToolStripMenuItem";
+            this.showToolbarToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.showToolbarToolStripMenuItem.Text = "Show &Toolbar";
+            this.showToolbarToolStripMenuItem.Click += new System.EventHandler(this.showToolbarToolStripMenuItem_Click);
+            // 
+            // showStatusbarToolStripMenuItem
+            // 
+            this.showStatusbarToolStripMenuItem.Checked = true;
+            this.showStatusbarToolStripMenuItem.CheckOnClick = true;
+            this.showStatusbarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.showStatusbarToolStripMenuItem.Name = "showStatusbarToolStripMenuItem";
+            this.showStatusbarToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.showStatusbarToolStripMenuItem.Text = "Show &Status Bar";
+            this.showStatusbarToolStripMenuItem.Click += new System.EventHandler(this.showStatusbarToolStripMenuItem_Click);
+            // 
+            // showInfoPaneToolStripMenuItem
+            // 
+            this.showInfoPaneToolStripMenuItem.Checked = true;
+            this.showInfoPaneToolStripMenuItem.CheckOnClick = true;
+            this.showInfoPaneToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.showInfoPaneToolStripMenuItem.Name = "showInfoPaneToolStripMenuItem";
+            this.showInfoPaneToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.showInfoPaneToolStripMenuItem.Text = "Show &Info Pane";
+            this.showInfoPaneToolStripMenuItem.Click += new System.EventHandler(this.showInfoPaneToolStripMenuItem_Click);
+            // 
             // listToolStripMenuItem
             // 
             this.listToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -199,9 +240,7 @@
             this.addDirectoryToolStripMenuItem,
             this.removeSelectedToolStripMenuItem,
             this.toolStripSeparator2,
-            this.shuffleToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.propertiesToolStripMenuItem});
+            this.shuffleToolStripMenuItem});
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
             this.listToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.listToolStripMenuItem.Text = "&List";
@@ -219,7 +258,7 @@
             // 
             this.addDirectoryToolStripMenuItem.Name = "addDirectoryToolStripMenuItem";
             this.addDirectoryToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.addDirectoryToolStripMenuItem.Text = "Add &Directory...";
+            this.addDirectoryToolStripMenuItem.Text = "Add Fol&der...";
             this.addDirectoryToolStripMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
             // 
             // removeSelectedToolStripMenuItem
@@ -242,19 +281,6 @@
             this.shuffleToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.shuffleToolStripMenuItem.Text = "&Shuffle";
             this.shuffleToolStripMenuItem.Click += new System.EventHandler(this.shuffleToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(185, 6);
-            // 
-            // propertiesToolStripMenuItem
-            // 
-            this.propertiesToolStripMenuItem.Image = global::Sounds.Properties.Resources.Properties;
-            this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
-            this.propertiesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.propertiesToolStripMenuItem.Text = "Song &Properties...";
-            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
             // playbackToolStripMenuItem
             // 
@@ -282,7 +308,7 @@
             // 
             this.togglePlaybackToolStripMenuItem.Name = "togglePlaybackToolStripMenuItem";
             this.togglePlaybackToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Space)));
-            this.togglePlaybackToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.togglePlaybackToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.togglePlaybackToolStripMenuItem.Text = "&Toggle Playback";
             this.togglePlaybackToolStripMenuItem.Visible = false;
             this.togglePlaybackToolStripMenuItem.Click += new System.EventHandler(this.togglePlaybackToolStripMenuItem_Click);
@@ -292,7 +318,7 @@
             this.playToolStripMenuItem.Image = global::Sounds.Properties.Resources.Play;
             this.playToolStripMenuItem.Name = "playToolStripMenuItem";
             this.playToolStripMenuItem.ShortcutKeyDisplayString = "";
-            this.playToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.playToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.playToolStripMenuItem.Text = "&Play";
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
@@ -300,7 +326,7 @@
             // 
             this.pauseToolStripMenuItem.Image = global::Sounds.Properties.Resources.Pause;
             this.pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
-            this.pauseToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.pauseToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.pauseToolStripMenuItem.Text = "P&ause";
             this.pauseToolStripMenuItem.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
             // 
@@ -310,21 +336,21 @@
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
             this.stopToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.Space)));
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.stopToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.stopToolStripMenuItem.Text = "&Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(222, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(224, 6);
             // 
             // previousToolStripMenuItem
             // 
             this.previousToolStripMenuItem.Image = global::Sounds.Properties.Resources.Previous;
             this.previousToolStripMenuItem.Name = "previousToolStripMenuItem";
             this.previousToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Left)));
-            this.previousToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.previousToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.previousToolStripMenuItem.Text = "Pre&vious";
             this.previousToolStripMenuItem.Click += new System.EventHandler(this.previousToolStripMenuItem_Click);
             // 
@@ -333,18 +359,9 @@
             this.nextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Next;
             this.nextToolStripMenuItem.Name = "nextToolStripMenuItem";
             this.nextToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Right)));
-            this.nextToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.nextToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.nextToolStripMenuItem.Text = "&Next";
             this.nextToolStripMenuItem.Click += new System.EventHandler(this.nextToolStripMenuItem_Click);
-            // 
-            // skipAheadToolStripMenuItem
-            // 
-            this.skipAheadToolStripMenuItem.Name = "skipAheadToolStripMenuItem";
-            this.skipAheadToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.Right)));
-            this.skipAheadToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.skipAheadToolStripMenuItem.Text = "S&kip Ahead";
-            this.skipAheadToolStripMenuItem.Click += new System.EventHandler(this.skipAheadToolStripMenuItem_Click);
             // 
             // rewindToolStripMenuItem
             // 
@@ -355,16 +372,25 @@
             this.rewindToolStripMenuItem.Text = "Re&wind";
             this.rewindToolStripMenuItem.Click += new System.EventHandler(this.rewindToolStripMenuItem_Click);
             // 
+            // skipAheadToolStripMenuItem
+            // 
+            this.skipAheadToolStripMenuItem.Name = "skipAheadToolStripMenuItem";
+            this.skipAheadToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Right)));
+            this.skipAheadToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.skipAheadToolStripMenuItem.Text = "S&kip Ahead";
+            this.skipAheadToolStripMenuItem.Click += new System.EventHandler(this.skipAheadToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(222, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 6);
             // 
             // volumeUpToolStripMenuItem
             // 
             this.volumeUpToolStripMenuItem.Name = "volumeUpToolStripMenuItem";
             this.volumeUpToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Up)));
-            this.volumeUpToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.volumeUpToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.volumeUpToolStripMenuItem.Text = "Volume &Up";
             this.volumeUpToolStripMenuItem.Click += new System.EventHandler(this.volumeUpToolStripMenuItem_Click);
             // 
@@ -372,7 +398,7 @@
             // 
             this.volumeDownToolStripMenuItem.Name = "volumeDownToolStripMenuItem";
             this.volumeDownToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Down)));
-            this.volumeDownToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.volumeDownToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.volumeDownToolStripMenuItem.Text = "Volume &Down";
             this.volumeDownToolStripMenuItem.Click += new System.EventHandler(this.volumeDownToolStripMenuItem_Click);
             // 
@@ -380,21 +406,21 @@
             // 
             this.muteToolStripMenuItem.Name = "muteToolStripMenuItem";
             this.muteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
-            this.muteToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.muteToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.muteToolStripMenuItem.Text = "&Mute";
             this.muteToolStripMenuItem.Click += new System.EventHandler(this.muteToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(222, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(224, 6);
             // 
             // repeatToolStripMenuItem
             // 
             this.repeatToolStripMenuItem.CheckOnClick = true;
             this.repeatToolStripMenuItem.Image = global::Sounds.Properties.Resources.Repeat;
             this.repeatToolStripMenuItem.Name = "repeatToolStripMenuItem";
-            this.repeatToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.repeatToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.repeatToolStripMenuItem.Text = "&Repeat";
             this.repeatToolStripMenuItem.Click += new System.EventHandler(this.repeatToolStripMenuItem_Click);
             // 
@@ -410,7 +436,7 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(0, 106);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(417, 243);
+            this.listView1.Size = new System.Drawing.Size(417, 267);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -445,13 +471,13 @@
             this.propertiesContextToolStripMenuItem,
             this.removeContextToolStripMenuItem});
             this.playlistContextMenu.Name = "playlistContextMenu";
-            this.playlistContextMenu.Size = new System.Drawing.Size(153, 98);
+            this.playlistContextMenu.Size = new System.Drawing.Size(137, 76);
             // 
             // playContextToolStripMenuItem
             // 
             this.playContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Play;
             this.playContextToolStripMenuItem.Name = "playContextToolStripMenuItem";
-            this.playContextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.playContextToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.playContextToolStripMenuItem.Text = "&Play";
             this.playContextToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
@@ -464,7 +490,7 @@
             // 
             this.propertiesContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Properties;
             this.propertiesContextToolStripMenuItem.Name = "propertiesContextToolStripMenuItem";
-            this.propertiesContextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.propertiesContextToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.propertiesContextToolStripMenuItem.Text = "P&roperties...";
             this.propertiesContextToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
@@ -472,7 +498,7 @@
             // 
             this.removeContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Delete;
             this.removeContextToolStripMenuItem.Name = "removeContextToolStripMenuItem";
-            this.removeContextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.removeContextToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.removeContextToolStripMenuItem.Text = "Remo&ve";
             this.removeContextToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
             // 
@@ -565,6 +591,17 @@
             this.errorMessageLabel.Name = "errorMessageLabel";
             this.errorMessageLabel.Size = new System.Drawing.Size(0, 17);
             // 
+            // volumeStatusButton
+            // 
+            this.volumeStatusButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.volumeStatusButton.Enabled = false;
+            this.volumeStatusButton.Image = global::Sounds.Properties.Resources.Volume;
+            this.volumeStatusButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.volumeStatusButton.Name = "volumeStatusButton";
+            this.volumeStatusButton.Size = new System.Drawing.Size(58, 20);
+            this.volumeStatusButton.Text = "50%";
+            this.volumeStatusButton.Visible = false;
+            // 
             // openPlaylistDialog
             // 
             this.openPlaylistDialog.DefaultExt = "m3u";
@@ -592,7 +629,7 @@
             this.toolStripContainer1.ContentPanel.AutoScroll = true;
             this.toolStripContainer1.ContentPanel.Controls.Add(this.listView1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(417, 349);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(417, 373);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -618,10 +655,10 @@
             this.toolStripSeparator7,
             this.volumeButton,
             this.toolStripSeparator8,
-            this.addSongToolStripButton});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 48);
+            this.addFilesToolStripButton});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(267, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(255, 25);
             this.toolStrip1.TabIndex = 1;
             // 
             // playToolStripButton
@@ -643,19 +680,6 @@
             this.pauseToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.pauseToolStripButton.Text = "Pause";
             this.pauseToolStripButton.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
-            // 
-            // volumeButton
-            // 
-            this.volumeButton.Image = global::Sounds.Properties.Resources.Volume;
-            this.volumeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.volumeButton.Name = "volumeButton";
-            this.volumeButton.Size = new System.Drawing.Size(58, 22);
-            this.volumeButton.Text = "50%";
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripSeparator6
             // 
@@ -682,79 +706,45 @@
             this.nextToolStripButton.Text = "Next";
             this.nextToolStripButton.Click += new System.EventHandler(this.nextToolStripMenuItem_Click);
             // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // volumeButton
+            // 
+            this.volumeButton.Image = global::Sounds.Properties.Resources.Volume;
+            this.volumeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.volumeButton.Name = "volumeButton";
+            this.volumeButton.Size = new System.Drawing.Size(58, 22);
+            this.volumeButton.Text = "50%";
+            // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
-            // addSongToolStripButton
+            // addFilesToolStripButton
             // 
-            this.addSongToolStripButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addDirectoryToolStripButtonMenuItem});
-            this.addSongToolStripButton.Image = global::Sounds.Properties.Resources.AddSong;
-            this.addSongToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.addSongToolStripButton.Name = "addSongToolStripButton";
-            this.addSongToolStripButton.Size = new System.Drawing.Size(96, 22);
-            this.addSongToolStripButton.Text = "Add Files...";
-            this.addSongToolStripButton.ButtonClick += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
+            this.addFilesToolStripButton.Image = global::Sounds.Properties.Resources.AddSong;
+            this.addFilesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.addFilesToolStripButton.Name = "addFilesToolStripButton";
+            this.addFilesToolStripButton.Size = new System.Drawing.Size(84, 22);
+            this.addFilesToolStripButton.Text = "Add Files...";
+            this.addFilesToolStripButton.Click += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
             // 
-            // addDirectoryToolStripButtonMenuItem
+            // propertiesToolStripMenuItem
             // 
-            this.addDirectoryToolStripButtonMenuItem.Name = "addDirectoryToolStripButtonMenuItem";
-            this.addDirectoryToolStripButtonMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.addDirectoryToolStripButtonMenuItem.Text = "Add &Directory...";
-            this.addDirectoryToolStripButtonMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
+            this.propertiesToolStripMenuItem.Image = global::Sounds.Properties.Resources.Properties;
+            this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
+            this.propertiesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.propertiesToolStripMenuItem.Text = "Song &Properties...";
+            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
-            // viewToolStripMenuItem
+            // toolStripSeparator3
             // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showToolbarToolStripMenuItem,
-            this.showStatusbarToolStripMenuItem,
-            this.showInfoPaneToolStripMenuItem});
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "&View";
-            // 
-            // showToolbarToolStripMenuItem
-            // 
-            this.showToolbarToolStripMenuItem.Checked = true;
-            this.showToolbarToolStripMenuItem.CheckOnClick = true;
-            this.showToolbarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.showToolbarToolStripMenuItem.Name = "showToolbarToolStripMenuItem";
-            this.showToolbarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.showToolbarToolStripMenuItem.Text = "Show &Toolbar";
-            this.showToolbarToolStripMenuItem.Click += new System.EventHandler(this.showToolbarToolStripMenuItem_Click);
-            // 
-            // volumeStatusButton
-            // 
-            this.volumeStatusButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.volumeStatusButton.Enabled = false;
-            this.volumeStatusButton.Image = global::Sounds.Properties.Resources.Volume;
-            this.volumeStatusButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.volumeStatusButton.Name = "volumeStatusButton";
-            this.volumeStatusButton.Size = new System.Drawing.Size(58, 20);
-            this.volumeStatusButton.Text = "50%";
-            this.volumeStatusButton.Visible = false;
-            // 
-            // showStatusbarToolStripMenuItem
-            // 
-            this.showStatusbarToolStripMenuItem.Checked = true;
-            this.showStatusbarToolStripMenuItem.CheckOnClick = true;
-            this.showStatusbarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.showStatusbarToolStripMenuItem.Name = "showStatusbarToolStripMenuItem";
-            this.showStatusbarToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.showStatusbarToolStripMenuItem.Text = "Show &Status Bar";
-            this.showStatusbarToolStripMenuItem.Click += new System.EventHandler(this.showStatusbarToolStripMenuItem_Click);
-            // 
-            // showInfoPaneToolStripMenuItem
-            // 
-            this.showInfoPaneToolStripMenuItem.Checked = true;
-            this.showInfoPaneToolStripMenuItem.CheckOnClick = true;
-            this.showInfoPaneToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.showInfoPaneToolStripMenuItem.Name = "showInfoPaneToolStripMenuItem";
-            this.showInfoPaneToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.showInfoPaneToolStripMenuItem.Text = "Show &Info Pane";
-            this.showInfoPaneToolStripMenuItem.Click += new System.EventHandler(this.showInfoPaneToolStripMenuItem_Click);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(163, 6);
             // 
             // MainForm
             // 
@@ -824,14 +814,12 @@
         private System.Windows.Forms.ToolStripMenuItem addFilesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeSelectedToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader trackNoHeader;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.ToolStripMenuItem addDirectoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem repeatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem shuffleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripStatusLabel errorMessageLabel;
         private System.Windows.Forms.ToolStripMenuItem volumeUpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem volumeDownToolStripMenuItem;
@@ -855,13 +843,14 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripDropDownButton volumeButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripSplitButton addSongToolStripButton;
-        private System.Windows.Forms.ToolStripMenuItem addDirectoryToolStripButtonMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showToolbarToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton volumeStatusButton;
         private System.Windows.Forms.ToolStripMenuItem showStatusbarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showInfoPaneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton addFilesToolStripButton;
     }
 }
 
