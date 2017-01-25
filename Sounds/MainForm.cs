@@ -218,9 +218,16 @@ namespace Sounds
             propertiesToolStripMenuItem.Enabled = playing || any;
             shuffleToolStripMenuItem.Enabled = any;
 
-            playToolStripMenuItem.Enabled = playing ? Paused : any;
-            pauseToolStripMenuItem.Enabled = playing ? !Paused : false;
+            var canPlay = playing ? Paused : any;
+            var canPause = playing ? !Paused : false;
+
+            playToolStripMenuItem.Enabled = canPlay;
+            pauseToolStripMenuItem.Enabled = canPause;
             stopToolStripMenuItem.Enabled = playing;
+            playToolStripMenuItem.Checked = playing && !Paused;
+            pauseToolStripMenuItem.Checked = playing && Paused;
+            stopToolStripMenuItem.Checked = !playing;
+
             previousToolStripMenuItem.Enabled = playing;
             nextToolStripMenuItem.Enabled = playing;
         }
