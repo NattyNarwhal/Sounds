@@ -60,6 +60,7 @@ namespace Sounds
                 simplePercent.NumberFormat.PercentDecimalDigits = 0;
                 simplePercent.NumberFormat.PercentPositivePattern = 1;
                 volumeButton.Text = string.Format(simplePercent, "{0:P}", mp.Volume);
+                UpdateMenus();
             }
         }
 
@@ -267,6 +268,10 @@ namespace Sounds
 
             previousToolStripMenuItem.Enabled = playing;
             nextToolStripMenuItem.Enabled = playing;
+
+            volumeUpToolStripMenuItem.Enabled = Volume + 0.1 <= 1;
+            volumeDownToolStripMenuItem.Enabled = Volume - 0.1 >= 0;
+            muteToolStripMenuItem.Enabled = Volume > 0;
         }
 
         public void Stop()
