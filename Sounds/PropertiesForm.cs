@@ -28,6 +28,7 @@ namespace Sounds
 
             titleBox.Text = f.Tag.Title;
             albumBox.Text = f.Tag.Album;
+            yearBox.Text = f.Tag.Year.ToString();
             trackBox.Text = f.Tag.TrackCount > 0 ?
                 string.Format("{0}/{1}", f.Tag.Track, f.Tag.TrackCount)
                 : f.Tag.Track.ToString();

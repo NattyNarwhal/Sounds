@@ -60,6 +60,8 @@
             this.albumArtInfo = new System.Windows.Forms.Label();
             this.albumArtBox = new System.Windows.Forms.PictureBox();
             this.albumArtSelector = new System.Windows.Forms.ComboBox();
+            this.yearBox = new System.Windows.Forms.TextBox();
+            this.yearLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.intrinisicsTab.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -211,6 +213,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.yearBox);
+            this.tabPage2.Controls.Add(this.yearLabel);
             this.tabPage2.Controls.Add(this.genresBox);
             this.tabPage2.Controls.Add(this.genreLabel);
             this.tabPage2.Controls.Add(this.composersBox);
@@ -411,6 +415,25 @@
             this.albumArtSelector.TabIndex = 0;
             this.albumArtSelector.SelectedIndexChanged += new System.EventHandler(this.albumArtSelector_SelectedIndexChanged);
             // 
+            // yearBox
+            // 
+            this.yearBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.yearBox.Location = new System.Drawing.Point(80, 257);
+            this.yearBox.Name = "yearBox";
+            this.yearBox.ReadOnly = true;
+            this.yearBox.Size = new System.Drawing.Size(166, 20);
+            this.yearBox.TabIndex = 21;
+            // 
+            // yearLabel
+            // 
+            this.yearLabel.AutoSize = true;
+            this.yearLabel.Location = new System.Drawing.Point(6, 260);
+            this.yearLabel.Name = "yearLabel";
+            this.yearLabel.Size = new System.Drawing.Size(29, 13);
+            this.yearLabel.TabIndex = 20;
+            this.yearLabel.Text = "&Year";
+            // 
             // PropertiesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,5 +494,7 @@
         private System.Windows.Forms.PictureBox albumArtBox;
         private System.Windows.Forms.ComboBox albumArtSelector;
         private System.Windows.Forms.Label albumArtInfo;
+        private System.Windows.Forms.TextBox yearBox;
+        private System.Windows.Forms.Label yearLabel;
     }
 }

@@ -192,7 +192,7 @@ namespace Sounds
             var any = listView1.Items.Count > 0;
 
             removeSelectedToolStripMenuItem.Enabled = selected;
-            propertiesToolStripMenuItem.Enabled = selected;
+            propertiesToolStripMenuItem.Enabled = playing || any;
             shuffleToolStripMenuItem.Enabled = any;
 
             playToolStripMenuItem.Enabled = playing ? Paused : any;
@@ -395,8 +395,12 @@ namespace Sounds
 
         private void propertiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            TagLib.File item = activeFile;
+
             if (listView1.SelectedItems.Count > 0)
-                new PropertiesForm((TagLib.File)listView1.SelectedItems[0].Tag).Show(this);
+                item = (TagLib.File)listView1.SelectedItems[0].Tag;
+
+            new PropertiesForm(item).Show(this);
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
