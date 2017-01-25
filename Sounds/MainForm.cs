@@ -633,5 +633,10 @@ namespace Sounds
         {
             DeleteSelected();
         }
+
+        private void showToolbarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStrip1.Visible = showToolbarToolStripMenuItem.Checked;
+        }
     }
 }

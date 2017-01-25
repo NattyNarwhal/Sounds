@@ -97,6 +97,8 @@
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.addSongToolStripButton = new System.Windows.Forms.ToolStripSplitButton();
             this.addDirectoryToolStripButtonMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showToolbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.playlistContextMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -119,6 +121,7 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
+            this.viewToolStripMenuItem,
             this.listToolStripMenuItem,
             this.playbackToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -600,6 +603,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playToolStripButton,
             this.pauseToolStripButton,
@@ -612,7 +616,7 @@
             this.addSongToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(3, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(281, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(271, 25);
             this.toolStrip1.TabIndex = 1;
             // 
             // playToolStripButton
@@ -685,7 +689,7 @@
             this.addSongToolStripButton.Image = global::Sounds.Properties.Resources.AddSong;
             this.addSongToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.addSongToolStripButton.Name = "addSongToolStripButton";
-            this.addSongToolStripButton.Size = new System.Drawing.Size(100, 20);
+            this.addSongToolStripButton.Size = new System.Drawing.Size(100, 22);
             this.addSongToolStripButton.Text = "Add Song...";
             this.addSongToolStripButton.ButtonClick += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
             // 
@@ -695,6 +699,24 @@
             this.addDirectoryToolStripButtonMenuItem.Size = new System.Drawing.Size(156, 22);
             this.addDirectoryToolStripButtonMenuItem.Text = "Add &Directory...";
             this.addDirectoryToolStripButtonMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showToolbarToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "&View";
+            // 
+            // showToolbarToolStripMenuItem
+            // 
+            this.showToolbarToolStripMenuItem.Checked = true;
+            this.showToolbarToolStripMenuItem.CheckOnClick = true;
+            this.showToolbarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.showToolbarToolStripMenuItem.Name = "showToolbarToolStripMenuItem";
+            this.showToolbarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.showToolbarToolStripMenuItem.Text = "Show &Toolbar";
+            this.showToolbarToolStripMenuItem.Click += new System.EventHandler(this.showToolbarToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -797,6 +819,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripSplitButton addSongToolStripButton;
         private System.Windows.Forms.ToolStripMenuItem addDirectoryToolStripButtonMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showToolbarToolStripMenuItem;
     }
 }
 
