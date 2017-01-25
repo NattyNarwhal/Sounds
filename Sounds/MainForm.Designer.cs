@@ -620,7 +620,7 @@
             this.addSongToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(3, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(271, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(298, 25);
             this.toolStrip1.TabIndex = 1;
             // 
             // playToolStripButton
@@ -693,8 +693,8 @@
             this.addSongToolStripButton.Image = global::Sounds.Properties.Resources.AddSong;
             this.addSongToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.addSongToolStripButton.Name = "addSongToolStripButton";
-            this.addSongToolStripButton.Size = new System.Drawing.Size(100, 22);
-            this.addSongToolStripButton.Text = "Add Song...";
+            this.addSongToolStripButton.Size = new System.Drawing.Size(96, 22);
+            this.addSongToolStripButton.Text = "Add Files...";
             this.addSongToolStripButton.ButtonClick += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
             // 
             // addDirectoryToolStripButtonMenuItem
