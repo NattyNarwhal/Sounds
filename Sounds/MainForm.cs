@@ -114,6 +114,15 @@ namespace Sounds
             Volume = 0.50;
         }
         
+        public void DeleteSelected()
+        {
+            if (listView1.SelectedItems.Cast<ListViewItem>().Any(x => x.Tag == activeFile))
+                Stop();
+
+            foreach (ListViewItem lvi in listView1.SelectedItems)
+                listView1.Items.Remove(lvi);
+        }
+
         public void AddFile(string fileName)
         {
             try
@@ -280,6 +289,10 @@ namespace Sounds
             volumeUpToolStripMenuItem.Enabled = Volume + 0.1 <= 1;
             volumeDownToolStripMenuItem.Enabled = Volume - 0.1 >= 0;
             muteToolStripMenuItem.Enabled = Volume > 0;
+
+            playContextToolStripMenuItem.Enabled = selected;
+            propertiesContextToolStripMenuItem.Enabled = selected;
+            removeContextToolStripMenuItem.Enabled = selected;
         }
 
         public void Stop()
@@ -330,6 +343,16 @@ namespace Sounds
             {
                 Stop();
             }
+        }
+
+        public void ShowPropertiesDialog()
+        {
+            TagLib.File item = activeFile;
+
+            if (listView1.SelectedItems.Count > 0)
+                item = (TagLib.File)listView1.SelectedItems[0].Tag;
+
+            new PropertiesForm(item).Show(this);
         }
 
         public void Shuffle()
@@ -431,11 +454,7 @@ namespace Sounds
 
         private void removeSelectedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (listView1.SelectedItems.Cast<ListViewItem>().Any(x => x.Tag == activeFile))
-                Stop();
-
-            foreach (ListViewItem lvi in listView1.SelectedItems)
-                listView1.Items.Remove(lvi);
+            DeleteSelected();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -475,12 +494,7 @@ namespace Sounds
 
         private void propertiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TagLib.File item = activeFile;
-
-            if (listView1.SelectedItems.Count > 0)
-                item = (TagLib.File)listView1.SelectedItems[0].Tag;
-
-            new PropertiesForm(item).Show(this);
+            ShowPropertiesDialog();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -596,6 +610,21 @@ namespace Sounds
         private void rewindToolStripMenuItem_Click(object sender, EventArgs e)
         {
             mp.Position = mp.Position.Add(new TimeSpan(0, 0, 15));
+        }
+
+        private void playContextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PlayAndSet(true);
+        }
+
+        private void propertiesContextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowPropertiesDialog();
+        }
+
+        private void removeContextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteSelected();
         }
     }
 }
