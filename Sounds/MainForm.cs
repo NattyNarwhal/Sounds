@@ -370,6 +370,9 @@ namespace Sounds
 
         public void ShowPropertiesDialog()
         {
+            if (activeFile == null)
+                return;
+
             TagLib.File item = activeFile;
 
             if (listView1.SelectedItems.Count > 0)
