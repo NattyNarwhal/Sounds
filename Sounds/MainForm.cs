@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -16,6 +17,7 @@ namespace Sounds
 {
     public partial class MainForm : Form
     {
+        ToolStripTrackBar tb = new ToolStripTrackBar();
         MediaPlayer mp = new MediaPlayer();
         TagLib.File activeFile = null;
         // not if the MediaPlayer is, but if we should at all
@@ -47,6 +49,21 @@ namespace Sounds
         public MainForm()
         {
             InitializeComponent();
+
+            // construct volume widget
+            tb.Maximum = 100;
+            tb.TickFrequency = 10;
+            tb.Scroll += (o, e) =>
+            {
+                ChangeVolume(tb.Value / 100d);
+            };
+            // a new dropdown w/ a system rendering looks more like a panel
+            var dd = new ToolStripDropDown();
+            dd.RenderMode = ToolStripRenderMode.System;
+            dd.Items.Add(tb);
+            volumeButton.DropDown = dd;
+
+            // do initial init of menubar and such
             UpdateMenus();
             mp.MediaEnded += (o, e) =>
             {
@@ -74,6 +91,9 @@ namespace Sounds
                     positionTrackBar.Enabled = false;
                 }
             };
+
+            // mp's value is, but not the UI bits; do this to update them
+            ChangeVolume(0.50);
         }
         
         public void AddFile(string fileName)
@@ -111,6 +131,16 @@ namespace Sounds
             {
                 AddFile(f);
             }
+        }
+
+        public void ChangeVolume(double amount)
+        {
+            mp.Volume = amount;
+            tb.Value = Convert.ToInt32(amount * 100);
+            var simplePercent = new CultureInfo(CultureInfo.InvariantCulture.Name);
+            simplePercent.NumberFormat.PercentDecimalDigits = 0;
+            simplePercent.NumberFormat.PercentPositivePattern = 1;
+            volumeButton.Text = string.Format(simplePercent, "{0:P}", mp.Volume);
         }
 
         public void PlayAndSet(bool playSelected)

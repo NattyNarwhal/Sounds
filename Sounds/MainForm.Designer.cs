@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.addFilesDialog = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,10 +70,11 @@
             this.trackBarSyncTimer = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.positionLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.errorMessageLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.openPlaylistDialog = new System.Windows.Forms.OpenFileDialog();
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.errorMessageLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.volumeButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.positionTrackBar)).BeginInit();
@@ -389,7 +391,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.positionLabel,
-            this.errorMessageLabel});
+            this.errorMessageLabel,
+            this.volumeButton});
+            this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.statusStrip1.Location = new System.Drawing.Point(0, 239);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(284, 22);
@@ -400,6 +404,11 @@
             // 
             this.positionLabel.Name = "positionLabel";
             this.positionLabel.Size = new System.Drawing.Size(0, 17);
+            // 
+            // errorMessageLabel
+            // 
+            this.errorMessageLabel.Name = "errorMessageLabel";
+            this.errorMessageLabel.Size = new System.Drawing.Size(0, 17);
             // 
             // openPlaylistDialog
             // 
@@ -416,10 +425,14 @@
             this.folderBrowserDialog1.Description = "Pick a folder full of music to add.";
             this.folderBrowserDialog1.ShowNewFolderButton = false;
             // 
-            // errorMessageLabel
+            // volumeButton
             // 
-            this.errorMessageLabel.Name = "errorMessageLabel";
-            this.errorMessageLabel.Size = new System.Drawing.Size(0, 17);
+            this.volumeButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.volumeButton.Image = ((System.Drawing.Image)(resources.GetObject("volumeButton.Image")));
+            this.volumeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.volumeButton.Name = "volumeButton";
+            this.volumeButton.Size = new System.Drawing.Size(76, 20);
+            this.volumeButton.Text = "Volume";
             // 
             // MainForm
             // 
@@ -492,6 +505,7 @@
         private System.Windows.Forms.ToolStripMenuItem shuffleToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripStatusLabel errorMessageLabel;
+        private System.Windows.Forms.ToolStripDropDownButton volumeButton;
     }
 }
 
