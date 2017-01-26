@@ -270,7 +270,9 @@ namespace Sounds
 
             var canPlay = playing ? Paused : any;
             var canPause = playing ? !Paused : false;
-            const string toggleDesc = "Ctrl+Space";
+            // localizable!
+            var toggleDesc = TypeDescriptor.GetConverter(typeof(Keys))
+                .ConvertToString(Keys.Control | Keys.Space);
 
             playToolStripMenuItem.Enabled = canPlay;
             playToolStripMenuItem.ShortcutKeyDisplayString =
