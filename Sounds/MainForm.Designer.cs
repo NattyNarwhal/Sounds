@@ -598,8 +598,8 @@
             this.volumeStatusButton.Image = global::Sounds.Properties.Resources.Volume;
             this.volumeStatusButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.volumeStatusButton.Name = "volumeStatusButton";
-            this.volumeStatusButton.Size = new System.Drawing.Size(58, 20);
-            this.volumeStatusButton.Text = "50%";
+            this.volumeStatusButton.Size = new System.Drawing.Size(76, 20);
+            this.volumeStatusButton.Text = "Volume";
             this.volumeStatusButton.Visible = false;
             // 
             // openPlaylistDialog
@@ -658,7 +658,7 @@
             this.addFilesToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(3, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(255, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(273, 25);
             this.toolStrip1.TabIndex = 1;
             // 
             // playToolStripButton
@@ -716,8 +716,8 @@
             this.volumeButton.Image = global::Sounds.Properties.Resources.Volume;
             this.volumeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.volumeButton.Name = "volumeButton";
-            this.volumeButton.Size = new System.Drawing.Size(58, 22);
-            this.volumeButton.Text = "50%";
+            this.volumeButton.Size = new System.Drawing.Size(76, 22);
+            this.volumeButton.Text = "Volume";
             // 
             // toolStripSeparator8
             // 
