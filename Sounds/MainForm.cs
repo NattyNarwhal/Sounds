@@ -512,7 +512,6 @@ namespace Sounds
 
         private void openPlaylistToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NewPlaylist();
             if (openPlaylistDialog.ShowDialog(this) == DialogResult.OK)
             {
                 OpenPlaylist(openPlaylistDialog.FileName);
