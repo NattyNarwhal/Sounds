@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="volumeStatusButton.ToolTipText" xml:space="preserve">
+    <value>Volume... [NEEDS TRANSLATING]</value>
+  </data>
   <data name="titleHeader.Text" xml:space="preserve">
     <value>Title [NEEDS TRANSLATING]</value>
   </data>
@@ -154,9 +157,6 @@
   <data name="playlistContextMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>263, 76</value>
   </data>
-  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>399, 25</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="artistLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -170,11 +170,26 @@
   <data name="positionTrackBar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 20</value>
+  <data name="albumArtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;File [NEEDS TRANSLATING]</value>
+  <data name="newPlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 22</value>
+  </data>
+  <data name="newPlaylistToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;New Playlist [NEEDS TRANSLATING]</value>
+  </data>
+  <data name="openPlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 22</value>
+  </data>
+  <data name="openPlaylistToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Open... [NEEDS TRANSLATING]</value>
+  </data>
+  <data name="savePlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 22</value>
+  </data>
+  <data name="savePlaylistToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Save... [NEEDS TRANSLATING]</value>
   </data>
   <data name="savePlaylistAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 22</value>
@@ -191,11 +206,11 @@
   <data name="quitToolStripMenuItem.Text" xml:space="preserve">
     <value>終了 (&amp;Q)</value>
   </data>
-  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 20</value>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 20</value>
   </data>
-  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;View [NEEDS TRANSLATING]</value>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;File [NEEDS TRANSLATING]</value>
   </data>
   <data name="showToolbarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>292, 22</value>
@@ -218,17 +233,35 @@
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>289, 6</value>
   </data>
-  <data name="listToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 20</value>
+  <data name="propertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>292, 22</value>
   </data>
-  <data name="listToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;List [NEEDS TRANSLATING]</value>
+  <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Song &amp;Properties... [NEEDS TRANSLATING]</value>
+  </data>
+  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 20</value>
+  </data>
+  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;View [NEEDS TRANSLATING]</value>
+  </data>
+  <data name="addFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 22</value>
+  </data>
+  <data name="addFilesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add &amp;Files... [NEEDS TRANSLATING]</value>
   </data>
   <data name="addDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>314, 22</value>
   </data>
   <data name="addDirectoryToolStripMenuItem.Text" xml:space="preserve">
     <value>Add Fol&amp;der... [NEEDS TRANSLATING]</value>
+  </data>
+  <data name="removeSelectedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 22</value>
+  </data>
+  <data name="removeSelectedToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Remove Selected [NEEDS TRANSLATING]</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 6</value>
@@ -239,17 +272,47 @@
   <data name="shuffleToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Shuffle [NEEDS TRANSLATING]</value>
   </data>
-  <data name="playbackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 20</value>
+  <data name="listToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 20</value>
   </data>
-  <data name="playbackToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Playback [NEEDS TRANSLATING]</value>
+  <data name="listToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;List [NEEDS TRANSLATING]</value>
   </data>
   <data name="togglePlaybackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>353, 22</value>
   </data>
+  <data name="playToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>353, 22</value>
+  </data>
+  <data name="playToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Play [NEEDS TRANSLATING]</value>
+  </data>
+  <data name="pauseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>353, 22</value>
+  </data>
+  <data name="pauseToolStripMenuItem.Text" xml:space="preserve">
+    <value>P&amp;ause [NEEDS TRANSLATING]</value>
+  </data>
+  <data name="stopToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>353, 22</value>
+  </data>
+  <data name="stopToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Stop [NEEDS TRANSLATING]</value>
+  </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>350, 6</value>
+  </data>
+  <data name="previousToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>353, 22</value>
+  </data>
+  <data name="previousToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pre&amp;vious [NEEDS TRANSLATING]</value>
+  </data>
+  <data name="nextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>353, 22</value>
+  </data>
+  <data name="nextToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Next [NEEDS TRANSLATING]</value>
   </data>
   <data name="rewindToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>353, 22</value>
@@ -287,83 +350,17 @@
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>350, 6</value>
   </data>
-  <data name="folderBrowserDialog1.Description" xml:space="preserve">
-    <value>Pick a folder full of music to add. [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="albumArtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="newPlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 22</value>
-  </data>
-  <data name="newPlaylistToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;New Playlist [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="openPlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 22</value>
-  </data>
-  <data name="openPlaylistToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Open... [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="savePlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 22</value>
-  </data>
-  <data name="savePlaylistToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Save... [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="propertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 22</value>
-  </data>
-  <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Song &amp;Properties... [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="addFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 22</value>
-  </data>
-  <data name="addFilesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add &amp;Files... [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="removeSelectedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 22</value>
-  </data>
-  <data name="removeSelectedToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Remove Selected [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="playToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
-  </data>
-  <data name="playToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Play [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="pauseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
-  </data>
-  <data name="pauseToolStripMenuItem.Text" xml:space="preserve">
-    <value>P&amp;ause [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="stopToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
-  </data>
-  <data name="stopToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Stop [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="previousToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
-  </data>
-  <data name="previousToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pre&amp;vious [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="nextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
-  </data>
-  <data name="nextToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Next [NEEDS TRANSLATING]</value>
-  </data>
   <data name="repeatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>353, 22</value>
   </data>
   <data name="repeatToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Repeat [NEEDS TRANSLATING]</value>
+  </data>
+  <data name="playbackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 20</value>
+  </data>
+  <data name="playbackToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Playback [NEEDS TRANSLATING]</value>
   </data>
   <data name="playToolStripButton.Text" xml:space="preserve">
     <value>Play [NEEDS TRANSLATING]</value>
@@ -377,13 +374,19 @@
   <data name="nextToolStripButton.Text" xml:space="preserve">
     <value>Next [NEEDS TRANSLATING]</value>
   </data>
+  <data name="volumeButton.ToolTipText" xml:space="preserve">
+    <value>Volume... [NEEDS TRANSLATING]</value>
+  </data>
   <data name="addFilesToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>210, 22</value>
   </data>
   <data name="addFilesToolStripButton.Text" xml:space="preserve">
     <value>Add Files... [NEEDS TRANSLATING]</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>399, 25</value>
+  </data>
+  <data name="folderBrowserDialog1.Description" xml:space="preserve">
+    <value>Pick a folder full of music to add. [NEEDS TRANSLATING]</value>
   </data>
 </root>
