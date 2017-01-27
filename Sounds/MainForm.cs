@@ -399,7 +399,22 @@ namespace Sounds
         {
             Stop();
             playlistFile = null;
+            playlistFile = null;
             listView1.Items.Clear();
+        }
+
+        public void OpenPlaylist(string fileName, bool append = false)
+        {
+            if (!append)
+                NewPlaylist();
+
+            var text = File.ReadAllText(fileName);
+            var splitText = Regex.Split(text, @"\r?\n");
+            foreach (var f in M3UParser.Parse(splitText))
+            {
+                AddFile(f);
+            }
+            playlistFile = fileName;
         }
 
         public void SavePlaylist(bool forceDialog)
@@ -500,13 +515,7 @@ namespace Sounds
             NewPlaylist();
             if (openPlaylistDialog.ShowDialog(this) == DialogResult.OK)
             {
-                var text = File.ReadAllText(openPlaylistDialog.FileName);
-                var splitText = Regex.Split(text, @"\r?\n");
-                foreach (var f in M3UParser.Parse(splitText))
-                {
-                    AddFile(f);
-                }
-                playlistFile = openPlaylistDialog.FileName;
+                OpenPlaylist(openPlaylistDialog.FileName);
             }
         }
 
