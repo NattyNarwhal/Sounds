@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAPICodePack.Taskbar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,8 @@ namespace Sounds
 {
     public partial class MainForm : Form
     {
+        TabbedThumbnail preview;
+
         ToolStripTrackBar tb = new ToolStripTrackBar();
         MediaPlayer mp = new MediaPlayer();
         TagLib.File activeFile = null;
@@ -69,6 +72,35 @@ namespace Sounds
         {
             InitializeComponent();
 
+            if (TaskbarManager.IsPlatformSupported)
+            {
+                preview = new TabbedThumbnail(Handle, Handle);
+                preview.Title = Text;
+                TaskbarManager.Instance.TabbedThumbnail.AddThumbnailPreview(preview);
+                preview.TabbedThumbnailBitmapRequested += (o, e) =>
+                {
+                    preview.InvalidatePreview();
+                    if (playing)
+                    {
+                        var pictureStream = activeFile.Tag.Pictures.Where(x => x.Type == TagLib.PictureType.FrontCover).FirstOrDefault()?.Data?.Data;
+                        using (var ms = new MemoryStream(pictureStream))
+                        {
+                            var b = new Bitmap(Image.FromStream(ms));
+                            preview.SetImage(b);
+                        }
+                    }
+                    //else
+                    //{
+                    //    using (var b = new Bitmap(ClientSize.Width, ClientSize.Height))
+                    //    {
+                    //        DrawToBitmap(b, ClientRectangle);
+                    //        preview.SetImage(b);
+                    //    }
+                    //}
+                    e.Handled = true;
+                };
+            }
+
             // construct volume widget
             tb.Maximum = 100;
             tb.TickFrequency = 10;
@@ -83,8 +115,6 @@ namespace Sounds
             volumeButton.DropDown = dd;
             volumeStatusButton.DropDown = dd;
 
-            // do initial init of menubar and such
-            UpdateMenus();
             mp.MediaEnded += (o, e) =>
             {
                 // avoid race coondition
@@ -111,11 +141,17 @@ namespace Sounds
                     positionTrackBar.Enabled = false;
                 }
             };
+        }
 
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            // do initial init of menubar and such
+            // we need to do it when the form is visible so taskbar updates work
+            UpdateMenus();
             // mp's value is, but not the UI bits; do this to update them
             Volume = 0.50;
         }
-        
+
         public void DeleteSelected()
         {
             if (listView1.SelectedItems.Cast<ListViewItem>().Any(x => x.Tag == activeFile))
@@ -219,8 +255,13 @@ namespace Sounds
                 var album = activeFile.Tag.Album;
                 var artist = activeFile.Tag.Performers?[0];
 
+                var formTitle = string.Format("{0} - {1}", title, artist);
                 // fill out metadata
-                Text = string.Format("{0} - {1}", title, artist);
+                if (TaskbarManager.IsPlatformSupported)
+                {
+                    preview.Title = formTitle;
+                }
+                Text = formTitle;
 
                 titleLabel.Text = title;
                 albumLabel.Text = album;
@@ -249,6 +290,11 @@ namespace Sounds
                 positionTrackBar.Enabled = false;
 
                 albumArtBox.Image = null;
+
+                if (TaskbarManager.IsPlatformSupported)
+                {
+                    preview.Title = "Sounds";
+                }
             }
 
             // we can run this regardless
@@ -305,18 +351,34 @@ namespace Sounds
             propertiesContextToolStripMenuItem.Enabled = selected;
             removeContextToolStripMenuItem.Enabled = selected;
 
-            // status bar image
+            // status bar/task bar icon image
+            // TODO: make these translatable messages
             if (!playing)
             {
                 positionLabel.Image = Properties.Resources.Stop;
+                if (TaskbarManager.IsPlatformSupported)
+                {
+                    var i = Icon.FromHandle(Properties.Resources.Stop.GetHicon());
+                    TaskbarManager.Instance.SetOverlayIcon(i, "Stopped");
+                }
             }
             else if (playing && Paused)
             {
                 positionLabel.Image = Properties.Resources.Pause;
+                if (TaskbarManager.IsPlatformSupported)
+                {
+                    var i = Icon.FromHandle(Properties.Resources.Pause.GetHicon());
+                    TaskbarManager.Instance.SetOverlayIcon(i, "Paused");
+                }
             }
             else if (playing && !Paused)
             {
                 positionLabel.Image = Properties.Resources.Play;
+                if (TaskbarManager.IsPlatformSupported)
+                {
+                    var i = Icon.FromHandle(Properties.Resources.Play.GetHicon());
+                    TaskbarManager.Instance.SetOverlayIcon(i, "Playing");
+                }
             }
         }
 
