@@ -19,6 +19,16 @@ namespace Sounds
     public partial class MainForm : Form
     {
         TabbedThumbnail preview;
+        ThumbnailToolBarButton playPauseTaskbarButton;
+        ThumbnailToolBarButton prevTaskbarButton;
+        ThumbnailToolBarButton nextTaskbarButton;
+
+        // some take Icons, not Bitmaps
+        Icon stopIcon = Icon.FromHandle(Properties.Resources.Stop.GetHicon());
+        Icon playIcon = Icon.FromHandle(Properties.Resources.Play.GetHicon());
+        Icon prevIcon = Icon.FromHandle(Properties.Resources.Previous.GetHicon());
+        Icon nextIcon = Icon.FromHandle(Properties.Resources.Next.GetHicon());
+        Icon pauseIcon = Icon.FromHandle(Properties.Resources.Pause.GetHicon());
 
         ToolStripTrackBar tb = new ToolStripTrackBar();
         MediaPlayer mp = new MediaPlayer();
@@ -75,11 +85,12 @@ namespace Sounds
             if (TaskbarManager.IsPlatformSupported)
             {
                 preview = new TabbedThumbnail(Handle, Handle);
+                preview.DisplayFrameAroundBitmap = true;
                 preview.Title = Text;
                 TaskbarManager.Instance.TabbedThumbnail.AddThumbnailPreview(preview);
-                preview.TabbedThumbnailBitmapRequested += (o, e) =>
+                preview.TabbedThumbnailBitmapRequested += (o, ev) =>
                 {
-                    preview.InvalidatePreview();
+                    // TODO: This seems to be a bit slow on the uptake
                     if (playing)
                     {
                         var pictureStream = activeFile.Tag.Pictures.Where(x => x.Type == TagLib.PictureType.FrontCover).FirstOrDefault()?.Data?.Data;
@@ -89,16 +100,32 @@ namespace Sounds
                             preview.SetImage(b);
                         }
                     }
-                    //else
-                    //{
-                    //    using (var b = new Bitmap(ClientSize.Width, ClientSize.Height))
-                    //    {
-                    //        DrawToBitmap(b, ClientRectangle);
-                    //        preview.SetImage(b);
-                    //    }
-                    //}
-                    e.Handled = true;
+                    else
+                    {
+                        preview.InvalidatePreview();
+                    }
+                    ev.Handled = true;
                 };
+                // Because we're using a thumbnail preview, we need to handle these
+                preview.TabbedThumbnailMinimized += (o, ev) => WindowState = FormWindowState.Minimized;
+                preview.TabbedThumbnailClosed += (o, ev) => Close();
+                preview.TabbedThumbnailActivated += (o, ev) =>
+                {
+                    WindowState = FormWindowState.Normal;
+                    Activate();
+                };
+                preview.TabbedThumbnailMaximized += (o, ev) => WindowState = FormWindowState.Maximized;
+
+                // finally, wire up the buttons
+                playPauseTaskbarButton = new ThumbnailToolBarButton(playIcon, "Play");
+                playPauseTaskbarButton.Click += (o, ev) => PlayPauseToggle();
+                prevTaskbarButton = new ThumbnailToolBarButton(prevIcon, "Previous");
+                prevTaskbarButton.Click += (o, ev) => Previous();
+                nextTaskbarButton = new ThumbnailToolBarButton(nextIcon, "Next");
+                nextTaskbarButton.Click += (o, ev) => Next();
+
+                TaskbarManager.Instance.ThumbnailToolBars.AddButtons(Handle,
+                    prevTaskbarButton, playPauseTaskbarButton, nextTaskbarButton);
             }
 
             // construct volume widget
@@ -145,8 +172,8 @@ namespace Sounds
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            // do initial init of menubar and such
             // we need to do it when the form is visible so taskbar updates work
+            // do initial init of menubar and such
             UpdateMenus();
             // mp's value is, but not the UI bits; do this to update them
             Volume = 0.50;
@@ -351,15 +378,34 @@ namespace Sounds
             propertiesContextToolStripMenuItem.Enabled = selected;
             removeContextToolStripMenuItem.Enabled = selected;
 
-            // status bar/task bar icon image
             // TODO: make these translatable messages
+            if (TaskbarManager.IsPlatformSupported)
+            {
+                if (playing && canPause)
+                {
+                    playPauseTaskbarButton.Icon = pauseIcon;
+                    playPauseTaskbarButton.Tooltip = "Pause";
+                    playPauseTaskbarButton.Enabled = true;
+                }
+                else if (playing && canPlay)
+                {
+                    playPauseTaskbarButton.Icon = playIcon;
+                    playPauseTaskbarButton.Tooltip = "Play";
+                    playPauseTaskbarButton.Enabled = true;
+                }
+                else
+                {
+                    playPauseTaskbarButton.Enabled = false;
+                }
+            }
+
+            // status bar/task bar icon image
             if (!playing)
             {
                 positionLabel.Image = Properties.Resources.Stop;
                 if (TaskbarManager.IsPlatformSupported)
                 {
-                    var i = Icon.FromHandle(Properties.Resources.Stop.GetHicon());
-                    TaskbarManager.Instance.SetOverlayIcon(i, "Stopped");
+                    TaskbarManager.Instance.SetOverlayIcon(stopIcon, "Stopped");
                 }
             }
             else if (playing && Paused)
@@ -367,8 +413,7 @@ namespace Sounds
                 positionLabel.Image = Properties.Resources.Pause;
                 if (TaskbarManager.IsPlatformSupported)
                 {
-                    var i = Icon.FromHandle(Properties.Resources.Pause.GetHicon());
-                    TaskbarManager.Instance.SetOverlayIcon(i, "Paused");
+                    TaskbarManager.Instance.SetOverlayIcon(pauseIcon, "Paused");
                 }
             }
             else if (playing && !Paused)
@@ -376,8 +421,7 @@ namespace Sounds
                 positionLabel.Image = Properties.Resources.Play;
                 if (TaskbarManager.IsPlatformSupported)
                 {
-                    var i = Icon.FromHandle(Properties.Resources.Play.GetHicon());
-                    TaskbarManager.Instance.SetOverlayIcon(i, "Playing");
+                    TaskbarManager.Instance.SetOverlayIcon(playIcon, "Playing");
                 }
             }
         }
