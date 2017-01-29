@@ -343,6 +343,24 @@ namespace Sounds
                 else
                 {
                     // reasonable fallback
+                    if (activeFile != null)
+                    {
+                        var containing = Path.GetDirectoryName(activeFile.Name);
+                        // TODO, add more of these, and make them more scalable
+                        // also figure out how to integrate this into the properties dialog
+                        if (File.Exists(Path.Combine(containing, "cover.jpg")))
+                        {
+                            return new Bitmap(Path.Combine(containing, "cover.jpg"));
+                        }
+                        else if (File.Exists(Path.Combine(containing, "front.jpg")))
+                        {
+                            return new Bitmap(Path.Combine(containing, "front.jpg"));
+                        }
+                        else if (File.Exists(Path.Combine(containing, "folder.jpg")))
+                        {
+                            return new Bitmap(Path.Combine(containing, "folder.jpg"));
+                        }
+                    }
                     return new Bitmap(100, 100);
                 }
             }
