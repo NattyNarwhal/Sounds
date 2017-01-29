@@ -282,6 +282,7 @@ namespace Sounds
                 if (TaskbarManager.IsPlatformSupported)
                 {
                     preview.Title = formTitle;
+                    preview.SetImage(AlbumArt);
                 }
                 Text = formTitle;
 
@@ -309,6 +310,7 @@ namespace Sounds
 
                 if (TaskbarManager.IsPlatformSupported)
                 {
+                    preview.InvalidatePreview();
                     preview.Title = "Sounds";
                 }
             }
