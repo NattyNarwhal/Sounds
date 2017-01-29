@@ -81,6 +81,8 @@ namespace Sounds
         public MainForm()
         {
             InitializeComponent();
+            // the designer doesn't want to use icons from resource files
+            Icon = Properties.Resources.AppIcon;
 
             if (TaskbarManager.IsPlatformSupported)
             {

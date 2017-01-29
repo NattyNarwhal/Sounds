@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\sounds.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.WindowsAPICodePack-Core.1.1.0.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
@@ -122,43 +125,46 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Volume.png" />
+    <None Include="Resources\Volume.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Delete.png" />
+    <None Include="Resources\Delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="New.png" />
+    <None Include="Resources\New.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Next.png" />
+    <None Include="Resources\Next.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Open.png" />
+    <None Include="Resources\Open.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Pause.png" />
+    <None Include="Resources\Pause.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Play.png" />
+    <None Include="Resources\Play.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Previous.png" />
+    <None Include="Resources\Previous.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties.png" />
+    <None Include="Resources\Properties.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Repeat.png" />
+    <None Include="Resources\Repeat.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Save.png" />
+    <None Include="Resources\Save.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Stop.png" />
+    <None Include="Resources\Stop.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AddSong.png" />
+    <None Include="Resources\AddSong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sounds.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
