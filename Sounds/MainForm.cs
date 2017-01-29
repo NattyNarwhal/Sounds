@@ -87,6 +87,7 @@ namespace Sounds
             if (TaskbarManager.IsPlatformSupported)
             {
                 preview = new TabbedThumbnail(Handle, Handle);
+                preview.SetWindowIcon(Properties.Resources.AppIcon);
                 preview.DisplayFrameAroundBitmap = true;
                 preview.Title = Text;
                 TaskbarManager.Instance.TabbedThumbnail.AddThumbnailPreview(preview);
