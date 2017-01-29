@@ -93,12 +93,7 @@ namespace Sounds
                     // TODO: This seems to be a bit slow on the uptake
                     if (playing)
                     {
-                        var pictureStream = activeFile.Tag.Pictures.Where(x => x.Type == TagLib.PictureType.FrontCover).FirstOrDefault()?.Data?.Data;
-                        using (var ms = new MemoryStream(pictureStream))
-                        {
-                            var b = new Bitmap(Image.FromStream(ms));
-                            preview.SetImage(b);
-                        }
+                        preview.SetImage(AlbumArt);
                     }
                     else
                     {
@@ -294,13 +289,7 @@ namespace Sounds
                 albumLabel.Text = album;
                 artistLabel.Text = artist;
 
-                // generating an image can be complicated
-                var pictureStream = activeFile.Tag.Pictures.Where(x => x.Type == TagLib.PictureType.FrontCover).FirstOrDefault()?.Data?.Data;
-                using (var ms = new MemoryStream(pictureStream))
-                {
-                    var b = Image.FromStream(ms);
-                    albumArtBox.Image = b;
-                }
+                albumArtBox.Image = AlbumArt;
 
                 // embolden the active song
                 listView1.Items.Cast<ListViewItem>().First(x => x.Tag == activeFile).Font = new Font(listView1.Font, FontStyle.Bold);
@@ -329,6 +318,28 @@ namespace Sounds
             foreach (var lvi in listView1.Items.Cast<ListViewItem>().Where(x => x.Tag != activeFile))
             {
                 lvi.Font = listView1.Font;
+            }
+        }
+
+        public Bitmap AlbumArt
+        {
+            get
+            {
+                // generating an image can be complicated
+                var pictureStream = activeFile.Tag.Pictures.Where(x => x.Type == TagLib.PictureType.FrontCover).FirstOrDefault()?.Data?.Data;
+                if (pictureStream != null)
+                {
+                    using (var ms = new MemoryStream(pictureStream))
+                    {
+                        var b = new Bitmap(Image.FromStream(ms));
+                        return b;
+                    }
+                }
+                else
+                {
+                    // reasonable fallback
+                    return new Bitmap(100, 100);
+                }
             }
         }
 
