@@ -250,7 +250,9 @@ namespace Sounds
 
         public void PlayActive()
         {
-            mp.Open(new Uri(activeFile.Name));
+            // HACK: It's deprecated, but MediaPlayer doesn't like escaped URIs
+            var u = new Uri(activeFile.Name, true);
+            mp.Open(u);
             mp.Play();
             UpdateUI();
             UpdateMenus();
