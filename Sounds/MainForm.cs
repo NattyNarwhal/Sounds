@@ -35,7 +35,7 @@ namespace Sounds
         TagLib.File activeFile = null;
         // not if the MediaPlayer is, but if we should at all
         bool playing = false;
-
+        double vol; // we need to keep this ourselves; mp.Stop resets mp.Volume
         bool repeat = false;
 
         string playlistFile = null;
@@ -63,11 +63,12 @@ namespace Sounds
         {
             get
             {
-                return mp.Volume;
+                return vol;
             }
             set
             {
-                mp.Volume = value;
+                vol = value;
+                mp.Volume = vol;
                 tb.Value = Convert.ToInt32(mp.Volume * 100);
                 var simplePercent = new CultureInfo(CultureInfo.InvariantCulture.Name);
                 simplePercent.NumberFormat.PercentDecimalDigits = 0;
@@ -253,6 +254,7 @@ namespace Sounds
             // HACK: It's deprecated, but MediaPlayer doesn't like escaped URIs
             var u = new Uri(activeFile.Name, true);
             mp.Open(u);
+            mp.Volume = vol; // as Stop might have reset it
             mp.Play();
             UpdateUI();
             UpdateMenus();
