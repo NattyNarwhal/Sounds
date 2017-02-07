@@ -518,15 +518,21 @@ namespace Sounds
 
         public void ShowPropertiesDialog()
         {
-            if (activeFile == null)
-                return;
-
-            TagLib.File item = activeFile;
+            TagLib.File item = null;
 
             if (listView1.SelectedItems.Count > 0)
+            {
                 item = (TagLib.File)listView1.SelectedItems[0].Tag;
+            }
+            else if (activeFile == null)
+            {
+                item = activeFile;
+            }
 
-            new PropertiesForm(item).Show(this);
+            if (item != null)
+            {
+                new PropertiesForm(item).Show(this);
+            }
         }
 
         public void Shuffle()
