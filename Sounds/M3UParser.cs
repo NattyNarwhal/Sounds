@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Sounds
 {
     public static class M3UParser
     {
-        public static IEnumerable<string> Parse(IEnumerable<string> decomposed)
+        public static IEnumerable<string> Parse(IEnumerable<string> decomposed, string relativePathBase)
         {
             foreach (var u in decomposed)
             {
@@ -16,7 +17,7 @@ namespace Sounds
                 if (u.StartsWith("#") || string.IsNullOrWhiteSpace(u))
                     continue;
 
-                yield return u;
+                yield return Path.IsPathRooted(u) ? u : Path.Combine(relativePathBase, u);
             }
         }
     }

@@ -577,7 +577,7 @@ namespace Sounds
 
             var text = File.ReadAllText(fileName);
             var splitText = Regex.Split(text, @"\r?\n");
-            foreach (var f in M3UParser.Parse(splitText))
+            foreach (var f in M3UParser.Parse(splitText, Path.GetDirectoryName(fileName)))
             {
                 AddItem(f);
             }
@@ -595,8 +595,17 @@ namespace Sounds
                 else return;
             }
 
-            var lines = listView1.Items.Cast<ListViewItem>().Select(x => ((TagLib.File)x.Tag).Name);
-            File.WriteAllLines(playlistFile, lines.ToArray());
+            var files = listView1.Items.Cast<ListViewItem>().Select(x => (TagLib.File)x.Tag);
+            var toWrite = new StringBuilder();
+            toWrite.AppendLine("#EXTM3U");
+            foreach (var f in files)
+            {
+                toWrite.AppendLine(string.Format("#EXTINF:{0},{1} - {2}",
+                    Math.Round(f.Properties.Duration.TotalSeconds),
+                    f.Tag?.AlbumArtists?.First(), f.Tag?.Title));
+                toWrite.AppendLine(f.Name);
+            }
+            File.WriteAllText(playlistFile, toWrite.ToString());
         }
 
         private void addFilesToolStripMenuItem_Click(object sender, EventArgs e)
