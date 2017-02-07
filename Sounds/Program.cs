@@ -20,17 +20,13 @@ namespace Sounds
             var mf = new MainForm();
             foreach (var f in args)
             {
-                if (Directory.Exists(f))
-                {
-                    mf.AddDirectory(f);
-                }
-                else if (File.Exists(f) && (f.EndsWith(".m3u") || f.EndsWith(".m3u8")))
+                if (File.Exists(f) && (f.EndsWith(".m3u") || f.EndsWith(".m3u8")))
                 {
                     mf.OpenPlaylist(f, true);
                 }
-                else if (File.Exists(f))
+                else
                 {
-                    mf.AddFile(f);
+                    mf.AddItem(f);
                 }
             }
             Application.Run(mf);

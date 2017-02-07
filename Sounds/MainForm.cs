@@ -225,6 +225,18 @@ namespace Sounds
             }
         }
 
+        public void AddItem(string name)
+        {
+            if (Directory.Exists(name))
+            {
+                AddDirectory(name);
+            }
+            else if (File.Exists(name))
+            {
+                AddFile(name);
+            }
+        }
+
         public void PlayAndSet(bool playSelected)
         {
             if (!playSelected && Paused)
@@ -567,7 +579,7 @@ namespace Sounds
             var splitText = Regex.Split(text, @"\r?\n");
             foreach (var f in M3UParser.Parse(splitText))
             {
-                AddFile(f);
+                AddItem(f);
             }
             playlistFile = fileName;
         }
