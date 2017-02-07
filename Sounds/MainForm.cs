@@ -398,8 +398,6 @@ namespace Sounds
 
             previousToolStripMenuItem.Enabled = playing;
             nextToolStripMenuItem.Enabled = playing;
-            prevTaskbarButton.Enabled = playing;
-            nextTaskbarButton.Enabled = playing;
             rewindToolStripMenuItem.Enabled = playing;
             skipAheadToolStripMenuItem.Enabled = playing;
 
@@ -421,6 +419,8 @@ namespace Sounds
             // TODO: make these translatable messages
             if (TaskbarManager.IsPlatformSupported)
             {
+                prevTaskbarButton.Enabled = playing;
+                nextTaskbarButton.Enabled = playing;
                 if (playing && canPause)
                 {
                     playPauseTaskbarButton.Icon = pauseIcon;
