@@ -596,6 +596,10 @@ namespace Sounds
             }
 
             var files = listView1.Items.Cast<ListViewItem>().Select(x => (TagLib.File)x.Tag);
+            // TODO: this should resolve the lowest common denominator root
+            // instead of only tolerating a single shared root
+            var hasSharedRoot = files.ToLookup(x => Path.GetDirectoryName(x.Name)).Count() == 1;
+
             var toWrite = new StringBuilder();
             toWrite.AppendLine("#EXTM3U");
             foreach (var f in files)
@@ -603,7 +607,14 @@ namespace Sounds
                 toWrite.AppendLine(string.Format("#EXTINF:{0},{1} - {2}",
                     Math.Round(f.Properties.Duration.TotalSeconds),
                     f.Tag?.AlbumArtists?.First(), f.Tag?.Title));
-                toWrite.AppendLine(f.Name);
+                if (hasSharedRoot)
+                {
+                    toWrite.AppendLine(Path.GetFileName(f.Name));
+                }
+                else
+                {
+                    toWrite.AppendLine(f.Name);
+                }
             }
             File.WriteAllText(playlistFile, toWrite.ToString());
         }
