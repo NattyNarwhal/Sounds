@@ -400,6 +400,7 @@ namespace Sounds
             var toggleDesc = TypeDescriptor.GetConverter(typeof(Keys))
                 .ConvertToString(Keys.Control | Keys.Space);
 
+            newPlaylistToolStripMenuItem.Enabled = !playing;
             playToolStripMenuItem.Enabled = canPlay;
             playToolStripMenuItem.ShortcutKeyDisplayString =
                 canPlay ? toggleDesc : string.Empty;
