@@ -67,7 +67,8 @@ namespace Sounds
             }
             set
             {
-                vol = value;
+                // clamp value
+                vol = Math.Min(Math.Max(value, 0), 1);
                 mp.Volume = vol;
                 tb.Value = Convert.ToInt32(mp.Volume * 100);
                 var simplePercent = new CultureInfo(CultureInfo.InvariantCulture.Name);
@@ -410,8 +411,8 @@ namespace Sounds
             previousToolStripButton.Enabled = playing;
             nextToolStripButton.Enabled = playing;
 
-            volumeUpToolStripMenuItem.Enabled = Volume + 0.1 <= 1;
-            volumeDownToolStripMenuItem.Enabled = Volume - 0.1 >= 0;
+            volumeUpToolStripMenuItem.Enabled = Volume != 1;
+            volumeDownToolStripMenuItem.Enabled = Volume != 0;
             muteToolStripMenuItem.Enabled = Volume > 0;
 
             playContextToolStripMenuItem.Enabled = selected;
