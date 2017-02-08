@@ -64,6 +64,12 @@
             this.albumArtSelector = new System.Windows.Forms.ComboBox();
             this.albumArtBox = new System.Windows.Forms.PictureBox();
             this.fileSelector = new System.Windows.Forms.ComboBox();
+            this.copyrightBox = new System.Windows.Forms.TextBox();
+            this.copyrightLabel = new System.Windows.Forms.Label();
+            this.commentsBox = new System.Windows.Forms.TextBox();
+            this.commentsLabel = new System.Windows.Forms.Label();
+            this.lyricsBox = new System.Windows.Forms.TextBox();
+            this.lyricsLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.intrinisicsTab.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -161,6 +167,12 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lyricsBox);
+            this.tabPage2.Controls.Add(this.lyricsLabel);
+            this.tabPage2.Controls.Add(this.commentsBox);
+            this.tabPage2.Controls.Add(this.commentsLabel);
+            this.tabPage2.Controls.Add(this.copyrightBox);
+            this.tabPage2.Controls.Add(this.copyrightLabel);
             this.tabPage2.Controls.Add(this.yearBox);
             this.tabPage2.Controls.Add(this.yearLabel);
             this.tabPage2.Controls.Add(this.genresBox);
@@ -288,8 +300,8 @@
             // 
             // albumArtSelector
             // 
-            this.albumArtSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.albumArtSelector, "albumArtSelector");
+            this.albumArtSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.albumArtSelector.FormattingEnabled = true;
             this.albumArtSelector.Name = "albumArtSelector";
             this.albumArtSelector.SelectedIndexChanged += new System.EventHandler(this.albumArtSelector_SelectedIndexChanged);
@@ -307,6 +319,39 @@
             this.fileSelector.FormattingEnabled = true;
             this.fileSelector.Name = "fileSelector";
             this.fileSelector.SelectedIndexChanged += new System.EventHandler(this.fileSelector_SelectedIndexChanged);
+            // 
+            // copyrightBox
+            // 
+            resources.ApplyResources(this.copyrightBox, "copyrightBox");
+            this.copyrightBox.Name = "copyrightBox";
+            this.copyrightBox.ReadOnly = true;
+            // 
+            // copyrightLabel
+            // 
+            resources.ApplyResources(this.copyrightLabel, "copyrightLabel");
+            this.copyrightLabel.Name = "copyrightLabel";
+            // 
+            // commentsBox
+            // 
+            resources.ApplyResources(this.commentsBox, "commentsBox");
+            this.commentsBox.Name = "commentsBox";
+            this.commentsBox.ReadOnly = true;
+            // 
+            // commentsLabel
+            // 
+            resources.ApplyResources(this.commentsLabel, "commentsLabel");
+            this.commentsLabel.Name = "commentsLabel";
+            // 
+            // lyricsBox
+            // 
+            resources.ApplyResources(this.lyricsBox, "lyricsBox");
+            this.lyricsBox.Name = "lyricsBox";
+            this.lyricsBox.ReadOnly = true;
+            // 
+            // lyricsLabel
+            // 
+            resources.ApplyResources(this.lyricsLabel, "lyricsLabel");
+            this.lyricsLabel.Name = "lyricsLabel";
             // 
             // PropertiesForm
             // 
@@ -370,5 +415,11 @@
         private System.Windows.Forms.TextBox yearBox;
         private System.Windows.Forms.Label yearLabel;
         private System.Windows.Forms.ComboBox fileSelector;
+        private System.Windows.Forms.TextBox lyricsBox;
+        private System.Windows.Forms.Label lyricsLabel;
+        private System.Windows.Forms.TextBox commentsBox;
+        private System.Windows.Forms.Label commentsLabel;
+        private System.Windows.Forms.TextBox copyrightBox;
+        private System.Windows.Forms.Label copyrightLabel;
     }
 }

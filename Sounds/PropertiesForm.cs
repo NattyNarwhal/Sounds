@@ -44,6 +44,9 @@ namespace Sounds
             discBox.Text = f.Tag.DiscCount > 0 ?
                 string.Format("{0}/{1}", f.Tag.Disc, f.Tag.DiscCount)
                 : f.Tag.Disc.ToString();
+            copyrightBox.Text = f.Tag.Copyright;
+            commentsBox.Text = f.Tag.Comment;
+            lyricsBox.Text = f.Tag.Lyrics;
 
             artistsBox.Items.Clear();
             composersBox.Items.Clear();

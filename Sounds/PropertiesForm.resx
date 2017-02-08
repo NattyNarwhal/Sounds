@@ -129,7 +129,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 324</value>
+    <value>443, 324</value>
   </data>
   <data name="okButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -156,215 +156,8 @@
   <data name="tabControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;intrinisicsTab.Name" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;intrinisicsTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;intrinisicsTab.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;intrinisicsTab.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 306</value>
-  </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;durationBox.Name" xml:space="preserve">
-    <value>durationBox</value>
-  </data>
-  <data name="&gt;&gt;durationBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;durationBox.Parent" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;durationBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;durationLabel.Name" xml:space="preserve">
-    <value>durationLabel</value>
-  </data>
-  <data name="&gt;&gt;durationLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;durationLabel.Parent" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;durationLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;sampleRateBox.Name" xml:space="preserve">
-    <value>sampleRateBox</value>
-  </data>
-  <data name="&gt;&gt;sampleRateBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sampleRateBox.Parent" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;sampleRateBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;sampleRateLabel.Name" xml:space="preserve">
-    <value>sampleRateLabel</value>
-  </data>
-  <data name="&gt;&gt;sampleRateLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sampleRateLabel.Parent" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;sampleRateLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;channelsBox.Name" xml:space="preserve">
-    <value>channelsBox</value>
-  </data>
-  <data name="&gt;&gt;channelsBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;channelsBox.Parent" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;channelsBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;channelsLabel.Name" xml:space="preserve">
-    <value>channelsLabel</value>
-  </data>
-  <data name="&gt;&gt;channelsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;channelsLabel.Parent" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;channelsLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;bitrateBox.Name" xml:space="preserve">
-    <value>bitrateBox</value>
-  </data>
-  <data name="&gt;&gt;bitrateBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bitrateBox.Parent" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;bitrateBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;bitrateLabel.Name" xml:space="preserve">
-    <value>bitrateLabel</value>
-  </data>
-  <data name="&gt;&gt;bitrateLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bitrateLabel.Parent" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;bitrateLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;fileNameBox.Name" xml:space="preserve">
-    <value>fileNameBox</value>
-  </data>
-  <data name="&gt;&gt;fileNameBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileNameBox.Parent" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;fileNameBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;fileNameLabel.Name" xml:space="preserve">
-    <value>fileNameLabel</value>
-  </data>
-  <data name="&gt;&gt;fileNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileNameLabel.Parent" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;fileNameLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="intrinisicsTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="intrinisicsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="intrinisicsTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 280</value>
-  </data>
-  <data name="intrinisicsTab.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="intrinisicsTab.Text" xml:space="preserve">
-    <value>Intrinisics</value>
-  </data>
-  <data name="&gt;&gt;intrinisicsTab.Name" xml:space="preserve">
-    <value>intrinisicsTab</value>
-  </data>
-  <data name="&gt;&gt;intrinisicsTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;intrinisicsTab.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;intrinisicsTab.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="durationBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
   <data name="durationBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 110</value>
+    <value>326, 58</value>
   </data>
   <data name="durationBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 20</value>
@@ -388,7 +181,7 @@
     <value>True</value>
   </data>
   <data name="durationLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 113</value>
+    <value>252, 61</value>
   </data>
   <data name="durationLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 13</value>
@@ -411,11 +204,8 @@
   <data name="&gt;&gt;durationLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="sampleRateBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
   <data name="sampleRateBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 84</value>
+    <value>326, 32</value>
   </data>
   <data name="sampleRateBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 20</value>
@@ -439,7 +229,7 @@
     <value>True</value>
   </data>
   <data name="sampleRateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 87</value>
+    <value>252, 35</value>
   </data>
   <data name="sampleRateLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 13</value>
@@ -461,9 +251,6 @@
   </data>
   <data name="&gt;&gt;sampleRateLabel.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="channelsBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
   </data>
   <data name="channelsBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 58</value>
@@ -512,9 +299,6 @@
   </data>
   <data name="&gt;&gt;channelsLabel.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="bitrateBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
   </data>
   <data name="bitrateBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 32</value>
@@ -571,7 +355,7 @@
     <value>80, 6</value>
   </data>
   <data name="fileNameBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 20</value>
+    <value>412, 20</value>
   </data>
   <data name="fileNameBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -615,230 +399,200 @@
   <data name="&gt;&gt;fileNameLabel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="&gt;&gt;yearBox.Name" xml:space="preserve">
-    <value>yearBox</value>
-  </data>
-  <data name="&gt;&gt;yearBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;yearBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;yearBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;yearLabel.Name" xml:space="preserve">
-    <value>yearLabel</value>
-  </data>
-  <data name="&gt;&gt;yearLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;yearLabel.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;yearLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;genresBox.Name" xml:space="preserve">
-    <value>genresBox</value>
-  </data>
-  <data name="&gt;&gt;genresBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;genresBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;genresBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;genreLabel.Name" xml:space="preserve">
-    <value>genreLabel</value>
-  </data>
-  <data name="&gt;&gt;genreLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;genreLabel.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;genreLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;composersBox.Name" xml:space="preserve">
-    <value>composersBox</value>
-  </data>
-  <data name="&gt;&gt;composersBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;composersBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;composersBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;composersLabel.Name" xml:space="preserve">
-    <value>composersLabel</value>
-  </data>
-  <data name="&gt;&gt;composersLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;composersLabel.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;composersLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;artistsBox.Name" xml:space="preserve">
-    <value>artistsBox</value>
-  </data>
-  <data name="&gt;&gt;artistsBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;artistsBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;artistsBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;artistsLabel.Name" xml:space="preserve">
-    <value>artistsLabel</value>
-  </data>
-  <data name="&gt;&gt;artistsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;artistsLabel.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;artistsLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;discBox.Name" xml:space="preserve">
-    <value>discBox</value>
-  </data>
-  <data name="&gt;&gt;discBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;discBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;discBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;discLabel.Name" xml:space="preserve">
-    <value>discLabel</value>
-  </data>
-  <data name="&gt;&gt;discLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;discLabel.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;discLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;trackBox.Name" xml:space="preserve">
-    <value>trackBox</value>
-  </data>
-  <data name="&gt;&gt;trackBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;trackBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;trackBox.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;trackLabel.Name" xml:space="preserve">
-    <value>trackLabel</value>
-  </data>
-  <data name="&gt;&gt;trackLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;trackLabel.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;trackLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;albumBox.Name" xml:space="preserve">
-    <value>albumBox</value>
-  </data>
-  <data name="&gt;&gt;albumBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;albumBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;albumBox.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;albumLabel.Name" xml:space="preserve">
-    <value>albumLabel</value>
-  </data>
-  <data name="&gt;&gt;albumLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;albumLabel.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;albumLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;titleBox.Name" xml:space="preserve">
-    <value>titleBox</value>
-  </data>
-  <data name="&gt;&gt;titleBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;titleBox.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;titleBox.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;titleLabel.Name" xml:space="preserve">
-    <value>titleLabel</value>
-  </data>
-  <data name="&gt;&gt;titleLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;titleLabel.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;titleLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="intrinisicsTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="intrinisicsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 280</value>
+  <data name="intrinisicsTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>498, 280</value>
   </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="intrinisicsTab.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Metadata</value>
+  <data name="intrinisicsTab.Text" xml:space="preserve">
+    <value>Intrinisics</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="&gt;&gt;intrinisicsTab.Name" xml:space="preserve">
+    <value>intrinisicsTab</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+  <data name="&gt;&gt;intrinisicsTab.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;intrinisicsTab.Parent" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;intrinisicsTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lyricsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 162</value>
+  </data>
+  <data name="lyricsBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lyricsBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
+  <data name="lyricsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 112</value>
+  </data>
+  <data name="lyricsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;lyricsBox.Name" xml:space="preserve">
+    <value>lyricsBox</value>
+  </data>
+  <data name="&gt;&gt;lyricsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lyricsBox.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;lyricsBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lyricsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lyricsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lyricsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 165</value>
+  </data>
+  <data name="lyricsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 13</value>
+  </data>
+  <data name="lyricsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="lyricsLabel.Text" xml:space="preserve">
+    <value>&amp;Lyrics</value>
+  </data>
+  <data name="&gt;&gt;lyricsLabel.Name" xml:space="preserve">
+    <value>lyricsLabel</value>
+  </data>
+  <data name="&gt;&gt;lyricsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lyricsLabel.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;lyricsLabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="yearBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="commentsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 162</value>
+  </data>
+  <data name="commentsBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="commentsBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
+  <data name="commentsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 112</value>
+  </data>
+  <data name="commentsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;commentsBox.Name" xml:space="preserve">
+    <value>commentsBox</value>
+  </data>
+  <data name="&gt;&gt;commentsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;commentsBox.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;commentsBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="commentsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="commentsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="commentsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 165</value>
+  </data>
+  <data name="commentsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
+  </data>
+  <data name="commentsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="commentsLabel.Text" xml:space="preserve">
+    <value>Co&amp;mments</value>
+  </data>
+  <data name="&gt;&gt;commentsLabel.Name" xml:space="preserve">
+    <value>commentsLabel</value>
+  </data>
+  <data name="&gt;&gt;commentsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;commentsLabel.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;commentsLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="copyrightBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 136</value>
+  </data>
+  <data name="copyrightBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 20</value>
+  </data>
+  <data name="copyrightBox.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;copyrightBox.Name" xml:space="preserve">
+    <value>copyrightBox</value>
+  </data>
+  <data name="&gt;&gt;copyrightBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyrightBox.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;copyrightBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="copyrightLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="copyrightLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="copyrightLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 139</value>
+  </data>
+  <data name="copyrightLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="copyrightLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="copyrightLabel.Text" xml:space="preserve">
+    <value>Copyrig&amp;ht</value>
+  </data>
+  <data name="&gt;&gt;copyrightLabel.Name" xml:space="preserve">
+    <value>copyrightLabel</value>
+  </data>
+  <data name="&gt;&gt;copyrightLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyrightLabel.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;copyrightLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="yearBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 257</value>
+    <value>80, 110</value>
   </data>
   <data name="yearBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 20</value>
@@ -856,13 +610,13 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;yearBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="yearLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="yearLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 260</value>
+    <value>6, 113</value>
   </data>
   <data name="yearLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 13</value>
@@ -883,13 +637,13 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;yearLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="genresBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="genresBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 208</value>
+    <value>326, 110</value>
   </data>
   <data name="genresBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 43</value>
@@ -907,13 +661,13 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;genresBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="genreLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="genreLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 211</value>
+    <value>252, 113</value>
   </data>
   <data name="genreLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 13</value>
@@ -934,13 +688,13 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;genreLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>9</value>
   </data>
   <data name="composersBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="composersBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 159</value>
+    <value>326, 58</value>
   </data>
   <data name="composersBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 43</value>
@@ -958,13 +712,13 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;composersBox.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>10</value>
   </data>
   <data name="composersLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="composersLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 162</value>
+    <value>252, 61</value>
   </data>
   <data name="composersLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
@@ -985,13 +739,13 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;composersLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>11</value>
   </data>
   <data name="artistsBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="artistsBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 110</value>
+    <value>326, 6</value>
   </data>
   <data name="artistsBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 43</value>
@@ -1009,13 +763,13 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;artistsBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>12</value>
   </data>
   <data name="artistsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="artistsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 113</value>
+    <value>252, 9</value>
   </data>
   <data name="artistsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
@@ -1036,10 +790,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;artistsLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="discBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>13</value>
   </data>
   <data name="discBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 84</value>
@@ -1060,7 +811,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;discBox.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>14</value>
   </data>
   <data name="discLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1087,10 +838,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;discLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="trackBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>15</value>
   </data>
   <data name="trackBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 58</value>
@@ -1111,7 +859,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;trackBox.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>16</value>
   </data>
   <data name="trackLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1138,10 +886,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;trackLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="albumBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>17</value>
   </data>
   <data name="albumBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 32</value>
@@ -1162,7 +907,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;albumBox.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>18</value>
   </data>
   <data name="albumLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1189,10 +934,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;albumLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="titleBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+    <value>19</value>
   </data>
   <data name="titleBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 6</value>
@@ -1213,7 +955,7 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;titleBox.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>20</value>
   </data>
   <data name="titleLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1240,70 +982,34 @@
     <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;titleLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>21</value>
   </data>
-  <data name="&gt;&gt;albumArtInfo.Name" xml:space="preserve">
-    <value>albumArtInfo</value>
-  </data>
-  <data name="&gt;&gt;albumArtInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;albumArtInfo.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;albumArtInfo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;albumArtSelector.Name" xml:space="preserve">
-    <value>albumArtSelector</value>
-  </data>
-  <data name="&gt;&gt;albumArtSelector.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;albumArtSelector.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;albumArtSelector.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;albumArtBox.Name" xml:space="preserve">
-    <value>albumArtBox</value>
-  </data>
-  <data name="&gt;&gt;albumArtBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;albumArtBox.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;albumArtBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 280</value>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>498, 280</value>
   </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Pictures</value>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Metadata</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="albumArtInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
@@ -1312,7 +1018,7 @@
     <value>6, 256</value>
   </data>
   <data name="albumArtInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 21</value>
+    <value>486, 21</value>
   </data>
   <data name="albumArtInfo.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1329,6 +1035,9 @@
   <data name="&gt;&gt;albumArtInfo.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="albumArtSelector.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <data name="albumArtSelector.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>System</value>
   </data>
@@ -1336,7 +1045,7 @@
     <value>6, 6</value>
   </data>
   <data name="albumArtSelector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 21</value>
+    <value>486, 21</value>
   </data>
   <data name="albumArtSelector.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1360,7 +1069,7 @@
     <value>6, 33</value>
   </data>
   <data name="albumArtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 220</value>
+    <value>486, 220</value>
   </data>
   <data name="albumArtBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -1380,6 +1089,54 @@
   <data name="&gt;&gt;albumArtBox.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>498, 280</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Pictures</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>506, 306</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="fileSelector.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
@@ -1390,7 +1147,7 @@
     <value>12, 325</value>
   </data>
   <data name="fileSelector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 21</value>
+    <value>425, 21</value>
   </data>
   <data name="fileSelector.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1414,7 +1171,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>284, 359</value>
+    <value>530, 359</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
