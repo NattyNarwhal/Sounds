@@ -532,9 +532,9 @@ namespace Sounds
             }
         }
 
-        public void ShowPropertiesDialog()
+        public void ShowPropertiesDialog(bool forcePlayingSong)
         {
-            if (listView1.SelectedItems.Count > 0)
+            if (!forcePlayingSong && listView1.SelectedItems.Count > 0)
             {
                 new PropertiesForm(listView1.SelectedItems.Cast<ListViewItem>().Select(x => (TagLib.File)x.Tag).ToArray()).Show(this);
             }
@@ -711,7 +711,7 @@ namespace Sounds
 
         private void propertiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowPropertiesDialog();
+            ShowPropertiesDialog(false);
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -846,6 +846,11 @@ namespace Sounds
         private void showInfoPaneToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panel1.Visible = showInfoPaneToolStripMenuItem.Checked;
+        }
+
+        private void albumArtBox_Click(object sender, EventArgs e)
+        {
+            ShowPropertiesDialog(true);
         }
     }
 }
