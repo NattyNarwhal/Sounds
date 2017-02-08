@@ -63,6 +63,7 @@
             this.albumArtInfo = new System.Windows.Forms.Label();
             this.albumArtSelector = new System.Windows.Forms.ComboBox();
             this.albumArtBox = new System.Windows.Forms.PictureBox();
+            this.fileSelector = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.intrinisicsTab.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -89,7 +90,6 @@
             // 
             // intrinisicsTab
             // 
-            resources.ApplyResources(this.intrinisicsTab, "intrinisicsTab");
             this.intrinisicsTab.Controls.Add(this.durationBox);
             this.intrinisicsTab.Controls.Add(this.durationLabel);
             this.intrinisicsTab.Controls.Add(this.sampleRateBox);
@@ -100,6 +100,7 @@
             this.intrinisicsTab.Controls.Add(this.bitrateLabel);
             this.intrinisicsTab.Controls.Add(this.fileNameBox);
             this.intrinisicsTab.Controls.Add(this.fileNameLabel);
+            resources.ApplyResources(this.intrinisicsTab, "intrinisicsTab");
             this.intrinisicsTab.Name = "intrinisicsTab";
             this.intrinisicsTab.UseVisualStyleBackColor = true;
             // 
@@ -160,7 +161,6 @@
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.yearBox);
             this.tabPage2.Controls.Add(this.yearLabel);
             this.tabPage2.Controls.Add(this.genresBox);
@@ -177,6 +177,7 @@
             this.tabPage2.Controls.Add(this.albumLabel);
             this.tabPage2.Controls.Add(this.titleBox);
             this.tabPage2.Controls.Add(this.titleLabel);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -193,8 +194,8 @@
             // 
             // genresBox
             // 
-            resources.ApplyResources(this.genresBox, "genresBox");
             this.genresBox.FormattingEnabled = true;
+            resources.ApplyResources(this.genresBox, "genresBox");
             this.genresBox.Name = "genresBox";
             this.genresBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             // 
@@ -205,8 +206,8 @@
             // 
             // composersBox
             // 
-            resources.ApplyResources(this.composersBox, "composersBox");
             this.composersBox.FormattingEnabled = true;
+            resources.ApplyResources(this.composersBox, "composersBox");
             this.composersBox.Name = "composersBox";
             this.composersBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             // 
@@ -217,8 +218,8 @@
             // 
             // artistsBox
             // 
-            resources.ApplyResources(this.artistsBox, "artistsBox");
             this.artistsBox.FormattingEnabled = true;
+            resources.ApplyResources(this.artistsBox, "artistsBox");
             this.artistsBox.Name = "artistsBox";
             this.artistsBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             // 
@@ -273,10 +274,10 @@
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.albumArtInfo);
             this.tabPage1.Controls.Add(this.albumArtSelector);
             this.tabPage1.Controls.Add(this.albumArtBox);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -287,8 +288,8 @@
             // 
             // albumArtSelector
             // 
-            resources.ApplyResources(this.albumArtSelector, "albumArtSelector");
             this.albumArtSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.albumArtSelector, "albumArtSelector");
             this.albumArtSelector.FormattingEnabled = true;
             this.albumArtSelector.Name = "albumArtSelector";
             this.albumArtSelector.SelectedIndexChanged += new System.EventHandler(this.albumArtSelector_SelectedIndexChanged);
@@ -299,11 +300,20 @@
             this.albumArtBox.Name = "albumArtBox";
             this.albumArtBox.TabStop = false;
             // 
+            // fileSelector
+            // 
+            resources.ApplyResources(this.fileSelector, "fileSelector");
+            this.fileSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.fileSelector.FormattingEnabled = true;
+            this.fileSelector.Name = "fileSelector";
+            this.fileSelector.SelectedIndexChanged += new System.EventHandler(this.fileSelector_SelectedIndexChanged);
+            // 
             // PropertiesForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.okButton;
+            this.Controls.Add(this.fileSelector);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.okButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -359,5 +369,6 @@
         private System.Windows.Forms.Label albumArtInfo;
         private System.Windows.Forms.TextBox yearBox;
         private System.Windows.Forms.Label yearLabel;
+        private System.Windows.Forms.ComboBox fileSelector;
     }
 }

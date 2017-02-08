@@ -534,20 +534,13 @@ namespace Sounds
 
         public void ShowPropertiesDialog()
         {
-            TagLib.File item = null;
-
             if (listView1.SelectedItems.Count > 0)
             {
-                item = (TagLib.File)listView1.SelectedItems[0].Tag;
+                new PropertiesForm(listView1.SelectedItems.Cast<ListViewItem>().Select(x => (TagLib.File)x.Tag).ToArray()).Show(this);
             }
-            else if (activeFile == null)
+            else if (playing)
             {
-                item = activeFile;
-            }
-
-            if (item != null)
-            {
-                new PropertiesForm(item).Show(this);
+                new PropertiesForm(activeFile).Show(this);
             }
         }
 

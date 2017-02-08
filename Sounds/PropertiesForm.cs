@@ -16,9 +16,18 @@ namespace Sounds
         public PropertiesForm()
         {
             InitializeComponent();
+            fileSelector.DisplayMember = "Name";
         }
 
-        public PropertiesForm(TagLib.File f) : this()
+        public PropertiesForm(params TagLib.File[] files) : this()
+        {
+            fileSelector.Items.AddRange(files);
+            fileSelector.SelectedIndex = 0;
+            // TODO: Improve this aspect
+            fileSelector.DropDownWidth = TextRenderer.MeasureText(files[0].Name, fileSelector.Font).Width;
+        }
+
+        public void SwitchFile(TagLib.File f)
         {
             fileNameBox.Text = f.Name;
             durationBox.Text = f.Properties.Duration.ToString();
@@ -36,10 +45,13 @@ namespace Sounds
                 string.Format("{0}/{1}", f.Tag.Disc, f.Tag.DiscCount)
                 : f.Tag.Disc.ToString();
 
+            artistsBox.Items.Clear();
+            composersBox.Items.Clear();
+            genresBox.Items.Clear();
             artistsBox.Items.AddRange(f.Tag.Performers);
             composersBox.Items.AddRange(f.Tag.Composers);
             genresBox.Items.AddRange(f.Tag.Genres);
-            
+
             albumArtSelector.DisplayMember = "Type";
             albumArtSelector.Items.AddRange(f.Tag.Pictures);
             if (albumArtSelector.Items.Count > 0)
@@ -67,6 +79,11 @@ namespace Sounds
                     albumArtBox.Image = b;
                 }
             }
+        }
+
+        private void fileSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SwitchFile((TagLib.File)fileSelector.SelectedItem);
         }
     }
 }
