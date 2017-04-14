@@ -23,8 +23,14 @@ namespace Sounds
         {
             fileSelector.Items.AddRange(files);
             fileSelector.SelectedIndex = 0;
-            // TODO: Improve this aspect
-            fileSelector.DropDownWidth = TextRenderer.MeasureText(files[0].Name, fileSelector.Font).Width;
+
+            int largestWidth = 0;
+            foreach(var i in files)
+            {
+                var width = TextRenderer.MeasureText(i.Name, fileSelector.Font).Width;
+                largestWidth = Math.Max(width, largestWidth);
+            }
+            fileSelector.DropDownWidth = largestWidth;
         }
 
         public void SwitchFile(TagLib.File f)
