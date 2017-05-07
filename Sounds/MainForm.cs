@@ -88,7 +88,7 @@ namespace Sounds
 
             if (TaskbarManager.IsPlatformSupported)
             {
-                preview = new TabbedThumbnail(Handle, Handle);
+                preview = new TabbedThumbnail(Handle, toolStripContainer1.Handle);
                 preview.SetWindowIcon(Properties.Resources.AppIcon);
                 preview.DisplayFrameAroundBitmap = true;
                 preview.Title = Text;
@@ -102,7 +102,18 @@ namespace Sounds
                     }
                     else
                     {
-                        preview.InvalidatePreview();
+                        // HACK: the preview code is horribly broken with
+                        // minimized forms, try to contain it?
+                        if (WindowState == FormWindowState.Minimized)
+                        {
+                            // desperate measures to stop an NRE
+                            using (var empty = new Bitmap(RestoreBounds.Width, RestoreBounds.Height))
+                            {
+                                preview.SetImage(empty);
+                            }
+                        }
+                        else
+                            preview.InvalidatePreview();
                     }
                     ev.Handled = true;
                 };
@@ -111,7 +122,8 @@ namespace Sounds
                 preview.TabbedThumbnailClosed += (o, ev) => Close();
                 preview.TabbedThumbnailActivated += (o, ev) =>
                 {
-                    WindowState = FormWindowState.Normal;
+                    if (WindowState == FormWindowState.Minimized)
+                        WindowState = FormWindowState.Normal;
                     Activate();
                 };
                 preview.TabbedThumbnailMaximized += (o, ev) => WindowState = FormWindowState.Maximized;
@@ -124,7 +136,7 @@ namespace Sounds
                 nextTaskbarButton = new ThumbnailToolBarButton(nextIcon, "Next");
                 nextTaskbarButton.Click += (o, ev) => Next();
 
-                TaskbarManager.Instance.ThumbnailToolBars.AddButtons(Handle,
+                TaskbarManager.Instance.ThumbnailToolBars.AddButtons(toolStripContainer1.Handle,
                     prevTaskbarButton, playPauseTaskbarButton, nextTaskbarButton);
             }
 
