@@ -276,8 +276,10 @@ namespace Sounds
 
         public void PlayActive()
         {
+#pragma warning disable CS0618
             // HACK: It's deprecated, but MediaPlayer doesn't like escaped URIs
             var u = new Uri(activeFile.Name, true);
+#pragma warning restore CS0618
             mp.Open(u);
             mp.Volume = vol; // as Stop might have reset it
             mp.Play();
