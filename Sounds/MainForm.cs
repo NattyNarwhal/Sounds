@@ -30,6 +30,8 @@ namespace Sounds
         Icon nextIcon = Icon.FromHandle(Properties.Resources.Next.GetHicon());
         Icon pauseIcon = Icon.FromHandle(Properties.Resources.Pause.GetHicon());
 
+        bool showInfoPane = true;
+
         ToolStripTrackBar tb = new ToolStripTrackBar();
         MediaPlayer mp = new MediaPlayer();
         TagLib.File activeFile = null;
@@ -189,6 +191,7 @@ namespace Sounds
             // we need to do it when the form is visible so taskbar updates work
             // do initial init of menubar and such
             UpdateMenus();
+            UpdateUI();
             // mp's value is, but not the UI bits; do this to update them
             Volume = 0.50;
         }
@@ -329,6 +332,8 @@ namespace Sounds
 
                 albumArtBox.Image = AlbumArt;
 
+                panel1.Visible = showInfoPane;
+
                 // embolden the active song
                 listView1.Items.Cast<ListViewItem>().First(x => x.Tag == activeFile).Font = new Font(listView1.Font, FontStyle.Bold);
             }
@@ -345,6 +350,8 @@ namespace Sounds
                 positionTrackBar.Visible = false;
 
                 albumArtBox.Image = null;
+
+                panel1.Visible = false;
 
                 if (TaskbarManager.IsPlatformSupported)
                 {
@@ -862,7 +869,8 @@ namespace Sounds
 
         private void showInfoPaneToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel1.Visible = showInfoPaneToolStripMenuItem.Checked;
+            showInfoPane = showInfoPaneToolStripMenuItem.Checked;
+            UpdateUI();
         }
 
         private void albumArtBox_Click(object sender, EventArgs e)
