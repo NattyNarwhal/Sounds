@@ -172,12 +172,14 @@ namespace Sounds
                 {
                     positionTrackBar.Maximum = Convert.ToInt32(mp.NaturalDuration.TimeSpan.TotalSeconds);
                     positionTrackBar.Enabled = true;
+                    positionTrackBar.Visible = true;
                     trackBarSyncTimer.Enabled = true;
                 }
                 else
                 {
                     trackBarSyncTimer.Enabled = false;
                     positionTrackBar.Enabled = false;
+                    positionTrackBar.Visible = false;
                 }
             };
         }
@@ -340,6 +342,7 @@ namespace Sounds
 
                 positionLabel.Text = string.Empty;
                 positionTrackBar.Enabled = false;
+                positionTrackBar.Visible = false;
 
                 albumArtBox.Image = null;
 
