@@ -413,10 +413,11 @@ namespace Sounds
         {
             var selected = listView1.SelectedItems.Count > 0;
             var any = listView1.Items.Count > 0;
+            var atLeastTwo = listView1.Items.Count > 1;
 
             removeSelectedToolStripMenuItem.Enabled = selected;
             propertiesToolStripMenuItem.Enabled = playing || selected;
-            shuffleToolStripMenuItem.Enabled = any;
+            shuffleToolStripMenuItem.Enabled = atLeastTwo;
 
             var canPlay = playing ? Paused : any;
             var canPause = playing ? !Paused : false;
