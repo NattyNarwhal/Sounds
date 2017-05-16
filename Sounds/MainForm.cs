@@ -90,6 +90,10 @@ namespace Sounds
             InitializeComponent();
             // the designer doesn't want to use icons from resource files
             Icon = Properties.Resources.AppIcon;
+            // load settings
+            showToolBar = Properties.Settings.Default.ShowToolBar;
+            showStatusBar = Properties.Settings.Default.ShowStatusBar;
+            showInfoPane = Properties.Settings.Default.ShowInfoPane;
 
             if (TaskbarManager.IsPlatformSupported)
             {
@@ -465,6 +469,10 @@ namespace Sounds
             playContextToolStripMenuItem.Enabled = selected;
             propertiesContextToolStripMenuItem.Enabled = selected;
             removeContextToolStripMenuItem.Enabled = selected;
+
+            showToolbarToolStripMenuItem.Checked = showToolBar;
+            showStatusbarToolStripMenuItem.Checked = showStatusBar;
+            showInfoPaneToolStripMenuItem.Checked = showInfoPane;
 
             // TODO: make these translatable messages
             if (TaskbarManager.IsPlatformSupported)
@@ -895,6 +903,15 @@ namespace Sounds
         private void deleteOnNextToolStripMenuItem_Click(object sender, EventArgs e)
         {
             deleteOnNext = deleteOnNextToolStripMenuItem.Checked;
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // save settings at end
+            Properties.Settings.Default.ShowToolBar = showToolBar;
+            Properties.Settings.Default.ShowStatusBar = showStatusBar;
+            Properties.Settings.Default.ShowInfoPane = showInfoPane;
+            Properties.Settings.Default.Save();
         }
     }
 }
