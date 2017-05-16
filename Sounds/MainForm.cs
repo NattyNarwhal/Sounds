@@ -31,6 +31,8 @@ namespace Sounds
         Icon pauseIcon = Icon.FromHandle(Properties.Resources.Pause.GetHicon());
 
         bool showInfoPane = true;
+        bool showToolBar = true;
+        bool showStatusBar = true;
 
         ToolStripTrackBar tb = new ToolStripTrackBar();
         MediaPlayer mp = new MediaPlayer();
@@ -309,6 +311,8 @@ namespace Sounds
         }
 
         // Metadata and such
+        // TODO: needs optimization. profiler says we're churning, but
+        // album art is fine. My guess is emboldening.
         public void UpdateUI()
         {
             if (activeFile != null)
@@ -363,6 +367,10 @@ namespace Sounds
             }
 
             // we can run this regardless
+            statusStrip1.Visible = showStatusBar;
+            toolStrip1.Visible = showToolBar;
+            volumeStatusButton.Enabled = !showToolBar;
+            volumeStatusButton.Visible = !showToolBar;
             errorMessageLabel.Text = string.Empty;
             foreach (var lvi in listView1.Items.Cast<ListViewItem>().Where(x => x.Tag != activeFile))
             {
@@ -863,16 +871,14 @@ namespace Sounds
 
         private void showToolbarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var check = showToolbarToolStripMenuItem.Checked;
-            toolStrip1.Visible = check;
-
-            volumeStatusButton.Enabled = !check;
-            volumeStatusButton.Visible = !check;
+            showToolBar = showToolbarToolStripMenuItem.Checked;
+            UpdateUI();
         }
 
         private void showStatusbarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            statusStrip1.Visible = showStatusbarToolStripMenuItem.Checked;
+            showStatusBar = showStatusbarToolStripMenuItem.Checked;
+            UpdateUI();
         }
 
         private void showInfoPaneToolStripMenuItem_Click(object sender, EventArgs e)
