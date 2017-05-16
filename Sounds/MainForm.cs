@@ -39,6 +39,7 @@ namespace Sounds
         bool playing = false;
         double vol; // we need to keep this ourselves; mp.Stop resets mp.Volume
         bool repeat = false;
+        bool deleteOnNext = false;
 
         string playlistFile = null;
 
@@ -534,7 +535,13 @@ namespace Sounds
 
         public void Next()
         {
+            var oldActiveFile = activeFile;
             activeFile = (TagLib.File)listView1.Items.Cast<ListViewItem>().SkipWhile(x => x.Tag != activeFile).Skip(1).FirstOrDefault()?.Tag;
+            if (deleteOnNext && oldActiveFile != null)
+            {
+                listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == oldActiveFile).First().Remove();
+            }
+
             if (activeFile != null && playing)
             {
                 PlayActive();
@@ -877,6 +884,11 @@ namespace Sounds
         private void albumArtBox_Click(object sender, EventArgs e)
         {
             ShowPropertiesDialog(true);
+        }
+
+        private void deleteOnNextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            deleteOnNext = deleteOnNextToolStripMenuItem.Checked;
         }
     }
 }

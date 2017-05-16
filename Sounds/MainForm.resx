@@ -708,6 +708,12 @@
   <data name="repeatToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Repeat</value>
   </data>
+  <data name="deleteOnNextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 22</value>
+  </data>
+  <data name="deleteOnNextToolStripMenuItem.Text" xml:space="preserve">
+    <value>D&amp;elete on Next</value>
+  </data>
   <data name="playbackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 20</value>
   </data>
@@ -1250,6 +1256,12 @@
   </data>
   <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteOnNextToolStripMenuItem.Name" xml:space="preserve">
+    <value>deleteOnNextToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deleteOnNextToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

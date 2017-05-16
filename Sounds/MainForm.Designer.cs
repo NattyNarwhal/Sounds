@@ -102,6 +102,7 @@
             this.openPlaylistDialog = new System.Windows.Forms.OpenFileDialog();
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.deleteOnNextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -448,7 +449,8 @@
             this.volumeDownToolStripMenuItem,
             this.muteToolStripMenuItem,
             this.toolStripSeparator4,
-            this.repeatToolStripMenuItem});
+            this.repeatToolStripMenuItem,
+            this.deleteOnNextToolStripMenuItem});
             this.playbackToolStripMenuItem.Name = "playbackToolStripMenuItem";
             resources.ApplyResources(this.playbackToolStripMenuItem, "playbackToolStripMenuItem");
             // 
@@ -645,6 +647,13 @@
             resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             this.folderBrowserDialog1.ShowNewFolderButton = false;
             // 
+            // deleteOnNextToolStripMenuItem
+            // 
+            this.deleteOnNextToolStripMenuItem.CheckOnClick = true;
+            this.deleteOnNextToolStripMenuItem.Name = "deleteOnNextToolStripMenuItem";
+            resources.ApplyResources(this.deleteOnNextToolStripMenuItem, "deleteOnNextToolStripMenuItem");
+            this.deleteOnNextToolStripMenuItem.Click += new System.EventHandler(this.deleteOnNextToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -749,6 +758,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton addFilesToolStripButton;
+        private System.Windows.Forms.ToolStripMenuItem deleteOnNextToolStripMenuItem;
     }
 }
 
