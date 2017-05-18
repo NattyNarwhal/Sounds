@@ -94,6 +94,8 @@ namespace Sounds
             showToolBar = Properties.Settings.Default.ShowToolBar;
             showStatusBar = Properties.Settings.Default.ShowStatusBar;
             showInfoPane = Properties.Settings.Default.ShowInfoPane;
+            deleteOnNext = Properties.Settings.Default.DeleteOnNext;
+            repeat = Properties.Settings.Default.Repeat;
 
             if (TaskbarManager.IsPlatformSupported)
             {
@@ -473,6 +475,9 @@ namespace Sounds
             showToolbarToolStripMenuItem.Checked = showToolBar;
             showStatusbarToolStripMenuItem.Checked = showStatusBar;
             showInfoPaneToolStripMenuItem.Checked = showInfoPane;
+
+            repeatToolStripMenuItem.Checked = repeat;
+            deleteOnNextToolStripMenuItem.Checked = deleteOnNext;
 
             // TODO: make these translatable messages
             if (TaskbarManager.IsPlatformSupported)
@@ -911,6 +916,8 @@ namespace Sounds
             Properties.Settings.Default.ShowToolBar = showToolBar;
             Properties.Settings.Default.ShowStatusBar = showStatusBar;
             Properties.Settings.Default.ShowInfoPane = showInfoPane;
+            Properties.Settings.Default.DeleteOnNext = deleteOnNext;
+            Properties.Settings.Default.Repeat = repeat;
             Properties.Settings.Default.Save();
         }
     }

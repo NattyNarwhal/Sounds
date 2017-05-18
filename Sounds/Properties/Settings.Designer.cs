@@ -58,5 +58,29 @@ namespace Sounds.Properties {
                 this["ShowInfoPane"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DeleteOnNext {
+            get {
+                return ((bool)(this["DeleteOnNext"]));
+            }
+            set {
+                this["DeleteOnNext"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Repeat {
+            get {
+                return ((bool)(this["Repeat"]));
+            }
+            set {
+                this["Repeat"] = value;
+            }
+        }
     }
 }
