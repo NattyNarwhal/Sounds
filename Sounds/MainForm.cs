@@ -874,12 +874,12 @@ namespace Sounds
 
         private void skipAheadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp.Position = mp.Position.Add(new TimeSpan(0, 0, 15));
+            mp.Position = mp.Position.Add(new TimeSpan(0, 0, Properties.Settings.Default.TimeShortcutSeconds));
         }
 
         private void rewindToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, 15));
+            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, Properties.Settings.Default.TimeShortcutSeconds)));
         }
 
         private void showToolbarToolStripMenuItem_Click(object sender, EventArgs e)

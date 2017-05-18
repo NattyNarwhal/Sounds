@@ -82,5 +82,17 @@ namespace Sounds.Properties {
                 this["Repeat"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("15")]
+        public int TimeShortcutSeconds {
+            get {
+                return ((int)(this["TimeShortcutSeconds"]));
+            }
+            set {
+                this["TimeShortcutSeconds"] = value;
+            }
+        }
     }
 }
