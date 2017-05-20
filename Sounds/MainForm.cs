@@ -879,7 +879,7 @@ namespace Sounds
 
         private void rewindToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, Properties.Settings.Default.TimeShortcutSeconds)));
+            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, Properties.Settings.Default.TimeShortcutSeconds));
         }
 
         private void showToolbarToolStripMenuItem_Click(object sender, EventArgs e)
