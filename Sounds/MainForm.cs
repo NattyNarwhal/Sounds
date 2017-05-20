@@ -168,7 +168,8 @@ namespace Sounds
             mp.MediaEnded += (o, e) =>
             {
                 // avoid race coondition
-                trackBarSyncTimer.Enabled = false;
+                if (!repeat)
+                    trackBarSyncTimer.Enabled = false;
                 if (playing)
                     Next();
             };
@@ -557,7 +558,8 @@ namespace Sounds
         public void Next()
         {
             var oldActiveFile = activeFile;
-            activeFile = (TagLib.File)listView1.Items.Cast<ListViewItem>().SkipWhile(x => x.Tag != activeFile).Skip(1).FirstOrDefault()?.Tag;
+            if (listView1.Items.Count > 1)
+                activeFile = (TagLib.File)listView1.Items.Cast<ListViewItem>().SkipWhile(x => x.Tag != activeFile).Skip(1).FirstOrDefault()?.Tag;
             if (deleteOnNext && oldActiveFile != null)
             {
                 listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == oldActiveFile).First().Remove();
