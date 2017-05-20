@@ -347,7 +347,13 @@ namespace Sounds
                 panel1.Visible = showInfoPane;
 
                 // embolden the active song
-                listView1.Items.Cast<ListViewItem>().First(x => x.Tag == activeFile).Font = new Font(listView1.Font, FontStyle.Bold);
+                var newBoldItem = listView1.Items.Cast<ListViewItem>().FirstOrDefault(x => x.Tag == activeFile);
+#if DEBUG
+                if (newBoldItem == null)
+                    System.Diagnostics.Debugger.Break();
+#endif
+                if (newBoldItem != null)
+                    newBoldItem.Font = new Font(listView1.Font, FontStyle.Bold);
             }
             else
             {
