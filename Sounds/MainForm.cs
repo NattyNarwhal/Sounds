@@ -942,5 +942,12 @@ namespace Sounds
             Properties.Settings.Default.Repeat = repeat;
             Properties.Settings.Default.Save();
         }
+
+        private void playContextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // the menu/toolbar item will play the same track when paused; this
+            // forcibly plays the selected track
+            PlayAndSet(true);
+        }
     }
 }

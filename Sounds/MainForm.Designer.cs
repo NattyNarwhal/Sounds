@@ -213,7 +213,7 @@
             this.playContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Play;
             this.playContextToolStripMenuItem.Name = "playContextToolStripMenuItem";
             resources.ApplyResources(this.playContextToolStripMenuItem, "playContextToolStripMenuItem");
-            this.playContextToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
+            this.playContextToolStripMenuItem.Click += new System.EventHandler(this.playContextToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
