@@ -97,8 +97,10 @@ namespace Sounds
 
         private void copyImageButton_Click(object sender, EventArgs e)
         {
-            Clipboard.SetImage(albumArtBox.Image);
-            Clipboard.SetText(albumArtInfo.Text);
+            var dataObject = new DataObject();
+            dataObject.SetImage(albumArtBox.Image);
+            dataObject.SetText(albumArtInfo.Text);
+            Clipboard.SetDataObject(dataObject);
         }
     }
 }
