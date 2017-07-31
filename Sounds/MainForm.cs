@@ -285,19 +285,25 @@ namespace Sounds
                 }
                 else return;
 
-                if (deleteOnNext && oldActiveFile != null && oldActiveFile != activeFile)
-                {
-                    listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == oldActiveFile).First().Remove();
-                }
-
                 playing = true;
-
-                PlayActive();
+                PlayActive(oldActiveFile);
             }
         }
 
-        public void PlayActive()
+        /// <summary>
+        /// Plays the song set as the active track.
+        /// </summary>
+        /// <remarks>
+        /// It's the caller's responsibility to set the active track.
+        /// </remarks>
+        /// <param name="old">The old track, for deletion if desired.</param>
+        public void PlayActive(TagLib.File old = null)
         {
+            if (deleteOnNext && old != null && old != activeFile)
+            {
+                listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == old).First().Remove();
+            }
+
 #pragma warning disable CS0618
             // HACK: It's deprecated, but MediaPlayer doesn't like escaped URIs
             var u = new Uri(activeFile.Name, true);
@@ -557,10 +563,12 @@ namespace Sounds
 
         public void Previous()
         {
-            activeFile = (TagLib.File)listView1.Items.Cast<ListViewItem>().TakeWhile(x => x.Tag != activeFile).LastOrDefault()?.Tag;
+            var oldActiveFile = activeFile;
+            if (listView1.Items.Count > 1)
+                activeFile = (TagLib.File)listView1.Items.Cast<ListViewItem>().TakeWhile(x => x.Tag != activeFile).LastOrDefault()?.Tag;
             if (activeFile != null && playing)
             {
-                PlayActive();
+                PlayActive(oldActiveFile);
             }
             else
             {
@@ -573,21 +581,17 @@ namespace Sounds
             var oldActiveFile = activeFile;
             if (listView1.Items.Count > 1)
                 activeFile = (TagLib.File)listView1.Items.Cast<ListViewItem>().SkipWhile(x => x.Tag != activeFile).Skip(1).FirstOrDefault()?.Tag;
-            if (deleteOnNext && oldActiveFile != null)
-            {
-                listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == oldActiveFile).First().Remove();
-            }
 
             if (activeFile != null && playing)
             {
-                PlayActive();
+                PlayActive(oldActiveFile);
             }
             else if (playing && repeat)
             {
                 activeFile = (TagLib.File)listView1.Items.Cast<ListViewItem>().FirstOrDefault().Tag;
                 if (activeFile != null)
                 {
-                    PlayActive();
+                    PlayActive(oldActiveFile);
                 }
                 else
                 {
