@@ -1011,14 +1011,44 @@
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="copyImageButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="copyImageButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="copyImageButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 254</value>
+  </data>
+  <data name="copyImageButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 23</value>
+  </data>
+  <data name="copyImageButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="copyImageButton.Text" xml:space="preserve">
+    <value>&amp;Copy Image</value>
+  </data>
+  <data name="&gt;&gt;copyImageButton.Name" xml:space="preserve">
+    <value>copyImageButton</value>
+  </data>
+  <data name="&gt;&gt;copyImageButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyImageButton.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;copyImageButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="albumArtInfo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
   <data name="albumArtInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 256</value>
+    <value>6, 254</value>
   </data>
   <data name="albumArtInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>486, 21</value>
+    <value>386, 23</value>
   </data>
   <data name="albumArtInfo.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1033,7 +1063,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;albumArtInfo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="albumArtSelector.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1060,7 +1090,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;albumArtSelector.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="albumArtBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1069,7 +1099,7 @@
     <value>6, 33</value>
   </data>
   <data name="albumArtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>486, 220</value>
+    <value>486, 218</value>
   </data>
   <data name="albumArtBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -1087,7 +1117,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;albumArtBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

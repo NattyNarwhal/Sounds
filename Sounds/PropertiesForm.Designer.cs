@@ -43,6 +43,12 @@
             this.fileNameBox = new System.Windows.Forms.TextBox();
             this.fileNameLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lyricsBox = new System.Windows.Forms.TextBox();
+            this.lyricsLabel = new System.Windows.Forms.Label();
+            this.commentsBox = new System.Windows.Forms.TextBox();
+            this.commentsLabel = new System.Windows.Forms.Label();
+            this.copyrightBox = new System.Windows.Forms.TextBox();
+            this.copyrightLabel = new System.Windows.Forms.Label();
             this.yearBox = new System.Windows.Forms.TextBox();
             this.yearLabel = new System.Windows.Forms.Label();
             this.genresBox = new System.Windows.Forms.ListBox();
@@ -64,12 +70,7 @@
             this.albumArtSelector = new System.Windows.Forms.ComboBox();
             this.albumArtBox = new System.Windows.Forms.PictureBox();
             this.fileSelector = new System.Windows.Forms.ComboBox();
-            this.copyrightBox = new System.Windows.Forms.TextBox();
-            this.copyrightLabel = new System.Windows.Forms.Label();
-            this.commentsBox = new System.Windows.Forms.TextBox();
-            this.commentsLabel = new System.Windows.Forms.Label();
-            this.lyricsBox = new System.Windows.Forms.TextBox();
-            this.lyricsLabel = new System.Windows.Forms.Label();
+            this.copyImageButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.intrinisicsTab.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -193,6 +194,39 @@
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // lyricsBox
+            // 
+            resources.ApplyResources(this.lyricsBox, "lyricsBox");
+            this.lyricsBox.Name = "lyricsBox";
+            this.lyricsBox.ReadOnly = true;
+            // 
+            // lyricsLabel
+            // 
+            resources.ApplyResources(this.lyricsLabel, "lyricsLabel");
+            this.lyricsLabel.Name = "lyricsLabel";
+            // 
+            // commentsBox
+            // 
+            resources.ApplyResources(this.commentsBox, "commentsBox");
+            this.commentsBox.Name = "commentsBox";
+            this.commentsBox.ReadOnly = true;
+            // 
+            // commentsLabel
+            // 
+            resources.ApplyResources(this.commentsLabel, "commentsLabel");
+            this.commentsLabel.Name = "commentsLabel";
+            // 
+            // copyrightBox
+            // 
+            resources.ApplyResources(this.copyrightBox, "copyrightBox");
+            this.copyrightBox.Name = "copyrightBox";
+            this.copyrightBox.ReadOnly = true;
+            // 
+            // copyrightLabel
+            // 
+            resources.ApplyResources(this.copyrightLabel, "copyrightLabel");
+            this.copyrightLabel.Name = "copyrightLabel";
+            // 
             // yearBox
             // 
             resources.ApplyResources(this.yearBox, "yearBox");
@@ -286,6 +320,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.copyImageButton);
             this.tabPage1.Controls.Add(this.albumArtInfo);
             this.tabPage1.Controls.Add(this.albumArtSelector);
             this.tabPage1.Controls.Add(this.albumArtBox);
@@ -320,38 +355,12 @@
             this.fileSelector.Name = "fileSelector";
             this.fileSelector.SelectedIndexChanged += new System.EventHandler(this.fileSelector_SelectedIndexChanged);
             // 
-            // copyrightBox
+            // copyImageButton
             // 
-            resources.ApplyResources(this.copyrightBox, "copyrightBox");
-            this.copyrightBox.Name = "copyrightBox";
-            this.copyrightBox.ReadOnly = true;
-            // 
-            // copyrightLabel
-            // 
-            resources.ApplyResources(this.copyrightLabel, "copyrightLabel");
-            this.copyrightLabel.Name = "copyrightLabel";
-            // 
-            // commentsBox
-            // 
-            resources.ApplyResources(this.commentsBox, "commentsBox");
-            this.commentsBox.Name = "commentsBox";
-            this.commentsBox.ReadOnly = true;
-            // 
-            // commentsLabel
-            // 
-            resources.ApplyResources(this.commentsLabel, "commentsLabel");
-            this.commentsLabel.Name = "commentsLabel";
-            // 
-            // lyricsBox
-            // 
-            resources.ApplyResources(this.lyricsBox, "lyricsBox");
-            this.lyricsBox.Name = "lyricsBox";
-            this.lyricsBox.ReadOnly = true;
-            // 
-            // lyricsLabel
-            // 
-            resources.ApplyResources(this.lyricsLabel, "lyricsLabel");
-            this.lyricsLabel.Name = "lyricsLabel";
+            resources.ApplyResources(this.copyImageButton, "copyImageButton");
+            this.copyImageButton.Name = "copyImageButton";
+            this.copyImageButton.UseVisualStyleBackColor = true;
+            this.copyImageButton.Click += new System.EventHandler(this.copyImageButton_Click);
             // 
             // PropertiesForm
             // 
@@ -421,5 +430,6 @@
         private System.Windows.Forms.Label commentsLabel;
         private System.Windows.Forms.TextBox copyrightBox;
         private System.Windows.Forms.Label copyrightLabel;
+        private System.Windows.Forms.Button copyImageButton;
     }
 }

@@ -94,5 +94,11 @@ namespace Sounds
         {
             SwitchFile((TagLib.File)fileSelector.SelectedItem);
         }
+
+        private void copyImageButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetImage(albumArtBox.Image);
+            Clipboard.SetText(albumArtInfo.Text);
+        }
     }
 }
