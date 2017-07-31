@@ -573,7 +573,6 @@
             // 
             // playToolStripButton
             // 
-            this.playToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.playToolStripButton.Image = global::Sounds.Properties.Resources.Play;
             resources.ApplyResources(this.playToolStripButton, "playToolStripButton");
             this.playToolStripButton.Name = "playToolStripButton";
@@ -581,7 +580,6 @@
             // 
             // pauseToolStripButton
             // 
-            this.pauseToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.pauseToolStripButton.Image = global::Sounds.Properties.Resources.Pause;
             resources.ApplyResources(this.pauseToolStripButton, "pauseToolStripButton");
             this.pauseToolStripButton.Name = "pauseToolStripButton";

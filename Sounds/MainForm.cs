@@ -478,8 +478,11 @@ namespace Sounds
             skipAheadToolStripMenuItem.Enabled = playing;
 
             playToolStripButton.Enabled = canPlay;
+            // ensure visibility in all cases
+            playToolStripButton.Visible = canPlay || !playing;
             playToolStripButton.Checked = playing && !Paused;
             pauseToolStripButton.Enabled = canPause;
+            pauseToolStripButton.Visible = canPause;
             pauseToolStripButton.Checked = playing && Paused;
             previousToolStripButton.Enabled = playing;
             nextToolStripButton.Enabled = playing;
