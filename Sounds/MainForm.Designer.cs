@@ -103,6 +103,8 @@
             this.openPlaylistDialog = new System.Windows.Forms.OpenFileDialog();
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.removeSelectedToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.stopToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -562,13 +564,15 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playToolStripButton,
             this.pauseToolStripButton,
+            this.stopToolStripButton,
             this.toolStripSeparator6,
             this.previousToolStripButton,
             this.nextToolStripButton,
             this.toolStripSeparator7,
             this.volumeButton,
             this.toolStripSeparator8,
-            this.addFilesToolStripButton});
+            this.addFilesToolStripButton,
+            this.removeSelectedToolStripButton});
             this.toolStrip1.Name = "toolStrip1";
             // 
             // playToolStripButton
@@ -651,6 +655,22 @@
             // 
             resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             this.folderBrowserDialog1.ShowNewFolderButton = false;
+            // 
+            // removeSelectedToolStripButton
+            // 
+            this.removeSelectedToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.removeSelectedToolStripButton.Image = global::Sounds.Properties.Resources.Delete;
+            resources.ApplyResources(this.removeSelectedToolStripButton, "removeSelectedToolStripButton");
+            this.removeSelectedToolStripButton.Name = "removeSelectedToolStripButton";
+            this.removeSelectedToolStripButton.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
+            // 
+            // stopToolStripButton
+            // 
+            this.stopToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.stopToolStripButton.Image = global::Sounds.Properties.Resources.Stop;
+            resources.ApplyResources(this.stopToolStripButton, "stopToolStripButton");
+            this.stopToolStripButton.Name = "stopToolStripButton";
+            this.stopToolStripButton.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -758,6 +778,8 @@
         private System.Windows.Forms.ToolStripMenuItem propertiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton addFilesToolStripButton;
         private System.Windows.Forms.ToolStripMenuItem deleteOnNextToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton removeSelectedToolStripButton;
+        private System.Windows.Forms.ToolStripButton stopToolStripButton;
     }
 }
 

@@ -468,6 +468,7 @@ namespace Sounds
             pauseToolStripMenuItem.ShortcutKeyDisplayString =
                 canPause ? toggleDesc : string.Empty;
             stopToolStripMenuItem.Enabled = playing;
+            stopToolStripButton.Enabled = playing;
             playToolStripMenuItem.Checked = playing && !Paused;
             pauseToolStripMenuItem.Checked = playing && Paused;
             stopToolStripMenuItem.Checked = !playing;
@@ -480,10 +481,8 @@ namespace Sounds
             playToolStripButton.Enabled = canPlay;
             // ensure visibility in all cases
             playToolStripButton.Visible = canPlay || !playing;
-            playToolStripButton.Checked = playing && !Paused;
             pauseToolStripButton.Enabled = canPause;
             pauseToolStripButton.Visible = canPause;
-            pauseToolStripButton.Checked = playing && Paused;
             previousToolStripButton.Enabled = playing;
             nextToolStripButton.Enabled = playing;
 
@@ -494,6 +493,7 @@ namespace Sounds
             playContextToolStripMenuItem.Enabled = selected;
             propertiesContextToolStripMenuItem.Enabled = selected;
             removeContextToolStripMenuItem.Enabled = selected;
+            removeSelectedToolStripButton.Enabled = selected;
 
             showToolbarToolStripMenuItem.Checked = showToolBar;
             showStatusbarToolStripMenuItem.Checked = showStatusBar;
