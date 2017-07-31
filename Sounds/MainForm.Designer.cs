@@ -87,6 +87,7 @@
             this.muteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.repeatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteOnNextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.playToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.pauseToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -102,7 +103,6 @@
             this.openPlaylistDialog = new System.Windows.Forms.OpenFileDialog();
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.deleteOnNextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -548,6 +548,13 @@
             resources.ApplyResources(this.repeatToolStripMenuItem, "repeatToolStripMenuItem");
             this.repeatToolStripMenuItem.Click += new System.EventHandler(this.repeatToolStripMenuItem_Click);
             // 
+            // deleteOnNextToolStripMenuItem
+            // 
+            this.deleteOnNextToolStripMenuItem.CheckOnClick = true;
+            this.deleteOnNextToolStripMenuItem.Name = "deleteOnNextToolStripMenuItem";
+            resources.ApplyResources(this.deleteOnNextToolStripMenuItem, "deleteOnNextToolStripMenuItem");
+            this.deleteOnNextToolStripMenuItem.Click += new System.EventHandler(this.deleteOnNextToolStripMenuItem_Click);
+            // 
             // toolStrip1
             // 
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
@@ -646,13 +653,6 @@
             // 
             resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             this.folderBrowserDialog1.ShowNewFolderButton = false;
-            // 
-            // deleteOnNextToolStripMenuItem
-            // 
-            this.deleteOnNextToolStripMenuItem.CheckOnClick = true;
-            this.deleteOnNextToolStripMenuItem.Name = "deleteOnNextToolStripMenuItem";
-            resources.ApplyResources(this.deleteOnNextToolStripMenuItem, "deleteOnNextToolStripMenuItem");
-            this.deleteOnNextToolStripMenuItem.Click += new System.EventHandler(this.deleteOnNextToolStripMenuItem_Click);
             // 
             // MainForm
             // 

@@ -273,6 +273,8 @@ namespace Sounds
             }
             else
             {
+                var oldActiveFile = activeFile;
+
                 if (listView1.SelectedItems.Count > 0)
                 {
                     activeFile = (TagLib.File)listView1.SelectedItems[0].Tag;
@@ -282,6 +284,11 @@ namespace Sounds
                     activeFile = (TagLib.File)listView1.Items[0].Tag;
                 }
                 else return;
+
+                if (deleteOnNext && oldActiveFile != null && oldActiveFile != activeFile)
+                {
+                    listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == oldActiveFile).First().Remove();
+                }
 
                 playing = true;
 
