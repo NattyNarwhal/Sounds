@@ -65,12 +65,6 @@
             this.showInfoPaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.shuffleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.togglePlaybackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,6 +99,12 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.removeSelectedToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.stopToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.addFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.shuffleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -288,7 +288,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.viewToolStripMenuItem,
-            this.listToolStripMenuItem,
             this.playbackToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
@@ -299,6 +298,12 @@
             this.openPlaylistToolStripMenuItem,
             this.savePlaylistToolStripMenuItem,
             this.savePlaylistAsToolStripMenuItem,
+            this.toolStripSeparator9,
+            this.addFilesToolStripMenuItem,
+            this.addDirectoryToolStripMenuItem,
+            this.removeSelectedToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.shuffleToolStripMenuItem,
             this.toolStripSeparator1,
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -391,48 +396,6 @@
             this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
             this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
-            // 
-            // listToolStripMenuItem
-            // 
-            this.listToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addFilesToolStripMenuItem,
-            this.addDirectoryToolStripMenuItem,
-            this.removeSelectedToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.shuffleToolStripMenuItem});
-            this.listToolStripMenuItem.Name = "listToolStripMenuItem";
-            resources.ApplyResources(this.listToolStripMenuItem, "listToolStripMenuItem");
-            // 
-            // addFilesToolStripMenuItem
-            // 
-            this.addFilesToolStripMenuItem.Image = global::Sounds.Properties.Resources.AddSong;
-            this.addFilesToolStripMenuItem.Name = "addFilesToolStripMenuItem";
-            resources.ApplyResources(this.addFilesToolStripMenuItem, "addFilesToolStripMenuItem");
-            this.addFilesToolStripMenuItem.Click += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
-            // 
-            // addDirectoryToolStripMenuItem
-            // 
-            this.addDirectoryToolStripMenuItem.Name = "addDirectoryToolStripMenuItem";
-            resources.ApplyResources(this.addDirectoryToolStripMenuItem, "addDirectoryToolStripMenuItem");
-            this.addDirectoryToolStripMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
-            // 
-            // removeSelectedToolStripMenuItem
-            // 
-            this.removeSelectedToolStripMenuItem.Image = global::Sounds.Properties.Resources.Delete;
-            this.removeSelectedToolStripMenuItem.Name = "removeSelectedToolStripMenuItem";
-            resources.ApplyResources(this.removeSelectedToolStripMenuItem, "removeSelectedToolStripMenuItem");
-            this.removeSelectedToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-            // 
-            // shuffleToolStripMenuItem
-            // 
-            this.shuffleToolStripMenuItem.Name = "shuffleToolStripMenuItem";
-            resources.ApplyResources(this.shuffleToolStripMenuItem, "shuffleToolStripMenuItem");
-            this.shuffleToolStripMenuItem.Click += new System.EventHandler(this.shuffleToolStripMenuItem_Click);
             // 
             // playbackToolStripMenuItem
             // 
@@ -672,6 +635,42 @@
             this.stopToolStripButton.Name = "stopToolStripButton";
             this.stopToolStripButton.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            resources.ApplyResources(this.toolStripSeparator9, "toolStripSeparator9");
+            // 
+            // addFilesToolStripMenuItem
+            // 
+            this.addFilesToolStripMenuItem.Image = global::Sounds.Properties.Resources.AddSong;
+            this.addFilesToolStripMenuItem.Name = "addFilesToolStripMenuItem";
+            resources.ApplyResources(this.addFilesToolStripMenuItem, "addFilesToolStripMenuItem");
+            this.addFilesToolStripMenuItem.Click += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
+            // 
+            // addDirectoryToolStripMenuItem
+            // 
+            this.addDirectoryToolStripMenuItem.Name = "addDirectoryToolStripMenuItem";
+            resources.ApplyResources(this.addDirectoryToolStripMenuItem, "addDirectoryToolStripMenuItem");
+            this.addDirectoryToolStripMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
+            // 
+            // removeSelectedToolStripMenuItem
+            // 
+            this.removeSelectedToolStripMenuItem.Image = global::Sounds.Properties.Resources.Delete;
+            this.removeSelectedToolStripMenuItem.Name = "removeSelectedToolStripMenuItem";
+            resources.ApplyResources(this.removeSelectedToolStripMenuItem, "removeSelectedToolStripMenuItem");
+            this.removeSelectedToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // shuffleToolStripMenuItem
+            // 
+            this.shuffleToolStripMenuItem.Name = "shuffleToolStripMenuItem";
+            resources.ApplyResources(this.shuffleToolStripMenuItem, "shuffleToolStripMenuItem");
+            this.shuffleToolStripMenuItem.Click += new System.EventHandler(this.shuffleToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -736,16 +735,10 @@
         private System.Windows.Forms.SaveFileDialog savePlaylistDialog;
         private System.Windows.Forms.ToolStripMenuItem savePlaylistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem savePlaylistAsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addFilesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeSelectedToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ColumnHeader trackNoHeader;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.ToolStripMenuItem addDirectoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem repeatToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem shuffleToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel errorMessageLabel;
         private System.Windows.Forms.ToolStripMenuItem volumeUpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem volumeDownToolStripMenuItem;
@@ -780,6 +773,12 @@
         private System.Windows.Forms.ToolStripMenuItem deleteOnNextToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton removeSelectedToolStripButton;
         private System.Windows.Forms.ToolStripButton stopToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripMenuItem addFilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addDirectoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeSelectedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem shuffleToolStripMenuItem;
     }
 }
 
