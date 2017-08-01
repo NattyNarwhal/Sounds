@@ -715,6 +715,9 @@ namespace Sounds
 
         private void stopToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // the Stop function is called by Next and such which will call
+            // delete themselves. if the user manually stops, do deletion here.
+            DeleteOnChange(activeFile);
             Stop();
         }
 
