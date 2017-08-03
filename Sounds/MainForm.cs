@@ -246,7 +246,7 @@ namespace Sounds
 
         public void AddDirectory(string name)
         {
-            foreach (var f in Directory.EnumerateFiles(name))
+            foreach (var f in Directory.EnumerateFiles(name).OrderBy(x => x))
             {
                 AddFile(f);
             }
@@ -848,7 +848,7 @@ namespace Sounds
                 if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 {
                     var data = (string[])e.Data.GetData(DataFormats.FileDrop);
-                    foreach (var f in data)
+                    foreach (var f in data.OrderBy(x => x))
                     {
                         if (Directory.Exists(f))
                         {
