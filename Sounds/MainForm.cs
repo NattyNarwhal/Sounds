@@ -238,6 +238,8 @@ namespace Sounds
                 lvi.SubItems.Add(trackNumber);
                 lvi.SubItems.Add(f.Tag.Album);
                 lvi.SubItems.Add(f.Tag.Performers.Count() > 0 ? f.Tag.Performers?[0] : string.Empty);
+                lvi.UseItemStyleForSubItems = false;
+                lvi.ToolTipText = f.Name;
                 lvi.Tag = f;
                 listView1.Items.Add(lvi);
             }

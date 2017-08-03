@@ -57,6 +57,12 @@
             this.openPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.savePlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.savePlaylistAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.addFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.shuffleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,6 +91,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.playToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.pauseToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.stopToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.previousToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.nextToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -92,19 +99,12 @@
             this.volumeButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.addFilesToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.removeSelectedToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.addFilesDialog = new System.Windows.Forms.OpenFileDialog();
             this.trackBarSyncTimer = new System.Windows.Forms.Timer(this.components);
             this.openPlaylistDialog = new System.Windows.Forms.OpenFileDialog();
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.removeSelectedToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.stopToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.addFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.shuffleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -176,6 +176,7 @@
             this.listView1.ContextMenuStrip = this.playlistContextMenu;
             resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Name = "listView1";
+            this.listView1.ShowItemToolTips = true;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.ItemActivate += new System.EventHandler(this.listView1_ItemActivate);
@@ -335,6 +336,42 @@
             this.savePlaylistAsToolStripMenuItem.Name = "savePlaylistAsToolStripMenuItem";
             resources.ApplyResources(this.savePlaylistAsToolStripMenuItem, "savePlaylistAsToolStripMenuItem");
             this.savePlaylistAsToolStripMenuItem.Click += new System.EventHandler(this.savePlaylistAsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            resources.ApplyResources(this.toolStripSeparator9, "toolStripSeparator9");
+            // 
+            // addFilesToolStripMenuItem
+            // 
+            this.addFilesToolStripMenuItem.Image = global::Sounds.Properties.Resources.AddSong;
+            this.addFilesToolStripMenuItem.Name = "addFilesToolStripMenuItem";
+            resources.ApplyResources(this.addFilesToolStripMenuItem, "addFilesToolStripMenuItem");
+            this.addFilesToolStripMenuItem.Click += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
+            // 
+            // addDirectoryToolStripMenuItem
+            // 
+            this.addDirectoryToolStripMenuItem.Name = "addDirectoryToolStripMenuItem";
+            resources.ApplyResources(this.addDirectoryToolStripMenuItem, "addDirectoryToolStripMenuItem");
+            this.addDirectoryToolStripMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
+            // 
+            // removeSelectedToolStripMenuItem
+            // 
+            this.removeSelectedToolStripMenuItem.Image = global::Sounds.Properties.Resources.Delete;
+            this.removeSelectedToolStripMenuItem.Name = "removeSelectedToolStripMenuItem";
+            resources.ApplyResources(this.removeSelectedToolStripMenuItem, "removeSelectedToolStripMenuItem");
+            this.removeSelectedToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // shuffleToolStripMenuItem
+            // 
+            this.shuffleToolStripMenuItem.Name = "shuffleToolStripMenuItem";
+            resources.ApplyResources(this.shuffleToolStripMenuItem, "shuffleToolStripMenuItem");
+            this.shuffleToolStripMenuItem.Click += new System.EventHandler(this.shuffleToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -552,6 +589,14 @@
             this.pauseToolStripButton.Name = "pauseToolStripButton";
             this.pauseToolStripButton.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
             // 
+            // stopToolStripButton
+            // 
+            this.stopToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.stopToolStripButton.Image = global::Sounds.Properties.Resources.Stop;
+            resources.ApplyResources(this.stopToolStripButton, "stopToolStripButton");
+            this.stopToolStripButton.Name = "stopToolStripButton";
+            this.stopToolStripButton.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
+            // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
@@ -596,6 +641,14 @@
             this.addFilesToolStripButton.Name = "addFilesToolStripButton";
             this.addFilesToolStripButton.Click += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
             // 
+            // removeSelectedToolStripButton
+            // 
+            this.removeSelectedToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.removeSelectedToolStripButton.Image = global::Sounds.Properties.Resources.Delete;
+            resources.ApplyResources(this.removeSelectedToolStripButton, "removeSelectedToolStripButton");
+            this.removeSelectedToolStripButton.Name = "removeSelectedToolStripButton";
+            this.removeSelectedToolStripButton.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
+            // 
             // addFilesDialog
             // 
             this.addFilesDialog.Multiselect = true;
@@ -618,58 +671,6 @@
             // 
             resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             this.folderBrowserDialog1.ShowNewFolderButton = false;
-            // 
-            // removeSelectedToolStripButton
-            // 
-            this.removeSelectedToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.removeSelectedToolStripButton.Image = global::Sounds.Properties.Resources.Delete;
-            resources.ApplyResources(this.removeSelectedToolStripButton, "removeSelectedToolStripButton");
-            this.removeSelectedToolStripButton.Name = "removeSelectedToolStripButton";
-            this.removeSelectedToolStripButton.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
-            // 
-            // stopToolStripButton
-            // 
-            this.stopToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.stopToolStripButton.Image = global::Sounds.Properties.Resources.Stop;
-            resources.ApplyResources(this.stopToolStripButton, "stopToolStripButton");
-            this.stopToolStripButton.Name = "stopToolStripButton";
-            this.stopToolStripButton.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            resources.ApplyResources(this.toolStripSeparator9, "toolStripSeparator9");
-            // 
-            // addFilesToolStripMenuItem
-            // 
-            this.addFilesToolStripMenuItem.Image = global::Sounds.Properties.Resources.AddSong;
-            this.addFilesToolStripMenuItem.Name = "addFilesToolStripMenuItem";
-            resources.ApplyResources(this.addFilesToolStripMenuItem, "addFilesToolStripMenuItem");
-            this.addFilesToolStripMenuItem.Click += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
-            // 
-            // addDirectoryToolStripMenuItem
-            // 
-            this.addDirectoryToolStripMenuItem.Name = "addDirectoryToolStripMenuItem";
-            resources.ApplyResources(this.addDirectoryToolStripMenuItem, "addDirectoryToolStripMenuItem");
-            this.addDirectoryToolStripMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
-            // 
-            // removeSelectedToolStripMenuItem
-            // 
-            this.removeSelectedToolStripMenuItem.Image = global::Sounds.Properties.Resources.Delete;
-            this.removeSelectedToolStripMenuItem.Name = "removeSelectedToolStripMenuItem";
-            resources.ApplyResources(this.removeSelectedToolStripMenuItem, "removeSelectedToolStripMenuItem");
-            this.removeSelectedToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-            // 
-            // shuffleToolStripMenuItem
-            // 
-            this.shuffleToolStripMenuItem.Name = "shuffleToolStripMenuItem";
-            resources.ApplyResources(this.shuffleToolStripMenuItem, "shuffleToolStripMenuItem");
-            this.shuffleToolStripMenuItem.Click += new System.EventHandler(this.shuffleToolStripMenuItem_Click);
             // 
             // MainForm
             // 
