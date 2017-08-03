@@ -228,7 +228,14 @@ namespace Sounds
                 var lvi = new ListViewItem();
                 // fall back to filename
                 lvi.Text = f.Tag.Title ?? f.Name;
-                lvi.SubItems.Add(f.Tag.Track.ToString());
+                var trackNumber = f.Tag.TrackCount > 0 ?
+                    string.Format("{0}/{1}", f.Tag.Track, f.Tag.TrackCount)
+                    : f.Tag.Track.ToString();
+                if (f.Tag.Disc > 0)
+                    trackNumber += f.Tag.DiscCount > 0 ?
+                        string.Format(" ({0}/{1})", f.Tag.Disc, f.Tag.DiscCount)
+                        : string.Format(" ({0})" ,f.Tag.Disc.ToString());
+                lvi.SubItems.Add(trackNumber);
                 lvi.SubItems.Add(f.Tag.Album);
                 lvi.SubItems.Add(f.Tag.Performers.Count() > 0 ? f.Tag.Performers?[0] : string.Empty);
                 lvi.Tag = f;
