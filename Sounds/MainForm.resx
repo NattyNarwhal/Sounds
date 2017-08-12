@@ -544,7 +544,7 @@
     <value>195, 22</value>
   </data>
   <data name="shuffleToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Shuffle</value>
+    <value>S&amp;huffle</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 6</value>
