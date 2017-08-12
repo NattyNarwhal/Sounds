@@ -42,7 +42,7 @@
             this.bitrateLabel = new System.Windows.Forms.Label();
             this.fileNameBox = new System.Windows.Forms.TextBox();
             this.fileNameLabel = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.metadataTab = new System.Windows.Forms.TabPage();
             this.lyricsBox = new System.Windows.Forms.TextBox();
             this.lyricsLabel = new System.Windows.Forms.Label();
             this.commentsBox = new System.Windows.Forms.TextBox();
@@ -65,16 +65,16 @@
             this.albumLabel = new System.Windows.Forms.Label();
             this.titleBox = new System.Windows.Forms.TextBox();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.picturesTab = new System.Windows.Forms.TabPage();
+            this.copyImageButton = new System.Windows.Forms.Button();
             this.albumArtInfo = new System.Windows.Forms.Label();
             this.albumArtSelector = new System.Windows.Forms.ComboBox();
             this.albumArtBox = new System.Windows.Forms.PictureBox();
             this.fileSelector = new System.Windows.Forms.ComboBox();
-            this.copyImageButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.intrinisicsTab.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.metadataTab.SuspendLayout();
+            this.picturesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.albumArtBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,8 +90,8 @@
             // 
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.intrinisicsTab);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.metadataTab);
+            this.tabControl1.Controls.Add(this.picturesTab);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
@@ -166,33 +166,33 @@
             resources.ApplyResources(this.fileNameLabel, "fileNameLabel");
             this.fileNameLabel.Name = "fileNameLabel";
             // 
-            // tabPage2
+            // metadataTab
             // 
-            this.tabPage2.Controls.Add(this.lyricsBox);
-            this.tabPage2.Controls.Add(this.lyricsLabel);
-            this.tabPage2.Controls.Add(this.commentsBox);
-            this.tabPage2.Controls.Add(this.commentsLabel);
-            this.tabPage2.Controls.Add(this.copyrightBox);
-            this.tabPage2.Controls.Add(this.copyrightLabel);
-            this.tabPage2.Controls.Add(this.yearBox);
-            this.tabPage2.Controls.Add(this.yearLabel);
-            this.tabPage2.Controls.Add(this.genresBox);
-            this.tabPage2.Controls.Add(this.genreLabel);
-            this.tabPage2.Controls.Add(this.composersBox);
-            this.tabPage2.Controls.Add(this.composersLabel);
-            this.tabPage2.Controls.Add(this.artistsBox);
-            this.tabPage2.Controls.Add(this.artistsLabel);
-            this.tabPage2.Controls.Add(this.discBox);
-            this.tabPage2.Controls.Add(this.discLabel);
-            this.tabPage2.Controls.Add(this.trackBox);
-            this.tabPage2.Controls.Add(this.trackLabel);
-            this.tabPage2.Controls.Add(this.albumBox);
-            this.tabPage2.Controls.Add(this.albumLabel);
-            this.tabPage2.Controls.Add(this.titleBox);
-            this.tabPage2.Controls.Add(this.titleLabel);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.metadataTab.Controls.Add(this.lyricsBox);
+            this.metadataTab.Controls.Add(this.lyricsLabel);
+            this.metadataTab.Controls.Add(this.commentsBox);
+            this.metadataTab.Controls.Add(this.commentsLabel);
+            this.metadataTab.Controls.Add(this.copyrightBox);
+            this.metadataTab.Controls.Add(this.copyrightLabel);
+            this.metadataTab.Controls.Add(this.yearBox);
+            this.metadataTab.Controls.Add(this.yearLabel);
+            this.metadataTab.Controls.Add(this.genresBox);
+            this.metadataTab.Controls.Add(this.genreLabel);
+            this.metadataTab.Controls.Add(this.composersBox);
+            this.metadataTab.Controls.Add(this.composersLabel);
+            this.metadataTab.Controls.Add(this.artistsBox);
+            this.metadataTab.Controls.Add(this.artistsLabel);
+            this.metadataTab.Controls.Add(this.discBox);
+            this.metadataTab.Controls.Add(this.discLabel);
+            this.metadataTab.Controls.Add(this.trackBox);
+            this.metadataTab.Controls.Add(this.trackLabel);
+            this.metadataTab.Controls.Add(this.albumBox);
+            this.metadataTab.Controls.Add(this.albumLabel);
+            this.metadataTab.Controls.Add(this.titleBox);
+            this.metadataTab.Controls.Add(this.titleLabel);
+            resources.ApplyResources(this.metadataTab, "metadataTab");
+            this.metadataTab.Name = "metadataTab";
+            this.metadataTab.UseVisualStyleBackColor = true;
             // 
             // lyricsBox
             // 
@@ -318,15 +318,22 @@
             resources.ApplyResources(this.titleLabel, "titleLabel");
             this.titleLabel.Name = "titleLabel";
             // 
-            // tabPage1
+            // picturesTab
             // 
-            this.tabPage1.Controls.Add(this.copyImageButton);
-            this.tabPage1.Controls.Add(this.albumArtInfo);
-            this.tabPage1.Controls.Add(this.albumArtSelector);
-            this.tabPage1.Controls.Add(this.albumArtBox);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.picturesTab.Controls.Add(this.copyImageButton);
+            this.picturesTab.Controls.Add(this.albumArtInfo);
+            this.picturesTab.Controls.Add(this.albumArtSelector);
+            this.picturesTab.Controls.Add(this.albumArtBox);
+            resources.ApplyResources(this.picturesTab, "picturesTab");
+            this.picturesTab.Name = "picturesTab";
+            this.picturesTab.UseVisualStyleBackColor = true;
+            // 
+            // copyImageButton
+            // 
+            resources.ApplyResources(this.copyImageButton, "copyImageButton");
+            this.copyImageButton.Name = "copyImageButton";
+            this.copyImageButton.UseVisualStyleBackColor = true;
+            this.copyImageButton.Click += new System.EventHandler(this.copyImageButton_Click);
             // 
             // albumArtInfo
             // 
@@ -355,13 +362,6 @@
             this.fileSelector.Name = "fileSelector";
             this.fileSelector.SelectedIndexChanged += new System.EventHandler(this.fileSelector_SelectedIndexChanged);
             // 
-            // copyImageButton
-            // 
-            resources.ApplyResources(this.copyImageButton, "copyImageButton");
-            this.copyImageButton.Name = "copyImageButton";
-            this.copyImageButton.UseVisualStyleBackColor = true;
-            this.copyImageButton.Click += new System.EventHandler(this.copyImageButton_Click);
-            // 
             // PropertiesForm
             // 
             resources.ApplyResources(this, "$this");
@@ -379,9 +379,9 @@
             this.tabControl1.ResumeLayout(false);
             this.intrinisicsTab.ResumeLayout(false);
             this.intrinisicsTab.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
+            this.metadataTab.ResumeLayout(false);
+            this.metadataTab.PerformLayout();
+            this.picturesTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.albumArtBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -392,7 +392,7 @@
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage intrinisicsTab;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage metadataTab;
         private System.Windows.Forms.Label fileNameLabel;
         private System.Windows.Forms.TextBox channelsBox;
         private System.Windows.Forms.Label channelsLabel;
@@ -417,7 +417,7 @@
         private System.Windows.Forms.Label genreLabel;
         private System.Windows.Forms.ListBox composersBox;
         private System.Windows.Forms.Label composersLabel;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage picturesTab;
         private System.Windows.Forms.PictureBox albumArtBox;
         private System.Windows.Forms.ComboBox albumArtSelector;
         private System.Windows.Forms.Label albumArtInfo;
