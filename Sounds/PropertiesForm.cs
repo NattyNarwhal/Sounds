@@ -62,9 +62,22 @@ namespace Sounds
             genresBox.Items.AddRange(f.Tag.Genres);
 
             albumArtSelector.DisplayMember = "Type";
-            albumArtSelector.Items.AddRange(f.Tag.Pictures);
-            if (albumArtSelector.Items.Count > 0)
-                albumArtSelector.SelectedIndex = 0;
+            albumArtSelector.Items.Clear();
+            if (f.Tag.Pictures.Count() > 0)
+            {
+                albumArtSelector.Enabled = true;
+                copyImageButton.Enabled = true;
+                albumArtSelector.Items.AddRange(f.Tag.Pictures);
+                if (albumArtSelector.Items.Count > 0)
+                    albumArtSelector.SelectedIndex = 0;
+            }
+            else
+            {
+                albumArtSelector.Enabled = false;
+                copyImageButton.Enabled = false;
+                albumArtInfo.Text = string.Empty;
+                albumArtBox.Image = null;
+            }
         }
 
         private void okButton_Click(object sender, EventArgs e)
@@ -97,10 +110,13 @@ namespace Sounds
 
         private void copyImageButton_Click(object sender, EventArgs e)
         {
-            var dataObject = new DataObject();
-            dataObject.SetImage(albumArtBox.Image);
-            dataObject.SetText(albumArtInfo.Text);
-            Clipboard.SetDataObject(dataObject);
+            if (albumArtBox.Image != null)
+            {
+                var dataObject = new DataObject();
+                dataObject.SetImage(albumArtBox.Image);
+                dataObject.SetText(albumArtInfo.Text);
+                Clipboard.SetDataObject(dataObject);
+            }
         }
     }
 }
