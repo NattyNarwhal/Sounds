@@ -1,4 +1,4 @@
-<img src="http://i.imgur.com/VPy8ymB.png" style"float:right;" />
+![Screen shot](http://i.imgur.com/tlXZuIF.png)
 
 A minimalistic music player for Windows.
 
