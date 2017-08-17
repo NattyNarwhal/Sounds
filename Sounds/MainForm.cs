@@ -87,6 +87,8 @@ namespace Sounds
 
         public MainForm()
         {
+            // Uncomment to debug Japanese localization
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("ja-JP");
             InitializeComponent();
             // the designer doesn't want to use icons from resource files
             Icon = Properties.Resources.AppIcon;
