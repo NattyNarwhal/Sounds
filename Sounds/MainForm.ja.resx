@@ -118,44 +118,44 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="volumeStatusButton.ToolTipText" xml:space="preserve">
-    <value>Volume... [NEEDS TRANSLATING]</value>
+    <value>音量</value>
   </data>
   <data name="titleHeader.Text" xml:space="preserve">
-    <value>Title [NEEDS TRANSLATING]</value>
+    <value>曲名</value>
   </data>
   <data name="trackNoHeader.Text" xml:space="preserve">
-    <value>Track # [NEEDS TRANSLATING]</value>
+    <value>トラック</value>
   </data>
   <data name="albumHeader.Text" xml:space="preserve">
-    <value>Album [NEEDS TRANSLATING]</value>
+    <value>アルバム</value>
   </data>
   <data name="artistHeader.Text" xml:space="preserve">
-    <value>Artist [NEEDS TRANSLATING]</value>
+    <value>アーティスト</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="playContextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 22</value>
+    <value>118, 22</value>
   </data>
   <data name="playContextToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Play [NEEDS TRANSLATING]</value>
+    <value>再生 (&amp;P)</value>
   </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 6</value>
+    <value>115, 6</value>
   </data>
   <data name="propertiesContextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 22</value>
+    <value>118, 22</value>
   </data>
   <data name="propertiesContextToolStripMenuItem.Text" xml:space="preserve">
-    <value>P&amp;roperties... [NEEDS TRANSLATING]</value>
+    <value>情報 (&amp;R)</value>
   </data>
   <data name="removeContextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>262, 22</value>
+    <value>118, 22</value>
   </data>
   <data name="removeContextToolStripMenuItem.Text" xml:space="preserve">
-    <value>Remo&amp;ve [NEEDS TRANSLATING]</value>
+    <value>除去 (&amp;V)</value>
   </data>
   <data name="playlistContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 76</value>
+    <value>119, 76</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="artistLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -174,219 +174,243 @@
     <value>NoControl</value>
   </data>
   <data name="newPlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 22</value>
+    <value>232, 22</value>
   </data>
   <data name="newPlaylistToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;New Playlist [NEEDS TRANSLATING]</value>
+    <value>新規プレイリスト (&amp;N)</value>
   </data>
   <data name="openPlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 22</value>
+    <value>232, 22</value>
   </data>
   <data name="openPlaylistToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Open... [NEEDS TRANSLATING]</value>
+    <value>プレイリストを開く... (&amp;O)</value>
   </data>
   <data name="savePlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 22</value>
+    <value>232, 22</value>
   </data>
   <data name="savePlaylistToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Save... [NEEDS TRANSLATING]</value>
+    <value>プレイリストを保存 (&amp;S)</value>
   </data>
   <data name="savePlaylistAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 22</value>
+    <value>232, 22</value>
   </data>
   <data name="savePlaylistAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save &amp;As... [NEEDS TRANSLATING]</value>
+    <value>プレイリストを別名で保存... (&amp;A)</value>
+  </data>
+  <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 6</value>
+  </data>
+  <data name="addFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
+  </data>
+  <data name="addFilesToolStripMenuItem.Text" xml:space="preserve">
+    <value>ファイルを追加... (&amp;F)</value>
+  </data>
+  <data name="addDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
+  </data>
+  <data name="addDirectoryToolStripMenuItem.Text" xml:space="preserve">
+    <value>フォルダを追加... (&amp;D)</value>
+  </data>
+  <data name="removeSelectedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
+  </data>
+  <data name="removeSelectedToolStripMenuItem.Text" xml:space="preserve">
+    <value>選択を除去 (&amp;R)</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 6</value>
+  </data>
+  <data name="shuffleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
+  </data>
+  <data name="shuffleToolStripMenuItem.Text" xml:space="preserve">
+    <value>シャッフル (&amp;H)</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>304, 6</value>
+    <value>229, 6</value>
   </data>
   <data name="quitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 22</value>
+    <value>232, 22</value>
   </data>
   <data name="quitToolStripMenuItem.Text" xml:space="preserve">
     <value>終了 (&amp;Q)</value>
   </data>
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 20</value>
+    <value>73, 20</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;File [NEEDS TRANSLATING]</value>
+    <value>ファイル (&amp;F)</value>
   </data>
   <data name="showToolbarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 22</value>
+    <value>221, 22</value>
   </data>
   <data name="showToolbarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show &amp;Toolbar [NEEDS TRANSLATING] </value>
+    <value>ツールバー (&amp;T)</value>
   </data>
   <data name="showStatusbarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 22</value>
+    <value>221, 22</value>
   </data>
   <data name="showStatusbarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show &amp;Status Bar [NEEDS TRANSLATING]</value>
+    <value>ステータスバー (&amp;S)</value>
   </data>
   <data name="showInfoPaneToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 22</value>
+    <value>221, 22</value>
   </data>
   <data name="showInfoPaneToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show &amp;Info Pane [NEEDS TRANSLATING]</value>
+    <value>情報ペイン (&amp;I)</value>
   </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>289, 6</value>
+    <value>218, 6</value>
   </data>
   <data name="propertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>292, 22</value>
+    <value>221, 22</value>
   </data>
   <data name="propertiesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Song &amp;Properties... [NEEDS TRANSLATING]</value>
+    <value>曲の情報を見る... (&amp;P)</value>
   </data>
   <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 20</value>
+    <value>63, 20</value>
   </data>
   <data name="viewToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;View [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="addFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 22</value>
-  </data>
-  <data name="addFilesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add &amp;Files... [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="addDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 22</value>
-  </data>
-  <data name="addDirectoryToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add Fol&amp;der... [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="removeSelectedToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 22</value>
-  </data>
-  <data name="removeSelectedToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Remove Selected [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>311, 6</value>
-  </data>
-  <data name="shuffleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 22</value>
-  </data>
-  <data name="shuffleToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Shuffle [NEEDS TRANSLATING]</value>
-  </data>
-  <data name="listToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 20</value>
-  </data>
-  <data name="listToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;List [NEEDS TRANSLATING]</value>
+    <value>表示 (&amp;V)</value>
   </data>
   <data name="togglePlaybackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="playToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="playToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Play [NEEDS TRANSLATING]</value>
+    <value>再生 (&amp;P)</value>
   </data>
   <data name="pauseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="pauseToolStripMenuItem.Text" xml:space="preserve">
-    <value>P&amp;ause [NEEDS TRANSLATING]</value>
+    <value>一時停止 (&amp;A)</value>
   </data>
   <data name="stopToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="stopToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Stop [NEEDS TRANSLATING]</value>
+    <value>停止 (&amp;S)</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 6</value>
+    <value>225, 6</value>
   </data>
   <data name="previousToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="previousToolStripMenuItem.Text" xml:space="preserve">
-    <value>Pre&amp;vious [NEEDS TRANSLATING]</value>
+    <value>前へ (&amp;V)</value>
   </data>
   <data name="nextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="nextToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Next [NEEDS TRANSLATING]</value>
+    <value>次へ (&amp;N)</value>
   </data>
   <data name="rewindToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="rewindToolStripMenuItem.Text" xml:space="preserve">
-    <value>Re&amp;wind [NEEDS TRANSLATING]</value>
+    <value>先頭へ (&amp;W)</value>
   </data>
   <data name="skipAheadToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="skipAheadToolStripMenuItem.Text" xml:space="preserve">
-    <value>S&amp;kip Ahead [NEEDS TRANSLATING]</value>
+    <value>末尾へ (&amp;K)</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 6</value>
+    <value>225, 6</value>
   </data>
   <data name="volumeUpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="volumeUpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Volume &amp;Up [NEEDS TRANSLATING]</value>
+    <value>音量を上げる (&amp;U)</value>
   </data>
   <data name="volumeDownToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="volumeDownToolStripMenuItem.Text" xml:space="preserve">
-    <value>Volume &amp;Down [NEEDS TRANSLATING]</value>
+    <value>音量を下げる (&amp;D)</value>
   </data>
   <data name="muteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="muteToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Mute [NEEDS TRANSLATING]</value>
+    <value>消音 (&amp;M)</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 6</value>
+    <value>225, 6</value>
   </data>
   <data name="repeatToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 22</value>
+    <value>228, 22</value>
   </data>
   <data name="repeatToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Repeat [NEEDS TRANSLATING]</value>
+    <value>繰り返し (&amp;R)</value>
+  </data>
+  <data name="deleteOnNextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 22</value>
+  </data>
+  <data name="deleteOnNextToolStripMenuItem.Text" xml:space="preserve">
+    <value>次に進むと除去 (&amp;E)</value>
   </data>
   <data name="playbackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 20</value>
+    <value>63, 20</value>
   </data>
   <data name="playbackToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Playback [NEEDS TRANSLATING]</value>
+    <value>再生 (&amp;P)</value>
+  </data>
+  <data name="playToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 22</value>
   </data>
   <data name="playToolStripButton.Text" xml:space="preserve">
-    <value>Play [NEEDS TRANSLATING]</value>
+    <value>再生</value>
+  </data>
+  <data name="pauseToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 22</value>
   </data>
   <data name="pauseToolStripButton.Text" xml:space="preserve">
-    <value>Pause [NEEDS TRANSLATING]</value>
+    <value>一時停止</value>
+  </data>
+  <data name="stopToolStripButton.Text" xml:space="preserve">
+    <value>停止</value>
   </data>
   <data name="previousToolStripButton.Text" xml:space="preserve">
-    <value>Previous [NEEDS TRANSLATING]</value>
+    <value>前へ</value>
   </data>
   <data name="nextToolStripButton.Text" xml:space="preserve">
-    <value>Next [NEEDS TRANSLATING]</value>
+    <value>次へ</value>
   </data>
   <data name="volumeButton.ToolTipText" xml:space="preserve">
-    <value>Volume... [NEEDS TRANSLATING]</value>
+    <value>音量</value>
   </data>
   <data name="addFilesToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 22</value>
+    <value>109, 20</value>
   </data>
   <data name="addFilesToolStripButton.Text" xml:space="preserve">
-    <value>Add Files... [NEEDS TRANSLATING]</value>
+    <value>ファイルを追加...</value>
+  </data>
+  <data name="removeSelectedToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 20</value>
+  </data>
+  <data name="removeSelectedToolStripButton.Text" xml:space="preserve">
+    <value>選択を除去</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>399, 25</value>
+    <value>414, 25</value>
+  </data>
+  <data name="openPlaylistDialog.Filter" xml:space="preserve">
+    <value>プレイリスト|*.m3u;*.m3u8</value>
+  </data>
+  <data name="savePlaylistDialog.Filter" xml:space="preserve">
+    <value>プレイリスト|*.m3u;*.m3u8</value>
   </data>
   <data name="folderBrowserDialog1.Description" xml:space="preserve">
-    <value>Pick a folder full of music to add. [NEEDS TRANSLATING]</value>
+    <value>音楽ファイルが入っているフォルダを選択してください。</value>
   </data>
 </root>
