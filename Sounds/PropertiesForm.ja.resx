@@ -120,7 +120,56 @@
   <data name="intrinisicsTab.Text" xml:space="preserve">
     <value>基本情報</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="durationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="durationLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
+  </data>
+  <data name="durationLabel.Text" xml:space="preserve">
+    <value>再生時間</value>
+  </data>
+  <data name="sampleRateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="sampleRateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="sampleRateLabel.Text" xml:space="preserve">
+    <value>サンプルレート</value>
+  </data>
+  <data name="channelsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="channelsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="channelsLabel.Text" xml:space="preserve">
+    <value>チャンネル</value>
+  </data>
+  <data name="bitrateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="bitrateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 13</value>
+  </data>
+  <data name="bitrateLabel.Text" xml:space="preserve">
+    <value>ビットレート</value>
+  </data>
+  <data name="fileNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="fileNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="fileNameLabel.Text" xml:space="preserve">
+    <value>ファイル名</value>
+  </data>
+  <data name="metadataTab.Text" xml:space="preserve">
+    <value>詳細情報</value>
+  </data>
   <data name="lyricsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
@@ -139,7 +188,6 @@
   <data name="copyrightLabel.Text" xml:space="preserve">
     <value>特許</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="yearLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -212,56 +260,8 @@
   <data name="titleLabel.Text" xml:space="preserve">
     <value>曲名</value>
   </data>
-  <data name="metadataTab.Text" xml:space="preserve">
-    <value>詳細情報</value>
-  </data>
   <data name="picturesTab.Text" xml:space="preserve">
     <value>画像</value>
-  </data>
-  <data name="durationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="durationLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="durationLabel.Text" xml:space="preserve">
-    <value>再生時間</value>
-  </data>
-  <data name="sampleRateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="sampleRateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
-  <data name="sampleRateLabel.Text" xml:space="preserve">
-    <value>サンプルレート</value>
-  </data>
-  <data name="channelsLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="channelsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="channelsLabel.Text" xml:space="preserve">
-    <value>チャンネル</value>
-  </data>
-  <data name="bitrateLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="bitrateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
-  </data>
-  <data name="bitrateLabel.Text" xml:space="preserve">
-    <value>ビットレート</value>
-  </data>
-  <data name="fileNameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="fileNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="fileNameLabel.Text" xml:space="preserve">
-    <value>ファイル名</value>
   </data>
   <data name="copyImageButton.Text" xml:space="preserve">
     <value>画像をコピー (&amp;C)</value>
@@ -273,6 +273,6 @@
     <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Properties [NEEDS TRANSLATING]</value>
+    <value>情報</value>
   </data>
 </root>
