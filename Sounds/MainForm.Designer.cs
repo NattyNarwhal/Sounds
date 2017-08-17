@@ -703,7 +703,6 @@
             this.statusStrip1.PerformLayout();
             this.playlistContextMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.positionTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.albumArtBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);

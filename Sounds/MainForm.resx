@@ -120,8 +120,8 @@
   <data name="&gt;&gt;toolStripSeparator8.Name" xml:space="preserve">
     <value>toolStripSeparator8</value>
   </data>
-  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
   </data>
   <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -141,7 +141,7 @@
     <value>0, 0</value>
   </data>
   <data name="positionTrackBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 58</value>
+    <value>109, 67</value>
   </data>
   <data name="&gt;&gt;artistLabel.Name" xml:space="preserve">
     <value>artistLabel</value>
@@ -228,11 +228,14 @@
   <data name="&gt;&gt;trackBarSyncTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator7.Name" xml:space="preserve">
-    <value>toolStripSeparator7</value>
+  <data name="toolStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="deleteOnNextToolStripMenuItem.Text" xml:space="preserve">
-    <value>R&amp;emove on Track Change</value>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.RightToolStripPanel</value>
   </data>
   <data name="artistLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -243,8 +246,11 @@
   <data name="removeSelectedToolStripButton.Text" xml:space="preserve">
     <value>Remove Selected</value>
   </data>
-  <data name="quitToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Q</value>
+  <data name="&gt;&gt;playbackToolStripMenuItem.Name" xml:space="preserve">
+    <value>playbackToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;artistLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="titleLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -261,9 +267,6 @@
   <data name="togglePlaybackToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Toggle Playback</value>
   </data>
-  <data name="playToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 22</value>
-  </data>
   <data name="volumeStatusButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 20</value>
   </data>
@@ -273,11 +276,14 @@
   <data name="&gt;&gt;muteToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;volumeDownToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;stopToolStripButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="volumeUpToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Up</value>
+  </data>
+  <data name="rewindToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+Left</value>
   </data>
   <data name="volumeStatusButton.ToolTipText" xml:space="preserve">
     <value>Volume...</value>
@@ -294,23 +300,20 @@
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>417, 22</value>
   </data>
-  <data name="showStatusbarToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show &amp;Status Bar</value>
-  </data>
   <data name="openPlaylistToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+O</value>
   </data>
   <data name="&gt;&gt;pauseToolStripButton.Name" xml:space="preserve">
     <value>pauseToolStripButton</value>
   </data>
+  <data name="positionTrackBar.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="togglePlaybackToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Space</value>
   </data>
   <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.Parent" xml:space="preserve">
     <value>toolStripContainer1</value>
-  </data>
-  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 6</value>
   </data>
   <data name="&gt;&gt;listView1.Name" xml:space="preserve">
     <value>listView1</value>
@@ -321,9 +324,6 @@
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="showToolbarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 22</value>
-  </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -333,6 +333,12 @@
   <data name="errorMessageLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
   </data>
+  <data name="&gt;&gt;muteToolStripMenuItem.Name" xml:space="preserve">
+    <value>muteToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;albumLabel.Name" xml:space="preserve">
+    <value>albumLabel</value>
+  </data>
   <data name="positionTrackBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -341,6 +347,9 @@
   </data>
   <data name="removeSelectedToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Del</value>
+  </data>
+  <data name="&gt;&gt;volumeUpToolStripMenuItem.Name" xml:space="preserve">
+    <value>volumeUpToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;albumArtBox.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -354,11 +363,11 @@
   <data name="openPlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
-  <data name="&gt;&gt;volumeUpToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="addFilesToolStripButton.Text" xml:space="preserve">
+    <value>Add Files...</value>
   </data>
-  <data name="rewindToolStripMenuItem.Text" xml:space="preserve">
-    <value>Re&amp;wind</value>
+  <data name="stopToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Stop</value>
   </data>
   <data name="positionLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
@@ -369,8 +378,8 @@
   <data name="pauseToolStripButton.Text" xml:space="preserve">
     <value>Pause</value>
   </data>
-  <data name="&gt;&gt;addFilesDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;volumeDownToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pauseToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -402,11 +411,8 @@
   <data name="toolStripContainer1.Size" type="System.Drawing.Size, System.Drawing">
     <value>417, 444</value>
   </data>
-  <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.Name" xml:space="preserve">
-    <value>toolStripContainer1.RightToolStripPanel</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;toolStripSeparator7.Name" xml:space="preserve">
+    <value>toolStripSeparator7</value>
   </data>
   <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -420,20 +426,20 @@
   <data name="&gt;&gt;openPlaylistToolStripMenuItem.Name" xml:space="preserve">
     <value>openPlaylistToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;repeatToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
   </data>
+  <data name="&gt;&gt;previousToolStripButton.Name" xml:space="preserve">
+    <value>previousToolStripButton</value>
+  </data>
   <data name="playContextToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Play</value>
-  </data>
-  <data name="folderBrowserDialog1.Description" xml:space="preserve">
-    <value>Pick a folder full of music to add.</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
     <value>toolStripSeparator4</value>
@@ -446,6 +452,9 @@
   </data>
   <data name="&gt;&gt;pauseToolStripButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rewindToolStripMenuItem.Text" xml:space="preserve">
+    <value>Re&amp;wind</value>
   </data>
   <data name="&gt;&gt;titleHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -462,17 +471,14 @@
   <data name="listView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 106</value>
   </data>
-  <data name="&gt;&gt;previousToolStripButton.Name" xml:space="preserve">
-    <value>previousToolStripButton</value>
+  <data name="showStatusbarToolStripMenuItem.Text" xml:space="preserve">
+    <value>Show &amp;Status Bar</value>
   </data>
   <data name="&gt;&gt;viewToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;volumeUpToolStripMenuItem.Name" xml:space="preserve">
-    <value>volumeUpToolStripMenuItem</value>
-  </data>
-  <data name="artistLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -489,11 +495,11 @@
   <data name="&gt;&gt;toolStripContainer1.TopToolStripPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;repeatToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="toolStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
+  <data name="savePlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
   </data>
   <data name="toolStripSeparator9.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 6</value>
@@ -507,20 +513,20 @@
   <data name="listView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="removeSelectedToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Remove Selected</value>
+  </data>
   <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="savePlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 22</value>
+  <data name="quitToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Q</value>
   </data>
   <data name="volumeStatusButton.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="&gt;&gt;albumLabel.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;previousToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripContainer1.RightToolStripPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -534,14 +540,14 @@
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 6</value>
   </data>
-  <data name="addFilesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add &amp;Files...</value>
+  <data name="&gt;&gt;errorMessageLabel.Name" xml:space="preserve">
+    <value>errorMessageLabel</value>
   </data>
   <data name="&gt;&gt;showInfoPaneToolStripMenuItem.Name" xml:space="preserve">
     <value>showInfoPaneToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;File</value>
   </data>
   <data name="&gt;&gt;toolStripContainer1.ContentPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripContentPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -555,14 +561,8 @@
   <data name="&gt;&gt;volumeStatusButton.Name" xml:space="preserve">
     <value>volumeStatusButton</value>
   </data>
-  <data name="&gt;&gt;openPlaylistDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="stopToolStripButton.Text" xml:space="preserve">
-    <value>Stop</value>
-  </data>
-  <data name="toolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>417, 373</value>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 6</value>
   </data>
   <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -582,9 +582,6 @@
   <data name="&gt;&gt;albumArtBox.Name" xml:space="preserve">
     <value>albumArtBox</value>
   </data>
-  <data name="stopToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Stop</value>
-  </data>
   <data name="muteToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Mute</value>
   </data>
@@ -597,11 +594,14 @@
   <data name="newPlaylistToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;New Playlist</value>
   </data>
+  <data name="&gt;&gt;positionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;togglePlaybackToolStripMenuItem.Name" xml:space="preserve">
     <value>togglePlaybackToolStripMenuItem</value>
   </data>
   <data name="artistLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 36</value>
+    <value>109, 42</value>
   </data>
   <data name="playbackToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Playback</value>
@@ -663,6 +663,9 @@
   <data name="addFilesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
+  <data name="&gt;&gt;openPlaylistDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;toolStripContainer1.ContentPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -675,8 +678,8 @@
   <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
     <value>statusStrip1</value>
   </data>
-  <data name="&gt;&gt;artistHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="propertiesContextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 22</value>
   </data>
   <data name="&gt;&gt;albumLabel.Parent" xml:space="preserve">
     <value>panel1</value>
@@ -702,8 +705,8 @@
   <data name="albumHeader.Text" xml:space="preserve">
     <value>Album</value>
   </data>
-  <data name="&gt;&gt;albumLabel.Name" xml:space="preserve">
-    <value>albumLabel</value>
+  <data name="&gt;&gt;toolStripContainer1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -741,6 +744,9 @@
   <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;volumeUpToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;removeSelectedToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -749,6 +755,9 @@
   </data>
   <data name="propertiesToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+I</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
     <value>toolStrip1</value>
@@ -783,6 +792,9 @@
   <data name="stopToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Shift+Space</value>
   </data>
+  <data name="&gt;&gt;addFilesDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;artistLabel.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
@@ -792,17 +804,11 @@
   <data name="previousToolStripMenuItem.Text" xml:space="preserve">
     <value>Pre&amp;vious</value>
   </data>
-  <data name="propertiesContextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 22</value>
-  </data>
   <data name="&gt;&gt;toolStripContainer1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;propertiesContextToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;File</value>
   </data>
   <data name="&gt;&gt;toolStripContainer1.ContentPanel.Name" xml:space="preserve">
     <value>toolStripContainer1.ContentPanel</value>
@@ -828,14 +834,17 @@
   <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
     <value>417, 267</value>
   </data>
-  <data name="&gt;&gt;playbackToolStripMenuItem.Name" xml:space="preserve">
-    <value>playbackToolStripMenuItem</value>
+  <data name="artistLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="&gt;&gt;listView1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;trackNoHeader.Name" xml:space="preserve">
     <value>trackNoHeader</value>
+  </data>
+  <data name="&gt;&gt;artistHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="trackNoHeader.Text" xml:space="preserve">
     <value>Track #</value>
@@ -858,17 +867,17 @@
   <data name="statusStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="savePlaylistToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Save Playlist...</value>
-  </data>
   <data name="&gt;&gt;albumHeader.Name" xml:space="preserve">
     <value>albumHeader</value>
   </data>
   <data name="nextToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Right</value>
   </data>
-  <data name="toolStripContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 24</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>417, 24</value>
@@ -884,6 +893,9 @@
   </data>
   <data name="addDirectoryToolStripMenuItem.Text" xml:space="preserve">
     <value>Add Fol&amp;der...</value>
+  </data>
+  <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.Name" xml:space="preserve">
+    <value>toolStripContainer1.BottomToolStripPanel</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>toolStripContainer1.TopToolStripPanel</value>
@@ -909,8 +921,8 @@
   <data name="titleLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>108, 3</value>
   </data>
-  <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 24</value>
+  <data name="stopToolStripButton.Text" xml:space="preserve">
+    <value>Stop</value>
   </data>
   <data name="&gt;&gt;toolStripContainer1.TopToolStripPanel.Name" xml:space="preserve">
     <value>toolStripContainer1.TopToolStripPanel</value>
@@ -918,8 +930,8 @@
   <data name="&gt;&gt;newPlaylistToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="removeSelectedToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Remove Selected</value>
+  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.Parent" xml:space="preserve">
+    <value>toolStripContainer1</value>
   </data>
   <data name="playToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 22</value>
@@ -948,8 +960,8 @@
   <data name="showInfoPaneToolStripMenuItem.Text" xml:space="preserve">
     <value>Show &amp;Info Pane</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="newPlaylistToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+N</value>
   </data>
   <data name="volumeUpToolStripMenuItem.Text" xml:space="preserve">
     <value>Volume &amp;Up</value>
@@ -960,14 +972,11 @@
   <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="volumeStatusButton.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;propertiesToolStripMenuItem.Name" xml:space="preserve">
     <value>propertiesToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;positionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
+    <value>toolStripContainer1.ContentPanel</value>
   </data>
   <data name="&gt;&gt;toolStripContainer1.ContentPanel.Parent" xml:space="preserve">
     <value>toolStripContainer1</value>
@@ -991,13 +1000,16 @@
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="albumLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 23</value>
+    <value>109, 26</value>
   </data>
   <data name="&gt;&gt;openPlaylistToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>None</value>
+  <data name="deleteOnNextToolStripMenuItem.Text" xml:space="preserve">
+    <value>R&amp;emove on Track Change</value>
+  </data>
+  <data name="volumeStatusButton.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="pauseToolStripButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1026,14 +1038,11 @@
   <data name="savePlaylistDialog.Filter" xml:space="preserve">
     <value>Playlists|*.m3u;*.m3u8</value>
   </data>
-  <data name="newPlaylistToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+N</value>
-  </data>
   <data name="propertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>203, 22</value>
   </data>
-  <data name="&gt;&gt;toolStripContainer1.BottomToolStripPanel.Name" xml:space="preserve">
-    <value>toolStripContainer1.BottomToolStripPanel</value>
+  <data name="savePlaylistToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Save Playlist...</value>
   </data>
   <data name="playContextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 22</value>
@@ -1065,14 +1074,8 @@
   <data name="&gt;&gt;nextToolStripButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="addFilesToolStripButton.Text" xml:space="preserve">
-    <value>Add Files...</value>
-  </data>
-  <data name="&gt;&gt;toolStripContainer1.LeftToolStripPanel.Parent" xml:space="preserve">
-    <value>toolStripContainer1</value>
-  </data>
-  <data name="&gt;&gt;toolStripContainer1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="playToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 22</value>
   </data>
   <data name="playToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Play</value>
@@ -1092,8 +1095,8 @@
   <data name="&gt;&gt;shuffleToolStripMenuItem.Name" xml:space="preserve">
     <value>shuffleToolStripMenuItem</value>
   </data>
-  <data name="rewindToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+Left</value>
+  <data name="showToolbarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 22</value>
   </data>
   <data name="&gt;&gt;propertiesToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1116,8 +1119,8 @@
   <data name="albumArtBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="shuffleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
   </data>
   <data name="previousToolStripButton.Text" xml:space="preserve">
     <value>Previous</value>
@@ -1125,14 +1128,11 @@
   <data name="&gt;&gt;albumHeader.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;listView1.Parent" xml:space="preserve">
-    <value>toolStripContainer1.ContentPanel</value>
+  <data name="toolStripContainer1.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 373</value>
   </data>
   <data name="titleHeader.Width" type="System.Int32, mscorlib">
     <value>200</value>
-  </data>
-  <data name="&gt;&gt;stopToolStripButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>417, 444</value>
@@ -1152,8 +1152,11 @@
   <data name="&gt;&gt;toolStripSeparator5.Name" xml:space="preserve">
     <value>toolStripSeparator5</value>
   </data>
-  <data name="&gt;&gt;muteToolStripMenuItem.Name" xml:space="preserve">
-    <value>muteToolStripMenuItem</value>
+  <data name="folderBrowserDialog1.Description" xml:space="preserve">
+    <value>Pick a folder full of music to add.</value>
+  </data>
+  <data name="menuStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Sounds</value>
@@ -1182,23 +1185,17 @@
   <data name="&gt;&gt;trackBarSyncTimer.Name" xml:space="preserve">
     <value>trackBarSyncTimer</value>
   </data>
-  <data name="&gt;&gt;artistLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="positionTrackBar.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="quitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
-  <data name="&gt;&gt;errorMessageLabel.Name" xml:space="preserve">
-    <value>errorMessageLabel</value>
-  </data>
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="positionTrackBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 45</value>
+    <value>305, 36</value>
   </data>
   <data name="showInfoPaneToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>203, 22</value>
@@ -1208,6 +1205,9 @@
   </data>
   <data name="nextToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator8.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1224,8 +1224,8 @@
   <data name="&gt;&gt;positionTrackBar.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="shuffleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 22</value>
+  <data name="&gt;&gt;previousToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="togglePlaybackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
@@ -1238,6 +1238,9 @@
   </data>
   <data name="viewToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;View</value>
+  </data>
+  <data name="toolStripContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="&gt;&gt;shuffleToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1266,8 +1269,8 @@
   <data name="&gt;&gt;previousToolStripButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
+  <data name="addFilesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add &amp;Files...</value>
   </data>
   <data name="&gt;&gt;albumArtBox.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -1278,8 +1281,8 @@
   <metadata name="trackBarSyncTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>272, 17</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ja</value>
+  <metadata name="addFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1289,9 +1292,6 @@
   </metadata>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>424, 17</value>
-  </metadata>
-  <metadata name="addFilesDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
   </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>157, 17</value>
