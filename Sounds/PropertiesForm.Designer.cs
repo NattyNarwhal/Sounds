@@ -97,6 +97,7 @@
             // 
             // intrinisicsTab
             // 
+            resources.ApplyResources(this.intrinisicsTab, "intrinisicsTab");
             this.intrinisicsTab.Controls.Add(this.durationBox);
             this.intrinisicsTab.Controls.Add(this.durationLabel);
             this.intrinisicsTab.Controls.Add(this.sampleRateBox);
@@ -107,7 +108,6 @@
             this.intrinisicsTab.Controls.Add(this.bitrateLabel);
             this.intrinisicsTab.Controls.Add(this.fileNameBox);
             this.intrinisicsTab.Controls.Add(this.fileNameLabel);
-            resources.ApplyResources(this.intrinisicsTab, "intrinisicsTab");
             this.intrinisicsTab.Name = "intrinisicsTab";
             this.intrinisicsTab.UseVisualStyleBackColor = true;
             // 
@@ -168,6 +168,7 @@
             // 
             // metadataTab
             // 
+            resources.ApplyResources(this.metadataTab, "metadataTab");
             this.metadataTab.Controls.Add(this.lyricsBox);
             this.metadataTab.Controls.Add(this.lyricsLabel);
             this.metadataTab.Controls.Add(this.commentsBox);
@@ -190,7 +191,6 @@
             this.metadataTab.Controls.Add(this.albumLabel);
             this.metadataTab.Controls.Add(this.titleBox);
             this.metadataTab.Controls.Add(this.titleLabel);
-            resources.ApplyResources(this.metadataTab, "metadataTab");
             this.metadataTab.Name = "metadataTab";
             this.metadataTab.UseVisualStyleBackColor = true;
             // 
@@ -240,8 +240,8 @@
             // 
             // genresBox
             // 
-            this.genresBox.FormattingEnabled = true;
             resources.ApplyResources(this.genresBox, "genresBox");
+            this.genresBox.FormattingEnabled = true;
             this.genresBox.Name = "genresBox";
             this.genresBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             // 
@@ -252,8 +252,8 @@
             // 
             // composersBox
             // 
-            this.composersBox.FormattingEnabled = true;
             resources.ApplyResources(this.composersBox, "composersBox");
+            this.composersBox.FormattingEnabled = true;
             this.composersBox.Name = "composersBox";
             this.composersBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             // 
@@ -264,8 +264,8 @@
             // 
             // artistsBox
             // 
-            this.artistsBox.FormattingEnabled = true;
             resources.ApplyResources(this.artistsBox, "artistsBox");
+            this.artistsBox.FormattingEnabled = true;
             this.artistsBox.Name = "artistsBox";
             this.artistsBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             // 
@@ -320,11 +320,11 @@
             // 
             // picturesTab
             // 
+            resources.ApplyResources(this.picturesTab, "picturesTab");
             this.picturesTab.Controls.Add(this.copyImageButton);
             this.picturesTab.Controls.Add(this.albumArtInfo);
             this.picturesTab.Controls.Add(this.albumArtSelector);
             this.picturesTab.Controls.Add(this.albumArtBox);
-            resources.ApplyResources(this.picturesTab, "picturesTab");
             this.picturesTab.Name = "picturesTab";
             this.picturesTab.UseVisualStyleBackColor = true;
             // 
