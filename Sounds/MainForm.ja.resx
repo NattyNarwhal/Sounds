@@ -390,13 +390,10 @@
     <value>音量</value>
   </data>
   <data name="addFilesToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 20</value>
+    <value>109, 22</value>
   </data>
   <data name="addFilesToolStripButton.Text" xml:space="preserve">
     <value>ファイルを追加...</value>
-  </data>
-  <data name="removeSelectedToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 20</value>
   </data>
   <data name="removeSelectedToolStripButton.Text" xml:space="preserve">
     <value>選択を除去</value>
