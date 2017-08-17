@@ -87,6 +87,9 @@ namespace Sounds
 
         public MainForm()
         {
+#if ForceJA
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("ja-JP");
+#endif
             InitializeComponent();
             // the designer doesn't want to use icons from resource files
             Icon = Properties.Resources.AppIcon;
