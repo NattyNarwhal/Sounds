@@ -354,9 +354,15 @@ namespace Sounds
             {
                 var title = activeFile.Tag.Title;
                 var album = activeFile.Tag.Album;
-                var artist = activeFile.Tag.Performers?[0];
+                var artist = activeFile.Tag.Performers.Count() > 0 ?
+                    activeFile.Tag.Performers[0] : string.Empty;
 
-                var formTitle = string.Format("{0} - {1}", title, artist);
+                string formTitle;
+                if (title != null && activeFile.Tag.Album != null)
+                    formTitle = string.Format("{0} - {1}", title, artist);
+                else
+                    formTitle = activeFile.Name;
+
                 // fill out metadata
                 if (TaskbarManager.IsPlatformSupported)
                 {
@@ -366,7 +372,7 @@ namespace Sounds
                 }
                 Text = formTitle;
 
-                titleLabel.Text = title;
+                titleLabel.Text = title ?? activeFile.Name;
                 albumLabel.Text = album;
                 artistLabel.Text = artist;
 
