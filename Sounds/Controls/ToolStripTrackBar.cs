@@ -73,6 +73,18 @@ namespace Sounds
             }
         }
 
+        public int LargeChange
+        {
+            get
+            {
+                return TrackBar.LargeChange;
+            }
+            set
+            {
+                TrackBar.LargeChange = value;
+            }
+        }
+
         protected virtual void OnScroll(EventArgs e)
         {
             Scroll?.Invoke(this, e);

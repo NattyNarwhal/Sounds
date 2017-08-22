@@ -40,6 +40,10 @@ namespace Sounds
         // not if the MediaPlayer is, but if we should at all
         bool playing = false;
         double vol; // we need to keep this ourselves; mp.Stop resets mp.Volume
+
+        // setings
+        int volIncrement; // for trackbar/keyboard
+        int timeIncrement;
         bool repeat = false;
         bool deleteOnNext = false;
 
@@ -99,6 +103,8 @@ namespace Sounds
             showInfoPane = Properties.Settings.Default.ShowInfoPane;
             deleteOnNext = Properties.Settings.Default.DeleteOnNext;
             repeat = Properties.Settings.Default.Repeat;
+            volIncrement = Properties.Settings.Default.VolumeShortcutIncrement;
+            timeIncrement = Properties.Settings.Default.TimeShortcutSeconds;
 
             if (TaskbarManager.IsPlatformSupported)
             {
@@ -157,6 +163,7 @@ namespace Sounds
             // construct volume widget
             tb.Maximum = 100;
             tb.TickFrequency = 10;
+            tb.LargeChange = volIncrement;
             tb.Scroll += (o, e) =>
             {
                 Volume = tb.Value / 100d;
@@ -901,12 +908,12 @@ namespace Sounds
 
         private void volumeUpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Volume += 0.1;
+            Volume += (volIncrement * 0.01);
         }
 
         private void volumeDownToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Volume -= 0.1;
+            Volume -= (volIncrement * 0.01);
         }
 
         private void muteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -921,12 +928,12 @@ namespace Sounds
 
         private void skipAheadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp.Position = mp.Position.Add(new TimeSpan(0, 0, Properties.Settings.Default.TimeShortcutSeconds));
+            mp.Position = mp.Position.Add(new TimeSpan(0, 0, timeIncrement));
         }
 
         private void rewindToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, Properties.Settings.Default.TimeShortcutSeconds));
+            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, timeIncrement));
         }
 
         private void showToolbarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -965,6 +972,8 @@ namespace Sounds
             Properties.Settings.Default.ShowInfoPane = showInfoPane;
             Properties.Settings.Default.DeleteOnNext = deleteOnNext;
             Properties.Settings.Default.Repeat = repeat;
+            Properties.Settings.Default.VolumeShortcutIncrement = volIncrement;
+            Properties.Settings.Default.TimeShortcutSeconds = timeIncrement;
             Properties.Settings.Default.Save();
         }
 

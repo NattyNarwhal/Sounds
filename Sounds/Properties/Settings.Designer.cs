@@ -94,5 +94,29 @@ namespace Sounds.Properties {
                 this["TimeShortcutSeconds"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AddFolderRecursive {
+            get {
+                return ((bool)(this["AddFolderRecursive"]));
+            }
+            set {
+                this["AddFolderRecursive"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int VolumeShortcutIncrement {
+            get {
+                return ((int)(this["VolumeShortcutIncrement"]));
+            }
+            set {
+                this["VolumeShortcutIncrement"] = value;
+            }
+        }
     }
 }
