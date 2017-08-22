@@ -1017,5 +1017,30 @@ namespace Sounds
             // forcibly plays the selected track
             PlayAndSet(true);
         }
+
+        private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var pd = new PrefsDialog()
+            {
+                ShowToolbar = showToolBar,
+                ShowStatusbar = showStatusBar,
+                ShowInfoPane = showInfoPane,
+                DeleteOnTrackChange = deleteOnNext,
+                Recursive = recursive,
+                VolumeIncrement = volIncrement,
+                TimeIncrement = timeIncrement,
+            };
+            if (pd.ShowDialog(this) == DialogResult.OK)
+            {
+                showToolBar = pd.ShowToolbar;
+                showStatusBar = pd.ShowStatusbar;
+                showInfoPane = pd.ShowInfoPane;
+                deleteOnNext = pd.DeleteOnTrackChange;
+                recursive = pd.Recursive;
+                volIncrement = pd.VolumeIncrement;
+                timeIncrement = pd.TimeIncrement;
+                UpdateUI();
+            }
+        }
     }
 }

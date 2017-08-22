@@ -72,7 +72,7 @@ namespace Sounds
             }
         }
 
-        public int VolumneIncrement
+        public int VolumeIncrement
         {
             get
             {
@@ -99,6 +99,12 @@ namespace Sounds
         public PrefsDialog()
         {
             InitializeComponent();
+        }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }
