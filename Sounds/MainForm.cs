@@ -90,6 +90,26 @@ namespace Sounds
             }
         }
 
+        int VolumeIncrement
+        {
+            get { return volIncrement; }
+            set
+            {
+                volIncrement = value;
+                tb.LargeChange = VolumeIncrement;
+            }
+        }
+
+        int TimeIncrement
+        {
+            get { return timeIncrement; }
+            set
+            {
+                timeIncrement = value;
+                positionTrackBar.LargeChange = TimeIncrement;
+            }
+        }
+
         public MainForm()
         {
 #if ForceJA
@@ -104,8 +124,8 @@ namespace Sounds
             showInfoPane = Properties.Settings.Default.ShowInfoPane;
             deleteOnNext = Properties.Settings.Default.DeleteOnNext;
             repeat = Properties.Settings.Default.Repeat;
-            volIncrement = Properties.Settings.Default.VolumeShortcutIncrement;
-            timeIncrement = Properties.Settings.Default.TimeShortcutSeconds;
+            VolumeIncrement = Properties.Settings.Default.VolumeShortcutIncrement;
+            TimeIncrement = Properties.Settings.Default.TimeShortcutSeconds;
             recursive = Properties.Settings.Default.AddFolderRecursive;
 
             if (TaskbarManager.IsPlatformSupported)
@@ -165,7 +185,7 @@ namespace Sounds
             // construct volume widget
             tb.Maximum = 100;
             tb.TickFrequency = 10;
-            tb.LargeChange = volIncrement;
+            //tb.LargeChange = volIncrement;
             tb.Scroll += (o, e) =>
             {
                 Volume = tb.Value / 100d;
@@ -921,12 +941,12 @@ namespace Sounds
 
         private void volumeUpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Volume += (volIncrement * 0.01);
+            Volume += (VolumeIncrement * 0.01);
         }
 
         private void volumeDownToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Volume -= (volIncrement * 0.01);
+            Volume -= (VolumeIncrement * 0.01);
         }
 
         private void muteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -941,12 +961,12 @@ namespace Sounds
 
         private void skipAheadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp.Position = mp.Position.Add(new TimeSpan(0, 0, timeIncrement));
+            mp.Position = mp.Position.Add(new TimeSpan(0, 0, TimeIncrement));
         }
 
         private void rewindToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, timeIncrement));
+            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, TimeIncrement));
         }
 
         private void showToolbarToolStripMenuItem_Click(object sender, EventArgs e)
