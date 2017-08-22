@@ -42,10 +42,11 @@ namespace Sounds
         double vol; // we need to keep this ourselves; mp.Stop resets mp.Volume
 
         // setings
-        int volIncrement; // for trackbar/keyboard
-        int timeIncrement;
+        int volIncrement = 5; // for trackbar/keyboard
+        int timeIncrement = 15;
         bool repeat = false;
         bool deleteOnNext = false;
+        bool recursive = false;
 
         string playlistFile = null;
 
@@ -105,6 +106,7 @@ namespace Sounds
             repeat = Properties.Settings.Default.Repeat;
             volIncrement = Properties.Settings.Default.VolumeShortcutIncrement;
             timeIncrement = Properties.Settings.Default.TimeShortcutSeconds;
+            recursive = Properties.Settings.Default.AddFolderRecursive;
 
             if (TaskbarManager.IsPlatformSupported)
             {
@@ -265,9 +267,20 @@ namespace Sounds
 
         public void AddDirectory(string name)
         {
-            foreach (var f in Directory.EnumerateFiles(name).OrderBy(x => x))
+            if (recursive)
             {
-                AddFile(f);
+                foreach (var f in Directory.EnumerateFiles(name).OrderBy(x => x)
+                    .Concat(Directory.EnumerateDirectories(name).OrderBy(x => x)))
+                {
+                    AddItem(f);
+                }
+            }
+            else
+            {
+                foreach (var f in Directory.EnumerateFiles(name).OrderBy(x => x))
+                {
+                    AddFile(f);
+                }
             }
         }
 
@@ -974,6 +987,7 @@ namespace Sounds
             Properties.Settings.Default.Repeat = repeat;
             Properties.Settings.Default.VolumeShortcutIncrement = volIncrement;
             Properties.Settings.Default.TimeShortcutSeconds = timeIncrement;
+            Properties.Settings.Default.AddFolderRecursive = recursive;
             Properties.Settings.Default.Save();
         }
 
