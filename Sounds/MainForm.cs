@@ -556,12 +556,7 @@ namespace Sounds
             removeContextToolStripMenuItem.Enabled = selected;
             removeSelectedToolStripButton.Enabled = selected;
 
-            showToolbarToolStripMenuItem.Checked = showToolBar;
-            showStatusbarToolStripMenuItem.Checked = showStatusBar;
-            showInfoPaneToolStripMenuItem.Checked = showInfoPane;
-
             repeatToolStripMenuItem.Checked = repeat;
-            deleteOnNextToolStripMenuItem.Checked = deleteOnNext;
 
             // TODO: make these translatable messages
             if (TaskbarManager.IsPlatformSupported)
@@ -969,32 +964,9 @@ namespace Sounds
             mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, TimeIncrement));
         }
 
-        private void showToolbarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            showToolBar = showToolbarToolStripMenuItem.Checked;
-            UpdateUI();
-        }
-
-        private void showStatusbarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            showStatusBar = showStatusbarToolStripMenuItem.Checked;
-            UpdateUI();
-        }
-
-        private void showInfoPaneToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            showInfoPane = showInfoPaneToolStripMenuItem.Checked;
-            UpdateUI();
-        }
-
         private void albumArtBox_Click(object sender, EventArgs e)
         {
             ShowPropertiesDialog(true);
-        }
-
-        private void deleteOnNextToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            deleteOnNext = deleteOnNextToolStripMenuItem.Checked;
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

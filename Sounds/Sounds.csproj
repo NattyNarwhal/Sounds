@@ -152,6 +152,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrefsDialog.ja.resx">
+      <DependentUpon>PrefsDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrefsDialog.resx">
       <DependentUpon>PrefsDialog.cs</DependentUpon>
     </EmbeddedResource>
