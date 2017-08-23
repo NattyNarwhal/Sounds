@@ -66,9 +66,9 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playbackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.togglePlaybackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -395,21 +395,10 @@
             // 
             resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.preferencesToolStripMenuItem,
+            this.propertiesToolStripMenuItem,
             this.toolStripSeparator3,
-            this.propertiesToolStripMenuItem});
+            this.preferencesToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            // 
-            // preferencesToolStripMenuItem
-            // 
-            resources.ApplyResources(this.preferencesToolStripMenuItem, "preferencesToolStripMenuItem");
-            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
-            this.preferencesToolStripMenuItem.Click += new System.EventHandler(this.preferencesToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
             // 
             // propertiesToolStripMenuItem
             // 
@@ -417,6 +406,18 @@
             this.propertiesToolStripMenuItem.Image = global::Sounds.Properties.Resources.Properties;
             this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            // 
+            // preferencesToolStripMenuItem
+            // 
+            resources.ApplyResources(this.preferencesToolStripMenuItem, "preferencesToolStripMenuItem");
+            this.preferencesToolStripMenuItem.Image = global::Sounds.Properties.Resources.Preferences;
+            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
+            this.preferencesToolStripMenuItem.Click += new System.EventHandler(this.preferencesToolStripMenuItem_Click);
             // 
             // playbackToolStripMenuItem
             // 
@@ -488,12 +489,14 @@
             // rewindToolStripMenuItem
             // 
             resources.ApplyResources(this.rewindToolStripMenuItem, "rewindToolStripMenuItem");
+            this.rewindToolStripMenuItem.Image = global::Sounds.Properties.Resources.Rewind;
             this.rewindToolStripMenuItem.Name = "rewindToolStripMenuItem";
             this.rewindToolStripMenuItem.Click += new System.EventHandler(this.rewindToolStripMenuItem_Click);
             // 
             // skipAheadToolStripMenuItem
             // 
             resources.ApplyResources(this.skipAheadToolStripMenuItem, "skipAheadToolStripMenuItem");
+            this.skipAheadToolStripMenuItem.Image = global::Sounds.Properties.Resources.FastForward;
             this.skipAheadToolStripMenuItem.Name = "skipAheadToolStripMenuItem";
             this.skipAheadToolStripMenuItem.Click += new System.EventHandler(this.skipAheadToolStripMenuItem_Click);
             // 
