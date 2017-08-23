@@ -648,7 +648,7 @@ namespace Sounds
             }
             else if (playing && repeat)
             {
-                activeFile = (TagLib.File)listView1.Items.Cast<ListViewItem>().FirstOrDefault().Tag;
+                activeFile = (TagLib.File)listView1.Items.Cast<ListViewItem>().FirstOrDefault()?.Tag;
                 if (activeFile != null)
                 {
                     PlayActive();
