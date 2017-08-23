@@ -1009,8 +1009,8 @@ namespace Sounds
                 showInfoPane = pd.ShowInfoPane;
                 deleteOnNext = pd.DeleteOnTrackChange;
                 recursive = pd.Recursive;
-                volIncrement = pd.VolumeIncrement;
-                timeIncrement = pd.TimeIncrement;
+                VolumeIncrement = pd.VolumeIncrement;
+                TimeIncrement = pd.TimeIncrement;
                 UpdateUI();
             }
         }
