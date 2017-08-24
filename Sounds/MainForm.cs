@@ -116,6 +116,8 @@ namespace Sounds
             System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("ja-JP");
 #endif
             InitializeComponent();
+            // native ToolStrips
+            ToolStripManager.Renderer = new ToolStripAeroRenderer(ToolbarTheme.Toolbar);
             // the designer doesn't want to use icons from resource files
             Icon = Properties.Resources.AppIcon;
             // load settings
