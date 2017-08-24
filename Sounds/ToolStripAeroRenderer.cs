@@ -333,15 +333,26 @@ namespace Sounds
         {
             if (EnsureRenderer())
             {
-                // Draw the background using Rebar & RP_BACKGROUND (or, if that is not available, fall back to
-                // Rebar.Band.Normal)
-                if (VisualStyleRenderer.IsElementDefined(VisualStyleElement.CreateElement(RebarClass, RebarBackground, 0)))
+                // Don't render the panels containing status bars like they're
+                // toolbars. You can move the status bar outside of the
+                // container, so the TSM won't be forceful, but this is a bit
+                // clumsy if you ask me.
+                if (e.ToolStripPanel.Rows?[0]?.Controls?[0] is StatusStrip)
                 {
-                    renderer.SetParameters(RebarClass, RebarBackground, 0);
+                    renderer.SetParameters(VisualStyleElement.Status.Bar.Normal);
                 }
                 else
                 {
-                    renderer.SetParameters(RebarClass, 0, 0);
+                    // Draw the background using Rebar & RP_BACKGROUND (or, if that is not available, fall back to
+                    // Rebar.Band.Normal)
+                    if (VisualStyleRenderer.IsElementDefined(VisualStyleElement.CreateElement(RebarClass, RebarBackground, 0)))
+                    {
+                        renderer.SetParameters(RebarClass, RebarBackground, 0);
+                    }
+                    else
+                    {
+                        renderer.SetParameters(RebarClass, 0, 0);
+                    }
                 }
 
                 if (renderer.IsBackgroundPartiallyTransparent())
