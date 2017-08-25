@@ -521,15 +521,19 @@ namespace Sounds
 
                 renderer.SetParameters(MenuClass, (int)MenuParts.PopupCheckBackground, e.Item.Enabled ? (int)MenuPopupCheckBackgroundStates.Normal : (int)MenuPopupCheckBackgroundStates.Disabled);
                 renderer.DrawBackground(e.Graphics, bgRect);
+                
+                // Don't draw the checkmark if there's an image
+                if (e.Item.Image == null)
+                {
+                    Rectangle checkRect = e.ImageRectangle;
+                    checkRect.X = bgRect.X + bgRect.Width / 2 - checkRect.Width / 2;
+                    checkRect.Y = bgRect.Y + bgRect.Height / 2 - checkRect.Height / 2;
 
-                Rectangle checkRect = e.ImageRectangle;
-                checkRect.X = bgRect.X + bgRect.Width / 2 - checkRect.Width / 2;
-                checkRect.Y = bgRect.Y + bgRect.Height / 2 - checkRect.Height / 2;
+                    // I don't think ToolStrip even supports radio box items, so no need to render them.
+                    renderer.SetParameters(MenuClass, (int)MenuParts.PopupCheck, e.Item.Enabled ? (int)MenuPopupCheckStates.CheckmarkNormal : (int)MenuPopupCheckStates.CheckmarkDisabled);
 
-                // I don't think ToolStrip even supports radio box items, so no need to render them.
-                renderer.SetParameters(MenuClass, (int)MenuParts.PopupCheck, e.Item.Enabled ? (int)MenuPopupCheckStates.CheckmarkNormal : (int)MenuPopupCheckStates.CheckmarkDisabled);
-
-                renderer.DrawBackground(e.Graphics, checkRect);
+                    renderer.DrawBackground(e.Graphics, checkRect);
+                }
             }
             else
             {
