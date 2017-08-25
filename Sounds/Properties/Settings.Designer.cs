@@ -118,5 +118,17 @@ namespace Sounds.Properties {
                 this["VolumeShortcutIncrement"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool NativeToolStripRendering {
+            get {
+                return ((bool)(this["NativeToolStripRendering"]));
+            }
+            set {
+                this["NativeToolStripRendering"] = value;
+            }
+        }
     }
 }

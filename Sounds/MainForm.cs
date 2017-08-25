@@ -117,7 +117,8 @@ namespace Sounds
 #endif
             InitializeComponent();
             // native ToolStrips
-            ToolStripManager.Renderer = new ToolStripAeroRenderer(ToolbarTheme.Toolbar);
+            if (Properties.Settings.Default.NativeToolStripRendering)
+                ToolStripManager.Renderer = new ToolStripAeroRenderer(ToolbarTheme.Toolbar);
             // the designer doesn't want to use icons from resource files
             Icon = Properties.Resources.AppIcon;
             // load settings
