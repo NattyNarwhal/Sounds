@@ -170,10 +170,10 @@
     <value>フォルダの内容を再帰的に追加</value>
   </data>
   <data name="deleteOnTrackChangeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 18</value>
+    <value>175, 18</value>
   </data>
   <data name="deleteOnTrackChangeBox.Text" xml:space="preserve">
-    <value>再生済みの曲をプレイリストから削除</value>
+    <value>再生したらプレイリストから削除</value>
   </data>
   <data name="generalBox.Text" xml:space="preserve">
     <value>一般</value>
