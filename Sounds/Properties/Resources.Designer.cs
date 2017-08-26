@@ -153,6 +153,16 @@ namespace Sounds.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PlaylistTotal {
+            get {
+                object obj = ResourceManager.GetObject("PlaylistTotal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Preferences {
             get {
                 object obj = ResourceManager.GetObject("Preferences", resourceCulture);

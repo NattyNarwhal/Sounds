@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="volumeStatusButton.ToolTipText" xml:space="preserve">
-    <value>音量</value>
-  </data>
   <data name="titleHeader.Text" xml:space="preserve">
     <value>曲名</value>
   </data>
@@ -133,6 +130,12 @@
     <value>アーティスト</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="playlistContextMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 76</value>
+  </data>
+  <data name="volumeStatusButton.ToolTipText" xml:space="preserve">
+    <value>音量</value>
+  </data>
   <data name="playContextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 22</value>
   </data>
@@ -154,9 +157,6 @@
   <data name="removeContextToolStripMenuItem.Text" xml:space="preserve">
     <value>除去 (&amp;V)</value>
   </data>
-  <data name="playlistContextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 76</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="artistLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -172,6 +172,12 @@
   </data>
   <data name="albumArtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>ファイル (&amp;F)</value>
   </data>
   <data name="newPlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>232, 22</value>
@@ -236,11 +242,11 @@
   <data name="quitToolStripMenuItem.Text" xml:space="preserve">
     <value>終了 (&amp;Q)</value>
   </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 20</value>
+  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 20</value>
   </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>ファイル (&amp;F)</value>
+  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
+    <value>表示 (&amp;V)</value>
   </data>
   <data name="propertiesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 22</value>
@@ -257,11 +263,11 @@
   <data name="preferencesToolStripMenuItem.Text" xml:space="preserve">
     <value>設定... (&amp;R)</value>
   </data>
-  <data name="viewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="playbackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 20</value>
   </data>
-  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
-    <value>表示 (&amp;V)</value>
+  <data name="playbackToolStripMenuItem.Text" xml:space="preserve">
+    <value>再生 (&amp;P)</value>
   </data>
   <data name="togglePlaybackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>228, 22</value>
@@ -340,12 +346,6 @@
   </data>
   <data name="repeatToolStripMenuItem.Text" xml:space="preserve">
     <value>繰り返し (&amp;R)</value>
-  </data>
-  <data name="playbackToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 20</value>
-  </data>
-  <data name="playbackToolStripMenuItem.Text" xml:space="preserve">
-    <value>再生 (&amp;P)</value>
   </data>
   <data name="playToolStripButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 22</value>

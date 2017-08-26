@@ -185,6 +185,9 @@ namespace Sounds
                     prevTaskbarButton, playPauseTaskbarButton, nextTaskbarButton);
             }
 
+            // init the pl total label
+            UpdatePlaylistTotal();
+
             // construct volume widget
             tb.Maximum = 100;
             tb.TickFrequency = 10;
@@ -248,6 +251,8 @@ namespace Sounds
 
             foreach (ListViewItem lvi in listView1.SelectedItems)
                 listView1.Items.Remove(lvi);
+
+            UpdatePlaylistTotal();
         }
 
         public void AddFile(string fileName)
@@ -285,6 +290,7 @@ namespace Sounds
             finally
             {
                 UpdateMenus();
+                UpdatePlaylistTotal();
             }
         }
 
@@ -297,6 +303,7 @@ namespace Sounds
                 {
                     AddItem(f);
                 }
+                UpdatePlaylistTotal();
             }
             else
             {
@@ -324,6 +331,7 @@ namespace Sounds
             if (deleteOnNext && old != null)
             {
                 listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == old).First().Remove();
+                UpdatePlaylistTotal();
             }
         }
 
@@ -611,6 +619,13 @@ namespace Sounds
             }
         }
 
+        public void UpdatePlaylistTotal()
+        {
+            var plTotal = listView1.Items.Cast<ListViewItem>().Sum(x => ((TagLib.File)x.Tag).Properties.Duration.TotalSeconds);
+            var plTotalSpan = new TimeSpan(0, 0, Convert.ToInt32(plTotal));
+            playlistTotalLabel.Text = plTotalSpan.ToString();
+        }
+
         public void Stop()
         {
             trackBarSyncTimer.Enabled = false;
@@ -697,6 +712,7 @@ namespace Sounds
             playlistFile = null;
             playlistFile = null;
             listView1.Items.Clear();
+            UpdatePlaylistTotal();
         }
 
         public void OpenPlaylist(string fileName, bool append = false)
@@ -711,6 +727,7 @@ namespace Sounds
                 AddItem(f);
             }
             playlistFile = fileName;
+            UpdatePlaylistTotal();
         }
 
         public void SavePlaylist(bool forceDialog)
