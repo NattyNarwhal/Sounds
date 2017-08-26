@@ -140,6 +140,9 @@
   <data name="composersLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
   </data>
+  <data name="&gt;&gt;fileNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;commentsLabel.Name" xml:space="preserve">
     <value>commentsLabel</value>
   </data>
@@ -170,6 +173,9 @@
   </data>
   <data name="&gt;&gt;bitrateBox.Parent" xml:space="preserve">
     <value>intrinisicsTab</value>
+  </data>
+  <data name="commentsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 165</value>
   </data>
   <data name="durationBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 20</value>
@@ -206,9 +212,6 @@
   </data>
   <data name="albumArtInfo.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 254</value>
-  </data>
-  <data name="&gt;&gt;lyricsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="albumArtInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>386, 23</value>
@@ -318,6 +321,9 @@
   <data name="copyrightLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 13</value>
   </data>
+  <data name="&gt;&gt;artistsBox.Name" xml:space="preserve">
+    <value>artistsBox</value>
+  </data>
   <data name="copyImageButton.Text" xml:space="preserve">
     <value>&amp;Copy Picture</value>
   </data>
@@ -405,6 +411,9 @@
   <data name="&gt;&gt;discLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="copyrightLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 139</value>
+  </data>
   <data name="artistsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 9</value>
   </data>
@@ -413,6 +422,9 @@
   </data>
   <data name="&gt;&gt;copyrightLabel.Parent" xml:space="preserve">
     <value>metadataTab</value>
+  </data>
+  <data name="&gt;&gt;albumArtInfo.Name" xml:space="preserve">
+    <value>albumArtInfo</value>
   </data>
   <data name="&gt;&gt;artistsLabel.Parent" xml:space="preserve">
     <value>metadataTab</value>
@@ -456,6 +468,9 @@
   <data name="intrinisicsTab.Size" type="System.Drawing.Size, System.Drawing">
     <value>498, 280</value>
   </data>
+  <data name="&gt;&gt;commentsLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="&gt;&gt;titleBox.Parent" xml:space="preserve">
     <value>metadataTab</value>
   </data>
@@ -495,23 +510,20 @@
   <data name="&gt;&gt;yearLabel.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;bitrateLabel.Name" xml:space="preserve">
-    <value>bitrateLabel</value>
-  </data>
-  <data name="&gt;&gt;composersBox.Name" xml:space="preserve">
-    <value>composersBox</value>
+  <data name="&gt;&gt;okButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="genresBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 43</value>
+  </data>
+  <data name="&gt;&gt;composersBox.Name" xml:space="preserve">
+    <value>composersBox</value>
   </data>
   <data name="titleBox.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="&gt;&gt;discBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bitrateBox.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="composersLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 61</value>
@@ -537,17 +549,14 @@
   <data name="&gt;&gt;albumArtBox.Name" xml:space="preserve">
     <value>albumArtBox</value>
   </data>
-  <data name="&gt;&gt;titleLabel.Name" xml:space="preserve">
-    <value>titleLabel</value>
-  </data>
   <data name="yearLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="metadataTab.Text" xml:space="preserve">
     <value>Metadata</value>
   </data>
-  <data name="&gt;&gt;okButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="sampleRateLabel.Text" xml:space="preserve">
+    <value>&amp;Sample Rate</value>
   </data>
   <data name="bitrateBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 20</value>
@@ -603,8 +612,8 @@
   <data name="&gt;&gt;channelsBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="genresBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;bitrateLabel.Name" xml:space="preserve">
+    <value>bitrateLabel</value>
   </data>
   <data name="albumArtSelector.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -624,14 +633,8 @@
   <data name="&gt;&gt;copyrightBox.Parent" xml:space="preserve">
     <value>metadataTab</value>
   </data>
-  <data name="&gt;&gt;durationBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="copyImageButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;trackBox.Name" xml:space="preserve">
-    <value>trackBox</value>
   </data>
   <data name="&gt;&gt;albumArtSelector.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -699,9 +702,6 @@
   <data name="&gt;&gt;discLabel.Parent" xml:space="preserve">
     <value>metadataTab</value>
   </data>
-  <data name="commentsBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 112</value>
-  </data>
   <data name="lyricsBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Both</value>
   </data>
@@ -713,6 +713,9 @@
   </data>
   <data name="albumLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;fileSelector.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;lyricsLabel.Parent" xml:space="preserve">
     <value>metadataTab</value>
@@ -744,9 +747,6 @@
   <data name="&gt;&gt;copyImageButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="fileNameBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>412, 20</value>
-  </data>
   <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>443, 324</value>
   </data>
@@ -758,6 +758,9 @@
   </data>
   <data name="fileNameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="composersBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 58</value>
   </data>
   <data name="genreLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 113</value>
@@ -810,6 +813,9 @@
   <data name="albumArtSelector.Size" type="System.Drawing.Size, System.Drawing">
     <value>486, 21</value>
   </data>
+  <data name="&gt;&gt;genreLabel.Parent" xml:space="preserve">
+    <value>metadataTab</value>
+  </data>
   <data name="copyrightLabel.Text" xml:space="preserve">
     <value>Copyrig&amp;ht</value>
   </data>
@@ -821,6 +827,9 @@
   </data>
   <data name="durationLabel.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="genresBox.HorizontalScrollbar" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="discLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>28, 13</value>
@@ -855,23 +864,17 @@
   <data name="discBox.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="lyricsLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="albumArtBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="commentsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
+  <data name="&gt;&gt;trackBox.Name" xml:space="preserve">
+    <value>trackBox</value>
   </data>
   <data name="sampleRateLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="&gt;&gt;albumArtBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="sampleRateLabel.Text" xml:space="preserve">
-    <value>&amp;Sample Rate</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>PropertiesForm</value>
@@ -891,14 +894,11 @@
   <data name="&gt;&gt;yearBox.Name" xml:space="preserve">
     <value>yearBox</value>
   </data>
-  <data name="&gt;&gt;artistsBox.Name" xml:space="preserve">
-    <value>artistsBox</value>
+  <data name="&gt;&gt;lyricsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="fileNameLabel.Text" xml:space="preserve">
     <value>File &amp;Name</value>
-  </data>
-  <data name="&gt;&gt;sampleRateBox.Name" xml:space="preserve">
-    <value>sampleRateBox</value>
   </data>
   <data name="okButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -936,9 +936,6 @@
   <data name="&gt;&gt;channelsBox.Name" xml:space="preserve">
     <value>channelsBox</value>
   </data>
-  <data name="metadataTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>498, 280</value>
-  </data>
   <data name="&gt;&gt;channelsLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
@@ -972,6 +969,9 @@
   <data name="sampleRateBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>326, 32</value>
   </data>
+  <data name="&gt;&gt;bitrateLabel.Parent" xml:space="preserve">
+    <value>intrinisicsTab</value>
+  </data>
   <data name="commentsBox.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
@@ -990,8 +990,8 @@
   <data name="&gt;&gt;genreLabel.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="commentsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 165</value>
+  <data name="commentsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 13</value>
   </data>
   <data name="&gt;&gt;commentsBox.Name" xml:space="preserve">
     <value>commentsBox</value>
@@ -1014,10 +1014,10 @@
   <data name="trackBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>80, 58</value>
   </data>
-  <data name="&gt;&gt;commentsLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="lyricsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;fileSelector.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;durationBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;durationBox.Type" xml:space="preserve">
@@ -1041,8 +1041,8 @@
   <data name="trackBox.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="&gt;&gt;genreLabel.Parent" xml:space="preserve">
-    <value>metadataTab</value>
+  <data name="commentsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 112</value>
   </data>
   <data name="metadataTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -1080,8 +1080,8 @@
   <data name="channelsBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="copyrightLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 139</value>
+  <data name="fileNameBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>412, 20</value>
   </data>
   <data name="&gt;&gt;yearLabel.Parent" xml:space="preserve">
     <value>metadataTab</value>
@@ -1134,8 +1134,8 @@
   <data name="commentsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="composersBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 58</value>
+  <data name="metadataTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>498, 280</value>
   </data>
   <data name="&gt;&gt;trackLabel.Parent" xml:space="preserve">
     <value>metadataTab</value>
@@ -1164,14 +1164,14 @@
   <data name="&gt;&gt;composersLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;fileNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;titleLabel.Name" xml:space="preserve">
+    <value>titleLabel</value>
   </data>
   <data name="&gt;&gt;sampleRateBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;bitrateLabel.Parent" xml:space="preserve">
-    <value>intrinisicsTab</value>
+  <data name="&gt;&gt;bitrateBox.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;intrinisicsTab.Parent" xml:space="preserve">
     <value>tabControl1</value>
@@ -1194,8 +1194,8 @@
   <data name="&gt;&gt;bitrateBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;albumArtInfo.Name" xml:space="preserve">
-    <value>albumArtInfo</value>
+  <data name="&gt;&gt;sampleRateBox.Name" xml:space="preserve">
+    <value>sampleRateBox</value>
   </data>
   <data name="&gt;&gt;fileSelector.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
