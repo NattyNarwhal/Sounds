@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="intrinisicsTab.Text" xml:space="preserve">
-    <value>基本情報</value>
+  <data name="okButton.Text" xml:space="preserve">
+    <value>OK (&amp;K)</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="durationLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -167,8 +167,8 @@
   <data name="fileNameLabel.Text" xml:space="preserve">
     <value>ファイル名</value>
   </data>
-  <data name="metadataTab.Text" xml:space="preserve">
-    <value>詳細情報</value>
+  <data name="intrinisicsTab.Text" xml:space="preserve">
+    <value>基本情報</value>
   </data>
   <data name="lyricsLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -260,8 +260,8 @@
   <data name="titleLabel.Text" xml:space="preserve">
     <value>曲名</value>
   </data>
-  <data name="picturesTab.Text" xml:space="preserve">
-    <value>画像</value>
+  <data name="metadataTab.Text" xml:space="preserve">
+    <value>詳細情報</value>
   </data>
   <data name="copyImageButton.Text" xml:space="preserve">
     <value>画像をコピー (&amp;C)</value>
@@ -271,6 +271,9 @@
   </data>
   <data name="albumArtBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="picturesTab.Text" xml:space="preserve">
+    <value>画像</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>情報</value>
