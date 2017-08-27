@@ -255,7 +255,7 @@ namespace Sounds
             UpdatePlaylistTotal();
         }
 
-        public void AddFile(string fileName)
+        public void AddFile(string fileName, bool update = true)
         {
             try
             {
@@ -289,8 +289,11 @@ namespace Sounds
             }
             finally
             {
-                UpdateMenus();
-                UpdatePlaylistTotal();
+                if (update)
+                {
+                    UpdateMenus();
+                    UpdatePlaylistTotal();
+                }
             }
         }
 
@@ -301,20 +304,21 @@ namespace Sounds
                 foreach (var f in Directory.EnumerateFiles(name).OrderBy(x => x)
                     .Concat(Directory.EnumerateDirectories(name).OrderBy(x => x)))
                 {
-                    AddItem(f);
+                    AddItem(f, false);
                 }
-                UpdatePlaylistTotal();
             }
             else
             {
                 foreach (var f in Directory.EnumerateFiles(name).OrderBy(x => x))
                 {
-                    AddFile(f);
+                    AddFile(f, false);
                 }
             }
+            UpdateMenus();
+            UpdatePlaylistTotal();
         }
 
-        public void AddItem(string name)
+        public void AddItem(string name, bool update = false)
         {
             if (Directory.Exists(name))
             {
@@ -322,7 +326,7 @@ namespace Sounds
             }
             else if (File.Exists(name))
             {
-                AddFile(name);
+                AddFile(name, update);
             }
         }
 
