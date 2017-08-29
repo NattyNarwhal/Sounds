@@ -745,8 +745,8 @@ namespace Sounds
             {
                 AddItem(f);
             }
-            if (!append)
-                dirty = false; // unset AddFile making it dirty
+            dirty = append; // appending always dirty, opening is not
+            UpdateMenus(); // as we set dirty bit
             UpdatePlaylistTotal();
         }
 
@@ -990,7 +990,10 @@ namespace Sounds
                         }
                         else if(File.Exists(f))
                         {
-                            AddFile(f);
+                            if (Path.GetExtension(f).Contains("m3u"))
+                                OpenPlaylist(f, Properties.Settings.Default.FileDragAppendPlaylist);
+                            else
+                                AddFile(f);
                         }
                     }
                 }

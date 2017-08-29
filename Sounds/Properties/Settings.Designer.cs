@@ -130,5 +130,17 @@ namespace Sounds.Properties {
                 this["NativeToolStripRendering"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FileDragAppendPlaylist {
+            get {
+                return ((bool)(this["FileDragAppendPlaylist"]));
+            }
+            set {
+                this["FileDragAppendPlaylist"] = value;
+            }
+        }
     }
 }
