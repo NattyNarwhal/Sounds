@@ -812,9 +812,13 @@ namespace Sounds
             toWrite.AppendLine("#EXTM3U");
             foreach (var f in files)
             {
-                toWrite.AppendLine(string.Format("#EXTINF:{0},{1} - {2}",
-                    Math.Round(f.Properties.Duration.TotalSeconds),
-                    f.Tag?.AlbumArtists?.First(), f.Tag?.Title));
+                // write an EXT tag if we have the metadata for it
+                if (f.Tag.Title != null && f.Tag.AlbumArtists.Length > 0)
+                {
+                    toWrite.AppendLine(string.Format("#EXTINF:{0},{1} - {2}",
+                        Math.Round(f.Properties.Duration.TotalSeconds),
+                        f.Tag.AlbumArtists.FirstOrDefault(), f.Tag.Title));
+                }
                 if (hasSharedRoot)
                 {
                     toWrite.AppendLine(Path.GetFileName(f.Name));
