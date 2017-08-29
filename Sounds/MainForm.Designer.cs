@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.positionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.playlistTotalLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.positionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.errorMessageLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.volumeStatusButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -103,6 +103,7 @@
             this.openPlaylistDialog = new System.Windows.Forms.OpenFileDialog();
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.appendPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -147,16 +148,16 @@
             this.statusStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.statusStrip1.Name = "statusStrip1";
             // 
-            // positionLabel
-            // 
-            this.positionLabel.Name = "positionLabel";
-            resources.ApplyResources(this.positionLabel, "positionLabel");
-            // 
             // playlistTotalLabel
             // 
             this.playlistTotalLabel.Image = global::Sounds.Properties.Resources.PlaylistTotal;
             this.playlistTotalLabel.Name = "playlistTotalLabel";
             resources.ApplyResources(this.playlistTotalLabel, "playlistTotalLabel");
+            // 
+            // positionLabel
+            // 
+            this.positionLabel.Name = "positionLabel";
+            resources.ApplyResources(this.positionLabel, "positionLabel");
             // 
             // errorMessageLabel
             // 
@@ -307,6 +308,7 @@
             this.toolStripSeparator9,
             this.addFilesToolStripMenuItem,
             this.addDirectoryToolStripMenuItem,
+            this.appendPlaylistToolStripMenuItem,
             this.removeSelectedToolStripMenuItem,
             this.toolStripSeparator2,
             this.shuffleToolStripMenuItem,
@@ -650,6 +652,12 @@
             resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             this.folderBrowserDialog1.ShowNewFolderButton = false;
             // 
+            // appendPlaylistToolStripMenuItem
+            // 
+            this.appendPlaylistToolStripMenuItem.Name = "appendPlaylistToolStripMenuItem";
+            resources.ApplyResources(this.appendPlaylistToolStripMenuItem, "appendPlaylistToolStripMenuItem");
+            this.appendPlaylistToolStripMenuItem.Click += new System.EventHandler(this.appendPlaylistToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -755,6 +763,7 @@
         private System.Windows.Forms.ToolStripMenuItem shuffleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel playlistTotalLabel;
+        private System.Windows.Forms.ToolStripMenuItem appendPlaylistToolStripMenuItem;
     }
 }
 

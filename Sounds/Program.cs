@@ -22,6 +22,8 @@ namespace Sounds
             {
                 if (File.Exists(f) && (f.EndsWith(".m3u") || f.EndsWith(".m3u8")))
                 {
+                    // this is a bit odd; it'll take the filename of the last
+                    // playlist. is that desirable?
                     mf.OpenPlaylist(f, true);
                 }
                 else

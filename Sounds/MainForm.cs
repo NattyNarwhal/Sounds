@@ -725,7 +725,10 @@ namespace Sounds
         public void OpenPlaylist(string fileName, bool append = false)
         {
             if (!append)
+            {
                 NewPlaylist();
+                playlistFile = fileName;
+            }
 
             var text = File.ReadAllText(fileName);
             var splitText = Regex.Split(text, @"\r?\n");
@@ -733,7 +736,6 @@ namespace Sounds
             {
                 AddItem(f);
             }
-            playlistFile = fileName;
             UpdatePlaylistTotal();
         }
 
@@ -1039,6 +1041,14 @@ namespace Sounds
                 VolumeIncrement = pd.VolumeIncrement;
                 TimeIncrement = pd.TimeIncrement;
                 UpdateUI();
+            }
+        }
+
+        private void appendPlaylistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openPlaylistDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                OpenPlaylist(openPlaylistDialog.FileName, true);
             }
         }
     }
