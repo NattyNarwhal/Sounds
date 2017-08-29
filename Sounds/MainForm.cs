@@ -862,16 +862,13 @@ namespace Sounds
             Application.Exit();
         }
 
-        public bool ChangePlaylistAskStop(bool newFile)
+        public bool ChangePlaylistAskStop(string msg)
         {
-            var msg = newFile ? MiscStrings.newFileWhilePlaying :
-                MiscStrings.changeFileWhilePlaying;
             // should count even when paused?
             if (playing)
                 return MessageBox.Show(this,
                     msg, "Sounds", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning)
-                    == DialogResult.Yes;
+                    MessageBoxIcon.Warning) == DialogResult.Yes;
             else return true;
         }
 
@@ -880,7 +877,6 @@ namespace Sounds
         public DialogResult ChangePlaylistAskDirty()
         {
             var msg = MiscStrings.changeFileWhileDirty;
-            // should count even when paused?
             if (dirty)
                 return MessageBox.Show(this,
                     msg, "Sounds", MessageBoxButtons.YesNoCancel,
@@ -898,7 +894,7 @@ namespace Sounds
                 case DialogResult.No: break;
                 default: return;
             }
-            if (ChangePlaylistAskStop(true))
+            if (ChangePlaylistAskStop(MiscStrings.newFileWhilePlaying))
                 NewPlaylist();
         }
 
@@ -912,7 +908,7 @@ namespace Sounds
                 case DialogResult.No: break;
                 default: return;
             }
-            if (ChangePlaylistAskStop(false) &&
+            if (ChangePlaylistAskStop(MiscStrings.changeFileWhilePlaying) && 
                 openPlaylistDialog.ShowDialog(this) == DialogResult.OK)
             {
                 OpenPlaylist(openPlaylistDialog.FileName);
@@ -1057,6 +1053,21 @@ namespace Sounds
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            switch (ChangePlaylistAskDirty())
+            {
+                case DialogResult.Yes:
+                    SavePlaylist(false);
+                    break;
+                case DialogResult.No: break;
+                default:
+                    e.Cancel = true;
+                    return;
+            }
+            if (!ChangePlaylistAskStop(MiscStrings.quitWhilePlaying))
+            {
+                e.Cancel = true;
+                return;
+            }
             // save settings at end
             Properties.Settings.Default.ShowToolBar = showToolBar;
             Properties.Settings.Default.ShowStatusBar = showStatusBar;

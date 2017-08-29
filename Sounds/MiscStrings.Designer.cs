@@ -106,6 +106,15 @@ namespace Sounds {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There is a track currently playing. Are you sure you want to stop playing the track to quit the application?.
+        /// </summary>
+        internal static string quitWhilePlaying {
+            get {
+                return ResourceManager.GetString("quitWhilePlaying", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stopped.
         /// </summary>
         internal static string stopped {

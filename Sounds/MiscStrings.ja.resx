@@ -132,6 +132,9 @@
   <data name="playing" xml:space="preserve">
     <value>Playing [Translate]</value>
   </data>
+  <data name="quitWhilePlaying" xml:space="preserve">
+    <value>[Translate]</value>
+  </data>
   <data name="stopped" xml:space="preserve">
     <value>Stopped [Translate]</value>
   </data>

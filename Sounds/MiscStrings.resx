@@ -132,6 +132,9 @@
   <data name="playing" xml:space="preserve">
     <value>Playing</value>
   </data>
+  <data name="quitWhilePlaying" xml:space="preserve">
+    <value>There is a track currently playing. Are you sure you want to stop playing the track to quit the application?</value>
+  </data>
   <data name="stopped" xml:space="preserve">
     <value>Stopped</value>
   </data>
