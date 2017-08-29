@@ -186,9 +186,6 @@ namespace Sounds
                     prevTaskbarButton, playPauseTaskbarButton, nextTaskbarButton);
             }
 
-            // init the pl total label
-            UpdatePlaylistTotal();
-
             // construct volume widget
             tb.Maximum = 100;
             tb.TickFrequency = 10;
@@ -233,6 +230,9 @@ namespace Sounds
                     positionTrackBar.Visible = false;
                 }
             };
+
+            // finally init UI by creating PL (args will override it)
+            NewPlaylist();
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
@@ -650,7 +650,7 @@ namespace Sounds
             if (!playing)
             {
                 positionLabel.Image = Properties.Resources.Stop;
-                if (TaskbarManager.IsPlatformSupported)
+                if (TaskbarManager.IsPlatformSupported && Visible)
                 {
                     TaskbarManager.Instance.SetOverlayIcon(stopIcon, MiscStrings.stopped);
                 }
@@ -658,7 +658,7 @@ namespace Sounds
             else if (playing && Paused)
             {
                 positionLabel.Image = Properties.Resources.Pause;
-                if (TaskbarManager.IsPlatformSupported)
+                if (TaskbarManager.IsPlatformSupported && Visible)
                 {
                     TaskbarManager.Instance.SetOverlayIcon(pauseIcon, MiscStrings.paused);
                 }
@@ -666,7 +666,7 @@ namespace Sounds
             else if (playing && !Paused)
             {
                 positionLabel.Image = Properties.Resources.Play;
-                if (TaskbarManager.IsPlatformSupported)
+                if (TaskbarManager.IsPlatformSupported && Visible)
                 {
                     TaskbarManager.Instance.SetOverlayIcon(playIcon, MiscStrings.playing);
                 }
