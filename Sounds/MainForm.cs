@@ -872,14 +872,43 @@ namespace Sounds
             else return true;
         }
 
+        // use result because tri-state
+        // also, must be done beforehand and inline, as logic is more complex
+        public DialogResult ChangePlaylistAskDirty()
+        {
+            var msg = miscLocale.GetString("changeFileWhileDirty");
+            // should count even when paused?
+            if (dirty)
+                return MessageBox.Show(this,
+                    msg, "Sounds", MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Warning);
+            else return DialogResult.No;
+        }
+
         private void newPlaylistToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            switch (ChangePlaylistAskDirty())
+            {
+                case DialogResult.Yes:
+                    SavePlaylist(false);
+                    break;
+                case DialogResult.No: break;
+                default: return;
+            }
             if (ChangePlaylistAskStop(true))
                 NewPlaylist();
         }
 
         private void openPlaylistToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            switch (ChangePlaylistAskDirty())
+            {
+                case DialogResult.Yes:
+                    SavePlaylist(false);
+                    break;
+                case DialogResult.No: break;
+                default: return;
+            }
             if (ChangePlaylistAskStop(false) &&
                 openPlaylistDialog.ShowDialog(this) == DialogResult.OK)
             {

@@ -61,6 +61,15 @@ namespace Sounds {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There have been changes made to the playlist. Do you want to save your changes?.
+        /// </summary>
+        internal static string changeFileWhileDirty {
+            get {
+                return ResourceManager.GetString("changeFileWhileDirty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There is a track currently playing. Are you sure you want to stop playing the track and switch to another playlist?.
         /// </summary>
         internal static string changeFileWhilePlaying {
