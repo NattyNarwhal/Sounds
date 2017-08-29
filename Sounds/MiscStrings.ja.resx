@@ -135,4 +135,7 @@
   <data name="stopped" xml:space="preserve">
     <value>Stopped [Translate]</value>
   </data>
+  <data name="untitledPlaylist" xml:space="preserve">
+    <value>[Translate]</value>
+  </data>
 </root>

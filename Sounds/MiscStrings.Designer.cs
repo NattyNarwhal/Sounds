@@ -113,5 +113,14 @@ namespace Sounds {
                 return ResourceManager.GetString("stopped", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Untitled Playlist.
+        /// </summary>
+        internal static string untitledPlaylist {
+            get {
+                return ResourceManager.GetString("untitledPlaylist", resourceCulture);
+            }
+        }
     }
 }

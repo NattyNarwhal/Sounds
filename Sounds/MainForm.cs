@@ -412,6 +412,10 @@ namespace Sounds
         // album art is fine. My guess is emboldening.
         public void UpdateUI()
         {
+            var fileNameTitle = string.IsNullOrEmpty(playlistFile) ?
+                MiscStrings.untitledPlaylist : Path.GetFileName(playlistFile);
+            //var fileNameFinalTitle = string.Format("{0}{1}",
+            //    fileNameTitle, dirty ? "*" : "");
             if (activeFile != null)
             {
                 var title = activeFile.Tag.Title;
@@ -420,10 +424,12 @@ namespace Sounds
                     activeFile.Tag.Performers[0] : string.Empty;
 
                 string formTitle;
-                if (title != null && activeFile.Tag.Album != null)
-                    formTitle = string.Format("{0} - {1}", title, artist);
+                if (title != null && album != null)
+                    formTitle = string.Format("{0} - {1} [{2}]",
+                        title, artist, fileNameTitle);
                 else
-                    formTitle = activeFile.Name;
+                    formTitle = string.Format("{0} [{1}]",
+                        activeFile.Name, fileNameTitle);
 
                 // fill out metadata
                 if (TaskbarManager.IsPlatformSupported)
@@ -454,7 +460,7 @@ namespace Sounds
             else
             {
                 // nop it out
-                Text = "Sounds";
+                Text = fileNameTitle;
                 titleLabel.Text = string.Empty;
                 albumLabel.Text = string.Empty;
                 artistLabel.Text = string.Empty;
