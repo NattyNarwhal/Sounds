@@ -52,6 +52,7 @@ namespace Sounds
         bool recursive = false;
 
         string playlistFile = null;
+        bool dirty = false;
 
         bool Paused
         {
@@ -255,6 +256,7 @@ namespace Sounds
             foreach (ListViewItem lvi in listView1.SelectedItems)
                 listView1.Items.Remove(lvi);
 
+            dirty = true;
             UpdatePlaylistTotal();
         }
 
@@ -292,6 +294,7 @@ namespace Sounds
             }
             finally
             {
+                dirty = true; // will get unset by Open if so
                 if (update)
                 {
                     UpdateMenus();
@@ -338,6 +341,7 @@ namespace Sounds
             if (deleteOnNext && old != null)
             {
                 listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == old).First().Remove();
+                dirty = true;
                 UpdatePlaylistTotal();
             }
         }
@@ -529,6 +533,8 @@ namespace Sounds
             var any = listView1.Items.Count > 0;
             var atLeastTwo = listView1.Items.Count > 1;
 
+            savePlaylistToolStripMenuItem.Enabled = dirty;
+
             removeSelectedToolStripMenuItem.Enabled = selected;
             propertiesToolStripMenuItem.Enabled = playing || selected;
             shuffleToolStripMenuItem.Enabled = atLeastTwo;
@@ -710,13 +716,14 @@ namespace Sounds
                 listView1.Items[n] = (ListViewItem)listView1.Items[k].Clone();
                 listView1.Items[k] = temp;
             }
+            dirty = true;
         }
 
         public void NewPlaylist()
         {
             Stop();
             playlistFile = null;
-            playlistFile = null;
+            dirty = false;
             listView1.Items.Clear();
             UpdatePlaylistTotal();
         }
@@ -735,6 +742,8 @@ namespace Sounds
             {
                 AddItem(f);
             }
+            if (!append)
+                dirty = false; // unset AddFile making it dirty
             UpdatePlaylistTotal();
         }
 
@@ -771,6 +780,7 @@ namespace Sounds
                 }
             }
             File.WriteAllText(playlistFile, toWrite.ToString());
+            dirty = false;
         }
 
         private void addFilesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -972,8 +982,9 @@ namespace Sounds
 
                     foreach (var i in selectedItems)
                         i.Remove();
-                }
 
+                    dirty = true;
+                }
             }
         }
 
