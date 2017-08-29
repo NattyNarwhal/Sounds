@@ -241,6 +241,7 @@ namespace Sounds
             // do initial init of menubar and such
             UpdateMenus();
             UpdateUI();
+            UpdateTitle();
             // mp's value is, but not the UI bits; do this to update them
             Volume = 0.50;
         }
@@ -385,6 +386,7 @@ namespace Sounds
             mp.Open(u);
             mp.Volume = vol; // as Stop might have reset it
             mp.Play();
+            UpdateTitle();
             UpdateUI();
             UpdateMenus();
         }
@@ -404,13 +406,11 @@ namespace Sounds
             UpdateMenus();
         }
 
-        // Metadata and such
-        // TODO: needs optimization. profiler says we're churning, but
-        // album art is fine. My guess is emboldening.
-        public void UpdateUI()
+        public void UpdateTitle()
         {
             var fileNameTitle = string.IsNullOrEmpty(playlistFile) ?
                 MiscStrings.untitledPlaylist : Path.GetFileName(playlistFile);
+            // Recommended if dirty if turned into a property?
             //var fileNameFinalTitle = string.Format("{0}{1}",
             //    fileNameTitle, dirty ? "*" : "");
             if (activeFile != null)
@@ -419,23 +419,48 @@ namespace Sounds
                 var album = activeFile.Tag.Album;
                 var artist = activeFile.Tag.Performers.Count() > 0 ?
                     activeFile.Tag.Performers[0] : string.Empty;
-
-                string formTitle;
+                
                 if (title != null && album != null)
-                    formTitle = string.Format("{0} - {1} [{2}]",
+                    Text = string.Format("{0} - {1} [{2}]",
                         title, artist, fileNameTitle);
                 else
-                    formTitle = string.Format("{0} [{1}]",
+                    Text = string.Format("{0} [{1}]",
                         activeFile.Name, fileNameTitle);
 
                 // fill out metadata
                 if (TaskbarManager.IsPlatformSupported)
                 {
-                    preview.Title = formTitle;
-                    preview.Tooltip = formTitle;
+                    preview.Title = Text;
+                    preview.Tooltip = Text;
                     preview.SetImage(AlbumArt);
                 }
-                Text = formTitle;
+            }
+            else
+            {
+                // nop it out
+                Text = fileNameTitle;
+
+                if (TaskbarManager.IsPlatformSupported)
+                {
+                    preview.InvalidatePreview();
+                    preview.Title = Text;
+                    preview.Tooltip = Text;
+                }
+            }
+        }
+
+        // Metadata and such
+        // TODO: needs optimization. profiler says we're churning, but
+        // album art is fine. My guess is emboldening. [album art change
+        // moved to Title.]
+        public void UpdateUI()
+        {
+            if (activeFile != null)
+            {
+                var title = activeFile.Tag.Title;
+                var album = activeFile.Tag.Album;
+                var artist = activeFile.Tag.Performers.Count() > 0 ?
+                    activeFile.Tag.Performers[0] : string.Empty;
 
                 titleLabel.Text = title ?? activeFile.Name;
                 albumLabel.Text = album;
@@ -457,7 +482,6 @@ namespace Sounds
             else
             {
                 // nop it out
-                Text = fileNameTitle;
                 titleLabel.Text = string.Empty;
                 albumLabel.Text = string.Empty;
                 artistLabel.Text = string.Empty;
@@ -649,6 +673,7 @@ namespace Sounds
             playing = false;
             activeFile = null;
 
+            UpdateTitle();
             UpdateUI();
             UpdateMenus();
         }
@@ -728,6 +753,7 @@ namespace Sounds
             playlistFile = null;
             dirty = false;
             listView1.Items.Clear();
+            UpdateTitle();
             UpdatePlaylistTotal();
         }
 
@@ -746,6 +772,7 @@ namespace Sounds
                 AddItem(f);
             }
             dirty = append; // appending always dirty, opening is not
+            UpdateTitle();
             UpdateMenus(); // as we set dirty bit
             UpdatePlaylistTotal();
         }
