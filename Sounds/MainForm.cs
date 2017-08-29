@@ -254,7 +254,7 @@ namespace Sounds
             foreach (ListViewItem lvi in listView1.SelectedItems)
                 listView1.Items.Remove(lvi);
 
-            dirty = true;
+            Dirty = true;
             UpdatePlaylistTotal();
         }
 
@@ -292,7 +292,7 @@ namespace Sounds
             }
             finally
             {
-                dirty = true; // will get unset by Open if so
+                Dirty = true; // will get unset by Open if so
                 if (update)
                 {
                     UpdateMenus();
@@ -339,7 +339,7 @@ namespace Sounds
             if (deleteOnNext && old != null)
             {
                 listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == old).First().Remove();
-                dirty = true;
+                Dirty = true;
                 UpdatePlaylistTotal();
             }
         }
@@ -554,13 +554,28 @@ namespace Sounds
             }
         }
 
+        public bool Dirty
+        {
+            get
+            {
+                return dirty;
+            }
+
+            set
+            {
+                dirty = value;
+                UpdateTitle();
+                UpdateMenus();
+            }
+        }
+
         public void UpdateMenus()
         {
             var selected = listView1.SelectedItems.Count > 0;
             var any = listView1.Items.Count > 0;
             var atLeastTwo = listView1.Items.Count > 1;
 
-            savePlaylistToolStripMenuItem.Enabled = dirty;
+            savePlaylistToolStripMenuItem.Enabled = Dirty;
 
             removeSelectedToolStripMenuItem.Enabled = selected;
             propertiesToolStripMenuItem.Enabled = playing || selected;
@@ -744,14 +759,14 @@ namespace Sounds
                 listView1.Items[n] = (ListViewItem)listView1.Items[k].Clone();
                 listView1.Items[k] = temp;
             }
-            dirty = true;
+            Dirty = true;
         }
 
         public void NewPlaylist()
         {
             Stop();
             playlistFile = null;
-            dirty = false;
+            Dirty = false;
             listView1.Items.Clear();
             UpdateTitle();
             UpdatePlaylistTotal();
@@ -771,7 +786,7 @@ namespace Sounds
             {
                 AddItem(f);
             }
-            dirty = append; // appending always dirty, opening is not
+            Dirty = append; // appending always dirty, opening is not
             UpdateTitle();
             UpdateMenus(); // as we set dirty bit
             UpdatePlaylistTotal();
@@ -810,7 +825,7 @@ namespace Sounds
                 }
             }
             File.WriteAllText(playlistFile, toWrite.ToString());
-            dirty = false;
+            Dirty = false;
         }
 
         private void addFilesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -904,7 +919,7 @@ namespace Sounds
         public DialogResult ChangePlaylistAskDirty()
         {
             var msg = MiscStrings.changeFileWhileDirty;
-            if (dirty)
+            if (Dirty)
                 return MessageBox.Show(this,
                     msg, "Sounds", MessageBoxButtons.YesNoCancel,
                     MessageBoxIcon.Warning);
@@ -1041,7 +1056,7 @@ namespace Sounds
                     foreach (var i in selectedItems)
                         i.Remove();
 
-                    dirty = true;
+                    Dirty = true;
                 }
             }
         }
