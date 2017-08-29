@@ -260,6 +260,11 @@ namespace Sounds
 
         public void AddFile(string fileName, bool update = true)
         {
+            // HACK: ignore Mac droppings that confuse TagLib when we get
+            // aggressive with adding directories. (consider making a pref?)
+            if (Path.GetFileName(fileName).StartsWith("._"))
+                return;
+
             try
             {
                 var f = TagLib.File.Create(fileName);
@@ -289,6 +294,10 @@ namespace Sounds
             catch (TagLib.UnsupportedFormatException)
             {
                 // not needed
+            }
+            catch (TagLib.CorruptFileException)
+            {
+                // should warn the user
             }
             finally
             {
@@ -806,7 +815,8 @@ namespace Sounds
             var files = listView1.Items.Cast<ListViewItem>().Select(x => (TagLib.File)x.Tag);
             // TODO: this should resolve the lowest common denominator root
             // instead of only tolerating a single shared root
-            var hasSharedRoot = files.ToLookup(x => Path.GetDirectoryName(x.Name)).Count() == 1;
+            var hasSharedRoot = files.ToLookup(x => Path.GetDirectoryName(x.Name)).Count() == 1 &&
+                Path.GetDirectoryName(files.FirstOrDefault()?.Name) == Path.GetDirectoryName(playlistFile);
 
             var toWrite = new StringBuilder();
             toWrite.AppendLine("#EXTM3U");
@@ -828,7 +838,7 @@ namespace Sounds
                     toWrite.AppendLine(f.Name);
                 }
             }
-            File.WriteAllText(playlistFile, toWrite.ToString());
+            File.WriteAllText(playlistFile, toWrite.ToString(), Encoding.UTF8);
             Dirty = false;
         }
 
