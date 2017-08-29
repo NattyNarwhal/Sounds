@@ -129,6 +129,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MiscStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MiscStrings.resx</DependentUpon>
+    </Compile>
     <Compile Include="PrefsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +157,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MiscStrings.ja.resx" />
+    <EmbeddedResource Include="MiscStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MiscStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PrefsDialog.ja.resx">
       <DependentUpon>PrefsDialog.cs</DependentUpon>

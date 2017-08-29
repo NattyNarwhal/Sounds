@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Resources;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -18,6 +19,8 @@ namespace Sounds
 {
     public partial class MainForm : Form
     {
+        ResourceManager miscLocale = new ResourceManager("Sounds.MiscStrings", typeof(MainForm).Assembly);
+
         TabbedThumbnail preview;
         ThumbnailToolBarButton playPauseTaskbarButton;
         ThumbnailToolBarButton prevTaskbarButton;
@@ -174,11 +177,11 @@ namespace Sounds
                 preview.TabbedThumbnailMaximized += (o, ev) => WindowState = FormWindowState.Maximized;
 
                 // finally, wire up the buttons
-                playPauseTaskbarButton = new ThumbnailToolBarButton(playIcon, "Play");
+                playPauseTaskbarButton = new ThumbnailToolBarButton(playIcon, playToolStripButton.Text);
                 playPauseTaskbarButton.Click += (o, ev) => PlayPauseToggle();
-                prevTaskbarButton = new ThumbnailToolBarButton(prevIcon, "Previous");
+                prevTaskbarButton = new ThumbnailToolBarButton(prevIcon, previousToolStripButton.Text);
                 prevTaskbarButton.Click += (o, ev) => Previous();
-                nextTaskbarButton = new ThumbnailToolBarButton(nextIcon, "Next");
+                nextTaskbarButton = new ThumbnailToolBarButton(nextIcon, nextToolStripButton.Text);
                 nextTaskbarButton.Click += (o, ev) => Next();
 
                 TaskbarManager.Instance.ThumbnailToolBars.AddButtons(toolStripContainer1.Handle,
@@ -581,13 +584,13 @@ namespace Sounds
                 if (playing && canPause)
                 {
                     playPauseTaskbarButton.Icon = pauseIcon;
-                    playPauseTaskbarButton.Tooltip = "Pause";
+                    playPauseTaskbarButton.Tooltip = pauseToolStripButton.Text;
                     playPauseTaskbarButton.Enabled = true;
                 }
                 else if (playing && canPlay)
                 {
                     playPauseTaskbarButton.Icon = playIcon;
-                    playPauseTaskbarButton.Tooltip = "Play";
+                    playPauseTaskbarButton.Tooltip = playToolStripButton.Text;
                     playPauseTaskbarButton.Enabled = true;
                 }
                 else
@@ -602,7 +605,7 @@ namespace Sounds
                 positionLabel.Image = Properties.Resources.Stop;
                 if (TaskbarManager.IsPlatformSupported)
                 {
-                    TaskbarManager.Instance.SetOverlayIcon(stopIcon, "Stopped");
+                    TaskbarManager.Instance.SetOverlayIcon(stopIcon, miscLocale.GetString("stopped"));
                 }
             }
             else if (playing && Paused)
@@ -610,7 +613,7 @@ namespace Sounds
                 positionLabel.Image = Properties.Resources.Pause;
                 if (TaskbarManager.IsPlatformSupported)
                 {
-                    TaskbarManager.Instance.SetOverlayIcon(pauseIcon, "Paused");
+                    TaskbarManager.Instance.SetOverlayIcon(pauseIcon, miscLocale.GetString("paused"));
                 }
             }
             else if (playing && !Paused)
@@ -618,7 +621,7 @@ namespace Sounds
                 positionLabel.Image = Properties.Resources.Play;
                 if (TaskbarManager.IsPlatformSupported)
                 {
-                    TaskbarManager.Instance.SetOverlayIcon(playIcon, "Playing");
+                    TaskbarManager.Instance.SetOverlayIcon(playIcon, miscLocale.GetString("playing"));
                 }
             }
         }
