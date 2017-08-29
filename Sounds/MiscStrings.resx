@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="changeFileWhilePlaying" xml:space="preserve">
+    <value>There is a track currently playing. Are you sure you want to stop playing the track and switch to another playlist?</value>
+  </data>
+  <data name="newFileWhilePlaying" xml:space="preserve">
+    <value>There is a track currently playing. Are you sure you want to stop playing the track and create a new playlist?</value>
+  </data>
   <data name="paused" xml:space="preserve">
     <value>Paused</value>
   </data>

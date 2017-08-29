@@ -538,8 +538,7 @@ namespace Sounds
             // localizable!
             var toggleDesc = TypeDescriptor.GetConverter(typeof(Keys))
                 .ConvertToString(Keys.Control | Keys.Space);
-
-            newPlaylistToolStripMenuItem.Enabled = !playing;
+            
             playToolStripMenuItem.Enabled = canPlay;
             playToolStripMenuItem.ShortcutKeyDisplayString =
                 canPlay ? toggleDesc : string.Empty;
@@ -850,14 +849,29 @@ namespace Sounds
             Application.Exit();
         }
 
+        public bool ChangePlaylistAskStop(bool newFile)
+        {
+            var msg = miscLocale.GetString(newFile ?
+                "newFileWhilePlaying" : "changeFileWhilePlaying");
+            // should count even when paused?
+            if (playing)
+                return MessageBox.Show(this,
+                    msg, "Sounds", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning)
+                    == DialogResult.Yes;
+            else return true;
+        }
+
         private void newPlaylistToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NewPlaylist();
+            if (ChangePlaylistAskStop(true))
+                NewPlaylist();
         }
 
         private void openPlaylistToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (openPlaylistDialog.ShowDialog(this) == DialogResult.OK)
+            if (ChangePlaylistAskStop(false) &&
+                openPlaylistDialog.ShowDialog(this) == DialogResult.OK)
             {
                 OpenPlaylist(openPlaylistDialog.FileName);
             }

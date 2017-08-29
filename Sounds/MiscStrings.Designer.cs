@@ -61,6 +61,24 @@ namespace Sounds {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There is a track currently playing. Are you sure you want to stop playing the track and switch to another playlist?.
+        /// </summary>
+        internal static string changeFileWhilePlaying {
+            get {
+                return ResourceManager.GetString("changeFileWhilePlaying", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There is a track currently playing. Are you sure you want to stop playing the track and create a new playlist?.
+        /// </summary>
+        internal static string newFileWhilePlaying {
+            get {
+                return ResourceManager.GetString("newFileWhilePlaying", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Paused.
         /// </summary>
         internal static string paused {
