@@ -411,8 +411,8 @@ namespace Sounds
             var fileNameTitle = string.IsNullOrEmpty(playlistFile) ?
                 MiscStrings.untitledPlaylist : Path.GetFileName(playlistFile);
             // Recommended if dirty if turned into a property?
-            //var fileNameFinalTitle = string.Format("{0}{1}",
-            //    fileNameTitle, dirty ? "*" : "");
+            var fileNameFinalTitle = string.Format("{0}{1}",
+                fileNameTitle, Dirty ? "*" : "");
             if (activeFile != null)
             {
                 var title = activeFile.Tag.Title;
@@ -422,10 +422,10 @@ namespace Sounds
                 
                 if (title != null && album != null)
                     Text = string.Format("{0} - {1} [{2}]",
-                        title, artist, fileNameTitle);
+                        title, artist, fileNameFinalTitle);
                 else
                     Text = string.Format("{0} [{1}]",
-                        activeFile.Name, fileNameTitle);
+                        activeFile.Name, fileNameFinalTitle);
 
                 // fill out metadata
                 if (TaskbarManager.IsPlatformSupported)
@@ -438,7 +438,7 @@ namespace Sounds
             else
             {
                 // nop it out
-                Text = fileNameTitle;
+                Text = fileNameFinalTitle;
 
                 if (TaskbarManager.IsPlatformSupported)
                 {
