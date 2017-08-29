@@ -7,7 +7,6 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Resources;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -19,8 +18,6 @@ namespace Sounds
 {
     public partial class MainForm : Form
     {
-        ResourceManager miscLocale = new ResourceManager("Sounds.MiscStrings", typeof(MainForm).Assembly);
-
         TabbedThumbnail preview;
         ThumbnailToolBarButton playPauseTaskbarButton;
         ThumbnailToolBarButton prevTaskbarButton;
@@ -616,7 +613,7 @@ namespace Sounds
                 positionLabel.Image = Properties.Resources.Stop;
                 if (TaskbarManager.IsPlatformSupported)
                 {
-                    TaskbarManager.Instance.SetOverlayIcon(stopIcon, miscLocale.GetString("stopped"));
+                    TaskbarManager.Instance.SetOverlayIcon(stopIcon, MiscStrings.stopped);
                 }
             }
             else if (playing && Paused)
@@ -624,7 +621,7 @@ namespace Sounds
                 positionLabel.Image = Properties.Resources.Pause;
                 if (TaskbarManager.IsPlatformSupported)
                 {
-                    TaskbarManager.Instance.SetOverlayIcon(pauseIcon, miscLocale.GetString("paused"));
+                    TaskbarManager.Instance.SetOverlayIcon(pauseIcon, MiscStrings.paused);
                 }
             }
             else if (playing && !Paused)
@@ -632,7 +629,7 @@ namespace Sounds
                 positionLabel.Image = Properties.Resources.Play;
                 if (TaskbarManager.IsPlatformSupported)
                 {
-                    TaskbarManager.Instance.SetOverlayIcon(playIcon, miscLocale.GetString("playing"));
+                    TaskbarManager.Instance.SetOverlayIcon(playIcon, MiscStrings.playing);
                 }
             }
         }
@@ -867,8 +864,8 @@ namespace Sounds
 
         public bool ChangePlaylistAskStop(bool newFile)
         {
-            var msg = miscLocale.GetString(newFile ?
-                "newFileWhilePlaying" : "changeFileWhilePlaying");
+            var msg = newFile ? MiscStrings.newFileWhilePlaying :
+                MiscStrings.changeFileWhilePlaying;
             // should count even when paused?
             if (playing)
                 return MessageBox.Show(this,
@@ -882,7 +879,7 @@ namespace Sounds
         // also, must be done beforehand and inline, as logic is more complex
         public DialogResult ChangePlaylistAskDirty()
         {
-            var msg = miscLocale.GetString("changeFileWhileDirty");
+            var msg = MiscStrings.changeFileWhileDirty;
             // should count even when paused?
             if (dirty)
                 return MessageBox.Show(this,
