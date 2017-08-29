@@ -1112,15 +1112,20 @@ namespace Sounds
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            switch (ChangePlaylistAskDirty())
+            // for ephemereal playlists, if it's not a saved playlist and no
+            // files, don't bother asking
+            if (listView1.Items.Count > 0 && playlistFile != null)
             {
-                case DialogResult.Yes:
-                    SavePlaylist(false);
-                    break;
-                case DialogResult.No: break;
-                default:
-                    e.Cancel = true;
-                    return;
+                switch (ChangePlaylistAskDirty())
+                {
+                    case DialogResult.Yes:
+                        SavePlaylist(false);
+                        break;
+                    case DialogResult.No: break;
+                    default:
+                        e.Cancel = true;
+                        return;
+                }
             }
             if (!ChangePlaylistAskStop(MiscStrings.quitWhilePlaying))
             {
