@@ -368,6 +368,10 @@ namespace Sounds
                     foreach (var row in e.ToolStripPanel.Rows)
                     {
                         Rectangle edgeBounds = row.Bounds;
+                        // rendering the top edge for the menustrip ruins the
+                        // illusion of a seamlessness in Windows 10
+                        if (edgeBounds.Y == 0)
+                            continue;
                         edgeBounds.Offset(0, -1);
                         renderer.DrawEdge(e.Graphics, edgeBounds, edge, EdgeStyle.Etched, EdgeEffects.None);
                     }
