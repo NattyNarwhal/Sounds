@@ -38,7 +38,6 @@
             this.timeIncrementLabel = new System.Windows.Forms.Label();
             this.volIncrementBox = new System.Windows.Forms.NumericUpDown();
             this.volIncrementLabel = new System.Windows.Forms.Label();
-            this.recursiveBox = new System.Windows.Forms.CheckBox();
             this.deleteOnTrackChangeBox = new System.Windows.Forms.CheckBox();
             this.okButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
@@ -83,7 +82,6 @@
             this.generalBox.Controls.Add(this.timeIncrementLabel);
             this.generalBox.Controls.Add(this.volIncrementBox);
             this.generalBox.Controls.Add(this.volIncrementLabel);
-            this.generalBox.Controls.Add(this.recursiveBox);
             this.generalBox.Controls.Add(this.deleteOnTrackChangeBox);
             this.generalBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.generalBox.Name = "generalBox";
@@ -110,12 +108,6 @@
             resources.ApplyResources(this.volIncrementLabel, "volIncrementLabel");
             this.volIncrementLabel.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.volIncrementLabel.Name = "volIncrementLabel";
-            // 
-            // recursiveBox
-            // 
-            resources.ApplyResources(this.recursiveBox, "recursiveBox");
-            this.recursiveBox.Name = "recursiveBox";
-            this.recursiveBox.UseVisualStyleBackColor = true;
             // 
             // deleteOnTrackChangeBox
             // 
@@ -176,7 +168,6 @@
         private System.Windows.Forms.Label timeIncrementLabel;
         private System.Windows.Forms.NumericUpDown volIncrementBox;
         private System.Windows.Forms.Label volIncrementLabel;
-        private System.Windows.Forms.CheckBox recursiveBox;
         private System.Windows.Forms.CheckBox deleteOnTrackChangeBox;
     }
 }

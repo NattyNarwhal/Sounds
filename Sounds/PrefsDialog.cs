@@ -60,18 +60,6 @@ namespace Sounds
             }
         }
 
-        public bool Recursive
-        {
-            get
-            {
-                return recursiveBox.Checked;
-            }
-            set
-            {
-                recursiveBox.Checked = value;
-            }
-        }
-
         public int VolumeIncrement
         {
             get

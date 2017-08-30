@@ -1137,7 +1137,6 @@ namespace Sounds
             Properties.Settings.Default.Repeat = repeat;
             Properties.Settings.Default.VolumeShortcutIncrement = volIncrement;
             Properties.Settings.Default.TimeShortcutSeconds = timeIncrement;
-            Properties.Settings.Default.AddFolderRecursive = recursive;
             Properties.Settings.Default.Save();
         }
 
@@ -1156,7 +1155,6 @@ namespace Sounds
                 ShowStatusbar = showStatusBar,
                 ShowInfoPane = showInfoPane,
                 DeleteOnTrackChange = deleteOnNext,
-                Recursive = recursive,
                 VolumeIncrement = volIncrement,
                 TimeIncrement = timeIncrement,
             };
@@ -1166,7 +1164,6 @@ namespace Sounds
                 showStatusBar = pd.ShowStatusbar;
                 showInfoPane = pd.ShowInfoPane;
                 deleteOnNext = pd.DeleteOnTrackChange;
-                recursive = pd.Recursive;
                 VolumeIncrement = pd.VolumeIncrement;
                 TimeIncrement = pd.TimeIncrement;
                 UpdateUI();

@@ -139,9 +139,6 @@
   <data name="displayGroup.Text" xml:space="preserve">
     <value>表示</value>
   </data>
-  <data name="generalBox.Text" xml:space="preserve">
-    <value>一般</value>
-  </data>
   <data name="timeIncrementBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 93</value>
   </data>
@@ -177,6 +174,9 @@
   </data>
   <data name="deleteOnTrackChangeBox.Text" xml:space="preserve">
     <value>再生したらプレイリストから削除</value>
+  </data>
+  <data name="generalBox.Text" xml:space="preserve">
+    <value>一般</value>
   </data>
   <data name="okButton.Text" xml:space="preserve">
     <value>OK</value>
