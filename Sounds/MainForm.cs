@@ -47,6 +47,7 @@ namespace Sounds
         bool repeat = false;
         bool deleteOnNext = false;
         bool recursive = false;
+        bool showDialogs;
 
         string playlistFile = null;
         bool dirty = false;
@@ -131,6 +132,7 @@ namespace Sounds
             VolumeIncrement = Properties.Settings.Default.VolumeShortcutIncrement;
             TimeIncrement = Properties.Settings.Default.TimeShortcutSeconds;
             recursive = Properties.Settings.Default.AddFolderRecursive;
+            showDialogs = Properties.Settings.Default.ShowConfirmationDialogs;
 
             if (TaskbarManager.IsPlatformSupported)
             {
@@ -920,6 +922,8 @@ namespace Sounds
 
         public bool ChangePlaylistAskStop(string msg)
         {
+            if (!showDialogs) return true; // stop it
+
             // should count even when paused?
             if (playing)
                 return MessageBox.Show(this,
@@ -932,6 +936,8 @@ namespace Sounds
         // also, must be done beforehand and inline, as logic is more complex
         public DialogResult ChangePlaylistAskDirty()
         {
+            if (!showDialogs) return DialogResult.No; // don't save
+
             var msg = MiscStrings.changeFileWhileDirty;
             if (Dirty)
                 return MessageBox.Show(this,
@@ -1155,6 +1161,7 @@ namespace Sounds
                 ShowStatusbar = showStatusBar,
                 ShowInfoPane = showInfoPane,
                 DeleteOnTrackChange = deleteOnNext,
+                ShowConfirmationDialogs = showDialogs,
                 VolumeIncrement = volIncrement,
                 TimeIncrement = timeIncrement,
             };
@@ -1164,6 +1171,7 @@ namespace Sounds
                 showStatusBar = pd.ShowStatusbar;
                 showInfoPane = pd.ShowInfoPane;
                 deleteOnNext = pd.DeleteOnTrackChange;
+                showDialogs = pd.ShowConfirmationDialogs;
                 VolumeIncrement = pd.VolumeIncrement;
                 TimeIncrement = pd.TimeIncrement;
                 UpdateUI();

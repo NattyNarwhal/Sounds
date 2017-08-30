@@ -142,5 +142,17 @@ namespace Sounds.Properties {
                 this["FileDragAppendPlaylist"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowConfirmationDialogs {
+            get {
+                return ((bool)(this["ShowConfirmationDialogs"]));
+            }
+            set {
+                this["ShowConfirmationDialogs"] = value;
+            }
+        }
     }
 }

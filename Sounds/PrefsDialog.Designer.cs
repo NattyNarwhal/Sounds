@@ -34,6 +34,7 @@
             this.showStatusbarBox = new System.Windows.Forms.CheckBox();
             this.showToolbarBox = new System.Windows.Forms.CheckBox();
             this.generalBox = new System.Windows.Forms.GroupBox();
+            this.showDialogsBox = new System.Windows.Forms.CheckBox();
             this.timeIncrementBox = new System.Windows.Forms.NumericUpDown();
             this.timeIncrementLabel = new System.Windows.Forms.Label();
             this.volIncrementBox = new System.Windows.Forms.NumericUpDown();
@@ -78,6 +79,7 @@
             // generalBox
             // 
             resources.ApplyResources(this.generalBox, "generalBox");
+            this.generalBox.Controls.Add(this.showDialogsBox);
             this.generalBox.Controls.Add(this.timeIncrementBox);
             this.generalBox.Controls.Add(this.timeIncrementLabel);
             this.generalBox.Controls.Add(this.volIncrementBox);
@@ -86,6 +88,12 @@
             this.generalBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.generalBox.Name = "generalBox";
             this.generalBox.TabStop = false;
+            // 
+            // showDialogsBox
+            // 
+            resources.ApplyResources(this.showDialogsBox, "showDialogsBox");
+            this.showDialogsBox.Name = "showDialogsBox";
+            this.showDialogsBox.UseVisualStyleBackColor = true;
             // 
             // timeIncrementBox
             // 
@@ -169,5 +177,6 @@
         private System.Windows.Forms.NumericUpDown volIncrementBox;
         private System.Windows.Forms.Label volIncrementLabel;
         private System.Windows.Forms.CheckBox deleteOnTrackChangeBox;
+        private System.Windows.Forms.CheckBox showDialogsBox;
     }
 }

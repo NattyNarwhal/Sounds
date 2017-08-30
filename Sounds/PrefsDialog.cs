@@ -60,6 +60,18 @@ namespace Sounds
             }
         }
 
+        public bool ShowConfirmationDialogs
+        {
+            get
+            {
+                return showDialogsBox.Checked;
+            }
+            set
+            {
+                showDialogsBox.Checked = value;
+            }
+        }
+
         public int VolumeIncrement
         {
             get

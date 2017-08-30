@@ -163,12 +163,6 @@
   <data name="volIncrementLabel.Text" xml:space="preserve">
     <value>音量を調整する度のパーセント値</value>
   </data>
-  <data name="recursiveBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 18</value>
-  </data>
-  <data name="recursiveBox.Text" xml:space="preserve">
-    <value>フォルダの内容を再帰的に追加</value>
-  </data>
   <data name="deleteOnTrackChangeBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>175, 18</value>
   </data>
