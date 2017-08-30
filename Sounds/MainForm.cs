@@ -348,7 +348,7 @@ namespace Sounds
             if (deleteOnNext && old != null)
             {
                 listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == old).First().Remove();
-                Dirty = true;
+                Dirty = listView1.Items.Count > 0 && playlistFile != null;
                 UpdatePlaylistTotal();
             }
         }
@@ -1114,18 +1114,15 @@ namespace Sounds
         {
             // for ephemereal playlists, if it's not a saved playlist and no
             // files, don't bother asking
-            if (listView1.Items.Count > 0 && playlistFile != null)
+            switch (ChangePlaylistAskDirty())
             {
-                switch (ChangePlaylistAskDirty())
-                {
-                    case DialogResult.Yes:
-                        SavePlaylist(false);
-                        break;
-                    case DialogResult.No: break;
-                    default:
-                        e.Cancel = true;
-                        return;
-                }
+                case DialogResult.Yes:
+                    SavePlaylist(false);
+                    break;
+                case DialogResult.No: break;
+                default:
+                    e.Cancel = true;
+                    return;
             }
             if (!ChangePlaylistAskStop(MiscStrings.quitWhilePlaying))
             {
