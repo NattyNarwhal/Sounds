@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -1184,6 +1185,16 @@ namespace Sounds
             {
                 OpenPlaylist(openPlaylistDialog.FileName, true);
             }
+        }
+
+        private void websiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://cmpct.info/~calvin/Sounds/");
+        }
+
+        private void reportABugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://bugs.cmpct.info/enter_bug.cgi?product=Sounds&component=Sounds");
         }
     }
 }
