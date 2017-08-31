@@ -90,6 +90,8 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportABugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutSoundsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.playToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.pauseToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -561,7 +563,9 @@
             resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.websiteToolStripMenuItem,
-            this.reportABugToolStripMenuItem});
+            this.reportABugToolStripMenuItem,
+            this.toolStripSeparator10,
+            this.aboutSoundsToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             // 
             // websiteToolStripMenuItem
@@ -575,6 +579,17 @@
             resources.ApplyResources(this.reportABugToolStripMenuItem, "reportABugToolStripMenuItem");
             this.reportABugToolStripMenuItem.Name = "reportABugToolStripMenuItem";
             this.reportABugToolStripMenuItem.Click += new System.EventHandler(this.reportABugToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator10
+            // 
+            resources.ApplyResources(this.toolStripSeparator10, "toolStripSeparator10");
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            // 
+            // aboutSoundsToolStripMenuItem
+            // 
+            resources.ApplyResources(this.aboutSoundsToolStripMenuItem, "aboutSoundsToolStripMenuItem");
+            this.aboutSoundsToolStripMenuItem.Name = "aboutSoundsToolStripMenuItem";
+            this.aboutSoundsToolStripMenuItem.Click += new System.EventHandler(this.aboutSoundsToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -802,6 +817,8 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem websiteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportABugToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripMenuItem aboutSoundsToolStripMenuItem;
     }
 }
 
