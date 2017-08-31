@@ -88,9 +88,6 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.repeatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.websiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportABugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutSoundsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.playToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -124,11 +121,9 @@
             // 
             // toolStripContainer1
             // 
-            resources.ApplyResources(this.toolStripContainer1, "toolStripContainer1");
             // 
             // toolStripContainer1.BottomToolStripPanel
             // 
-            resources.ApplyResources(this.toolStripContainer1.BottomToolStripPanel, "toolStripContainer1.BottomToolStripPanel");
             this.toolStripContainer1.BottomToolStripPanel.Controls.Add(this.statusStrip1);
             // 
             // toolStripContainer1.ContentPanel
@@ -136,19 +131,11 @@
             resources.ApplyResources(this.toolStripContainer1.ContentPanel, "toolStripContainer1.ContentPanel");
             this.toolStripContainer1.ContentPanel.Controls.Add(this.listView1);
             this.toolStripContainer1.ContentPanel.Controls.Add(this.panel1);
-            // 
-            // toolStripContainer1.LeftToolStripPanel
-            // 
-            resources.ApplyResources(this.toolStripContainer1.LeftToolStripPanel, "toolStripContainer1.LeftToolStripPanel");
+            resources.ApplyResources(this.toolStripContainer1, "toolStripContainer1");
             this.toolStripContainer1.Name = "toolStripContainer1";
-            // 
-            // toolStripContainer1.RightToolStripPanel
-            // 
-            resources.ApplyResources(this.toolStripContainer1.RightToolStripPanel, "toolStripContainer1.RightToolStripPanel");
             // 
             // toolStripContainer1.TopToolStripPanel
             // 
-            resources.ApplyResources(this.toolStripContainer1.TopToolStripPanel, "toolStripContainer1.TopToolStripPanel");
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.menuStrip1);
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
             // 
@@ -165,30 +152,29 @@
             // 
             // playlistTotalLabel
             // 
-            resources.ApplyResources(this.playlistTotalLabel, "playlistTotalLabel");
             this.playlistTotalLabel.Image = global::Sounds.Properties.Resources.PlaylistTotal;
             this.playlistTotalLabel.Name = "playlistTotalLabel";
+            resources.ApplyResources(this.playlistTotalLabel, "playlistTotalLabel");
             // 
             // positionLabel
             // 
-            resources.ApplyResources(this.positionLabel, "positionLabel");
             this.positionLabel.Name = "positionLabel";
+            resources.ApplyResources(this.positionLabel, "positionLabel");
             // 
             // errorMessageLabel
             // 
-            resources.ApplyResources(this.errorMessageLabel, "errorMessageLabel");
             this.errorMessageLabel.Name = "errorMessageLabel";
+            resources.ApplyResources(this.errorMessageLabel, "errorMessageLabel");
             // 
             // volumeStatusButton
             // 
-            resources.ApplyResources(this.volumeStatusButton, "volumeStatusButton");
             this.volumeStatusButton.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.volumeStatusButton, "volumeStatusButton");
             this.volumeStatusButton.Image = global::Sounds.Properties.Resources.Volume;
             this.volumeStatusButton.Name = "volumeStatusButton";
             // 
             // listView1
             // 
-            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.AllowDrop = true;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.titleHeader,
@@ -196,6 +182,7 @@
             this.albumHeader,
             this.artistHeader});
             this.listView1.ContextMenuStrip = this.playlistContextMenu;
+            resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Name = "listView1";
             this.listView1.ShowItemToolTips = true;
             this.listView1.UseCompatibleStateImageBehavior = false;
@@ -224,48 +211,48 @@
             // 
             // playlistContextMenu
             // 
-            resources.ApplyResources(this.playlistContextMenu, "playlistContextMenu");
             this.playlistContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playContextToolStripMenuItem,
             this.toolStripSeparator5,
             this.propertiesContextToolStripMenuItem,
             this.removeContextToolStripMenuItem});
             this.playlistContextMenu.Name = "playlistContextMenu";
+            resources.ApplyResources(this.playlistContextMenu, "playlistContextMenu");
             // 
             // playContextToolStripMenuItem
             // 
-            resources.ApplyResources(this.playContextToolStripMenuItem, "playContextToolStripMenuItem");
             this.playContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Play;
             this.playContextToolStripMenuItem.Name = "playContextToolStripMenuItem";
+            resources.ApplyResources(this.playContextToolStripMenuItem, "playContextToolStripMenuItem");
             this.playContextToolStripMenuItem.Click += new System.EventHandler(this.playContextToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
-            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
             this.toolStripSeparator5.Name = "toolStripSeparator5";
+            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
             // 
             // propertiesContextToolStripMenuItem
             // 
-            resources.ApplyResources(this.propertiesContextToolStripMenuItem, "propertiesContextToolStripMenuItem");
             this.propertiesContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Properties;
             this.propertiesContextToolStripMenuItem.Name = "propertiesContextToolStripMenuItem";
+            resources.ApplyResources(this.propertiesContextToolStripMenuItem, "propertiesContextToolStripMenuItem");
             this.propertiesContextToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
             // removeContextToolStripMenuItem
             // 
-            resources.ApplyResources(this.removeContextToolStripMenuItem, "removeContextToolStripMenuItem");
             this.removeContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Delete;
             this.removeContextToolStripMenuItem.Name = "removeContextToolStripMenuItem";
+            resources.ApplyResources(this.removeContextToolStripMenuItem, "removeContextToolStripMenuItem");
             this.removeContextToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.artistLabel);
             this.panel1.Controls.Add(this.albumLabel);
             this.panel1.Controls.Add(this.titleLabel);
             this.panel1.Controls.Add(this.positionTrackBar);
             this.panel1.Controls.Add(this.albumArtBox);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // artistLabel
@@ -316,7 +303,6 @@
             // 
             // fileToolStripMenuItem
             // 
-            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newPlaylistToolStripMenuItem,
             this.openPlaylistToolStripMenuItem,
@@ -332,118 +318,118 @@
             this.toolStripSeparator1,
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
             // 
             // newPlaylistToolStripMenuItem
             // 
-            resources.ApplyResources(this.newPlaylistToolStripMenuItem, "newPlaylistToolStripMenuItem");
             this.newPlaylistToolStripMenuItem.Image = global::Sounds.Properties.Resources.New;
             this.newPlaylistToolStripMenuItem.Name = "newPlaylistToolStripMenuItem";
+            resources.ApplyResources(this.newPlaylistToolStripMenuItem, "newPlaylistToolStripMenuItem");
             this.newPlaylistToolStripMenuItem.Click += new System.EventHandler(this.newPlaylistToolStripMenuItem_Click);
             // 
             // openPlaylistToolStripMenuItem
             // 
-            resources.ApplyResources(this.openPlaylistToolStripMenuItem, "openPlaylistToolStripMenuItem");
             this.openPlaylistToolStripMenuItem.Image = global::Sounds.Properties.Resources.Open;
             this.openPlaylistToolStripMenuItem.Name = "openPlaylistToolStripMenuItem";
+            resources.ApplyResources(this.openPlaylistToolStripMenuItem, "openPlaylistToolStripMenuItem");
             this.openPlaylistToolStripMenuItem.Click += new System.EventHandler(this.openPlaylistToolStripMenuItem_Click);
             // 
             // savePlaylistToolStripMenuItem
             // 
-            resources.ApplyResources(this.savePlaylistToolStripMenuItem, "savePlaylistToolStripMenuItem");
             this.savePlaylistToolStripMenuItem.Image = global::Sounds.Properties.Resources.Save;
             this.savePlaylistToolStripMenuItem.Name = "savePlaylistToolStripMenuItem";
+            resources.ApplyResources(this.savePlaylistToolStripMenuItem, "savePlaylistToolStripMenuItem");
             this.savePlaylistToolStripMenuItem.Click += new System.EventHandler(this.savePlaylistToolStripMenuItem_Click);
             // 
             // savePlaylistAsToolStripMenuItem
             // 
-            resources.ApplyResources(this.savePlaylistAsToolStripMenuItem, "savePlaylistAsToolStripMenuItem");
             this.savePlaylistAsToolStripMenuItem.Name = "savePlaylistAsToolStripMenuItem";
+            resources.ApplyResources(this.savePlaylistAsToolStripMenuItem, "savePlaylistAsToolStripMenuItem");
             this.savePlaylistAsToolStripMenuItem.Click += new System.EventHandler(this.savePlaylistAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator9
             // 
-            resources.ApplyResources(this.toolStripSeparator9, "toolStripSeparator9");
             this.toolStripSeparator9.Name = "toolStripSeparator9";
+            resources.ApplyResources(this.toolStripSeparator9, "toolStripSeparator9");
             // 
             // addFilesToolStripMenuItem
             // 
-            resources.ApplyResources(this.addFilesToolStripMenuItem, "addFilesToolStripMenuItem");
             this.addFilesToolStripMenuItem.Image = global::Sounds.Properties.Resources.AddSong;
             this.addFilesToolStripMenuItem.Name = "addFilesToolStripMenuItem";
+            resources.ApplyResources(this.addFilesToolStripMenuItem, "addFilesToolStripMenuItem");
             this.addFilesToolStripMenuItem.Click += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
             // 
             // addDirectoryToolStripMenuItem
             // 
-            resources.ApplyResources(this.addDirectoryToolStripMenuItem, "addDirectoryToolStripMenuItem");
             this.addDirectoryToolStripMenuItem.Name = "addDirectoryToolStripMenuItem";
+            resources.ApplyResources(this.addDirectoryToolStripMenuItem, "addDirectoryToolStripMenuItem");
             this.addDirectoryToolStripMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
             // 
             // appendPlaylistToolStripMenuItem
             // 
-            resources.ApplyResources(this.appendPlaylistToolStripMenuItem, "appendPlaylistToolStripMenuItem");
             this.appendPlaylistToolStripMenuItem.Name = "appendPlaylistToolStripMenuItem";
+            resources.ApplyResources(this.appendPlaylistToolStripMenuItem, "appendPlaylistToolStripMenuItem");
             this.appendPlaylistToolStripMenuItem.Click += new System.EventHandler(this.appendPlaylistToolStripMenuItem_Click);
             // 
             // removeSelectedToolStripMenuItem
             // 
-            resources.ApplyResources(this.removeSelectedToolStripMenuItem, "removeSelectedToolStripMenuItem");
             this.removeSelectedToolStripMenuItem.Image = global::Sounds.Properties.Resources.Delete;
             this.removeSelectedToolStripMenuItem.Name = "removeSelectedToolStripMenuItem";
+            resources.ApplyResources(this.removeSelectedToolStripMenuItem, "removeSelectedToolStripMenuItem");
             this.removeSelectedToolStripMenuItem.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
             // 
             // shuffleToolStripMenuItem
             // 
-            resources.ApplyResources(this.shuffleToolStripMenuItem, "shuffleToolStripMenuItem");
             this.shuffleToolStripMenuItem.Name = "shuffleToolStripMenuItem";
+            resources.ApplyResources(this.shuffleToolStripMenuItem, "shuffleToolStripMenuItem");
             this.shuffleToolStripMenuItem.Click += new System.EventHandler(this.shuffleToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // quitToolStripMenuItem
             // 
-            resources.ApplyResources(this.quitToolStripMenuItem, "quitToolStripMenuItem");
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            resources.ApplyResources(this.quitToolStripMenuItem, "quitToolStripMenuItem");
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
-            resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.propertiesToolStripMenuItem,
             this.toolStripSeparator3,
             this.preferencesToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
             // 
             // propertiesToolStripMenuItem
             // 
-            resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
             this.propertiesToolStripMenuItem.Image = global::Sounds.Properties.Resources.Properties;
             this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
+            resources.ApplyResources(this.propertiesToolStripMenuItem, "propertiesToolStripMenuItem");
             this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.propertiesToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             this.toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             // 
             // preferencesToolStripMenuItem
             // 
-            resources.ApplyResources(this.preferencesToolStripMenuItem, "preferencesToolStripMenuItem");
             this.preferencesToolStripMenuItem.Image = global::Sounds.Properties.Resources.Preferences;
             this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
+            resources.ApplyResources(this.preferencesToolStripMenuItem, "preferencesToolStripMenuItem");
             this.preferencesToolStripMenuItem.Click += new System.EventHandler(this.preferencesToolStripMenuItem_Click);
             // 
             // playbackToolStripMenuItem
             // 
-            resources.ApplyResources(this.playbackToolStripMenuItem, "playbackToolStripMenuItem");
             this.playbackToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.togglePlaybackToolStripMenuItem,
             this.playToolStripMenuItem,
@@ -461,134 +447,115 @@
             this.toolStripSeparator4,
             this.repeatToolStripMenuItem});
             this.playbackToolStripMenuItem.Name = "playbackToolStripMenuItem";
+            resources.ApplyResources(this.playbackToolStripMenuItem, "playbackToolStripMenuItem");
             // 
             // togglePlaybackToolStripMenuItem
             // 
-            resources.ApplyResources(this.togglePlaybackToolStripMenuItem, "togglePlaybackToolStripMenuItem");
             this.togglePlaybackToolStripMenuItem.Name = "togglePlaybackToolStripMenuItem";
+            resources.ApplyResources(this.togglePlaybackToolStripMenuItem, "togglePlaybackToolStripMenuItem");
             this.togglePlaybackToolStripMenuItem.Click += new System.EventHandler(this.togglePlaybackToolStripMenuItem_Click);
             // 
             // playToolStripMenuItem
             // 
-            resources.ApplyResources(this.playToolStripMenuItem, "playToolStripMenuItem");
             this.playToolStripMenuItem.Image = global::Sounds.Properties.Resources.Play;
             this.playToolStripMenuItem.Name = "playToolStripMenuItem";
+            resources.ApplyResources(this.playToolStripMenuItem, "playToolStripMenuItem");
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
             // pauseToolStripMenuItem
             // 
-            resources.ApplyResources(this.pauseToolStripMenuItem, "pauseToolStripMenuItem");
             this.pauseToolStripMenuItem.Image = global::Sounds.Properties.Resources.Pause;
             this.pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
+            resources.ApplyResources(this.pauseToolStripMenuItem, "pauseToolStripMenuItem");
             this.pauseToolStripMenuItem.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
             // 
             // stopToolStripMenuItem
             // 
-            resources.ApplyResources(this.stopToolStripMenuItem, "stopToolStripMenuItem");
             this.stopToolStripMenuItem.Image = global::Sounds.Properties.Resources.Stop;
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
+            resources.ApplyResources(this.stopToolStripMenuItem, "stopToolStripMenuItem");
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             // 
             // previousToolStripMenuItem
             // 
-            resources.ApplyResources(this.previousToolStripMenuItem, "previousToolStripMenuItem");
             this.previousToolStripMenuItem.Image = global::Sounds.Properties.Resources.Previous;
             this.previousToolStripMenuItem.Name = "previousToolStripMenuItem";
+            resources.ApplyResources(this.previousToolStripMenuItem, "previousToolStripMenuItem");
             this.previousToolStripMenuItem.Click += new System.EventHandler(this.previousToolStripMenuItem_Click);
             // 
             // nextToolStripMenuItem
             // 
-            resources.ApplyResources(this.nextToolStripMenuItem, "nextToolStripMenuItem");
             this.nextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Next;
             this.nextToolStripMenuItem.Name = "nextToolStripMenuItem";
+            resources.ApplyResources(this.nextToolStripMenuItem, "nextToolStripMenuItem");
             this.nextToolStripMenuItem.Click += new System.EventHandler(this.nextToolStripMenuItem_Click);
             // 
             // rewindToolStripMenuItem
             // 
-            resources.ApplyResources(this.rewindToolStripMenuItem, "rewindToolStripMenuItem");
             this.rewindToolStripMenuItem.Image = global::Sounds.Properties.Resources.Rewind;
             this.rewindToolStripMenuItem.Name = "rewindToolStripMenuItem";
+            resources.ApplyResources(this.rewindToolStripMenuItem, "rewindToolStripMenuItem");
             this.rewindToolStripMenuItem.Click += new System.EventHandler(this.rewindToolStripMenuItem_Click);
             // 
             // skipAheadToolStripMenuItem
             // 
-            resources.ApplyResources(this.skipAheadToolStripMenuItem, "skipAheadToolStripMenuItem");
             this.skipAheadToolStripMenuItem.Image = global::Sounds.Properties.Resources.FastForward;
             this.skipAheadToolStripMenuItem.Name = "skipAheadToolStripMenuItem";
+            resources.ApplyResources(this.skipAheadToolStripMenuItem, "skipAheadToolStripMenuItem");
             this.skipAheadToolStripMenuItem.Click += new System.EventHandler(this.skipAheadToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
-            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
             // 
             // volumeUpToolStripMenuItem
             // 
-            resources.ApplyResources(this.volumeUpToolStripMenuItem, "volumeUpToolStripMenuItem");
             this.volumeUpToolStripMenuItem.Name = "volumeUpToolStripMenuItem";
+            resources.ApplyResources(this.volumeUpToolStripMenuItem, "volumeUpToolStripMenuItem");
             this.volumeUpToolStripMenuItem.Click += new System.EventHandler(this.volumeUpToolStripMenuItem_Click);
             // 
             // volumeDownToolStripMenuItem
             // 
-            resources.ApplyResources(this.volumeDownToolStripMenuItem, "volumeDownToolStripMenuItem");
             this.volumeDownToolStripMenuItem.Name = "volumeDownToolStripMenuItem";
+            resources.ApplyResources(this.volumeDownToolStripMenuItem, "volumeDownToolStripMenuItem");
             this.volumeDownToolStripMenuItem.Click += new System.EventHandler(this.volumeDownToolStripMenuItem_Click);
             // 
             // muteToolStripMenuItem
             // 
-            resources.ApplyResources(this.muteToolStripMenuItem, "muteToolStripMenuItem");
             this.muteToolStripMenuItem.Name = "muteToolStripMenuItem";
+            resources.ApplyResources(this.muteToolStripMenuItem, "muteToolStripMenuItem");
             this.muteToolStripMenuItem.Click += new System.EventHandler(this.muteToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
-            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             this.toolStripSeparator4.Name = "toolStripSeparator4";
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             // 
             // repeatToolStripMenuItem
             // 
-            resources.ApplyResources(this.repeatToolStripMenuItem, "repeatToolStripMenuItem");
             this.repeatToolStripMenuItem.CheckOnClick = true;
             this.repeatToolStripMenuItem.Image = global::Sounds.Properties.Resources.Repeat;
             this.repeatToolStripMenuItem.Name = "repeatToolStripMenuItem";
+            resources.ApplyResources(this.repeatToolStripMenuItem, "repeatToolStripMenuItem");
             this.repeatToolStripMenuItem.Click += new System.EventHandler(this.repeatToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
-            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.websiteToolStripMenuItem,
-            this.reportABugToolStripMenuItem,
-            this.toolStripSeparator10,
             this.aboutSoundsToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            // 
-            // websiteToolStripMenuItem
-            // 
-            resources.ApplyResources(this.websiteToolStripMenuItem, "websiteToolStripMenuItem");
-            this.websiteToolStripMenuItem.Name = "websiteToolStripMenuItem";
-            this.websiteToolStripMenuItem.Click += new System.EventHandler(this.websiteToolStripMenuItem_Click);
-            // 
-            // reportABugToolStripMenuItem
-            // 
-            resources.ApplyResources(this.reportABugToolStripMenuItem, "reportABugToolStripMenuItem");
-            this.reportABugToolStripMenuItem.Name = "reportABugToolStripMenuItem";
-            this.reportABugToolStripMenuItem.Click += new System.EventHandler(this.reportABugToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator10
-            // 
-            resources.ApplyResources(this.toolStripSeparator10, "toolStripSeparator10");
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             // 
             // aboutSoundsToolStripMenuItem
             // 
-            resources.ApplyResources(this.aboutSoundsToolStripMenuItem, "aboutSoundsToolStripMenuItem");
             this.aboutSoundsToolStripMenuItem.Name = "aboutSoundsToolStripMenuItem";
+            resources.ApplyResources(this.aboutSoundsToolStripMenuItem, "aboutSoundsToolStripMenuItem");
             this.aboutSoundsToolStripMenuItem.Click += new System.EventHandler(this.aboutSoundsToolStripMenuItem_Click);
             // 
             // toolStrip1
@@ -612,81 +579,80 @@
             // 
             // playToolStripButton
             // 
-            resources.ApplyResources(this.playToolStripButton, "playToolStripButton");
             this.playToolStripButton.Image = global::Sounds.Properties.Resources.Play;
+            resources.ApplyResources(this.playToolStripButton, "playToolStripButton");
             this.playToolStripButton.Name = "playToolStripButton";
             this.playToolStripButton.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
             // pauseToolStripButton
             // 
-            resources.ApplyResources(this.pauseToolStripButton, "pauseToolStripButton");
             this.pauseToolStripButton.Image = global::Sounds.Properties.Resources.Pause;
+            resources.ApplyResources(this.pauseToolStripButton, "pauseToolStripButton");
             this.pauseToolStripButton.Name = "pauseToolStripButton";
             this.pauseToolStripButton.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
             // 
             // stopToolStripButton
             // 
-            resources.ApplyResources(this.stopToolStripButton, "stopToolStripButton");
             this.stopToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.stopToolStripButton.Image = global::Sounds.Properties.Resources.Stop;
+            resources.ApplyResources(this.stopToolStripButton, "stopToolStripButton");
             this.stopToolStripButton.Name = "stopToolStripButton";
             this.stopToolStripButton.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
-            resources.ApplyResources(this.toolStripSeparator6, "toolStripSeparator6");
             this.toolStripSeparator6.Name = "toolStripSeparator6";
+            resources.ApplyResources(this.toolStripSeparator6, "toolStripSeparator6");
             // 
             // previousToolStripButton
             // 
-            resources.ApplyResources(this.previousToolStripButton, "previousToolStripButton");
             this.previousToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.previousToolStripButton.Image = global::Sounds.Properties.Resources.Previous;
+            resources.ApplyResources(this.previousToolStripButton, "previousToolStripButton");
             this.previousToolStripButton.Name = "previousToolStripButton";
             this.previousToolStripButton.Click += new System.EventHandler(this.previousToolStripMenuItem_Click);
             // 
             // nextToolStripButton
             // 
-            resources.ApplyResources(this.nextToolStripButton, "nextToolStripButton");
             this.nextToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.nextToolStripButton.Image = global::Sounds.Properties.Resources.Next;
+            resources.ApplyResources(this.nextToolStripButton, "nextToolStripButton");
             this.nextToolStripButton.Name = "nextToolStripButton";
             this.nextToolStripButton.Click += new System.EventHandler(this.nextToolStripMenuItem_Click);
             // 
             // toolStripSeparator7
             // 
-            resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
             this.toolStripSeparator7.Name = "toolStripSeparator7";
+            resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
             // 
             // volumeButton
             // 
-            resources.ApplyResources(this.volumeButton, "volumeButton");
             this.volumeButton.Image = global::Sounds.Properties.Resources.Volume;
+            resources.ApplyResources(this.volumeButton, "volumeButton");
             this.volumeButton.Name = "volumeButton";
             // 
             // toolStripSeparator8
             // 
-            resources.ApplyResources(this.toolStripSeparator8, "toolStripSeparator8");
             this.toolStripSeparator8.Name = "toolStripSeparator8";
+            resources.ApplyResources(this.toolStripSeparator8, "toolStripSeparator8");
             // 
             // addFilesToolStripButton
             // 
-            resources.ApplyResources(this.addFilesToolStripButton, "addFilesToolStripButton");
             this.addFilesToolStripButton.Image = global::Sounds.Properties.Resources.AddSong;
+            resources.ApplyResources(this.addFilesToolStripButton, "addFilesToolStripButton");
             this.addFilesToolStripButton.Name = "addFilesToolStripButton";
             this.addFilesToolStripButton.Click += new System.EventHandler(this.addFilesToolStripMenuItem_Click);
             // 
             // removeSelectedToolStripButton
             // 
-            resources.ApplyResources(this.removeSelectedToolStripButton, "removeSelectedToolStripButton");
             this.removeSelectedToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.removeSelectedToolStripButton.Image = global::Sounds.Properties.Resources.Delete;
+            resources.ApplyResources(this.removeSelectedToolStripButton, "removeSelectedToolStripButton");
             this.removeSelectedToolStripButton.Name = "removeSelectedToolStripButton";
             this.removeSelectedToolStripButton.Click += new System.EventHandler(this.removeSelectedToolStripMenuItem_Click);
             // 
             // addFilesDialog
             // 
-            resources.ApplyResources(this.addFilesDialog, "addFilesDialog");
             this.addFilesDialog.Multiselect = true;
             // 
             // trackBarSyncTimer
@@ -815,9 +781,6 @@
         private System.Windows.Forms.ToolStripStatusLabel playlistTotalLabel;
         private System.Windows.Forms.ToolStripMenuItem appendPlaylistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem websiteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportABugToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripMenuItem aboutSoundsToolStripMenuItem;
     }
 }

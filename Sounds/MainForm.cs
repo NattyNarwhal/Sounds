@@ -1187,16 +1187,6 @@ namespace Sounds
             }
         }
 
-        private void websiteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://cmpct.info/~calvin/Sounds/");
-        }
-
-        private void reportABugToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://bugs.cmpct.info/enter_bug.cgi?product=Sounds&component=Sounds");
-        }
-
         private void aboutSoundsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new AboutForm().ShowDialog(this);
