@@ -257,7 +257,7 @@ namespace Sounds
             foreach (ListViewItem lvi in listView1.SelectedItems)
                 listView1.Items.Remove(lvi);
 
-            Dirty = true;
+            Dirty = listView1.Items.Count > 0 && playlistFile != null;
             UpdatePlaylistTotal();
         }
 
@@ -304,11 +304,9 @@ namespace Sounds
             }
             finally
             {
-                Dirty = true; // will get unset by Open if so
                 if (update)
                 {
-                    UpdateTitle();
-                    UpdateMenus();
+                    Dirty = true; // will get unset by Open if so
                     UpdatePlaylistTotal();
                 }
             }
@@ -331,8 +329,7 @@ namespace Sounds
                     AddFile(f, false);
                 }
             }
-            UpdateTitle();
-            UpdateMenus();
+            Dirty = true;
             UpdatePlaylistTotal();
         }
 
@@ -354,8 +351,6 @@ namespace Sounds
             {
                 listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == old).First().Remove();
                 Dirty = listView1.Items.Count > 0 && playlistFile != null;
-                UpdateTitle();
-                UpdateMenus();
                 UpdatePlaylistTotal();
             }
         }
@@ -782,9 +777,8 @@ namespace Sounds
         {
             Stop();
             playlistFile = null;
-            Dirty = false;
             listView1.Items.Clear();
-            UpdateTitle();
+            Dirty = false;
             UpdatePlaylistTotal();
         }
 
@@ -803,8 +797,6 @@ namespace Sounds
                 AddItem(f);
             }
             Dirty = append; // appending always dirty, opening is not
-            UpdateTitle();
-            UpdateMenus(); // as we set dirty bit
             UpdatePlaylistTotal();
         }
 
