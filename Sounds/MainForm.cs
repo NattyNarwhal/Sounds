@@ -307,6 +307,7 @@ namespace Sounds
                 Dirty = true; // will get unset by Open if so
                 if (update)
                 {
+                    UpdateTitle();
                     UpdateMenus();
                     UpdatePlaylistTotal();
                 }
@@ -330,6 +331,7 @@ namespace Sounds
                     AddFile(f, false);
                 }
             }
+            UpdateTitle();
             UpdateMenus();
             UpdatePlaylistTotal();
         }
