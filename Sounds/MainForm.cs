@@ -352,6 +352,8 @@ namespace Sounds
             {
                 listView1.Items.Cast<ListViewItem>().Where(x => x.Tag == old).First().Remove();
                 Dirty = listView1.Items.Count > 0 && playlistFile != null;
+                UpdateTitle();
+                UpdateMenus();
                 UpdatePlaylistTotal();
             }
         }
