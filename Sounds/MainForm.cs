@@ -1138,6 +1138,7 @@ namespace Sounds
             Properties.Settings.Default.ShowInfoPane = showInfoPane;
             Properties.Settings.Default.DeleteOnNext = deleteOnNext;
             Properties.Settings.Default.Repeat = repeat;
+            Properties.Settings.Default.ShowConfirmationDialogs = showDialogs;
             Properties.Settings.Default.VolumeShortcutIncrement = volIncrement;
             Properties.Settings.Default.TimeShortcutSeconds = timeIncrement;
             Properties.Settings.Default.Save();
