@@ -794,7 +794,7 @@ namespace Sounds
             var splitText = Regex.Split(text, @"\r?\n");
             foreach (var f in M3UParser.Parse(splitText, Path.GetDirectoryName(fileName)))
             {
-                AddItem(f);
+                AddItem(f, false);
             }
             Dirty = append; // appending always dirty, opening is not
             UpdatePlaylistTotal();
