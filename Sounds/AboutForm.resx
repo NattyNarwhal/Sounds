@@ -156,62 +156,30 @@
   <data name="tabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;licensePage.Name" xml:space="preserve">
-    <value>licensePage</value>
+  <data name="licenseBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;licensePage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="licenseBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="&gt;&gt;licensePage.Parent" xml:space="preserve">
-    <value>tabControl</value>
+  <data name="licenseBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;licensePage.ZOrder" xml:space="preserve">
+  <data name="licenseBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="licenseBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>346, 237</value>
+  </data>
+  <data name="licenseBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;authorsTab.Name" xml:space="preserve">
-    <value>authorsTab</value>
-  </data>
-  <data name="&gt;&gt;authorsTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;authorsTab.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-  <data name="&gt;&gt;authorsTab.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;attributionBox.Name" xml:space="preserve">
-    <value>attributionBox</value>
-  </data>
-  <data name="&gt;&gt;attributionBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;attributionBox.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-  <data name="&gt;&gt;attributionBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 51</value>
-  </data>
-  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 269</value>
-  </data>
-  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="licenseBox.Text" xml:space="preserve">
+    <value>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</value>
   </data>
   <data name="&gt;&gt;licenseBox.Name" xml:space="preserve">
     <value>licenseBox</value>
@@ -252,42 +220,27 @@
   <data name="&gt;&gt;licensePage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="licenseBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="authorsBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="licenseBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="authorsBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="licenseBox.Multiline" type="System.Boolean, mscorlib">
+  <data name="authorsBox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="licenseBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+  <data name="authorsBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
-  <data name="licenseBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="authorsBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 237</value>
   </data>
-  <data name="licenseBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="authorsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="licenseBox.Text" xml:space="preserve">
-    <value>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</value>
-  </data>
-  <data name="&gt;&gt;licenseBox.Name" xml:space="preserve">
-    <value>licenseBox</value>
-  </data>
-  <data name="&gt;&gt;licenseBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;licenseBox.Parent" xml:space="preserve">
-    <value>licensePage</value>
-  </data>
-  <data name="&gt;&gt;licenseBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="authorsBox.Text" xml:space="preserve">
+    <value>Application author: calvin &lt;calvin@cmpct.info&gt;
+Japanese translation: tsundoku &lt;tsundoku@tsundoku.ne.jp&gt;</value>
   </data>
   <data name="&gt;&gt;authorsBox.Name" xml:space="preserve">
     <value>authorsBox</value>
@@ -328,39 +281,92 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   <data name="&gt;&gt;authorsTab.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="authorsBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="textBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="authorsBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="authorsBox.Multiline" type="System.Boolean, mscorlib">
+  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="authorsBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
+  <data name="textBox1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
   </data>
-  <data name="authorsBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>346, 237</value>
   </data>
-  <data name="authorsBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="authorsBox.Text" xml:space="preserve">
-    <value>Application author: calvin &lt;calvin@cmpct.info&gt;
-Japanese translation: tsundoku &lt;tsundoku@tsundoku.ne.jp&gt;</value>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Uses:
+TagLib# &lt;https://github.com/mono/taglib-sharp/&gt;
+ToolStripAeroRenderer &lt;ttps://code.google.com/archive/p/szotar/&gt;
+Microsoft.WindowsAPICodePack &lt;https://www.nuget.org/packages/Microsoft.WindowsAPICodePack-Shell&gt;</value>
   </data>
-  <data name="&gt;&gt;authorsBox.Name" xml:space="preserve">
-    <value>authorsBox</value>
+  <data name="textBox1.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;authorsBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
+    <value>textBox1</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;authorsBox.Parent" xml:space="preserve">
-    <value>authorsTab</value>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>attributionBox</value>
   </data>
-  <data name="&gt;&gt;authorsBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="attributionBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="attributionBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="attributionBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 243</value>
+  </data>
+  <data name="attributionBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="attributionBox.Text" xml:space="preserve">
+    <value>Attribution</value>
+  </data>
+  <data name="&gt;&gt;attributionBox.Name" xml:space="preserve">
+    <value>attributionBox</value>
+  </data>
+  <data name="&gt;&gt;attributionBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;attributionBox.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;attributionBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 51</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 269</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="okButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -447,84 +453,6 @@ Japanese translation: tsundoku &lt;tsundoku@tsundoku.ne.jp&gt;</value>
     <value>$this</value>
   </data>
   <data name="&gt;&gt;websiteLink.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>attributionBox</value>
-  </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="attributionBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="attributionBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="attributionBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 243</value>
-  </data>
-  <data name="attributionBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="attributionBox.Text" xml:space="preserve">
-    <value>Attribution</value>
-  </data>
-  <data name="&gt;&gt;attributionBox.Name" xml:space="preserve">
-    <value>attributionBox</value>
-  </data>
-  <data name="&gt;&gt;attributionBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;attributionBox.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-  <data name="&gt;&gt;attributionBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="textBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBox1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Both</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 237</value>
-  </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>Uses:
-TagLib# &lt;https://github.com/mono/taglib-sharp/&gt;
-ToolStripAeroRenderer &lt;ttps://code.google.com/archive/p/szotar/&gt;
-Microsoft.WindowsAPICodePack &lt;https://www.nuget.org/packages/Microsoft.WindowsAPICodePack-Shell&gt;</value>
-  </data>
-  <data name="textBox1.WordWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>attributionBox</value>
-  </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

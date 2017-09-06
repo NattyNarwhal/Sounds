@@ -35,11 +35,11 @@
             this.licenseBox = new System.Windows.Forms.TextBox();
             this.authorsTab = new System.Windows.Forms.TabPage();
             this.authorsBox = new System.Windows.Forms.TextBox();
+            this.attributionBox = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
             this.taglineLabel = new System.Windows.Forms.Label();
             this.websiteLink = new System.Windows.Forms.LinkLabel();
-            this.attributionBox = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.licensePage.SuspendLayout();
             this.authorsTab.SuspendLayout();
@@ -87,6 +87,19 @@
             this.authorsBox.Name = "authorsBox";
             this.authorsBox.ReadOnly = true;
             // 
+            // attributionBox
+            // 
+            this.attributionBox.Controls.Add(this.textBox1);
+            resources.ApplyResources(this.attributionBox, "attributionBox");
+            this.attributionBox.Name = "attributionBox";
+            this.attributionBox.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            // 
             // okButton
             // 
             resources.ApplyResources(this.okButton, "okButton");
@@ -107,25 +120,11 @@
             this.websiteLink.TabStop = true;
             this.websiteLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.websiteLink_LinkClicked);
             // 
-            // attributionBox
-            // 
-            this.attributionBox.Controls.Add(this.textBox1);
-            resources.ApplyResources(this.attributionBox, "attributionBox");
-            this.attributionBox.Name = "attributionBox";
-            this.attributionBox.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            // 
             // AboutForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.okButton;
-            this.ControlBox = false;
             this.Controls.Add(this.websiteLink);
             this.Controls.Add(this.taglineLabel);
             this.Controls.Add(this.okButton);
