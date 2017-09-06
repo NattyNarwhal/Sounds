@@ -261,20 +261,21 @@ namespace Sounds
             UpdatePlaylistTotal();
         }
 
-        public void AddFile(string fileName, bool update = true)
+        public bool AddFile(string fileName, bool update = true)
         {
             // HACK: ignore Mac droppings that confuse TagLib when we get
             // aggressive with adding directories. (consider making a pref?)
             if (Path.GetFileName(fileName).StartsWith("._"))
-                return;
+                return false;
 
+            var doAdd = false;
             try
             {
                 var f = TagLib.File.Create(fileName);
                 if (f.Properties?.MediaTypes != TagLib.MediaTypes.Audio)
                 {
                     // we don't want it
-                    return;
+                    return false;
                 }
                 var lvi = new ListViewItem();
                 // fall back to filename
@@ -293,6 +294,7 @@ namespace Sounds
                 lvi.ToolTipText = f.Name;
                 lvi.Tag = f;
                 listView1.Items.Add(lvi);
+                doAdd = true;
             }
             catch (TagLib.UnsupportedFormatException)
             {
@@ -304,45 +306,53 @@ namespace Sounds
             }
             finally
             {
-                if (update)
+                if (doAdd && update)
                 {
                     Dirty = true; // will get unset by Open if so
                     UpdatePlaylistTotal();
                 }
             }
+            return doAdd;
         }
 
-        public void AddDirectory(string name)
+        public bool AddDirectory(string name, bool update = true)
         {
+            var didAdd = false;
             if (recursive)
             {
                 foreach (var f in Directory.EnumerateFiles(name).OrderBy(x => x)
                     .Concat(Directory.EnumerateDirectories(name).OrderBy(x => x)))
                 {
-                    AddItem(f, false);
+                    didAdd = didAdd || AddItem(f, false);
                 }
             }
             else
             {
                 foreach (var f in Directory.EnumerateFiles(name).OrderBy(x => x))
                 {
-                    AddFile(f, false);
+                    didAdd = didAdd || AddFile(f, false);
                 }
             }
-            Dirty = true;
-            UpdatePlaylistTotal();
+            if (didAdd && update)
+            {
+                Dirty = true;
+                UpdatePlaylistTotal();
+            }
+            return didAdd;
         }
 
-        public void AddItem(string name, bool update = false)
+        public bool AddItem(string name, bool update = false)
         {
+            var didAdd = false;
             if (Directory.Exists(name))
             {
-                AddDirectory(name);
+                didAdd = didAdd || AddDirectory(name);
             }
             else if (File.Exists(name))
             {
-                AddFile(name, update);
+                didAdd = didAdd || AddFile(name, update);
             }
+            return didAdd;
         }
 
         void DeleteOnChange(TagLib.File old)
@@ -792,11 +802,12 @@ namespace Sounds
 
             var text = File.ReadAllText(fileName);
             var splitText = Regex.Split(text, @"\r?\n");
+            var didAdd = false;
             foreach (var f in M3UParser.Parse(splitText, Path.GetDirectoryName(fileName)))
             {
-                AddItem(f, false);
+                didAdd = didAdd || AddItem(f, false);
             }
-            Dirty = append; // appending always dirty, opening is not
+            Dirty = append && didAdd; // appending always dirty, opening is not
             UpdatePlaylistTotal();
         }
 
@@ -1003,7 +1014,7 @@ namespace Sounds
         {
             if (folderBrowserDialog1.ShowDialog(this) == DialogResult.OK)
             {
-                AddDirectory(folderBrowserDialog1.SelectedPath);
+                AddDirectory(folderBrowserDialog1.SelectedPath, false);
             }
         }
 
