@@ -60,6 +60,10 @@ namespace Sounds
             artistsBox.Items.AddRange(f.Tag.Performers
                 .Select(x => f.Tag.AlbumArtists.Contains(x) ? string.Format(MiscStrings.albumArtistPrintf, x, MiscStrings.albumArtist) : x)
                 .ToArray());
+            artistsBox.Items.AddRange(f.Tag.AlbumArtists
+                .Where(x => !f.Tag.Performers.Contains(x))
+                .Select(x => string.Format(MiscStrings.albumArtistPrintf, x, MiscStrings.albumArtist))
+                .ToArray());
             composersBox.Items.AddRange(f.Tag.Composers);
             genresBox.Items.AddRange(f.Tag.Genres);
 
