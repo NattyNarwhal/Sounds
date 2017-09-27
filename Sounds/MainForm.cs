@@ -698,7 +698,7 @@ namespace Sounds
         {
             var plTotal = listView1.Items.Cast<ListViewItem>().Sum(x => ((TagLib.File)x.Tag).Properties.Duration.TotalSeconds);
             var plTotalSpan = new TimeSpan(0, 0, Convert.ToInt32(plTotal));
-            playlistTotalLabel.Text = plTotalSpan.ToString();
+            playlistTotalLabel.Text = string.Format("{0} ({1})", listView1.Items.Count, plTotalSpan.ToString());
         }
 
         public void Stop()
