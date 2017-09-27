@@ -289,7 +289,7 @@ namespace Sounds
                         : string.Format(" ({0})" ,f.Tag.Disc.ToString());
                 lvi.SubItems.Add(trackNumber);
                 lvi.SubItems.Add(f.Tag.Album);
-                lvi.SubItems.Add(f.Tag.Performers.Count() > 0 ? f.Tag.Performers?[0] : string.Empty);
+                lvi.SubItems.Add(f.Tag.Performers.Count() > 0 ? string.Join(", ", f.Tag.Performers) : string.Empty);
                 lvi.UseItemStyleForSubItems = false;
                 lvi.ToolTipText = f.Name;
                 lvi.Tag = f;
@@ -439,7 +439,7 @@ namespace Sounds
                 var title = activeFile.Tag.Title;
                 var album = activeFile.Tag.Album;
                 var artist = activeFile.Tag.Performers.Count() > 0 ?
-                    activeFile.Tag.Performers[0] : string.Empty;
+                    string.Join(", ", activeFile.Tag.Performers) : string.Empty;
                 
                 if (title != null && album != null)
                     Text = string.Format("{0} - {1} [{2}]",
@@ -481,7 +481,7 @@ namespace Sounds
                 var title = activeFile.Tag.Title;
                 var album = activeFile.Tag.Album;
                 var artist = activeFile.Tag.Performers.Count() > 0 ?
-                    activeFile.Tag.Performers[0] : string.Empty;
+                    string.Join(", ", activeFile.Tag.Performers) : string.Empty;
 
                 titleLabel.Text = title ?? activeFile.Name;
                 albumLabel.Text = album;
