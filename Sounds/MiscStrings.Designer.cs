@@ -61,6 +61,24 @@ namespace Sounds {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Album Artist.
+        /// </summary>
+        internal static string albumArtist {
+            get {
+                return ResourceManager.GetString("albumArtist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} ({1}).
+        /// </summary>
+        internal static string albumArtistPrintf {
+            get {
+                return ResourceManager.GetString("albumArtistPrintf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There have been changes made to the playlist. Do you want to save your changes?.
         /// </summary>
         internal static string changeFileWhileDirty {

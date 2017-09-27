@@ -57,7 +57,9 @@ namespace Sounds
             artistsBox.Items.Clear();
             composersBox.Items.Clear();
             genresBox.Items.Clear();
-            artistsBox.Items.AddRange(f.Tag.Performers);
+            artistsBox.Items.AddRange(f.Tag.Performers
+                .Select(x => f.Tag.AlbumArtists.Contains(x) ? string.Format(MiscStrings.albumArtistPrintf, x, MiscStrings.albumArtist) : x)
+                .ToArray());
             composersBox.Items.AddRange(f.Tag.Composers);
             genresBox.Items.AddRange(f.Tag.Genres);
 
