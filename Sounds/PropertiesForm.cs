@@ -19,10 +19,10 @@ namespace Sounds
             fileSelector.DisplayMember = "Name";
         }
 
-        public PropertiesForm(params TagLib.File[] files) : this()
+        public PropertiesForm(TagLib.File select, params TagLib.File[] files) : this()
         {
             fileSelector.Items.AddRange(files);
-            fileSelector.SelectedIndex = 0;
+            fileSelector.SelectedIndex = Array.IndexOf(files, select);
 
             int largestWidth = 0;
             foreach(var i in files)

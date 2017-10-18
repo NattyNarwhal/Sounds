@@ -762,11 +762,12 @@ namespace Sounds
         {
             if (!forcePlayingSong && listView1.SelectedItems.Count > 0)
             {
-                new PropertiesForm(listView1.SelectedItems.Cast<ListViewItem>().Select(x => (TagLib.File)x.Tag).ToArray()).Show(this);
+                new PropertiesForm(listView1.SelectedItems.Cast<ListViewItem>().Select(x => (TagLib.File)x.Tag).FirstOrDefault(),
+                    listView1.Items.Cast<ListViewItem>().Select(x => (TagLib.File)x.Tag).ToArray()).Show(this);
             }
             else if (playing)
             {
-                new PropertiesForm(activeFile).Show(this);
+                new PropertiesForm(activeFile, listView1.Items.Cast<ListViewItem>().Select(x => (TagLib.File)x.Tag).ToArray()).Show(this);
             }
         }
 
