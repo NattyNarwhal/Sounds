@@ -97,7 +97,6 @@
             // 
             // intrinisicsTab
             // 
-            resources.ApplyResources(this.intrinisicsTab, "intrinisicsTab");
             this.intrinisicsTab.Controls.Add(this.durationBox);
             this.intrinisicsTab.Controls.Add(this.durationLabel);
             this.intrinisicsTab.Controls.Add(this.sampleRateBox);
@@ -108,6 +107,7 @@
             this.intrinisicsTab.Controls.Add(this.bitrateLabel);
             this.intrinisicsTab.Controls.Add(this.fileNameBox);
             this.intrinisicsTab.Controls.Add(this.fileNameLabel);
+            resources.ApplyResources(this.intrinisicsTab, "intrinisicsTab");
             this.intrinisicsTab.Name = "intrinisicsTab";
             this.intrinisicsTab.UseVisualStyleBackColor = true;
             // 
@@ -168,7 +168,6 @@
             // 
             // metadataTab
             // 
-            resources.ApplyResources(this.metadataTab, "metadataTab");
             this.metadataTab.Controls.Add(this.lyricsBox);
             this.metadataTab.Controls.Add(this.lyricsLabel);
             this.metadataTab.Controls.Add(this.commentsBox);
@@ -191,6 +190,7 @@
             this.metadataTab.Controls.Add(this.albumLabel);
             this.metadataTab.Controls.Add(this.titleBox);
             this.metadataTab.Controls.Add(this.titleLabel);
+            resources.ApplyResources(this.metadataTab, "metadataTab");
             this.metadataTab.Name = "metadataTab";
             this.metadataTab.UseVisualStyleBackColor = true;
             // 
@@ -320,11 +320,11 @@
             // 
             // picturesTab
             // 
-            resources.ApplyResources(this.picturesTab, "picturesTab");
             this.picturesTab.Controls.Add(this.copyImageButton);
             this.picturesTab.Controls.Add(this.albumArtInfo);
             this.picturesTab.Controls.Add(this.albumArtSelector);
             this.picturesTab.Controls.Add(this.albumArtBox);
+            resources.ApplyResources(this.picturesTab, "picturesTab");
             this.picturesTab.Name = "picturesTab";
             this.picturesTab.UseVisualStyleBackColor = true;
             // 
@@ -370,7 +370,6 @@
             this.Controls.Add(this.fileSelector);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.okButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PropertiesForm";
