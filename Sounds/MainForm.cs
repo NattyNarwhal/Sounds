@@ -862,12 +862,18 @@ namespace Sounds
 
         private void addFilesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var shouldUpdate = false;
             if (addFilesDialog.ShowDialog(this) == DialogResult.OK)
             {
                 foreach (var f in addFilesDialog.FileNames)
                 {
-                    AddItem(f);
+                    shouldUpdate = shouldUpdate || AddItem(f);
                 }
+            }
+            if (shouldUpdate)
+            {
+                Dirty = true;
+                UpdatePlaylistTotal();
             }
         }
 
