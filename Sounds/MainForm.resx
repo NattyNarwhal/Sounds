@@ -531,12 +531,6 @@
   <data name="addDirectoryToolStripMenuItem.Text" xml:space="preserve">
     <value>Add Fol&amp;der...</value>
   </data>
-  <data name="appendPlaylistToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 22</value>
-  </data>
-  <data name="appendPlaylistToolStripMenuItem.Text" xml:space="preserve">
-    <value>App&amp;end Playlist...</value>
-  </data>
   <data name="removeSelectedToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Del</value>
   </data>
@@ -1045,12 +1039,6 @@
     <value>addDirectoryToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;addDirectoryToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;appendPlaylistToolStripMenuItem.Name" xml:space="preserve">
-    <value>appendPlaylistToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;appendPlaylistToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;removeSelectedToolStripMenuItem.Name" xml:space="preserve">

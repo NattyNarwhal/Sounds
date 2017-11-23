@@ -61,7 +61,6 @@
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.addFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.appendPlaylistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeSelectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.shuffleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -311,7 +310,6 @@
             this.toolStripSeparator9,
             this.addFilesToolStripMenuItem,
             this.addDirectoryToolStripMenuItem,
-            this.appendPlaylistToolStripMenuItem,
             this.removeSelectedToolStripMenuItem,
             this.toolStripSeparator2,
             this.shuffleToolStripMenuItem,
@@ -364,12 +362,6 @@
             this.addDirectoryToolStripMenuItem.Name = "addDirectoryToolStripMenuItem";
             resources.ApplyResources(this.addDirectoryToolStripMenuItem, "addDirectoryToolStripMenuItem");
             this.addDirectoryToolStripMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
-            // 
-            // appendPlaylistToolStripMenuItem
-            // 
-            this.appendPlaylistToolStripMenuItem.Name = "appendPlaylistToolStripMenuItem";
-            resources.ApplyResources(this.appendPlaylistToolStripMenuItem, "appendPlaylistToolStripMenuItem");
-            this.appendPlaylistToolStripMenuItem.Click += new System.EventHandler(this.appendPlaylistToolStripMenuItem_Click);
             // 
             // removeSelectedToolStripMenuItem
             // 
@@ -779,7 +771,6 @@
         private System.Windows.Forms.ToolStripMenuItem shuffleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel playlistTotalLabel;
-        private System.Windows.Forms.ToolStripMenuItem appendPlaylistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutSoundsToolStripMenuItem;
     }

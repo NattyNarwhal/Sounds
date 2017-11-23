@@ -341,7 +341,7 @@ namespace Sounds
             return didAdd;
         }
 
-        public bool AddItem(string name, bool update = false)
+        public bool AddItem(string name, bool update = false, bool append = true)
         {
             var didAdd = false;
             if (Directory.Exists(name))
@@ -350,7 +350,14 @@ namespace Sounds
             }
             else if (File.Exists(name))
             {
-                didAdd = didAdd || AddFile(name, update);
+                if (append && File.Exists(name) && (name.EndsWith(".m3u") || name.EndsWith(".m3u8")))
+                {
+                    OpenPlaylist(name, true);
+                }
+                else
+                {
+                    didAdd = didAdd || AddFile(name, update);
+                }
             }
             return didAdd;
         }
@@ -859,7 +866,7 @@ namespace Sounds
             {
                 foreach (var f in addFilesDialog.FileNames)
                 {
-                    AddFile(f);
+                    AddItem(f);
                 }
             }
         }
@@ -1061,7 +1068,7 @@ namespace Sounds
                         }
                         else if(File.Exists(f))
                         {
-                            if (Path.GetExtension(f).Contains("m3u"))
+                            if (File.Exists(f) && (f.EndsWith(".m3u") || f.EndsWith(".m3u8")))
                                 OpenPlaylist(f, Properties.Settings.Default.FileDragAppendPlaylist);
                             else
                                 AddFile(f);

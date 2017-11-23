@@ -28,7 +28,7 @@ namespace Sounds
                 }
                 else
                 {
-                    mf.AddItem(f);
+                    mf.AddItem(f, append: false);
                 }
             }
             Application.Run(mf);
