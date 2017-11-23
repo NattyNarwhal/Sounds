@@ -867,7 +867,7 @@ namespace Sounds
             {
                 foreach (var f in addFilesDialog.FileNames)
                 {
-                    shouldUpdate = shouldUpdate || AddItem(f);
+                    shouldUpdate = AddItem(f) || shouldUpdate;
                 }
             }
             if (shouldUpdate)
