@@ -20,5 +20,7 @@ namespace Sounds
                 yield return Path.IsPathRooted(u) ? u : Path.Combine(relativePathBase, u);
             }
         }
+
+        public static bool FileIsM3U(string f) => File.Exists(f) && (f.EndsWith(".m3u") || f.EndsWith(".m3u8"));
     }
 }

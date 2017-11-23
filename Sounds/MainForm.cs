@@ -350,7 +350,7 @@ namespace Sounds
             }
             else if (File.Exists(name))
             {
-                if (append && File.Exists(name) && (name.EndsWith(".m3u") || name.EndsWith(".m3u8")))
+                if (append && M3UParser.FileIsM3U(name))
                 {
                     OpenPlaylist(name, true);
                 }
@@ -1074,7 +1074,7 @@ namespace Sounds
                         }
                         else if(File.Exists(f))
                         {
-                            if (File.Exists(f) && (f.EndsWith(".m3u") || f.EndsWith(".m3u8")))
+                            if (M3UParser.FileIsM3U(f))
                                 OpenPlaylist(f, Properties.Settings.Default.FileDragAppendPlaylist);
                             else
                                 AddFile(f);

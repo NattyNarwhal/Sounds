@@ -20,7 +20,7 @@ namespace Sounds
             var mf = new MainForm();
             foreach (var f in args)
             {
-                if (File.Exists(f) && (f.EndsWith(".m3u") || f.EndsWith(".m3u8")))
+                if (M3UParser.FileIsM3U(f))
                 {
                     // this is a bit odd; it'll take the filename of the last
                     // playlist. is that desirable?
