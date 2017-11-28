@@ -117,388 +117,388 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="showDialogsBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 18</value>
-  </data>
-  <data name="&gt;&gt;generalBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>284, 268</value>
-  </data>
-  <data name="&gt;&gt;displayGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="volIncrementBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 20</value>
-  </data>
-  <data name="showStatusbarBox.Text" xml:space="preserve">
-    <value>Show Statusbar</value>
-  </data>
-  <data name="&gt;&gt;showToolbarBox.Name" xml:space="preserve">
-    <value>showToolbarBox</value>
-  </data>
-  <data name="&gt;&gt;deleteOnTrackChangeBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;generalBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;showToolbarBox.Parent" xml:space="preserve">
-    <value>displayGroup</value>
-  </data>
-  <data name="showStatusbarBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 18</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="showStatusbarBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="&gt;&gt;displayGroup.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;timeIncrementBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;timeIncrementBox.Parent" xml:space="preserve">
-    <value>generalBox</value>
-  </data>
-  <data name="&gt;&gt;showStatusbarBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="volIncrementLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 69</value>
+  <data name="displayGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="showInfoPaneBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="generalBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 121</value>
+  <data name="showInfoPaneBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="showInfoPaneBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 65</value>
+  </data>
+  <data name="showInfoPaneBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 18</value>
+  </data>
+  <data name="showInfoPaneBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="showInfoPaneBox.Text" xml:space="preserve">
+    <value>Show Info Pane</value>
+  </data>
+  <data name="&gt;&gt;showInfoPaneBox.Name" xml:space="preserve">
+    <value>showInfoPaneBox</value>
+  </data>
+  <data name="&gt;&gt;showInfoPaneBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showInfoPaneBox.Parent" xml:space="preserve">
+    <value>displayGroup</value>
+  </data>
+  <data name="&gt;&gt;showInfoPaneBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="showStatusbarBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="showStatusbarBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="showStatusbarBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 42</value>
+  </data>
+  <data name="showStatusbarBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 18</value>
+  </data>
+  <data name="showStatusbarBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="showStatusbarBox.Text" xml:space="preserve">
+    <value>Show Statusbar</value>
+  </data>
+  <data name="&gt;&gt;showStatusbarBox.Name" xml:space="preserve">
+    <value>showStatusbarBox</value>
+  </data>
+  <data name="&gt;&gt;showStatusbarBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showStatusbarBox.Parent" xml:space="preserve">
+    <value>displayGroup</value>
+  </data>
+  <data name="&gt;&gt;showStatusbarBox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="showToolbarBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="showToolbarBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="showToolbarBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="showToolbarBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 18</value>
+  </data>
+  <data name="showToolbarBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="showToolbarBox.Text" xml:space="preserve">
+    <value>Show Toolbar</value>
+  </data>
+  <data name="&gt;&gt;showToolbarBox.Name" xml:space="preserve">
+    <value>showToolbarBox</value>
+  </data>
+  <data name="&gt;&gt;showToolbarBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showToolbarBox.Parent" xml:space="preserve">
+    <value>displayGroup</value>
+  </data>
+  <data name="&gt;&gt;showToolbarBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="displayGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="displayGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 88</value>
+  </data>
+  <data name="displayGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="displayGroup.Text" xml:space="preserve">
+    <value>Display</value>
+  </data>
+  <data name="&gt;&gt;displayGroup.Name" xml:space="preserve">
+    <value>displayGroup</value>
+  </data>
+  <data name="&gt;&gt;displayGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;displayGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;displayGroup.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="generalBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="showDialogsBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="showDialogsBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="showDialogsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 43</value>
+  </data>
+  <data name="showDialogsBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 18</value>
+  </data>
+  <data name="showDialogsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="showDialogsBox.Text" xml:space="preserve">
+    <value>Show confirmation dialogs</value>
+  </data>
+  <data name="&gt;&gt;showDialogsBox.Name" xml:space="preserve">
+    <value>showDialogsBox</value>
+  </data>
+  <data name="&gt;&gt;showDialogsBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showDialogsBox.Parent" xml:space="preserve">
+    <value>generalBox</value>
+  </data>
+  <data name="&gt;&gt;showDialogsBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="timeIncrementBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 93</value>
+  </data>
+  <data name="timeIncrementBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 20</value>
+  </data>
+  <data name="timeIncrementBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;timeIncrementBox.Name" xml:space="preserve">
+    <value>timeIncrementBox</value>
+  </data>
+  <data name="&gt;&gt;timeIncrementBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeIncrementBox.Parent" xml:space="preserve">
+    <value>generalBox</value>
+  </data>
+  <data name="&gt;&gt;timeIncrementBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="timeIncrementLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="timeIncrementLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 95</value>
+  </data>
+  <data name="timeIncrementLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
+  </data>
+  <data name="timeIncrementLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="timeIncrementLabel.Text" xml:space="preserve">
+    <value>Time Increment</value>
+  </data>
+  <data name="&gt;&gt;timeIncrementLabel.Name" xml:space="preserve">
+    <value>timeIncrementLabel</value>
+  </data>
+  <data name="&gt;&gt;timeIncrementLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeIncrementLabel.Parent" xml:space="preserve">
+    <value>generalBox</value>
+  </data>
+  <data name="&gt;&gt;timeIncrementLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="volIncrementBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 67</value>
+  </data>
+  <data name="volIncrementBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 20</value>
+  </data>
+  <data name="volIncrementBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;volIncrementBox.Name" xml:space="preserve">
+    <value>volIncrementBox</value>
+  </data>
+  <data name="&gt;&gt;volIncrementBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;volIncrementBox.Parent" xml:space="preserve">
+    <value>generalBox</value>
+  </data>
+  <data name="&gt;&gt;volIncrementBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="volIncrementLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="volIncrementLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 69</value>
+  </data>
+  <data name="volIncrementLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 13</value>
+  </data>
+  <data name="volIncrementLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="volIncrementLabel.Text" xml:space="preserve">
+    <value>Volume Increment</value>
+  </data>
+  <data name="&gt;&gt;volIncrementLabel.Name" xml:space="preserve">
+    <value>volIncrementLabel</value>
+  </data>
+  <data name="&gt;&gt;volIncrementLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;volIncrementLabel.Parent" xml:space="preserve">
+    <value>generalBox</value>
+  </data>
+  <data name="&gt;&gt;volIncrementLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="deleteOnTrackChangeBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="showToolbarBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="deleteOnTrackChangeBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="deleteOnTrackChangeBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="deleteOnTrackChangeBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 18</value>
+  </data>
+  <data name="deleteOnTrackChangeBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="deleteOnTrackChangeBox.Text" xml:space="preserve">
     <value>Remove track when playback ends</value>
   </data>
-  <data name="showDialogsBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="&gt;&gt;timeIncrementLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;showStatusbarBox.Name" xml:space="preserve">
-    <value>showStatusbarBox</value>
-  </data>
-  <data name="cancelButton.Text" xml:space="preserve">
-    <value>&amp;Cancel</value>
-  </data>
-  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Preferences</value>
-  </data>
-  <data name="timeIncrementLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 95</value>
-  </data>
-  <data name="volIncrementBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 67</value>
-  </data>
-  <data name="showToolbarBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 18</value>
-  </data>
-  <data name="&gt;&gt;deleteOnTrackChangeBox.Parent" xml:space="preserve">
-    <value>generalBox</value>
-  </data>
-  <data name="okButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="&gt;&gt;volIncrementBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="generalBox.Text" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="volIncrementBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="timeIncrementLabel.Text" xml:space="preserve">
-    <value>Time Increment</value>
-  </data>
-  <data name="showDialogsBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="volIncrementLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;showDialogsBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="showToolbarBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="&gt;&gt;timeIncrementBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="okButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;volIncrementLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;displayGroup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;okButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="deleteOnTrackChangeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 18</value>
-  </data>
-  <data name="displayGroup.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;showStatusbarBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;showInfoPaneBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="showInfoPaneBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 18</value>
-  </data>
-  <data name="&gt;&gt;showDialogsBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="showStatusbarBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="generalBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="volIncrementLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="showDialogsBox.Text" xml:space="preserve">
-    <value>Show confirmation dialogs</value>
-  </data>
-  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;generalBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 233</value>
-  </data>
-  <data name="volIncrementLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 13</value>
-  </data>
-  <data name="&gt;&gt;okButton.Name" xml:space="preserve">
-    <value>okButton</value>
-  </data>
-  <data name="timeIncrementLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 13</value>
-  </data>
-  <data name="showToolbarBox.Text" xml:space="preserve">
-    <value>Show Toolbar</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>PrefsDialog</value>
-  </data>
-  <data name="displayGroup.Text" xml:space="preserve">
-    <value>Display</value>
-  </data>
-  <data name="displayGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="timeIncrementLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="okButton.Text" xml:space="preserve">
-    <value>O&amp;K</value>
-  </data>
-  <data name="showInfoPaneBox.Text" xml:space="preserve">
-    <value>Show Info Pane</value>
-  </data>
-  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 233</value>
-  </data>
-  <data name="&gt;&gt;showInfoPaneBox.Name" xml:space="preserve">
-    <value>showInfoPaneBox</value>
-  </data>
-  <data name="&gt;&gt;volIncrementLabel.Name" xml:space="preserve">
-    <value>volIncrementLabel</value>
-  </data>
-  <data name="deleteOnTrackChangeBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="showDialogsBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 43</value>
-  </data>
-  <data name="&gt;&gt;displayGroup.Name" xml:space="preserve">
-    <value>displayGroup</value>
-  </data>
-  <data name="displayGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;showInfoPaneBox.Parent" xml:space="preserve">
-    <value>displayGroup</value>
-  </data>
-  <data name="showStatusbarBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="&gt;&gt;deleteOnTrackChangeBox.Name" xml:space="preserve">
     <value>deleteOnTrackChangeBox</value>
   </data>
-  <data name="&gt;&gt;showToolbarBox.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;deleteOnTrackChangeBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;showDialogsBox.Name" xml:space="preserve">
-    <value>showDialogsBox</value>
-  </data>
-  <data name="volIncrementLabel.Text" xml:space="preserve">
-    <value>Volume Increment</value>
-  </data>
-  <data name="cancelButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="deleteOnTrackChangeBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 19</value>
-  </data>
-  <data name="showInfoPaneBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="&gt;&gt;okButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;generalBox.Name" xml:space="preserve">
-    <value>generalBox</value>
-  </data>
-  <data name="&gt;&gt;volIncrementBox.Name" xml:space="preserve">
-    <value>volIncrementBox</value>
-  </data>
-  <data name="showInfoPaneBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 65</value>
-  </data>
-  <data name="&gt;&gt;cancelButton.Name" xml:space="preserve">
-    <value>cancelButton</value>
-  </data>
-  <data name="showStatusbarBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 42</value>
-  </data>
-  <data name="deleteOnTrackChangeBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="&gt;&gt;showStatusbarBox.Parent" xml:space="preserve">
-    <value>displayGroup</value>
-  </data>
-  <data name="showToolbarBox.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;volIncrementLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="okButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="timeIncrementLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;okButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;showDialogsBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;deleteOnTrackChangeBox.Parent" xml:space="preserve">
     <value>generalBox</value>
   </data>
   <data name="&gt;&gt;deleteOnTrackChangeBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;timeIncrementLabel.Parent" xml:space="preserve">
-    <value>generalBox</value>
-  </data>
-  <data name="&gt;&gt;showToolbarBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="displayGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 88</value>
-  </data>
   <data name="generalBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 106</value>
   </data>
-  <data name="&gt;&gt;timeIncrementLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="generalBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 121</value>
   </data>
-  <data name="timeIncrementBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 93</value>
+  <data name="generalBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;timeIncrementBox.Name" xml:space="preserve">
-    <value>timeIncrementBox</value>
+  <data name="generalBox.Text" xml:space="preserve">
+    <value>General</value>
   </data>
-  <data name="&gt;&gt;timeIncrementLabel.Name" xml:space="preserve">
-    <value>timeIncrementLabel</value>
-  </data>
-  <data name="generalBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="cancelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>System</value>
-  </data>
-  <data name="timeIncrementBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;volIncrementLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;generalBox.Name" xml:space="preserve">
     <value>generalBox</value>
   </data>
-  <data name="showDialogsBox.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;generalBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;showInfoPaneBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;generalBox.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;volIncrementBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="showInfoPaneBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;generalBox.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="okButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="okButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 233</value>
+  </data>
+  <data name="okButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
   <data name="okButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;volIncrementBox.Parent" xml:space="preserve">
-    <value>generalBox</value>
+  <data name="okButton.Text" xml:space="preserve">
+    <value>O&amp;K</value>
   </data>
-  <data name="timeIncrementBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 20</value>
+  <data name="&gt;&gt;okButton.Name" xml:space="preserve">
+    <value>okButton</value>
+  </data>
+  <data name="&gt;&gt;okButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;okButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;okButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cancelButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="cancelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>System</value>
+  </data>
+  <data name="cancelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 233</value>
+  </data>
+  <data name="cancelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="cancelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="cancelButton.Text" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Name" xml:space="preserve">
+    <value>cancelButton</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cancelButton.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>284, 268</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PrefsDialog</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
