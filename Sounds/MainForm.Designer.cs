@@ -183,6 +183,7 @@
             this.listView1.ContextMenuStrip = this.playlistContextMenu;
             resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Name = "listView1";
+            this.listView1.OwnerDraw = true;
             this.listView1.ShowItemToolTips = true;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -191,6 +192,7 @@
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             this.listView1.DragDrop += new System.Windows.Forms.DragEventHandler(this.listView1_DragDrop);
             this.listView1.DragEnter += new System.Windows.Forms.DragEventHandler(this.listView1_DragEnter);
+            this.listView1.DragOver += new System.Windows.Forms.DragEventHandler(this.listView1_DragOver);
             // 
             // titleHeader
             // 

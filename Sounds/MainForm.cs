@@ -53,6 +53,8 @@ namespace Sounds
         string playlistFile = null;
         bool dirty = false;
 
+        int dropIndex = -1;
+
         bool Paused
         {
             get
@@ -188,6 +190,21 @@ namespace Sounds
                 TaskbarManager.Instance.ThumbnailToolBars.AddButtons(toolStripContainer1.Handle,
                     prevTaskbarButton, playPauseTaskbarButton, nextTaskbarButton);
             }
+
+            listView1.DrawColumnHeader += (o, e) => e.DrawDefault = true;
+            listView1.DrawItem += (o, e) =>
+            {
+                if (dropIndex > -1 && e.ItemIndex == dropIndex)
+                {
+                    e.Graphics.FillRectangle(System.Drawing.Brushes.Red, e.Bounds);
+                    e.DrawDefault = true;
+                }
+                else
+                {
+                    e.DrawDefault = true;
+                }
+            };
+            listView1.DrawSubItem += (o, e) => e.DrawDefault = true;
 
             // construct volume widget
             tb.Maximum = 100;
@@ -1085,12 +1102,11 @@ namespace Sounds
             else if (e.Effect == DragDropEffects.Move)
             {
                 var cp = listView1.PointToClient(new Point(e.X, e.Y));
-                ListViewItem dragToItem = listView1.GetItemAt(cp.X, cp.Y);
+                var dragToItem = listView1.GetItemAt(cp.X, cp.Y);
+                dropIndex = dragToItem?.Index ?? listView1.Items.Count;
                 if (!listView1.SelectedItems.Contains(dragToItem))
                 {
                     var selectedItems = listView1.SelectedItems.Cast<ListViewItem>().ToList();
-
-                    var dropIndex = dragToItem?.Index ?? listView1.Items.Count;
 
                     foreach (var i in selectedItems)
                         listView1.Items.Insert(dropIndex++, (ListViewItem)i.Clone());
@@ -1099,6 +1115,7 @@ namespace Sounds
                         i.Remove();
 
                     Dirty = true;
+                    dropIndex = -1;
                 }
             }
         }
@@ -1212,6 +1229,20 @@ namespace Sounds
         private void aboutSoundsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new AboutForm().ShowDialog(this);
+        }
+
+        private void listView1_DragOver(object sender, DragEventArgs e)
+        {
+            if (e.Effect == DragDropEffects.Move)
+            {
+                var cp = listView1.PointToClient(new Point(e.X, e.Y));
+                var dragToItem = listView1.GetItemAt(cp.X, cp.Y);
+                var newDropIndex = dragToItem?.Index ?? listView1.Items.Count;
+                if (newDropIndex != dropIndex)
+                    listView1.Invalidate();
+                dropIndex = newDropIndex;
+                Text = dropIndex.ToString();
+            }
         }
     }
 }
