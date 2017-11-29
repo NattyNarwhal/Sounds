@@ -323,14 +323,14 @@ namespace Sounds
                 foreach (var f in Directory.EnumerateFiles(name).OrderBy(x => x)
                     .Concat(Directory.EnumerateDirectories(name).OrderBy(x => x)))
                 {
-                    didAdd = didAdd || AddItem(f, false);
+                    didAdd = AddItem(f, false) || didAdd;
                 }
             }
             else
             {
                 foreach (var f in Directory.EnumerateFiles(name).OrderBy(x => x))
                 {
-                    didAdd = didAdd || AddFile(f, false);
+                    didAdd = AddFile(f, false) || didAdd;
                 }
             }
             if (didAdd && update)
