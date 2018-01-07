@@ -1284,8 +1284,8 @@ namespace Sounds
         {
             if (e.Button == MouseButtons.Right)
             {
-                var ht = listView1.HitTest(e.Location);
-                if (ht.Item != null && ht.SubItem == ht.Item.SubItems[0])
+                var item = listView1.GetItemAt(e.X, e.Y);
+                if (item != null)
                 {
                     // focused on an item
                     playlistContextMenu.Show(listView1, e.Location);
