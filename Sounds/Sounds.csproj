@@ -136,6 +136,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MiscStrings.resx</DependentUpon>
     </Compile>
+    <Compile Include="MiscStrings.ja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MiscStrings.ja.resx</DependentUpon>
+    </Compile>
     <Compile Include="PrefsDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,7 +171,10 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MiscStrings.ja.resx" />
+    <EmbeddedResource Include="MiscStrings.ja.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MiscStrings.ja.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="MiscStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MiscStrings.Designer.cs</LastGenOutput>
@@ -274,6 +282,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PlaylistTotal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PasteHS.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

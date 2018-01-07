@@ -19,6 +19,8 @@ namespace Sounds
 {
     public partial class MainForm : Form
     {
+        const string ClipboardType = "SoundsItem";
+
         TabbedThumbnail preview;
         ThumbnailToolBarButton playPauseTaskbarButton;
         ThumbnailToolBarButton prevTaskbarButton;
@@ -648,6 +650,12 @@ namespace Sounds
             propertiesContextToolStripMenuItem.Enabled = selected;
             removeContextToolStripMenuItem.Enabled = selected;
             removeSelectedToolStripButton.Enabled = selected;
+            cutToolStripMenuItem.Enabled = selected;
+            copyToolStripMenuItem.Enabled = selected;
+
+            selectAllToolStripMenuItem.Enabled = any;
+
+            pasteToolStripMenuItem.Enabled = Clipboard.ContainsData(ClipboardType);
 
             repeatToolStripMenuItem.Checked = repeat;
 
@@ -1212,6 +1220,55 @@ namespace Sounds
         private void aboutSoundsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new AboutForm().ShowDialog(this);
+        }
+
+        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem i in listView1.Items)
+                i.Selected = true;
+        }
+
+        public void CopySelected()
+        {
+            // TODO: we parse this later using existing code because easier
+            // but we could instead just pass TagLib.File to them directly
+            // (if those even serialize?)
+            var items = listView1.SelectedItems.Cast<ListViewItem>()
+                .Select(x => ((TagLib.File)x.Tag).Name);
+            Clipboard.SetData(ClipboardType, items.ToList());
+            UpdateMenus(); // to update paste
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CopySelected();
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CopySelected();
+            DeleteSelected();
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsData(ClipboardType))
+            {
+                var items = (List<string>)Clipboard.GetData(ClipboardType);
+                if (items != null && items.Count > 0)
+                {
+                    var shouldUpdate = false;
+                    foreach (var i in items)
+                    {
+                        shouldUpdate = AddFile(i, false) || shouldUpdate;
+                    }
+                    if (shouldUpdate)
+                    {
+                        Dirty = true;
+                        UpdatePlaylistTotal();
+                    }
+                }
+            }
         }
     }
 }
