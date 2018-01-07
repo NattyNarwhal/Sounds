@@ -113,6 +113,10 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.cutContextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyContextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playlistUnselectedContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pasteContextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
+            this.selectAllContextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -124,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.albumArtBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.playlistUnselectedContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainer1
@@ -188,7 +193,6 @@
             this.trackNoHeader,
             this.albumHeader,
             this.artistHeader});
-            this.listView1.ContextMenuStrip = this.playlistContextMenu;
             resources.ApplyResources(this.listView1, "listView1");
             this.listView1.Name = "listView1";
             this.listView1.ShowItemToolTips = true;
@@ -199,6 +203,7 @@
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             this.listView1.DragDrop += new System.Windows.Forms.DragEventHandler(this.listView1_DragDrop);
             this.listView1.DragEnter += new System.Windows.Forms.DragEventHandler(this.listView1_DragEnter);
+            this.listView1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseUp);
             // 
             // titleHeader
             // 
@@ -734,6 +739,33 @@
             resources.ApplyResources(this.copyContextToolStripMenuItem, "copyContextToolStripMenuItem");
             this.copyContextToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
+            // playlistUnselectedContextMenu
+            // 
+            this.playlistUnselectedContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pasteContextToolStripMenuItem,
+            this.toolStripMenuItem4,
+            this.selectAllContextToolStripMenuItem});
+            this.playlistUnselectedContextMenu.Name = "playlistUnselectedContextMenu";
+            resources.ApplyResources(this.playlistUnselectedContextMenu, "playlistUnselectedContextMenu");
+            // 
+            // pasteContextToolStripMenuItem
+            // 
+            this.pasteContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.PasteHS;
+            this.pasteContextToolStripMenuItem.Name = "pasteContextToolStripMenuItem";
+            resources.ApplyResources(this.pasteContextToolStripMenuItem, "pasteContextToolStripMenuItem");
+            this.pasteContextToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
+            // 
+            // selectAllContextToolStripMenuItem
+            // 
+            this.selectAllContextToolStripMenuItem.Name = "selectAllContextToolStripMenuItem";
+            resources.ApplyResources(this.selectAllContextToolStripMenuItem, "selectAllContextToolStripMenuItem");
+            this.selectAllContextToolStripMenuItem.Click += new System.EventHandler(this.selectAllToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -760,6 +792,7 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.playlistUnselectedContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -849,6 +882,10 @@
         private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cutContextToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyContextToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip playlistUnselectedContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem pasteContextToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem selectAllContextToolStripMenuItem;
     }
 }
 

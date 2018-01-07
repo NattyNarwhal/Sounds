@@ -656,8 +656,11 @@ namespace Sounds
             copyContextToolStripMenuItem.Enabled = selected;
 
             selectAllToolStripMenuItem.Enabled = any;
+            selectAllContextToolStripMenuItem.Enabled = any;
 
-            pasteToolStripMenuItem.Enabled = Clipboard.ContainsData(ClipboardType);
+            var canPaste = Clipboard.ContainsData(ClipboardType);
+            pasteToolStripMenuItem.Enabled = canPaste;
+            pasteContextToolStripMenuItem.Enabled = canPaste;
 
             repeatToolStripMenuItem.Checked = repeat;
 
@@ -1273,6 +1276,25 @@ namespace Sounds
                         Dirty = true;
                         UpdatePlaylistTotal();
                     }
+                }
+            }
+        }
+
+        private void listView1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var ht = listView1.HitTest(e.Location);
+                if (ht.Item != null && ht.SubItem == ht.Item.SubItems[0])
+                {
+                    // focused on an item
+                    playlistContextMenu.Show(listView1, e.Location);
+                }
+                // we could also test for headers?
+                else
+                {
+                    // not focused on an item
+                    playlistUnselectedContextMenu.Show(listView1, e.Location);
                 }
             }
         }
