@@ -652,6 +652,8 @@ namespace Sounds
             removeSelectedToolStripButton.Enabled = selected;
             cutToolStripMenuItem.Enabled = selected;
             copyToolStripMenuItem.Enabled = selected;
+            cutContextToolStripMenuItem.Enabled = selected;
+            copyContextToolStripMenuItem.Enabled = selected;
 
             selectAllToolStripMenuItem.Enabled = any;
 

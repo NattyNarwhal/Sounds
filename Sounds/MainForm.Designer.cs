@@ -111,6 +111,8 @@
             this.openPlaylistDialog = new System.Windows.Forms.OpenFileDialog();
             this.savePlaylistDialog = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.cutContextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyContextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1.BottomToolStripPanel.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -218,8 +220,10 @@
             // 
             this.playlistContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playContextToolStripMenuItem,
-            this.toolStripSeparator5,
             this.propertiesContextToolStripMenuItem,
+            this.toolStripSeparator5,
+            this.cutContextToolStripMenuItem,
+            this.copyContextToolStripMenuItem,
             this.removeContextToolStripMenuItem});
             this.playlistContextMenu.Name = "playlistContextMenu";
             resources.ApplyResources(this.playlistContextMenu, "playlistContextMenu");
@@ -716,6 +720,20 @@
             resources.ApplyResources(this.folderBrowserDialog1, "folderBrowserDialog1");
             this.folderBrowserDialog1.ShowNewFolderButton = false;
             // 
+            // cutContextToolStripMenuItem
+            // 
+            this.cutContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Cut;
+            this.cutContextToolStripMenuItem.Name = "cutContextToolStripMenuItem";
+            resources.ApplyResources(this.cutContextToolStripMenuItem, "cutContextToolStripMenuItem");
+            this.cutContextToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
+            // 
+            // copyContextToolStripMenuItem
+            // 
+            this.copyContextToolStripMenuItem.Image = global::Sounds.Properties.Resources.Copy;
+            this.copyContextToolStripMenuItem.Name = "copyContextToolStripMenuItem";
+            resources.ApplyResources(this.copyContextToolStripMenuItem, "copyContextToolStripMenuItem");
+            this.copyContextToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -829,6 +847,8 @@
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cutContextToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyContextToolStripMenuItem;
     }
 }
 
