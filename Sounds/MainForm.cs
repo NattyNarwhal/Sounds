@@ -1228,7 +1228,7 @@ namespace Sounds
                 i.Selected = true;
         }
 
-        public void CopySelected()
+        public void CopySelected(bool updateMenus = true)
         {
             // TODO: we parse this later using existing code because easier
             // but we could instead just pass TagLib.File to them directly
@@ -1236,7 +1236,11 @@ namespace Sounds
             var items = listView1.SelectedItems.Cast<ListViewItem>()
                 .Select(x => ((TagLib.File)x.Tag).Name);
             Clipboard.SetData(ClipboardType, items.ToList());
-            UpdateMenus(); // to update paste
+            // to update paste; cut will call delete which does this for us
+            if (updateMenus)
+            {
+                UpdateMenus();
+            }
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1246,7 +1250,7 @@ namespace Sounds
 
         private void cutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CopySelected();
+            CopySelected(false);
             DeleteSelected();
         }
 
