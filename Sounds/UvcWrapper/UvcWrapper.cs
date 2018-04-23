@@ -32,8 +32,7 @@ namespace Sounds.UvcWrapper
             ue.FastForward = () => FastForward?.Invoke(null, nullArgs);
             ue.Rewind = () => Rewind?.Invoke(null, nullArgs);
 
-            var res = PP_UVC_Init(ref ue);
-            api = res;
+            var api = PP_UVC_Init(ref ue);
             Initialized = api != null;
         }
 
