@@ -11,7 +11,7 @@ namespace Sounds.UvcWrapper
     {
         const string DllName = "PP-UWP-Interop.dll";
 
-        static Api api;
+        static IntPtr api;
 
         public static bool Initialized { get; private set; } = false;
 
@@ -32,28 +32,31 @@ namespace Sounds.UvcWrapper
             ue.FastForward = () => FastForward?.Invoke(null, nullArgs);
             ue.Rewind = () => Rewind?.Invoke(null, nullArgs);
 
-            api = PP_UVC_Init(ref ue);
-            Initialized = true;
+            var res = PP_UVC_Init(ref ue);
+            api = res;
+            Initialized = api != null;
         }
 
         static void CheckInitialized()
         {
             if (!Initialized)
                 throw new Exception("Not initialized.");
+            if (api == IntPtr.Zero)
+                throw new ArgumentNullException();
         }
 
         public static void Stopped()
         {
             CheckInitialized();
 
-            api.Stopped();
+            UVC_C_Stopped(api);
         }
 
         public static void Paused(bool paused)
         {
             CheckInitialized();
 
-            api.Paused(paused);
+            UVC_C_Paused(api, paused);
         }
 
         // TODO: wire up everything else
@@ -77,14 +80,21 @@ namespace Sounds.UvcWrapper
             ti.ImageData = IntPtr.Zero;
             ti.ImageSize = IntPtr.Zero;
 
-            api.NewTrack(ref ti);
+            UVC_C_NewTrack(api, ref ti);
         }
 
         public static event EventHandler Play, Pause, Stop, Next, Previous, FastForward, Rewind;
 
+        [DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
+        static extern IntPtr PP_UVC_Init(ref UserEventsCallback callbacks);
+
         [DllImport(DllName, CallingConvention = CallingConvention.Winapi)]
-        //[return: MarshalAs(UnmanagedType.LPStruct)]
-        static extern Api PP_UVC_Init(
-            [MarshalAs(UnmanagedType.LPStruct)] ref UserEventsCallback callbacks);
+        static extern void UVC_C_Stopped(IntPtr api);
+
+        [DllImport(DllName, CallingConvention = CallingConvention.Winapi)]
+        static extern void UVC_C_NewTrack(IntPtr api, ref TrackInfo ti);
+
+        [DllImport(DllName, CallingConvention = CallingConvention.Winapi)]
+        static extern void UVC_C_Paused(IntPtr api, bool paused);
     }
 }

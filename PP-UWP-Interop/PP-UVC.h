@@ -6,9 +6,10 @@
 // Set this define to 1 and edit the VC++ project settings for enhanced SMTC
 #define WINDOWS_10_MEDIA_API 0
 
+extern "C" {
 // Use a saner subset of C++ compatible with C
 #if 1
-typedef void(*VoidFtnPtr)();
+typedef void(*VoidFtnPtr)(void);
 
 typedef struct {
 	VoidFtnPtr Play;
@@ -17,9 +18,22 @@ typedef struct {
 	VoidFtnPtr Next;
 	VoidFtnPtr Previous;
 	VoidFtnPtr FastForward;
-	VoidFtnPtr Rewind();
+	VoidFtnPtr Rewind;
 } UserEventCallback;
+
+//! Track information structure to pass to API::NewTrack(). \n
+//! Members can be null/zero if specific parts of the information are not available for the current track. \n
+//! It is recommended to pass just title + artist + imgData/imgBytes; the rest isn't known to be used correctly.
+typedef struct {
+	const wchar_t * title;
+	const wchar_t * artist;
+	const wchar_t* albumArtist;
+	const wchar_t* albumTitle;
+	const void * imgData; size_t imgBytes;
+	DWORD trackNumber, trackCount;
+} TrackInfo;
 #endif
+}
 
 namespace PP {
 	//! A namespace containing our Universal Volume Control related definitions
@@ -39,18 +53,6 @@ namespace PP {
 		protected: UserEventCallback() {} ~UserEventCallback() {}
 		};
 #endif
-
-		//! Track information structure to pass to API::NewTrack(). \n
-		//! Members can be null/zero if specific parts of the information are not available for the current track. \n
-		//! It is recommended to pass just title + artist + imgData/imgBytes; the rest isn't known to be used correctly.
-		struct TrackInfo {
-			const wchar_t * title;
-			const wchar_t * artist;
-			const wchar_t* albumArtist;
-			const wchar_t* albumTitle;
-			const void * imgData; size_t imgBytes;
-			DWORD trackNumber, trackCount;
-		};
 
 		//! Primary interface for interfacing with our Unviersal Volume Control wrapper. \n
 		//! Call PP_UVC_Init() to instantiate. \n
@@ -79,4 +81,11 @@ extern "C" {
 	//! Takes a callback object to receive user events from UVC playback controls. \n
 	//! Returns an object allowing the caller to pass playback status information to UVC.
 	PP_UWP_INTEROP_API PP::UVC::API * PP_UVC_Init( UserEventCallback * cb );
+
+	// Shims for C FFI
+	// They're void* because of some godawful linking error
+
+	PP_UWP_INTEROP_API void UVC_C_Stopped(void* api);
+	PP_UWP_INTEROP_API void UVC_C_NewTrack(void* api, const TrackInfo & info);
+	PP_UWP_INTEROP_API void UVC_C_Paused(void* api, bool paused);
 }
