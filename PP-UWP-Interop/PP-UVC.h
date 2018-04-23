@@ -2,8 +2,8 @@
 
 #include "PP-UWP-Interop.h"
 
-// This is for compiling against Windows 8.1 APIs instead of 10
-// Set this define to 1 and edit the VC++ project settings for enhanced SMTC
+// TODO: upgrade toolchain and remove this so it'll work
+// UWP requires a workaround that needs a Win10 UWP API to fix
 #define WINDOWS_10_MEDIA_API 0
 
 extern "C" {
@@ -38,22 +38,6 @@ typedef struct {
 namespace PP {
 	//! A namespace containing our Universal Volume Control related definitions
 	namespace UVC {
-#if 0
-		//! A callback for handling user events
-		class __declspec(novtable) UserEventCallback {
-		public:
-			virtual void Play() = 0;
-			virtual void Pause() = 0;
-			virtual void Stop() = 0;
-			virtual void Next() = 0;
-			virtual void Previous() = 0;
-			virtual void FastForward() = 0;
-			virtual void Rewind() = 0;
-		private: UserEventCallback( const UserEventCallback & ) = delete; void operator=(const UserEventCallback & ) = delete;
-		protected: UserEventCallback() {} ~UserEventCallback() {}
-		};
-#endif
-
 		//! Primary interface for interfacing with our Unviersal Volume Control wrapper. \n
 		//! Call PP_UVC_Init() to instantiate. \n
 		//! Currently there's no way to shut it down, as in majority of apps it will stay active until the end of the process lifetime.
@@ -85,7 +69,7 @@ extern "C" {
 	// Shims for C FFI
 	// They're void* because of some godawful linking error
 
-	PP_UWP_INTEROP_API void UVC_C_Stopped(void* api);
-	PP_UWP_INTEROP_API void UVC_C_NewTrack(void* api, const TrackInfo & info);
-	PP_UWP_INTEROP_API void UVC_C_Paused(void* api, bool paused);
+	PP_UWP_INTEROP_API void UVC_C_Stopped(PP::UVC::API * api);
+	PP_UWP_INTEROP_API void UVC_C_NewTrack(PP::UVC::API * api, const TrackInfo & info);
+	PP_UWP_INTEROP_API void UVC_C_Paused(PP::UVC::API * api, bool paused);
 }
