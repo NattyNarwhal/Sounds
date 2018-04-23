@@ -159,6 +159,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ToolStripAeroRenderer.cs" />
+    <Compile Include="UvcWrapper\Api.cs" />
+    <Compile Include="UvcWrapper\TrackInfo.cs" />
+    <Compile Include="UvcWrapper\UserEventsCallback.cs" />
+    <Compile Include="UvcWrapper\UvcWrapper.cs" />
     <EmbeddedResource Include="AboutForm.ja.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
