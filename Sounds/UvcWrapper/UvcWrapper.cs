@@ -19,7 +19,7 @@ namespace Sounds.UvcWrapper
         public static void Init()
         {
             if (Environment.OSVersion.Platform != PlatformID.Win32NT
-                || Environment.OSVersion.Version < new Version(6, 3))
+                || Environment.OSVersion.Version < new Version(6, 2))
                 throw new PlatformNotSupportedException();
 
             UserEventsCallback ue;
@@ -62,8 +62,8 @@ namespace Sounds.UvcWrapper
             string artist,
             string albumArtist = null,
             string albumTitle = null,
-            int trackNumber = 0,
-            int trackCount = 0)
+            uint trackNumber = 0,
+            uint trackCount = 0)
         {
             CheckInitialized();
 
@@ -72,8 +72,8 @@ namespace Sounds.UvcWrapper
             ti.Artist = artist;
             ti.AlbumArtist = albumArtist;
             ti.AlbumTitle = albumTitle;
-            ti.TrackNumber = Convert.ToUInt64(trackNumber);
-            ti.TrackCount = Convert.ToUInt64(trackCount);
+            ti.TrackNumber = trackNumber;
+            ti.TrackCount = trackCount;
             ti.ImageData = IntPtr.Zero;
             ti.ImageSize = IntPtr.Zero;
 
@@ -82,8 +82,9 @@ namespace Sounds.UvcWrapper
 
         public static event EventHandler Play, Pause, Stop, Next, Previous, FastForward, Rewind;
 
-        [DllImport(DllName)]
-        [return: MarshalAs(UnmanagedType.LPStruct)]
-        static extern Api PP_UVC_Init(ref UserEventsCallback callbacks);
+        [DllImport(DllName, CallingConvention = CallingConvention.Winapi)]
+        //[return: MarshalAs(UnmanagedType.LPStruct)]
+        static extern Api PP_UVC_Init(
+            [MarshalAs(UnmanagedType.LPStruct)] ref UserEventsCallback callbacks);
     }
 }

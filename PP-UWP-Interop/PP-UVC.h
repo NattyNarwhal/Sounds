@@ -6,9 +6,25 @@
 // Set this define to 1 and edit the VC++ project settings for enhanced SMTC
 #define WINDOWS_10_MEDIA_API 0
 
+// Use a saner subset of C++ compatible with C
+#if 1
+typedef void(*VoidFtnPtr)();
+
+typedef struct {
+	VoidFtnPtr Play;
+	VoidFtnPtr Pause;
+	VoidFtnPtr Stop;
+	VoidFtnPtr Next;
+	VoidFtnPtr Previous;
+	VoidFtnPtr FastForward;
+	VoidFtnPtr Rewind();
+} UserEventCallback;
+#endif
+
 namespace PP {
 	//! A namespace containing our Universal Volume Control related definitions
 	namespace UVC {
+#if 0
 		//! A callback for handling user events
 		class __declspec(novtable) UserEventCallback {
 		public:
@@ -22,6 +38,7 @@ namespace PP {
 		private: UserEventCallback( const UserEventCallback & ) = delete; void operator=(const UserEventCallback & ) = delete;
 		protected: UserEventCallback() {} ~UserEventCallback() {}
 		};
+#endif
 
 		//! Track information structure to pass to API::NewTrack(). \n
 		//! Members can be null/zero if specific parts of the information are not available for the current track. \n
@@ -61,5 +78,5 @@ extern "C" {
 	//! Should be only called once within a process lifetime. \n
 	//! Takes a callback object to receive user events from UVC playback controls. \n
 	//! Returns an object allowing the caller to pass playback status information to UVC.
-	PP_UWP_INTEROP_API PP::UVC::API * PP_UVC_Init( PP::UVC::UserEventCallback * cb );
+	PP_UWP_INTEROP_API PP::UVC::API * PP_UVC_Init( UserEventCallback * cb );
 }

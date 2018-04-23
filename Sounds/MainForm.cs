@@ -191,6 +191,22 @@ namespace Sounds
                     prevTaskbarButton, playPauseTaskbarButton, nextTaskbarButton);
             }
 
+            // for 8.1+
+            try
+            {
+                UvcWrapper.UvcWrapper.Init();
+                UvcWrapper.UvcWrapper.Play += (o, e) => PlayAndSet(false);
+                UvcWrapper.UvcWrapper.Pause += (o, e) => Pause();
+                UvcWrapper.UvcWrapper.Stop += (o, e) => Stop();
+                UvcWrapper.UvcWrapper.Next += (o, e) => Next();
+                UvcWrapper.UvcWrapper.Previous += (o, e) => Previous();
+                UvcWrapper.UvcWrapper.FastForward += (o, e) => FastForward();
+                UvcWrapper.UvcWrapper.Rewind += (o, e) => Rewind();
+            }
+            catch (PlatformNotSupportedException)
+            {
+            }
+
             // construct volume widget
             tb.Maximum = 100;
             tb.TickFrequency = 10;
@@ -449,7 +465,9 @@ namespace Sounds
                 var album = activeFile.Tag.Album;
                 var artist = activeFile.Tag.Performers.Count() > 0 ?
                     string.Join(", ", activeFile.Tag.Performers) : string.Empty;
-                
+                var albumArtist = activeFile.Tag.AlbumArtists.Count() > 0 ?
+                    string.Join(", ", activeFile.Tag.AlbumArtists) : string.Empty;
+
                 if (title != null && album != null)
                     Text = string.Format("{0} - {1} [{2}]",
                         title, artist, fileNameFinalTitle);
@@ -463,6 +481,15 @@ namespace Sounds
                     preview.Title = Text;
                     preview.Tooltip = Text;
                     preview.SetImage(AlbumArt);
+                }
+                if (UvcWrapper.UvcWrapper.Initialized)
+                {
+                    UvcWrapper.UvcWrapper.NewTrack(title,
+                        artist,
+                        albumArtist,
+                        albumArtist,
+                        activeFile.Tag.Track,
+                        activeFile.Tag.TrackCount);
                 }
             }
             else
@@ -684,6 +711,17 @@ namespace Sounds
                 else
                 {
                     playPauseTaskbarButton.Enabled = false;
+                }
+            }
+            if (UvcWrapper.UvcWrapper.Initialized)
+            {
+                if (playing)
+                {
+                    UvcWrapper.UvcWrapper.Paused(Paused);
+                }
+                else
+                {
+                    UvcWrapper.UvcWrapper.Stopped();
                 }
             }
 
@@ -1136,14 +1174,24 @@ namespace Sounds
             PlayPauseToggle();
         }
 
-        private void skipAheadToolStripMenuItem_Click(object sender, EventArgs e)
+        public void Rewind()
+        {
+            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, TimeIncrement));
+        }
+
+        public void FastForward()
         {
             mp.Position = mp.Position.Add(new TimeSpan(0, 0, TimeIncrement));
         }
 
+        private void skipAheadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FastForward();
+        }
+
         private void rewindToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, TimeIncrement));
+            Rewind();
         }
 
         private void albumArtBox_Click(object sender, EventArgs e)
