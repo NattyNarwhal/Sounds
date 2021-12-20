@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sounds</RootNamespace>
     <AssemblyName>Sounds</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <PublishUrl>publish/</PublishUrl>
@@ -35,6 +35,7 @@
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -142,6 +143,7 @@
     <Compile Include="Controls\ToolStripTrackBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SystemMediaTransportControlsInterop.cs" />
     <Compile Include="ToolStripAeroRenderer.cs" />
     <EmbeddedResource Include="AboutForm.ja.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
