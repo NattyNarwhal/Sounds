@@ -9,6 +9,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -31,6 +32,8 @@ namespace Sounds
         // should work on Windows 10 of 2018 or so; 8.1 and newer a solid "idk"
         // 7, hell no
         SystemMediaTransportControls smtc = null;
+        // for the thumbnail, a good idea to persist so we don't leak more than we have to
+        InMemoryRandomAccessStream ras = null;
 
         // some take Icons, not Bitmaps
         Icon stopIcon = Icon.FromHandle(Properties.Resources.Stop.GetHicon());
@@ -493,7 +496,7 @@ namespace Sounds
             UpdateMenus();
         }
 
-        public void UpdateTitle()
+        public async void UpdateTitle()
         {
             var fileNameTitle = string.IsNullOrEmpty(playlistFile) ?
                 MiscStrings.untitledPlaylist : Path.GetFileName(playlistFile);
@@ -529,15 +532,23 @@ namespace Sounds
                     du.MusicProperties.Title = title;
                     du.MusicProperties.Artist = artist;
                     du.MusicProperties.AlbumTitle = album;
-                    #if 0
+
+                    // unfortunately a lot of copies. let's clean up the prev one
+                    if (ras != null)
+                    {
+                        ras.Dispose();
+                        ras = null;
+                    }
                     var ms = new MemoryStream();
                     // format doesn't matter;
-                    AlbumArt.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                    // it seems we need to make an in memory stream rather than .AsRandomAccessStream
-                    var ras = new InMemoryRandomAccessStream();
+                    AlbumArt.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    ms.Position = 0;
+                    var bytes = ms.ToArray().AsBuffer();
+                    ms.Dispose();
+                    ras = new InMemoryRandomAccessStream();
+                    await ras.WriteAsync(bytes);
                     var rref = RandomAccessStreamReference.CreateFromStream(ras);
                     du.Thumbnail = rref;
-                    #endif
 
                     // worth filling out the others?
                     du.Update();
