@@ -1184,7 +1184,7 @@ namespace Sounds
             repeat = repeatToolStripMenuItem.Checked;
             if (smtc != null)
             {
-                smtc.AutoRepeatMode = repeat;
+                smtc.AutoRepeatMode = repeat ? MediaPlaybackAutoRepeatMode.List : MediaPlaybackAutoRepeatMode.None;
             }
         }
 
