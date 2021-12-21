@@ -1182,6 +1182,10 @@ namespace Sounds
         private void repeatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             repeat = repeatToolStripMenuItem.Checked;
+            if (smtc != null)
+            {
+                smtc.AutoRepeatMode = repeat;
+            }
         }
 
         private void shuffleToolStripMenuItem_Click(object sender, EventArgs e)
