@@ -29,7 +29,9 @@ namespace UWPInterop
         public static SystemMediaTransportControls GetForWindow(IntPtr hWnd)
         {
             ISystemMediaTransportControlsInterop systemMediaTransportControlsInterop = (ISystemMediaTransportControlsInterop)WindowsRuntimeMarshal.GetActivationFactory(typeof(SystemMediaTransportControls));
-            Guid guid = typeof(SystemMediaTransportControls).GUID;
+            //Guid guid = typeof(SystemMediaTransportControls).GUID;
+            // I don't know why the above is invalid
+            var guid = new Guid("99FA3FF4-1742-42A6-902E-087D41F965EC");
 
             return systemMediaTransportControlsInterop.GetForWindow(hWnd, ref guid);
         }

@@ -14,6 +14,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
+using Windows.Media;
+using Windows.Storage.Streams;
 
 namespace Sounds
 {
@@ -25,6 +27,10 @@ namespace Sounds
         ThumbnailToolBarButton playPauseTaskbarButton;
         ThumbnailToolBarButton prevTaskbarButton;
         ThumbnailToolBarButton nextTaskbarButton;
+
+        // should work on Windows 10 of 2018 or so; 8.1 and newer a solid "idk"
+        // 7, hell no
+        SystemMediaTransportControls smtc = null;
 
         // some take Icons, not Bitmaps
         Icon stopIcon = Icon.FromHandle(Properties.Resources.Stop.GetHicon());
@@ -191,6 +197,25 @@ namespace Sounds
                     prevTaskbarButton, playPauseTaskbarButton, nextTaskbarButton);
             }
 
+            // XXX: Do we need to wrap initialization here?
+            try
+            {
+                smtc = UWPInterop.SystemMediaTransportControlsInterop.GetForWindow(this.Handle);
+                smtc.IsEnabled = true;
+                smtc.IsPreviousEnabled = true;
+                smtc.IsNextEnabled = true;
+                smtc.IsPlayEnabled = true;
+                smtc.IsPauseEnabled = true;
+                smtc.IsRewindEnabled = true;
+                smtc.IsFastForwardEnabled = true;
+                smtc.ButtonPressed += Smtc_ButtonPressed;
+            }
+            catch (AggregateException ex)
+            {
+                throw;
+                // discarding?
+            }
+
             // construct volume widget
             tb.Maximum = 100;
             tb.TickFrequency = 10;
@@ -238,6 +263,38 @@ namespace Sounds
 
             // finally init UI by creating PL (args will override it)
             NewPlaylist();
+        }
+
+        private void Smtc_ButtonPressed(SystemMediaTransportControls sender, SystemMediaTransportControlsButtonPressedEventArgs args)
+        {
+            switch (args.Button)
+            {
+                case SystemMediaTransportControlsButton.Play:
+                    Invoke(new Action(() => PlayAndSet(false)));
+                    break;
+                case SystemMediaTransportControlsButton.Pause:
+                    Invoke(new Action(() => Pause()));
+                    break;
+                case SystemMediaTransportControlsButton.Stop:
+                    Invoke(new Action(() => Stop()));
+                    break;
+                case SystemMediaTransportControlsButton.Previous:
+                    Invoke(new Action(() => Previous()));
+                    break;
+                case SystemMediaTransportControlsButton.Next:
+                    Invoke(new Action(() => Next()));
+                    break;
+                case SystemMediaTransportControlsButton.Rewind:
+                    Invoke(new Action(() =>
+                        mp.Position = mp.Position.Subtract(new TimeSpan(0, 0, TimeIncrement))));
+                    break;
+                case SystemMediaTransportControlsButton.FastForward:
+                    Invoke(new Action(() =>
+                        mp.Position = mp.Position.Add(new TimeSpan(0, 0, TimeIncrement))));
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
@@ -464,6 +521,27 @@ namespace Sounds
                     preview.Tooltip = Text;
                     preview.SetImage(AlbumArt);
                 }
+
+                if (smtc != null)
+                {
+                    var du = smtc.DisplayUpdater;
+                    du.Type = MediaPlaybackType.Music;
+                    du.MusicProperties.Title = title;
+                    du.MusicProperties.Artist = artist;
+                    du.MusicProperties.AlbumTitle = album;
+                    #if 0
+                    var ms = new MemoryStream();
+                    // format doesn't matter;
+                    AlbumArt.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    // it seems we need to make an in memory stream rather than .AsRandomAccessStream
+                    var ras = new InMemoryRandomAccessStream();
+                    var rref = RandomAccessStreamReference.CreateFromStream(ras);
+                    du.Thumbnail = rref;
+                    #endif
+
+                    // worth filling out the others?
+                    du.Update();
+                }
             }
             else
             {
@@ -475,6 +553,15 @@ namespace Sounds
                     preview.InvalidatePreview();
                     preview.Title = Text;
                     preview.Tooltip = Text;
+                }
+
+                if (smtc != null)
+                {
+                    var du = smtc.DisplayUpdater;
+                    du.ClearAll();
+                    // XXX: thumbnail
+                    du.Update();
+                    // worth filling out the others?
                 }
             }
         }
@@ -695,6 +782,10 @@ namespace Sounds
                 {
                     TaskbarManager.Instance.SetOverlayIcon(stopIcon, MiscStrings.stopped);
                 }
+                if (smtc != null)
+                {
+                    smtc.PlaybackStatus = MediaPlaybackStatus.Stopped;
+                }
             }
             else if (playing && Paused)
             {
@@ -703,6 +794,10 @@ namespace Sounds
                 {
                     TaskbarManager.Instance.SetOverlayIcon(pauseIcon, MiscStrings.paused);
                 }
+                if (smtc != null)
+                {
+                    smtc.PlaybackStatus = MediaPlaybackStatus.Paused;
+                }
             }
             else if (playing && !Paused)
             {
@@ -710,6 +805,10 @@ namespace Sounds
                 if (TaskbarManager.IsPlatformSupported && Visible)
                 {
                     TaskbarManager.Instance.SetOverlayIcon(playIcon, MiscStrings.playing);
+                }
+                if (smtc != null)
+                {
+                    smtc.PlaybackStatus = MediaPlaybackStatus.Playing;
                 }
             }
         }
