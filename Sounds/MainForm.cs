@@ -158,7 +158,15 @@ namespace Sounds
                     // TODO: This seems to be a bit slow on the uptake
                     if (playing)
                     {
-                        preview.SetImage(AlbumArt);
+                        var albumArt = AlbumArtNullable;
+                        if (albumArt != null)
+                        {
+                            preview.SetImage(albumArt);
+                        }
+                        else
+                        {
+                            preview.InvalidatePreview();
+                        }
                     }
                     else
                     {
@@ -509,6 +517,7 @@ namespace Sounds
                 var album = activeFile.Tag.Album;
                 var artist = activeFile.Tag.Performers.Count() > 0 ?
                     string.Join(", ", activeFile.Tag.Performers) : string.Empty;
+                var albumArt = AlbumArtNullable;
                 
                 if (title != null && album != null)
                     Text = string.Format("{0} - {1} [{2}]",
@@ -522,7 +531,14 @@ namespace Sounds
                 {
                     preview.Title = Text;
                     preview.Tooltip = Text;
-                    preview.SetImage(AlbumArt);
+                    if (albumArt != null)
+                    {
+                        preview.SetImage(albumArt);
+                    }
+                    else
+                    {
+                        preview.InvalidatePreview();
+                    }
                 }
 
                 if (smtc != null)
@@ -539,16 +555,19 @@ namespace Sounds
                         ras.Dispose();
                         ras = null;
                     }
-                    var ms = new MemoryStream();
-                    // format doesn't matter;
-                    AlbumArt.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    ms.Position = 0;
-                    var bytes = ms.ToArray().AsBuffer();
-                    ms.Dispose();
-                    ras = new InMemoryRandomAccessStream();
-                    await ras.WriteAsync(bytes);
-                    var rref = RandomAccessStreamReference.CreateFromStream(ras);
-                    du.Thumbnail = rref;
+                    if (albumArt != null)
+                    {
+                        var ms = new MemoryStream();
+                        // format doesn't matter;
+                        albumArt.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        ms.Position = 0;
+                        var bytes = ms.ToArray().AsBuffer();
+                        ms.Dispose();
+                        ras = new InMemoryRandomAccessStream();
+                        await ras.WriteAsync(bytes);
+                        var rref = RandomAccessStreamReference.CreateFromStream(ras);
+                        du.Thumbnail = rref;
+                    }
 
                     // worth filling out the others?
                     du.Update();
@@ -570,9 +589,7 @@ namespace Sounds
                 {
                     var du = smtc.DisplayUpdater;
                     du.ClearAll();
-                    // XXX: thumbnail
                     du.Update();
-                    // worth filling out the others?
                 }
             }
         }
@@ -642,7 +659,7 @@ namespace Sounds
             }
         }
 
-        public Bitmap AlbumArt
+        public Bitmap AlbumArtNullable
         {
             get
             {
@@ -677,9 +694,16 @@ namespace Sounds
                             return new Bitmap(Path.Combine(containing, "folder.jpg"));
                         }
                     }
-                    return new Bitmap(100, 100);
+                    return null;
                 }
             }
+        }
+
+        // stub for things that need a working bitmap;
+        // if you don't, just handle the null yourself
+        public Bitmap AlbumArt
+        {
+            get => AlbumArtNullable ?? new Bitmap(100, 100);
         }
 
         public bool Dirty
